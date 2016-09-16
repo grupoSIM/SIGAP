@@ -10,4 +10,10 @@
         Me.TbCaballosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
     End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Me.Close()
+        frmCarreraCaballo.DataGridView1.Refresh() 'should redraw with the new data
+
+    End Sub
 End Class
