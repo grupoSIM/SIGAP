@@ -72,11 +72,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmHipodromo.Designer.vb">
-      <DependentUpon>frmHipodromo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmHipodromo.vb">
-      <SubType>Form</SubType>
+    <Compile Include="bdSIGAP_DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
@@ -101,9 +100,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmHipodromo.resx">
-      <DependentUpon>frmHipodromo.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +111,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bdSIGAP_DataSet.xsc">
+      <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdSIGAP_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdSIGAP_DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdSIGAP_DataSet.xss">
+      <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -125,6 +132,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bdSIGAP_be.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
