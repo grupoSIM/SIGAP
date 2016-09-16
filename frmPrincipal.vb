@@ -10,4 +10,12 @@
     Private Sub CargarRematesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarRematesToolStripMenuItem.Click
         frmRemate.Show()
     End Sub
+
+    Private Sub CargarCarreraCaballosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarCarreraCaballosToolStripMenuItem.Click
+        frmCarreraCaballo.Show()
+    End Sub
+
+    Private Sub CarrerasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CarrerasToolStripMenuItem.Click
+        frmCaballo.Show()
+    End Sub
 End Class

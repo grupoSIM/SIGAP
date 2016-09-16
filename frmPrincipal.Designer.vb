@@ -26,6 +26,9 @@ Partial Class frmPrincipal
         Me.ParámetrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HipódromoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JornadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,7 +37,7 @@ Partial Class frmPrincipal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ParámetrosToolStripMenuItem, Me.RematesToolStripMenuItem, Me.ConsultasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ParámetrosToolStripMenuItem, Me.CarrerasToolStripMenuItem1, Me.RematesToolStripMenuItem, Me.ConsultasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(629, 24)
@@ -43,7 +46,7 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -51,14 +54,33 @@ Partial Class frmPrincipal
         'HipódromoToolStripMenuItem
         '
         Me.HipódromoToolStripMenuItem.Name = "HipódromoToolStripMenuItem"
-        Me.HipódromoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.HipódromoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HipódromoToolStripMenuItem.Text = "Hipódromos"
         '
         'JornadasToolStripMenuItem
         '
         Me.JornadasToolStripMenuItem.Name = "JornadasToolStripMenuItem"
-        Me.JornadasToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.JornadasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.JornadasToolStripMenuItem.Text = "Jornadas"
+        '
+        'CarrerasToolStripMenuItem
+        '
+        Me.CarrerasToolStripMenuItem.Name = "CarrerasToolStripMenuItem"
+        Me.CarrerasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CarrerasToolStripMenuItem.Text = "Caballos"
+        '
+        'CarrerasToolStripMenuItem1
+        '
+        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem})
+        Me.CarrerasToolStripMenuItem1.Name = "CarrerasToolStripMenuItem1"
+        Me.CarrerasToolStripMenuItem1.Size = New System.Drawing.Size(62, 20)
+        Me.CarrerasToolStripMenuItem1.Text = "Carreras"
+        '
+        'CargarCarreraCaballosToolStripMenuItem
+        '
+        Me.CargarCarreraCaballosToolStripMenuItem.Name = "CargarCarreraCaballosToolStripMenuItem"
+        Me.CargarCarreraCaballosToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.CargarCarreraCaballosToolStripMenuItem.Text = "Cargar carrera / caballos"
         '
         'RematesToolStripMenuItem
         '
@@ -103,4 +125,7 @@ Partial Class frmPrincipal
     Friend WithEvents CargarRematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JornadasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CarrerasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CarrerasToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents CargarCarreraCaballosToolStripMenuItem As ToolStripMenuItem
 End Class
