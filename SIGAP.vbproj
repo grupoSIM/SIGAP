@@ -79,6 +79,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmHipodromo.Designer.vb">
+      <DependentUpon>frmHipodromo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHipodromo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmHipodromo.resx">
+      <DependentUpon>frmHipodromo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
