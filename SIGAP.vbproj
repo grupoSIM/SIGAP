@@ -115,6 +115,12 @@
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRematador.Designer.vb">
+      <DependentUpon>frmRematador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRematador.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmRemate.Designer.vb">
       <DependentUpon>frmRemate.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRematador.resx">
+      <DependentUpon>frmRematador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemate.resx">
       <DependentUpon>frmRemate.vb</DependentUpon>
