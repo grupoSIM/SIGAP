@@ -24,10 +24,11 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ParámetrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HipódromoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JornadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HipódromoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,10 +43,22 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
+        '
+        'HipódromoToolStripMenuItem
+        '
+        Me.HipódromoToolStripMenuItem.Name = "HipódromoToolStripMenuItem"
+        Me.HipódromoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.HipódromoToolStripMenuItem.Text = "Hipódromos"
+        '
+        'JornadasToolStripMenuItem
+        '
+        Me.JornadasToolStripMenuItem.Name = "JornadasToolStripMenuItem"
+        Me.JornadasToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.JornadasToolStripMenuItem.Text = "Jornadas"
         '
         'RematesToolStripMenuItem
         '
@@ -66,12 +79,6 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
-        'HipódromoToolStripMenuItem
-        '
-        Me.HipódromoToolStripMenuItem.Name = "HipódromoToolStripMenuItem"
-        Me.HipódromoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.HipódromoToolStripMenuItem.Text = "Hipódromo"
-        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -81,6 +88,7 @@ Partial Class frmPrincipal
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPrincipal"
         Me.Text = "SiGAp"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -94,4 +102,5 @@ Partial Class frmPrincipal
     Friend WithEvents RematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarRematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents JornadasToolStripMenuItem As ToolStripMenuItem
 End Class

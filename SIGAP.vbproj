@@ -79,10 +79,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmHipodromo.Designer.vb">
+      <DependentUpon>frmHipodromo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHipodromo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJornada.Designer.vb">
+      <DependentUpon>frmJornada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJornada.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemate.Designer.vb">
+      <DependentUpon>frmRemate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTicket.Designer.vb">
@@ -108,8 +126,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmHipodromo.resx">
+      <DependentUpon>frmHipodromo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJornada.resx">
+      <DependentUpon>frmJornada.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemate.resx">
+      <DependentUpon>frmRemate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.vb</DependentUpon>
