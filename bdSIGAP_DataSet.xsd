@@ -638,6 +638,42 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VwTicketTableAdapter" GeneratorDataComponentClassName="VwTicketTableAdapter" Name="VwTicket" UserDataComponentName="VwTicketTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectName="VwTicket" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12 FROM VwTicket</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="NroCarrera" DataSetColumn="NroCarrera" />
+              <Mapping SourceColumn="Palco" DataSetColumn="Palco" />
+              <Mapping SourceColumn="NroCaballo" DataSetColumn="NroCaballo" />
+              <Mapping SourceColumn="CaballoNombre" DataSetColumn="CaballoNombre" />
+              <Mapping SourceColumn="ImporteApuesta" DataSetColumn="ImporteApuesta" />
+              <Mapping SourceColumn="Apostador" DataSetColumn="Apostador" />
+              <Mapping SourceColumn="Premio" DataSetColumn="Premio" />
+              <Mapping SourceColumn="ApuC1" DataSetColumn="ApuC1" />
+              <Mapping SourceColumn="ApuC2" DataSetColumn="ApuC2" />
+              <Mapping SourceColumn="ApuC3" DataSetColumn="ApuC3" />
+              <Mapping SourceColumn="ApuC4" DataSetColumn="ApuC4" />
+              <Mapping SourceColumn="ApuC5" DataSetColumn="ApuC5" />
+              <Mapping SourceColumn="ApuC6" DataSetColumn="ApuC6" />
+              <Mapping SourceColumn="ApuC7" DataSetColumn="ApuC7" />
+              <Mapping SourceColumn="ApuC8" DataSetColumn="ApuC8" />
+              <Mapping SourceColumn="ApuC9" DataSetColumn="ApuC9" />
+              <Mapping SourceColumn="ApuC10" DataSetColumn="ApuC10" />
+              <Mapping SourceColumn="ApuC11" DataSetColumn="ApuC11" />
+              <Mapping SourceColumn="ApuC12" DataSetColumn="ApuC12" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -646,7 +682,7 @@
   <xs:element name="bdSIGAP_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdSIGAP_DataSet" msprop:Generator_UserDSName="bdSIGAP_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tb_Caballos" msprop:Generator_TableClassName="tb_CaballosDataTable" msprop:Generator_TableVarName="tabletb_Caballos" msprop:Generator_TablePropName="tb_Caballos" msprop:Generator_RowDeletingName="tb_CaballosRowDeleting" msprop:Generator_RowChangingName="tb_CaballosRowChanging" msprop:Generator_RowEvHandlerName="tb_CaballosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_CaballosRowDeleted" msprop:Generator_UserTableName="tb_Caballos" msprop:Generator_RowChangedName="tb_CaballosRowChanged" msprop:Generator_RowEvArgName="tb_CaballosRowChangeEvent" msprop:Generator_RowClassName="tb_CaballosRow">
+        <xs:element name="tb_Caballos" msprop:Generator_TableClassName="tb_CaballosDataTable" msprop:Generator_TableVarName="tabletb_Caballos" msprop:Generator_RowChangedName="tb_CaballosRowChanged" msprop:Generator_TablePropName="tb_Caballos" msprop:Generator_RowDeletingName="tb_CaballosRowDeleting" msprop:Generator_RowChangingName="tb_CaballosRowChanging" msprop:Generator_RowEvHandlerName="tb_CaballosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_CaballosRowDeleted" msprop:Generator_RowClassName="tb_CaballosRow" msprop:Generator_UserTableName="tb_Caballos" msprop:Generator_RowEvArgName="tb_CaballosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -661,7 +697,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_Carreras" msprop:Generator_TableClassName="tb_CarrerasDataTable" msprop:Generator_TableVarName="tabletb_Carreras" msprop:Generator_TablePropName="tb_Carreras" msprop:Generator_RowDeletingName="tb_CarrerasRowDeleting" msprop:Generator_RowChangingName="tb_CarrerasRowChanging" msprop:Generator_RowEvHandlerName="tb_CarrerasRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_CarrerasRowDeleted" msprop:Generator_UserTableName="tb_Carreras" msprop:Generator_RowChangedName="tb_CarrerasRowChanged" msprop:Generator_RowEvArgName="tb_CarrerasRowChangeEvent" msprop:Generator_RowClassName="tb_CarrerasRow">
+        <xs:element name="tb_Carreras" msprop:Generator_TableClassName="tb_CarrerasDataTable" msprop:Generator_TableVarName="tabletb_Carreras" msprop:Generator_RowChangedName="tb_CarrerasRowChanged" msprop:Generator_TablePropName="tb_Carreras" msprop:Generator_RowDeletingName="tb_CarrerasRowDeleting" msprop:Generator_RowChangingName="tb_CarrerasRowChanging" msprop:Generator_RowEvHandlerName="tb_CarrerasRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_CarrerasRowDeleted" msprop:Generator_RowClassName="tb_CarrerasRow" msprop:Generator_UserTableName="tb_Carreras" msprop:Generator_RowEvArgName="tb_CarrerasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -687,7 +723,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_CarrerasCaballos" msprop:Generator_TableClassName="tb_CarrerasCaballosDataTable" msprop:Generator_TableVarName="tabletb_CarrerasCaballos" msprop:Generator_TablePropName="tb_CarrerasCaballos" msprop:Generator_RowDeletingName="tb_CarrerasCaballosRowDeleting" msprop:Generator_RowChangingName="tb_CarrerasCaballosRowChanging" msprop:Generator_RowEvHandlerName="tb_CarrerasCaballosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_CarrerasCaballosRowDeleted" msprop:Generator_UserTableName="tb_CarrerasCaballos" msprop:Generator_RowChangedName="tb_CarrerasCaballosRowChanged" msprop:Generator_RowEvArgName="tb_CarrerasCaballosRowChangeEvent" msprop:Generator_RowClassName="tb_CarrerasCaballosRow">
+        <xs:element name="tb_CarrerasCaballos" msprop:Generator_TableClassName="tb_CarrerasCaballosDataTable" msprop:Generator_TableVarName="tabletb_CarrerasCaballos" msprop:Generator_RowChangedName="tb_CarrerasCaballosRowChanged" msprop:Generator_TablePropName="tb_CarrerasCaballos" msprop:Generator_RowDeletingName="tb_CarrerasCaballosRowDeleting" msprop:Generator_RowChangingName="tb_CarrerasCaballosRowChanging" msprop:Generator_RowEvHandlerName="tb_CarrerasCaballosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_CarrerasCaballosRowDeleted" msprop:Generator_RowClassName="tb_CarrerasCaballosRow" msprop:Generator_UserTableName="tb_CarrerasCaballos" msprop:Generator_RowEvArgName="tb_CarrerasCaballosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -699,7 +735,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_DetalleRemates" msprop:Generator_TableClassName="tb_DetalleRematesDataTable" msprop:Generator_TableVarName="tabletb_DetalleRemates" msprop:Generator_TablePropName="tb_DetalleRemates" msprop:Generator_RowDeletingName="tb_DetalleRematesRowDeleting" msprop:Generator_RowChangingName="tb_DetalleRematesRowChanging" msprop:Generator_RowEvHandlerName="tb_DetalleRematesRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_DetalleRematesRowDeleted" msprop:Generator_UserTableName="tb_DetalleRemates" msprop:Generator_RowChangedName="tb_DetalleRematesRowChanged" msprop:Generator_RowEvArgName="tb_DetalleRematesRowChangeEvent" msprop:Generator_RowClassName="tb_DetalleRematesRow">
+        <xs:element name="tb_DetalleRemates" msprop:Generator_TableClassName="tb_DetalleRematesDataTable" msprop:Generator_TableVarName="tabletb_DetalleRemates" msprop:Generator_RowChangedName="tb_DetalleRematesRowChanged" msprop:Generator_TablePropName="tb_DetalleRemates" msprop:Generator_RowDeletingName="tb_DetalleRematesRowDeleting" msprop:Generator_RowChangingName="tb_DetalleRematesRowChanging" msprop:Generator_RowEvHandlerName="tb_DetalleRematesRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_DetalleRematesRowDeleted" msprop:Generator_RowClassName="tb_DetalleRematesRow" msprop:Generator_UserTableName="tb_DetalleRemates" msprop:Generator_RowEvArgName="tb_DetalleRematesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -732,7 +768,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_Hipodromos" msprop:Generator_TableClassName="tb_HipodromosDataTable" msprop:Generator_TableVarName="tabletb_Hipodromos" msprop:Generator_TablePropName="tb_Hipodromos" msprop:Generator_RowDeletingName="tb_HipodromosRowDeleting" msprop:Generator_RowChangingName="tb_HipodromosRowChanging" msprop:Generator_RowEvHandlerName="tb_HipodromosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_HipodromosRowDeleted" msprop:Generator_UserTableName="tb_Hipodromos" msprop:Generator_RowChangedName="tb_HipodromosRowChanged" msprop:Generator_RowEvArgName="tb_HipodromosRowChangeEvent" msprop:Generator_RowClassName="tb_HipodromosRow">
+        <xs:element name="tb_Hipodromos" msprop:Generator_TableClassName="tb_HipodromosDataTable" msprop:Generator_TableVarName="tabletb_Hipodromos" msprop:Generator_RowChangedName="tb_HipodromosRowChanged" msprop:Generator_TablePropName="tb_Hipodromos" msprop:Generator_RowDeletingName="tb_HipodromosRowDeleting" msprop:Generator_RowChangingName="tb_HipodromosRowChanging" msprop:Generator_RowEvHandlerName="tb_HipodromosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_HipodromosRowDeleted" msprop:Generator_RowClassName="tb_HipodromosRow" msprop:Generator_UserTableName="tb_Hipodromos" msprop:Generator_RowEvArgName="tb_HipodromosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -753,7 +789,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_Jornadas" msprop:Generator_TableClassName="tb_JornadasDataTable" msprop:Generator_TableVarName="tabletb_Jornadas" msprop:Generator_TablePropName="tb_Jornadas" msprop:Generator_RowDeletingName="tb_JornadasRowDeleting" msprop:Generator_RowChangingName="tb_JornadasRowChanging" msprop:Generator_RowEvHandlerName="tb_JornadasRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_JornadasRowDeleted" msprop:Generator_UserTableName="tb_Jornadas" msprop:Generator_RowChangedName="tb_JornadasRowChanged" msprop:Generator_RowEvArgName="tb_JornadasRowChangeEvent" msprop:Generator_RowClassName="tb_JornadasRow">
+        <xs:element name="tb_Jornadas" msprop:Generator_TableClassName="tb_JornadasDataTable" msprop:Generator_TableVarName="tabletb_Jornadas" msprop:Generator_RowChangedName="tb_JornadasRowChanged" msprop:Generator_TablePropName="tb_Jornadas" msprop:Generator_RowDeletingName="tb_JornadasRowDeleting" msprop:Generator_RowChangingName="tb_JornadasRowChanging" msprop:Generator_RowEvHandlerName="tb_JornadasRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_JornadasRowDeleted" msprop:Generator_RowClassName="tb_JornadasRow" msprop:Generator_UserTableName="tb_Jornadas" msprop:Generator_RowEvArgName="tb_JornadasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -769,7 +805,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_Palcos" msprop:Generator_TableClassName="tb_PalcosDataTable" msprop:Generator_TableVarName="tabletb_Palcos" msprop:Generator_TablePropName="tb_Palcos" msprop:Generator_RowDeletingName="tb_PalcosRowDeleting" msprop:Generator_RowChangingName="tb_PalcosRowChanging" msprop:Generator_RowEvHandlerName="tb_PalcosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_PalcosRowDeleted" msprop:Generator_UserTableName="tb_Palcos" msprop:Generator_RowChangedName="tb_PalcosRowChanged" msprop:Generator_RowEvArgName="tb_PalcosRowChangeEvent" msprop:Generator_RowClassName="tb_PalcosRow">
+        <xs:element name="tb_Palcos" msprop:Generator_TableClassName="tb_PalcosDataTable" msprop:Generator_TableVarName="tabletb_Palcos" msprop:Generator_RowChangedName="tb_PalcosRowChanged" msprop:Generator_TablePropName="tb_Palcos" msprop:Generator_RowDeletingName="tb_PalcosRowDeleting" msprop:Generator_RowChangingName="tb_PalcosRowChanging" msprop:Generator_RowEvHandlerName="tb_PalcosRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_PalcosRowDeleted" msprop:Generator_RowClassName="tb_PalcosRow" msprop:Generator_UserTableName="tb_Palcos" msprop:Generator_RowEvArgName="tb_PalcosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -786,7 +822,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_Rematadores" msprop:Generator_TableClassName="tb_RematadoresDataTable" msprop:Generator_TableVarName="tabletb_Rematadores" msprop:Generator_TablePropName="tb_Rematadores" msprop:Generator_RowDeletingName="tb_RematadoresRowDeleting" msprop:Generator_RowChangingName="tb_RematadoresRowChanging" msprop:Generator_RowEvHandlerName="tb_RematadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_RematadoresRowDeleted" msprop:Generator_UserTableName="tb_Rematadores" msprop:Generator_RowChangedName="tb_RematadoresRowChanged" msprop:Generator_RowEvArgName="tb_RematadoresRowChangeEvent" msprop:Generator_RowClassName="tb_RematadoresRow">
+        <xs:element name="tb_Rematadores" msprop:Generator_TableClassName="tb_RematadoresDataTable" msprop:Generator_TableVarName="tabletb_Rematadores" msprop:Generator_RowChangedName="tb_RematadoresRowChanged" msprop:Generator_TablePropName="tb_Rematadores" msprop:Generator_RowDeletingName="tb_RematadoresRowDeleting" msprop:Generator_RowChangingName="tb_RematadoresRowChanging" msprop:Generator_RowEvHandlerName="tb_RematadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_RematadoresRowDeleted" msprop:Generator_RowClassName="tb_RematadoresRow" msprop:Generator_UserTableName="tb_Rematadores" msprop:Generator_RowEvArgName="tb_RematadoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -801,7 +837,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tb_Remates" msprop:Generator_TableClassName="tb_RematesDataTable" msprop:Generator_TableVarName="tabletb_Remates" msprop:Generator_TablePropName="tb_Remates" msprop:Generator_RowDeletingName="tb_RematesRowDeleting" msprop:Generator_RowChangingName="tb_RematesRowChanging" msprop:Generator_RowEvHandlerName="tb_RematesRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_RematesRowDeleted" msprop:Generator_UserTableName="tb_Remates" msprop:Generator_RowChangedName="tb_RematesRowChanged" msprop:Generator_RowEvArgName="tb_RematesRowChangeEvent" msprop:Generator_RowClassName="tb_RematesRow">
+        <xs:element name="tb_Remates" msprop:Generator_TableClassName="tb_RematesDataTable" msprop:Generator_TableVarName="tabletb_Remates" msprop:Generator_RowChangedName="tb_RematesRowChanged" msprop:Generator_TablePropName="tb_Remates" msprop:Generator_RowDeletingName="tb_RematesRowDeleting" msprop:Generator_RowChangingName="tb_RematesRowChanging" msprop:Generator_RowEvHandlerName="tb_RematesRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_RematesRowDeleted" msprop:Generator_RowClassName="tb_RematesRow" msprop:Generator_UserTableName="tb_Remates" msprop:Generator_RowEvArgName="tb_RematesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -812,6 +848,129 @@
               <xs:element name="IdRematador" msprop:Generator_ColumnVarNameInTable="columnIdRematador" msprop:Generator_ColumnPropNameInRow="IdRematador" msprop:Generator_ColumnPropNameInTable="IdRematadorColumn" msprop:Generator_UserColumnName="IdRematador" type="xs:int" minOccurs="0" />
               <xs:element name="TotalApuestas" msprop:Generator_ColumnVarNameInTable="columnTotalApuestas" msprop:Generator_ColumnPropNameInRow="TotalApuestas" msprop:Generator_ColumnPropNameInTable="TotalApuestasColumn" msprop:Generator_UserColumnName="TotalApuestas" type="xs:int" minOccurs="0" />
               <xs:element name="ImportePremio" msprop:Generator_ColumnVarNameInTable="columnImportePremio" msprop:Generator_ColumnPropNameInRow="ImportePremio" msprop:Generator_ColumnPropNameInTable="ImportePremioColumn" msprop:Generator_UserColumnName="ImportePremio" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VwTicket" msprop:Generator_TableClassName="VwTicketDataTable" msprop:Generator_TableVarName="tableVwTicket" msprop:Generator_TablePropName="VwTicket" msprop:Generator_RowDeletingName="VwTicketRowDeleting" msprop:Generator_RowChangingName="VwTicketRowChanging" msprop:Generator_RowEvHandlerName="VwTicketRowChangeEventHandler" msprop:Generator_RowDeletedName="VwTicketRowDeleted" msprop:Generator_UserTableName="VwTicket" msprop:Generator_RowChangedName="VwTicketRowChanged" msprop:Generator_RowEvArgName="VwTicketRowChangeEvent" msprop:Generator_RowClassName="VwTicketRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NroCarrera" msprop:Generator_ColumnVarNameInTable="columnNroCarrera" msprop:Generator_ColumnPropNameInRow="NroCarrera" msprop:Generator_ColumnPropNameInTable="NroCarreraColumn" msprop:Generator_UserColumnName="NroCarrera" type="xs:int" minOccurs="0" />
+              <xs:element name="Palco" msprop:Generator_ColumnVarNameInTable="columnPalco" msprop:Generator_ColumnPropNameInRow="Palco" msprop:Generator_ColumnPropNameInTable="PalcoColumn" msprop:Generator_UserColumnName="Palco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NroCaballo" msprop:Generator_ColumnVarNameInTable="columnNroCaballo" msprop:Generator_ColumnPropNameInRow="NroCaballo" msprop:Generator_ColumnPropNameInTable="NroCaballoColumn" msprop:Generator_UserColumnName="NroCaballo" type="xs:int" minOccurs="0" />
+              <xs:element name="CaballoNombre" msprop:Generator_ColumnVarNameInTable="columnCaballoNombre" msprop:Generator_ColumnPropNameInRow="CaballoNombre" msprop:Generator_ColumnPropNameInTable="CaballoNombreColumn" msprop:Generator_UserColumnName="CaballoNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ImporteApuesta" msprop:Generator_ColumnVarNameInTable="columnImporteApuesta" msprop:Generator_ColumnPropNameInRow="ImporteApuesta" msprop:Generator_ColumnPropNameInTable="ImporteApuestaColumn" msprop:Generator_UserColumnName="ImporteApuesta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Apostador" msprop:Generator_ColumnVarNameInTable="columnApostador" msprop:Generator_ColumnPropNameInRow="Apostador" msprop:Generator_ColumnPropNameInTable="ApostadorColumn" msprop:Generator_UserColumnName="Apostador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Premio" msprop:Generator_ColumnVarNameInTable="columnPremio" msprop:Generator_ColumnPropNameInRow="Premio" msprop:Generator_ColumnPropNameInTable="PremioColumn" msprop:Generator_UserColumnName="Premio" type="xs:int" minOccurs="0" />
+              <xs:element name="ApuC1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC1" msprop:Generator_ColumnPropNameInRow="ApuC1" msprop:Generator_ColumnPropNameInTable="ApuC1Column" msprop:Generator_UserColumnName="ApuC1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC2" msprop:Generator_ColumnPropNameInRow="ApuC2" msprop:Generator_ColumnPropNameInTable="ApuC2Column" msprop:Generator_UserColumnName="ApuC2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC3" msprop:Generator_ColumnPropNameInRow="ApuC3" msprop:Generator_ColumnPropNameInTable="ApuC3Column" msprop:Generator_UserColumnName="ApuC3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC4" msprop:Generator_ColumnPropNameInRow="ApuC4" msprop:Generator_ColumnPropNameInTable="ApuC4Column" msprop:Generator_UserColumnName="ApuC4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC5" msprop:Generator_ColumnPropNameInRow="ApuC5" msprop:Generator_ColumnPropNameInTable="ApuC5Column" msprop:Generator_UserColumnName="ApuC5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC6" msprop:Generator_ColumnPropNameInRow="ApuC6" msprop:Generator_ColumnPropNameInTable="ApuC6Column" msprop:Generator_UserColumnName="ApuC6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC7" msprop:Generator_ColumnPropNameInRow="ApuC7" msprop:Generator_ColumnPropNameInTable="ApuC7Column" msprop:Generator_UserColumnName="ApuC7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC8" msprop:Generator_ColumnPropNameInRow="ApuC8" msprop:Generator_ColumnPropNameInTable="ApuC8Column" msprop:Generator_UserColumnName="ApuC8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC9" msprop:Generator_ColumnPropNameInRow="ApuC9" msprop:Generator_ColumnPropNameInTable="ApuC9Column" msprop:Generator_UserColumnName="ApuC9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC10" msprop:Generator_ColumnPropNameInRow="ApuC10" msprop:Generator_ColumnPropNameInTable="ApuC10Column" msprop:Generator_UserColumnName="ApuC10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC11" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC11" msprop:Generator_ColumnPropNameInRow="ApuC11" msprop:Generator_ColumnPropNameInTable="ApuC11Column" msprop:Generator_UserColumnName="ApuC11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApuC12" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApuC12" msprop:Generator_ColumnPropNameInRow="ApuC12" msprop:Generator_ColumnPropNameInTable="ApuC12Column" msprop:Generator_UserColumnName="ApuC12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -856,17 +1015,17 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="tb_Jornadastb_Carreras" msdata:parent="tb_Jornadas" msdata:child="tb_Carreras" msdata:parentkey="Id" msdata:childkey="IdJornada" msprop:Generator_UserChildTable="tb_Carreras" msprop:Generator_ChildPropName="Gettb_CarrerasRows" msprop:Generator_UserRelationName="tb_Jornadastb_Carreras" msprop:Generator_RelationVarName="relationtb_Jornadastb_Carreras" msprop:Generator_UserParentTable="tb_Jornadas" msprop:Generator_ParentPropName="tb_JornadasRow" />
-      <msdata:Relationship name="tb_Caballostb_CarrerasCaballos" msdata:parent="tb_Caballos" msdata:child="tb_CarrerasCaballos" msdata:parentkey="Id" msdata:childkey="IdCaballo" msprop:Generator_UserChildTable="tb_CarrerasCaballos" msprop:Generator_ChildPropName="Gettb_CarrerasCaballosRows" msprop:Generator_UserRelationName="tb_Caballostb_CarrerasCaballos" msprop:Generator_ParentPropName="tb_CaballosRow" msprop:Generator_RelationVarName="relationtb_Caballostb_CarrerasCaballos" msprop:Generator_UserParentTable="tb_Caballos" />
-      <msdata:Relationship name="tb_Carrerastb_CarrerasCaballos" msdata:parent="tb_Carreras" msdata:child="tb_CarrerasCaballos" msdata:parentkey="Id" msdata:childkey="IdCarrera" msprop:Generator_UserChildTable="tb_CarrerasCaballos" msprop:Generator_ChildPropName="Gettb_CarrerasCaballosRows" msprop:Generator_UserRelationName="tb_Carrerastb_CarrerasCaballos" msprop:Generator_ParentPropName="tb_CarrerasRow" msprop:Generator_RelationVarName="relationtb_Carrerastb_CarrerasCaballos" msprop:Generator_UserParentTable="tb_Carreras" />
-      <msdata:Relationship name="tb_CarrerasCaballostb_DetalleRemates" msdata:parent="tb_CarrerasCaballos" msdata:child="tb_DetalleRemates" msdata:parentkey="Id" msdata:childkey="IdCarreraCaballo" msprop:Generator_UserChildTable="tb_DetalleRemates" msprop:Generator_ChildPropName="Gettb_DetalleRematesRows" msprop:Generator_UserRelationName="tb_CarrerasCaballostb_DetalleRemates" msprop:Generator_ParentPropName="tb_CarrerasCaballosRow" msprop:Generator_RelationVarName="relationtb_CarrerasCaballostb_DetalleRemates" msprop:Generator_UserParentTable="tb_CarrerasCaballos" />
-      <msdata:Relationship name="tb_Rematestb_DetalleRemates" msdata:parent="tb_Remates" msdata:child="tb_DetalleRemates" msdata:parentkey="Id" msdata:childkey="IdRemate" msprop:Generator_UserChildTable="tb_DetalleRemates" msprop:Generator_ChildPropName="Gettb_DetalleRematesRows" msprop:Generator_UserRelationName="tb_Rematestb_DetalleRemates" msprop:Generator_RelationVarName="relationtb_Rematestb_DetalleRemates" msprop:Generator_UserParentTable="tb_Remates" msprop:Generator_ParentPropName="tb_RematesRow" />
-      <msdata:Relationship name="tb_Hipodromostb_Jornadas" msdata:parent="tb_Hipodromos" msdata:child="tb_Jornadas" msdata:parentkey="Id" msdata:childkey="IdHipodromo" msprop:Generator_UserChildTable="tb_Jornadas" msprop:Generator_ChildPropName="Gettb_JornadasRows" msprop:Generator_UserRelationName="tb_Hipodromostb_Jornadas" msprop:Generator_ParentPropName="tb_HipodromosRow" msprop:Generator_RelationVarName="relationtb_Hipodromostb_Jornadas" msprop:Generator_UserParentTable="tb_Hipodromos" />
-      <msdata:Relationship name="tb_Jornadastb_Palcos" msdata:parent="tb_Jornadas" msdata:child="tb_Palcos" msdata:parentkey="Id" msdata:childkey="IdJornada" msprop:Generator_UserChildTable="tb_Palcos" msprop:Generator_ChildPropName="Gettb_PalcosRows" msprop:Generator_UserRelationName="tb_Jornadastb_Palcos" msprop:Generator_ParentPropName="tb_JornadasRow" msprop:Generator_RelationVarName="relationtb_Jornadastb_Palcos" msprop:Generator_UserParentTable="tb_Jornadas" />
-      <msdata:Relationship name="tb_Rematadorestb_Palcos" msdata:parent="tb_Rematadores" msdata:child="tb_Palcos" msdata:parentkey="Id" msdata:childkey="IdRematador" msprop:Generator_UserChildTable="tb_Palcos" msprop:Generator_ChildPropName="Gettb_PalcosRows" msprop:Generator_UserRelationName="tb_Rematadorestb_Palcos" msprop:Generator_RelationVarName="relationtb_Rematadorestb_Palcos" msprop:Generator_UserParentTable="tb_Rematadores" msprop:Generator_ParentPropName="tb_RematadoresRow" />
-      <msdata:Relationship name="tb_Carrerastb_Remates" msdata:parent="tb_Carreras" msdata:child="tb_Remates" msdata:parentkey="Id" msdata:childkey="IdCarrera" msprop:Generator_UserChildTable="tb_Remates" msprop:Generator_ChildPropName="Gettb_RematesRows" msprop:Generator_UserRelationName="tb_Carrerastb_Remates" msprop:Generator_ParentPropName="tb_CarrerasRow" msprop:Generator_RelationVarName="relationtb_Carrerastb_Remates" msprop:Generator_UserParentTable="tb_Carreras" />
-      <msdata:Relationship name="tb_Palcostb_Remates" msdata:parent="tb_Palcos" msdata:child="tb_Remates" msdata:parentkey="Id" msdata:childkey="IdPalco" msprop:Generator_UserChildTable="tb_Remates" msprop:Generator_ChildPropName="Gettb_RematesRows" msprop:Generator_UserRelationName="tb_Palcostb_Remates" msprop:Generator_ParentPropName="tb_PalcosRow" msprop:Generator_RelationVarName="relationtb_Palcostb_Remates" msprop:Generator_UserParentTable="tb_Palcos" />
-      <msdata:Relationship name="tb_Rematadorestb_Remates" msdata:parent="tb_Rematadores" msdata:child="tb_Remates" msdata:parentkey="Id" msdata:childkey="IdRematador" msprop:Generator_UserChildTable="tb_Remates" msprop:Generator_ChildPropName="Gettb_RematesRows" msprop:Generator_UserRelationName="tb_Rematadorestb_Remates" msprop:Generator_ParentPropName="tb_RematadoresRow" msprop:Generator_RelationVarName="relationtb_Rematadorestb_Remates" msprop:Generator_UserParentTable="tb_Rematadores" />
+      <msdata:Relationship name="tb_Jornadastb_Carreras" msdata:parent="tb_Jornadas" msdata:child="tb_Carreras" msdata:parentkey="Id" msdata:childkey="IdJornada" msprop:Generator_UserChildTable="tb_Carreras" msprop:Generator_ChildPropName="Gettb_CarrerasRows" msprop:Generator_UserRelationName="tb_Jornadastb_Carreras" msprop:Generator_ParentPropName="tb_JornadasRow" msprop:Generator_RelationVarName="relationtb_Jornadastb_Carreras" msprop:Generator_UserParentTable="tb_Jornadas" />
+      <msdata:Relationship name="tb_Caballostb_CarrerasCaballos" msdata:parent="tb_Caballos" msdata:child="tb_CarrerasCaballos" msdata:parentkey="Id" msdata:childkey="IdCaballo" msprop:Generator_UserChildTable="tb_CarrerasCaballos" msprop:Generator_ChildPropName="Gettb_CarrerasCaballosRows" msprop:Generator_UserRelationName="tb_Caballostb_CarrerasCaballos" msprop:Generator_RelationVarName="relationtb_Caballostb_CarrerasCaballos" msprop:Generator_UserParentTable="tb_Caballos" msprop:Generator_ParentPropName="tb_CaballosRow" />
+      <msdata:Relationship name="tb_Carrerastb_CarrerasCaballos" msdata:parent="tb_Carreras" msdata:child="tb_CarrerasCaballos" msdata:parentkey="Id" msdata:childkey="IdCarrera" msprop:Generator_UserChildTable="tb_CarrerasCaballos" msprop:Generator_ChildPropName="Gettb_CarrerasCaballosRows" msprop:Generator_UserRelationName="tb_Carrerastb_CarrerasCaballos" msprop:Generator_RelationVarName="relationtb_Carrerastb_CarrerasCaballos" msprop:Generator_UserParentTable="tb_Carreras" msprop:Generator_ParentPropName="tb_CarrerasRow" />
+      <msdata:Relationship name="tb_CarrerasCaballostb_DetalleRemates" msdata:parent="tb_CarrerasCaballos" msdata:child="tb_DetalleRemates" msdata:parentkey="Id" msdata:childkey="IdCarreraCaballo" msprop:Generator_UserChildTable="tb_DetalleRemates" msprop:Generator_ChildPropName="Gettb_DetalleRematesRows" msprop:Generator_UserRelationName="tb_CarrerasCaballostb_DetalleRemates" msprop:Generator_RelationVarName="relationtb_CarrerasCaballostb_DetalleRemates" msprop:Generator_UserParentTable="tb_CarrerasCaballos" msprop:Generator_ParentPropName="tb_CarrerasCaballosRow" />
+      <msdata:Relationship name="tb_Rematestb_DetalleRemates" msdata:parent="tb_Remates" msdata:child="tb_DetalleRemates" msdata:parentkey="Id" msdata:childkey="IdRemate" msprop:Generator_UserChildTable="tb_DetalleRemates" msprop:Generator_ChildPropName="Gettb_DetalleRematesRows" msprop:Generator_UserRelationName="tb_Rematestb_DetalleRemates" msprop:Generator_ParentPropName="tb_RematesRow" msprop:Generator_RelationVarName="relationtb_Rematestb_DetalleRemates" msprop:Generator_UserParentTable="tb_Remates" />
+      <msdata:Relationship name="tb_Hipodromostb_Jornadas" msdata:parent="tb_Hipodromos" msdata:child="tb_Jornadas" msdata:parentkey="Id" msdata:childkey="IdHipodromo" msprop:Generator_UserChildTable="tb_Jornadas" msprop:Generator_ChildPropName="Gettb_JornadasRows" msprop:Generator_UserRelationName="tb_Hipodromostb_Jornadas" msprop:Generator_RelationVarName="relationtb_Hipodromostb_Jornadas" msprop:Generator_UserParentTable="tb_Hipodromos" msprop:Generator_ParentPropName="tb_HipodromosRow" />
+      <msdata:Relationship name="tb_Jornadastb_Palcos" msdata:parent="tb_Jornadas" msdata:child="tb_Palcos" msdata:parentkey="Id" msdata:childkey="IdJornada" msprop:Generator_UserChildTable="tb_Palcos" msprop:Generator_ChildPropName="Gettb_PalcosRows" msprop:Generator_UserRelationName="tb_Jornadastb_Palcos" msprop:Generator_RelationVarName="relationtb_Jornadastb_Palcos" msprop:Generator_UserParentTable="tb_Jornadas" msprop:Generator_ParentPropName="tb_JornadasRow" />
+      <msdata:Relationship name="tb_Rematadorestb_Palcos" msdata:parent="tb_Rematadores" msdata:child="tb_Palcos" msdata:parentkey="Id" msdata:childkey="IdRematador" msprop:Generator_UserChildTable="tb_Palcos" msprop:Generator_ChildPropName="Gettb_PalcosRows" msprop:Generator_UserRelationName="tb_Rematadorestb_Palcos" msprop:Generator_ParentPropName="tb_RematadoresRow" msprop:Generator_RelationVarName="relationtb_Rematadorestb_Palcos" msprop:Generator_UserParentTable="tb_Rematadores" />
+      <msdata:Relationship name="tb_Carrerastb_Remates" msdata:parent="tb_Carreras" msdata:child="tb_Remates" msdata:parentkey="Id" msdata:childkey="IdCarrera" msprop:Generator_UserChildTable="tb_Remates" msprop:Generator_ChildPropName="Gettb_RematesRows" msprop:Generator_UserRelationName="tb_Carrerastb_Remates" msprop:Generator_RelationVarName="relationtb_Carrerastb_Remates" msprop:Generator_UserParentTable="tb_Carreras" msprop:Generator_ParentPropName="tb_CarrerasRow" />
+      <msdata:Relationship name="tb_Palcostb_Remates" msdata:parent="tb_Palcos" msdata:child="tb_Remates" msdata:parentkey="Id" msdata:childkey="IdPalco" msprop:Generator_UserChildTable="tb_Remates" msprop:Generator_ChildPropName="Gettb_RematesRows" msprop:Generator_UserRelationName="tb_Palcostb_Remates" msprop:Generator_RelationVarName="relationtb_Palcostb_Remates" msprop:Generator_UserParentTable="tb_Palcos" msprop:Generator_ParentPropName="tb_PalcosRow" />
+      <msdata:Relationship name="tb_Rematadorestb_Remates" msdata:parent="tb_Rematadores" msdata:child="tb_Remates" msdata:parentkey="Id" msdata:childkey="IdRematador" msprop:Generator_UserChildTable="tb_Remates" msprop:Generator_ChildPropName="Gettb_RematesRows" msprop:Generator_UserRelationName="tb_Rematadorestb_Remates" msprop:Generator_RelationVarName="relationtb_Rematadorestb_Remates" msprop:Generator_UserParentTable="tb_Rematadores" msprop:Generator_ParentPropName="tb_RematadoresRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
