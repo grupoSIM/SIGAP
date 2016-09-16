@@ -8,6 +8,6 @@
     End Sub
 
     Private Sub CargarRematesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarRematesToolStripMenuItem.Click
-
+        frmRemate.Show()
     End Sub
 End Class
