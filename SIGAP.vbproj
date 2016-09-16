@@ -85,6 +85,12 @@
     <Compile Include="frmHipodromo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmJornada.Designer.vb">
+      <DependentUpon>frmJornada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJornada.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -116,6 +122,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmHipodromo.resx">
       <DependentUpon>frmHipodromo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJornada.resx">
+      <DependentUpon>frmJornada.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
