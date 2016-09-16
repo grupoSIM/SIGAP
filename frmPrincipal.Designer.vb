@@ -81,6 +81,7 @@ Partial Class frmPrincipal
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPrincipal"
         Me.Text = "SiGAp"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
