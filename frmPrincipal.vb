@@ -18,4 +18,8 @@
     Private Sub CarrerasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CarrerasToolStripMenuItem.Click
         frmCaballo.Show()
     End Sub
+
+    Private Sub PalcosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PalcosToolStripMenuItem.Click
+        frmPalco.Show()
+    End Sub
 End Class

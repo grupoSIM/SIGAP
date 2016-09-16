@@ -32,6 +32,7 @@ Partial Class frmPrincipal
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PalcosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,7 +47,7 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.PalcosToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -101,6 +102,12 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
+        'PalcosToolStripMenuItem
+        '
+        Me.PalcosToolStripMenuItem.Name = "PalcosToolStripMenuItem"
+        Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PalcosToolStripMenuItem.Text = "Palcos"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -128,4 +135,5 @@ Partial Class frmPrincipal
     Friend WithEvents CarrerasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CarrerasToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents CargarCarreraCaballosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PalcosToolStripMenuItem As ToolStripMenuItem
 End Class
