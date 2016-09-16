@@ -79,6 +79,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmCaballo.Designer.vb">
+      <DependentUpon>frmCaballo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaballo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarreraCaballo.Designer.vb">
+      <DependentUpon>frmCarreraCaballo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarreraCaballo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmHipodromo.Designer.vb">
       <DependentUpon>frmHipodromo.vb</DependentUpon>
     </Compile>
@@ -126,6 +138,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCaballo.resx">
+      <DependentUpon>frmCaballo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarreraCaballo.resx">
+      <DependentUpon>frmCarreraCaballo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHipodromo.resx">
       <DependentUpon>frmHipodromo.vb</DependentUpon>
     </EmbeddedResource>
