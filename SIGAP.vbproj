@@ -91,6 +91,12 @@
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRemate.Designer.vb">
+      <DependentUpon>frmRemate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTicket.Designer.vb">
       <DependentUpon>frmTicket.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemate.resx">
+      <DependentUpon>frmRemate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.vb</DependentUpon>
