@@ -13,6 +13,7 @@
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_CarrerasCaballos' table. You can move, or remove it, as needed.
         Me.Tb_CarrerasCaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_CarrerasCaballos)
 
+        CargarRemates()
         CargarDetallesRemates()
 
     End Sub
@@ -42,7 +43,17 @@
 
     End Function
 
+    Private Function CargarRemates()
+        Dim carrera As DataRow
+
+        carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cmbCarrera.SelectedValue)
+        txtPorcentajeCasa.Text = carrera("PorcentajeUltimoRemate")
+
+    End Function
+
     Private Sub cmbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCarrera.SelectedIndexChanged
+
+        CargarRemates()
         CargarDetallesRemates()
 
     End Sub

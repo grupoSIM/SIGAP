@@ -46,6 +46,9 @@ Partial Class frmRemate
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.Tb_CarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
+        Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
+        Me.txtRemate = New System.Windows.Forms.TextBox()
+        Me.txtPorcentajeCasa = New System.Windows.Forms.TextBox()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -213,11 +216,31 @@ Partial Class frmRemate
         '
         Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
         '
+        'Tb_RematesTableAdapter
+        '
+        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
+        '
+        'txtRemate
+        '
+        Me.txtRemate.Location = New System.Drawing.Point(93, 65)
+        Me.txtRemate.Name = "txtRemate"
+        Me.txtRemate.Size = New System.Drawing.Size(100, 20)
+        Me.txtRemate.TabIndex = 9
+        '
+        'txtPorcentajeCasa
+        '
+        Me.txtPorcentajeCasa.Location = New System.Drawing.Point(317, 65)
+        Me.txtPorcentajeCasa.Name = "txtPorcentajeCasa"
+        Me.txtPorcentajeCasa.Size = New System.Drawing.Size(100, 20)
+        Me.txtPorcentajeCasa.TabIndex = 10
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 362)
+        Me.ClientSize = New System.Drawing.Size(545, 362)
+        Me.Controls.Add(Me.txtPorcentajeCasa)
+        Me.Controls.Add(Me.txtRemate)
         Me.Controls.Add(Me.cmbCarrera)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblTitulo)
@@ -257,4 +280,7 @@ Partial Class frmRemate
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
     Friend WithEvents Tb_CarrerasCaballosBindingSource As BindingSource
     Friend WithEvents Tb_CarrerasCaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
+    Friend WithEvents Tb_RematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter
+    Friend WithEvents txtRemate As TextBox
+    Friend WithEvents txtPorcentajeCasa As TextBox
 End Class
