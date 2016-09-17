@@ -657,11 +657,11 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnCaballoNombre As Global.System.Data.DataColumn
         
-        Private columnEsLlave As Global.System.Data.DataColumn
-        
         Private columnCuidador As Global.System.Data.DataColumn
         
         Private columnOrigen As Global.System.Data.DataColumn
+        
+        Private columnEsLlave As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -716,14 +716,6 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property EsLlaveColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnEsLlave
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property CuidadorColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCuidador
@@ -735,6 +727,14 @@ Partial Public Class bdSIGAP_DataSet
         Public ReadOnly Property OrigenColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnOrigen
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property EsLlaveColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEsLlave
             End Get
         End Property
         
@@ -775,9 +775,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtb_CaballosRow(ByVal CaballoNombre As String, ByVal EsLlave As Boolean, ByVal Cuidador As String, ByVal Origen As String) As tb_CaballosRow
+        Public Overloads Function Addtb_CaballosRow(ByVal CaballoNombre As String, ByVal Cuidador As String, ByVal Origen As String, ByVal EsLlave As Boolean) As tb_CaballosRow
             Dim rowtb_CaballosRow As tb_CaballosRow = CType(Me.NewRow,tb_CaballosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, CaballoNombre, EsLlave, Cuidador, Origen}
+            Dim columnValuesArray() As Object = New Object() {Nothing, CaballoNombre, Cuidador, Origen, EsLlave}
             rowtb_CaballosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtb_CaballosRow)
             Return rowtb_CaballosRow
@@ -808,9 +808,9 @@ Partial Public Class bdSIGAP_DataSet
         Friend Sub InitVars()
             Me.columnId = MyBase.Columns("Id")
             Me.columnCaballoNombre = MyBase.Columns("CaballoNombre")
-            Me.columnEsLlave = MyBase.Columns("EsLlave")
             Me.columnCuidador = MyBase.Columns("Cuidador")
             Me.columnOrigen = MyBase.Columns("Origen")
+            Me.columnEsLlave = MyBase.Columns("EsLlave")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -820,12 +820,12 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnId)
             Me.columnCaballoNombre = New Global.System.Data.DataColumn("CaballoNombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCaballoNombre)
-            Me.columnEsLlave = New Global.System.Data.DataColumn("EsLlave", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnEsLlave)
             Me.columnCuidador = New Global.System.Data.DataColumn("Cuidador", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCuidador)
             Me.columnOrigen = New Global.System.Data.DataColumn("Origen", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnOrigen)
+            Me.columnEsLlave = New Global.System.Data.DataColumn("EsLlave", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEsLlave)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
             Me.columnId.AutoIncrement = true
             Me.columnId.AutoIncrementSeed = -1
@@ -978,6 +978,10 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnNroCarrera As Global.System.Data.DataColumn
         
+        Private columnNombre As Global.System.Data.DataColumn
+        
+        Private columnMetros As Global.System.Data.DataColumn
+        
         Private columnEstado As Global.System.Data.DataColumn
         
         Private columnPorcentajeCasa As Global.System.Data.DataColumn
@@ -987,10 +991,6 @@ Partial Public Class bdSIGAP_DataSet
         Private columnObservaciones As Global.System.Data.DataColumn
         
         Private columnTipoCarrera As Global.System.Data.DataColumn
-        
-        Private columnNombre As Global.System.Data.DataColumn
-        
-        Private columnMetros As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1053,6 +1053,22 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NombreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombre
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MetrosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMetros
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property EstadoColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnEstado
@@ -1088,22 +1104,6 @@ Partial Public Class bdSIGAP_DataSet
         Public ReadOnly Property TipoCarreraColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTipoCarrera
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property NombreColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnNombre
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property MetrosColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnMetros
             End Get
         End Property
         
@@ -1144,9 +1144,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtb_CarrerasRow(ByVal parenttb_JornadasRowBytb_Jornadastb_Carreras As tb_JornadasRow, ByVal NroCarrera As Integer, ByVal Estado As Integer, ByVal PorcentajeCasa As Integer, ByVal PorcentajeUltimoRemate As Integer, ByVal Observaciones As String, ByVal TipoCarrera As String, ByVal Nombre As String, ByVal Metros As Integer) As tb_CarrerasRow
+        Public Overloads Function Addtb_CarrerasRow(ByVal parenttb_JornadasRowBytb_Jornadastb_Carreras As tb_JornadasRow, ByVal NroCarrera As Integer, ByVal Nombre As String, ByVal Metros As Integer, ByVal Estado As Integer, ByVal PorcentajeCasa As Integer, ByVal PorcentajeUltimoRemate As Integer, ByVal Observaciones As String, ByVal TipoCarrera As String) As tb_CarrerasRow
             Dim rowtb_CarrerasRow As tb_CarrerasRow = CType(Me.NewRow,tb_CarrerasRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, NroCarrera, Estado, PorcentajeCasa, PorcentajeUltimoRemate, Observaciones, TipoCarrera, Nombre, Metros}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, NroCarrera, Nombre, Metros, Estado, PorcentajeCasa, PorcentajeUltimoRemate, Observaciones, TipoCarrera}
             If (Not (parenttb_JornadasRowBytb_Jornadastb_Carreras) Is Nothing) Then
                 columnValuesArray(1) = parenttb_JornadasRowBytb_Jornadastb_Carreras(0)
             End If
@@ -1181,13 +1181,13 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnId = MyBase.Columns("Id")
             Me.columnIdJornada = MyBase.Columns("IdJornada")
             Me.columnNroCarrera = MyBase.Columns("NroCarrera")
+            Me.columnNombre = MyBase.Columns("Nombre")
+            Me.columnMetros = MyBase.Columns("Metros")
             Me.columnEstado = MyBase.Columns("Estado")
             Me.columnPorcentajeCasa = MyBase.Columns("PorcentajeCasa")
             Me.columnPorcentajeUltimoRemate = MyBase.Columns("PorcentajeUltimoRemate")
             Me.columnObservaciones = MyBase.Columns("Observaciones")
             Me.columnTipoCarrera = MyBase.Columns("TipoCarrera")
-            Me.columnNombre = MyBase.Columns("Nombre")
-            Me.columnMetros = MyBase.Columns("Metros")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1199,6 +1199,10 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnIdJornada)
             Me.columnNroCarrera = New Global.System.Data.DataColumn("NroCarrera", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNroCarrera)
+            Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombre)
+            Me.columnMetros = New Global.System.Data.DataColumn("Metros", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMetros)
             Me.columnEstado = New Global.System.Data.DataColumn("Estado", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEstado)
             Me.columnPorcentajeCasa = New Global.System.Data.DataColumn("PorcentajeCasa", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -1209,19 +1213,15 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnObservaciones)
             Me.columnTipoCarrera = New Global.System.Data.DataColumn("TipoCarrera", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTipoCarrera)
-            Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNombre)
-            Me.columnMetros = New Global.System.Data.DataColumn("Metros", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMetros)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
             Me.columnId.AutoIncrement = true
             Me.columnId.AutoIncrementSeed = -1
             Me.columnId.AutoIncrementStep = -1
             Me.columnId.AllowDBNull = false
             Me.columnId.Unique = true
+            Me.columnNombre.MaxLength = 255
             Me.columnObservaciones.MaxLength = 255
             Me.columnTipoCarrera.MaxLength = 255
-            Me.columnNombre.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3648,6 +3648,8 @@ Partial Public Class bdSIGAP_DataSet
     Partial Public Class VwTicketDataTable
         Inherits Global.System.Data.TypedTableBase(Of VwTicketRow)
         
+        Private columnIdDetalleRemate As Global.System.Data.DataColumn
+        
         Private columnNombre As Global.System.Data.DataColumn
         
         Private columnFecha As Global.System.Data.DataColumn
@@ -3690,8 +3692,6 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnApuC12 As Global.System.Data.DataColumn
         
-        Private columnIdDetalleRemate As Global.System.Data.DataColumn
-        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3726,6 +3726,14 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IdDetalleRemateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdDetalleRemate
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -3896,14 +3904,6 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property IdDetalleRemateColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnIdDetalleRemate
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3963,7 +3963,7 @@ Partial Public Class bdSIGAP_DataSet
                     ByVal ApuC11 As String,  _
                     ByVal ApuC12 As String) As VwTicketRow
             Dim rowVwTicketRow As VwTicketRow = CType(Me.NewRow,VwTicketRow)
-            Dim columnValuesArray() As Object = New Object() {Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12}
             rowVwTicketRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwTicketRow)
             Return rowVwTicketRow
@@ -3986,6 +3986,7 @@ Partial Public Class bdSIGAP_DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnIdDetalleRemate = MyBase.Columns("IdDetalleRemate")
             Me.columnNombre = MyBase.Columns("Nombre")
             Me.columnFecha = MyBase.Columns("Fecha")
             Me.columnNroCarrera = MyBase.Columns("NroCarrera")
@@ -4007,12 +4008,13 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnApuC10 = MyBase.Columns("ApuC10")
             Me.columnApuC11 = MyBase.Columns("ApuC11")
             Me.columnApuC12 = MyBase.Columns("ApuC12")
-            Me.columnIdDetalleRemate = MyBase.Columns("IdDetalleRemate")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
+            Me.columnIdDetalleRemate = New Global.System.Data.DataColumn("IdDetalleRemate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdDetalleRemate)
             Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombre)
             Me.columnFecha = New Global.System.Data.DataColumn("Fecha", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -4055,8 +4057,9 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnApuC11)
             Me.columnApuC12 = New Global.System.Data.DataColumn("ApuC12", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnApuC12)
-            Me.columnIdDetalleRemate = New Global.System.Data.DataColumn("IdDetalleRemate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnIdDetalleRemate)
+            Me.columnIdDetalleRemate.AutoIncrement = true
+            Me.columnIdDetalleRemate.AutoIncrementSeed = -1
+            Me.columnIdDetalleRemate.AutoIncrementStep = -1
             Me.columnNombre.MaxLength = 255
             Me.columnPalco.MaxLength = 255
             Me.columnCaballoNombre.MaxLength = 255
@@ -4085,9 +4088,6 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnApuC11.MaxLength = 536870910
             Me.columnApuC12.ReadOnly = true
             Me.columnApuC12.MaxLength = 536870910
-            Me.columnIdDetalleRemate.AutoIncrement = true
-            Me.columnIdDetalleRemate.AutoIncrementSeed = -1
-            Me.columnIdDetalleRemate.AutoIncrementStep = -1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4260,21 +4260,6 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property EsLlave() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tabletb_Caballos.EsLlaveColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'EsLlave' in table 'tb_Caballos' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletb_Caballos.EsLlaveColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Cuidador() As String
             Get
                 Try 
@@ -4305,6 +4290,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EsLlave() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletb_Caballos.EsLlaveColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'EsLlave' in table 'tb_Caballos' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletb_Caballos.EsLlaveColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCaballoNombreNull() As Boolean
             Return Me.IsNull(Me.tabletb_Caballos.CaballoNombreColumn)
         End Function
@@ -4313,18 +4313,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCaballoNombreNull()
             Me(Me.tabletb_Caballos.CaballoNombreColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsEsLlaveNull() As Boolean
-            Return Me.IsNull(Me.tabletb_Caballos.EsLlaveColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetEsLlaveNull()
-            Me(Me.tabletb_Caballos.EsLlaveColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4349,6 +4337,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetOrigenNull()
             Me(Me.tabletb_Caballos.OrigenColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsEsLlaveNull() As Boolean
+            Return Me.IsNull(Me.tabletb_Caballos.EsLlaveColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetEsLlaveNull()
+            Me(Me.tabletb_Caballos.EsLlaveColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4415,6 +4415,36 @@ Partial Public Class bdSIGAP_DataSet
             End Get
             Set
                 Me(Me.tabletb_Carreras.NroCarreraColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Nombre() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletb_Carreras.NombreColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nombre' in table 'tb_Carreras' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletb_Carreras.NombreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Metros() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletb_Carreras.MetrosColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Metros' in table 'tb_Carreras' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletb_Carreras.MetrosColumn) = value
             End Set
         End Property
         
@@ -4495,36 +4525,6 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Nombre() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tabletb_Carreras.NombreColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nombre' in table 'tb_Carreras' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletb_Carreras.NombreColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Metros() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tabletb_Carreras.MetrosColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Metros' in table 'tb_Carreras' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletb_Carreras.MetrosColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property tb_JornadasRow() As tb_JornadasRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("tb_Jornadastb_Carreras")),tb_JornadasRow)
@@ -4556,6 +4556,30 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNroCarreraNull()
             Me(Me.tabletb_Carreras.NroCarreraColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNombreNull() As Boolean
+            Return Me.IsNull(Me.tabletb_Carreras.NombreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNombreNull()
+            Me(Me.tabletb_Carreras.NombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMetrosNull() As Boolean
+            Return Me.IsNull(Me.tabletb_Carreras.MetrosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMetrosNull()
+            Me(Me.tabletb_Carreras.MetrosColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4616,30 +4640,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetTipoCarreraNull()
             Me(Me.tabletb_Carreras.TipoCarreraColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsNombreNull() As Boolean
-            Return Me.IsNull(Me.tabletb_Carreras.NombreColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetNombreNull()
-            Me(Me.tabletb_Carreras.NombreColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsMetrosNull() As Boolean
-            Return Me.IsNull(Me.tabletb_Carreras.MetrosColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetMetrosNull()
-            Me(Me.tabletb_Carreras.MetrosColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5897,6 +5897,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property IdDetalleRemate() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwTicket.IdDetalleRemateColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdDetalleRemate' in table 'VwTicket' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwTicket.IdDetalleRemateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Nombre() As String
             Get
                 Try 
@@ -6212,18 +6227,15 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property IdDetalleRemate() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableVwTicket.IdDetalleRemateColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdDetalleRemate' in table 'VwTicket' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVwTicket.IdDetalleRemateColumn) = value
-            End Set
-        End Property
+        Public Function IsIdDetalleRemateNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.IdDetalleRemateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetIdDetalleRemateNull()
+            Me(Me.tableVwTicket.IdDetalleRemateColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -6475,18 +6487,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetApuC12Null()
             Me(Me.tableVwTicket.ApuC12Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsIdDetalleRemateNull() As Boolean
-            Return Me.IsNull(Me.tableVwTicket.IdDetalleRemateColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetIdDetalleRemateNull()
-            Me(Me.tableVwTicket.IdDetalleRemateColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -6982,56 +6982,56 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.DataSetTable = "tb_Caballos"
             tableMapping.ColumnMappings.Add("Id", "Id")
             tableMapping.ColumnMappings.Add("CaballoNombre", "CaballoNombre")
-            tableMapping.ColumnMappings.Add("EsLlave", "EsLlave")
             tableMapping.ColumnMappings.Add("Cuidador", "Cuidador")
             tableMapping.ColumnMappings.Add("Origen", "Origen")
+            tableMapping.ColumnMappings.Add("EsLlave", "EsLlave")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tb_Caballos` WHERE ((`Id` = ?) AND ((? = 1 AND `CaballoNombre` IS NU"& _ 
-                "LL) OR (`CaballoNombre` = ?)) AND ((? = 1 AND `EsLlave` IS NULL) OR (`EsLlave` ="& _ 
-                " ?)) AND ((? = 1 AND `Cuidador` IS NULL) OR (`Cuidador` = ?)) AND ((? = 1 AND `O"& _ 
-                "rigen` IS NULL) OR (`Origen` = ?)))"
+                "LL) OR (`CaballoNombre` = ?)) AND ((? = 1 AND `Cuidador` IS NULL) OR (`Cuidador`"& _ 
+                " = ?)) AND ((? = 1 AND `Origen` IS NULL) OR (`Origen` = ?)) AND ((? = 1 AND `EsL"& _ 
+                "lave` IS NULL) OR (`EsLlave` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CaballoNombre", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CaballoNombre", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CaballoNombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CaballoNombre", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_EsLlave", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cuidador", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuidador", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cuidador", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuidador", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Origen", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Origen", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Origen", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Origen", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_EsLlave", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_Caballos` (`CaballoNombre`, `EsLlave`, `Cuidador`, `Origen`) VALU"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_Caballos` (`CaballoNombre`, `Cuidador`, `Origen`, `EsLlave`) VALU"& _ 
                 "ES (?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CaballoNombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CaballoNombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cuidador", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuidador", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Origen", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Origen", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_Caballos` SET `CaballoNombre` = ?, `EsLlave` = ?, `Cuidador` = ?, `Ori"& _ 
-                "gen` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `CaballoNombre` IS NULL) OR (`Caballo"& _ 
-                "Nombre` = ?)) AND ((? = 1 AND `EsLlave` IS NULL) OR (`EsLlave` = ?)) AND ((? = 1"& _ 
-                " AND `Cuidador` IS NULL) OR (`Cuidador` = ?)) AND ((? = 1 AND `Origen` IS NULL) "& _ 
-                "OR (`Origen` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_Caballos` SET `CaballoNombre` = ?, `Cuidador` = ?, `Origen` = ?, `EsLl"& _ 
+                "ave` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `CaballoNombre` IS NULL) OR (`Caballo"& _ 
+                "Nombre` = ?)) AND ((? = 1 AND `Cuidador` IS NULL) OR (`Cuidador` = ?)) AND ((? ="& _ 
+                " 1 AND `Origen` IS NULL) OR (`Origen` = ?)) AND ((? = 1 AND `EsLlave` IS NULL) O"& _ 
+                "R (`EsLlave` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CaballoNombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CaballoNombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cuidador", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuidador", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Origen", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Origen", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CaballoNombre", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CaballoNombre", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CaballoNombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CaballoNombre", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_EsLlave", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cuidador", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuidador", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cuidador", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuidador", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Origen", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Origen", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Origen", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Origen", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_EsLlave", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_EsLlave", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EsLlave", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7047,7 +7047,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Id, CaballoNombre, EsLlave, Cuidador, Origen FROM tb_Caballos"
+            Me._commandCollection(0).CommandText = "SELECT Id, CaballoNombre, Cuidador, Origen, EsLlave FROM tb_Caballos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7107,7 +7107,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_CaballoNombre As String, ByVal Original_EsLlave As Boolean, ByVal Original_Cuidador As String, ByVal Original_Origen As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_CaballoNombre As String, ByVal Original_Cuidador As String, ByVal Original_Origen As String, ByVal Original_EsLlave As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             If (Original_CaballoNombre Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -7116,22 +7116,22 @@ Namespace bdSIGAP_DataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_CaballoNombre,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_EsLlave,Boolean)
             If (Original_Cuidador Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Cuidador,String)
+            End If
+            If (Original_Origen Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Cuidador,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Origen,String)
             End If
-            If (Original_Origen Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Origen,String)
-            End If
+            Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_EsLlave,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7151,23 +7151,23 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal CaballoNombre As String, ByVal EsLlave As Boolean, ByVal Cuidador As String, ByVal Origen As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal CaballoNombre As String, ByVal Cuidador As String, ByVal Origen As String, ByVal EsLlave As Boolean) As Integer
             If (CaballoNombre Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(CaballoNombre,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(EsLlave,Boolean)
             If (Cuidador Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Cuidador,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Cuidador,String)
             End If
             If (Origen Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Origen,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Origen,String)
             End If
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(EsLlave,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7187,23 +7187,23 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal CaballoNombre As String, ByVal EsLlave As Boolean, ByVal Cuidador As String, ByVal Origen As String, ByVal Original_Id As Integer, ByVal Original_CaballoNombre As String, ByVal Original_EsLlave As Boolean, ByVal Original_Cuidador As String, ByVal Original_Origen As String) As Integer
+        Public Overloads Overridable Function Update(ByVal CaballoNombre As String, ByVal Cuidador As String, ByVal Origen As String, ByVal EsLlave As Boolean, ByVal Original_Id As Integer, ByVal Original_CaballoNombre As String, ByVal Original_Cuidador As String, ByVal Original_Origen As String, ByVal Original_EsLlave As Boolean) As Integer
             If (CaballoNombre Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CaballoNombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(EsLlave,Boolean)
             If (Cuidador Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Cuidador,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Cuidador,String)
             End If
             If (Origen Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Origen,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Origen,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(EsLlave,Boolean)
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_Id,Integer)
             If (Original_CaballoNombre Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
@@ -7212,22 +7212,22 @@ Namespace bdSIGAP_DataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_CaballoNombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_EsLlave,Boolean)
             If (Original_Cuidador Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Cuidador,String)
+            End If
+            If (Original_Origen Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Cuidador,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Origen,String)
             End If
-            If (Original_Origen Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Origen,String)
-            End If
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_EsLlave,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7374,30 +7374,34 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("Id", "Id")
             tableMapping.ColumnMappings.Add("IdJornada", "IdJornada")
             tableMapping.ColumnMappings.Add("NroCarrera", "NroCarrera")
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre")
+            tableMapping.ColumnMappings.Add("Metros", "Metros")
             tableMapping.ColumnMappings.Add("Estado", "Estado")
             tableMapping.ColumnMappings.Add("PorcentajeCasa", "PorcentajeCasa")
             tableMapping.ColumnMappings.Add("PorcentajeUltimoRemate", "PorcentajeUltimoRemate")
             tableMapping.ColumnMappings.Add("Observaciones", "Observaciones")
             tableMapping.ColumnMappings.Add("TipoCarrera", "TipoCarrera")
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre")
-            tableMapping.ColumnMappings.Add("Metros", "Metros")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tb_Carreras` WHERE ((`Id` = ?) AND ((? = 1 AND `IdJornada` IS NULL) "& _ 
                 "OR (`IdJornada` = ?)) AND ((? = 1 AND `NroCarrera` IS NULL) OR (`NroCarrera` = ?"& _ 
-                ")) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)) AND ((? = 1 AND `Porcent"& _ 
-                "ajeCasa` IS NULL) OR (`PorcentajeCasa` = ?)) AND ((? = 1 AND `PorcentajeUltimoRe"& _ 
-                "mate` IS NULL) OR (`PorcentajeUltimoRemate` = ?)) AND ((? = 1 AND `Observaciones"& _ 
-                "` IS NULL) OR (`Observaciones` = ?)) AND ((? = 1 AND `TipoCarrera` IS NULL) OR ("& _ 
-                "`TipoCarrera` = ?)) AND ((? = 1 AND `Metros` IS NULL) OR (`Metros` = ?)) AND ((?"& _ 
-                " = 1 AND `Nombre` IS NULL) OR (`Nombre` = ?)))"
+                ")) AND ((? = 1 AND `Nombre` IS NULL) OR (`Nombre` = ?)) AND ((? = 1 AND `Metros`"& _ 
+                " IS NULL) OR (`Metros` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)"& _ 
+                ") AND ((? = 1 AND `PorcentajeCasa` IS NULL) OR (`PorcentajeCasa` = ?)) AND ((? ="& _ 
+                " 1 AND `PorcentajeUltimoRemate` IS NULL) OR (`PorcentajeUltimoRemate` = ?)) AND "& _ 
+                "((? = 1 AND `Observaciones` IS NULL) OR (`Observaciones` = ?)) AND ((? = 1 AND `"& _ 
+                "TipoCarrera` IS NULL) OR (`TipoCarrera` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdJornada", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdJornada", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdJornada", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdJornada", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_NroCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NroCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroCarrera", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Nombre", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Estado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Estado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PorcentajeCasa", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PorcentajeCasa", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -7408,52 +7412,52 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Observaciones", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Observaciones", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TipoCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TipoCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TipoCarrera", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TipoCarrera", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Nombre", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_Carreras` (`IdJornada`, `NroCarrera`, `Estado`, `PorcentajeCasa`,"& _ 
-                " `PorcentajeUltimoRemate`, `Observaciones`, `TipoCarrera`, `Metros`, `Nombre`) V"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_Carreras` (`IdJornada`, `NroCarrera`, `Nombre`, `Metros`, `Estado"& _ 
+                "`, `PorcentajeCasa`, `PorcentajeUltimoRemate`, `Observaciones`, `TipoCarrera`) V"& _ 
                 "ALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdJornada", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdJornada", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NroCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Estado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PorcentajeCasa", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PorcentajeCasa", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PorcentajeUltimoRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PorcentajeUltimoRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Observaciones", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Observaciones", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TipoCarrera", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TipoCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_Carreras` SET `IdJornada` = ?, `NroCarrera` = ?, `Estado` = ?, `Porcen"& _ 
-                "tajeCasa` = ?, `PorcentajeUltimoRemate` = ?, `Observaciones` = ?, `TipoCarrera` "& _ 
-                "= ?, `Metros` = ?, `Nombre` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `IdJornada` IS"& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_Carreras` SET `IdJornada` = ?, `NroCarrera` = ?, `Nombre` = ?, `Metros"& _ 
+                "` = ?, `Estado` = ?, `PorcentajeCasa` = ?, `PorcentajeUltimoRemate` = ?, `Observ"& _ 
+                "aciones` = ?, `TipoCarrera` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `IdJornada` IS"& _ 
                 " NULL) OR (`IdJornada` = ?)) AND ((? = 1 AND `NroCarrera` IS NULL) OR (`NroCarre"& _ 
-                "ra` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)) AND ((? = 1 AND `"& _ 
-                "PorcentajeCasa` IS NULL) OR (`PorcentajeCasa` = ?)) AND ((? = 1 AND `PorcentajeU"& _ 
-                "ltimoRemate` IS NULL) OR (`PorcentajeUltimoRemate` = ?)) AND ((? = 1 AND `Observ"& _ 
-                "aciones` IS NULL) OR (`Observaciones` = ?)) AND ((? = 1 AND `TipoCarrera` IS NUL"& _ 
-                "L) OR (`TipoCarrera` = ?)) AND ((? = 1 AND `Metros` IS NULL) OR (`Metros` = ?)) "& _ 
-                "AND ((? = 1 AND `Nombre` IS NULL) OR (`Nombre` = ?)))"
+                "ra` = ?)) AND ((? = 1 AND `Nombre` IS NULL) OR (`Nombre` = ?)) AND ((? = 1 AND `"& _ 
+                "Metros` IS NULL) OR (`Metros` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estad"& _ 
+                "o` = ?)) AND ((? = 1 AND `PorcentajeCasa` IS NULL) OR (`PorcentajeCasa` = ?)) AN"& _ 
+                "D ((? = 1 AND `PorcentajeUltimoRemate` IS NULL) OR (`PorcentajeUltimoRemate` = ?"& _ 
+                ")) AND ((? = 1 AND `Observaciones` IS NULL) OR (`Observaciones` = ?)) AND ((? = "& _ 
+                "1 AND `TipoCarrera` IS NULL) OR (`TipoCarrera` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdJornada", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdJornada", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NroCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Estado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PorcentajeCasa", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PorcentajeCasa", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PorcentajeUltimoRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PorcentajeUltimoRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Observaciones", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Observaciones", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TipoCarrera", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TipoCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdJornada", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdJornada", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdJornada", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdJornada", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_NroCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NroCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroCarrera", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Nombre", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Estado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Estado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PorcentajeCasa", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PorcentajeCasa", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -7464,10 +7468,6 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Observaciones", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Observaciones", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TipoCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TipoCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TipoCarrera", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TipoCarrera", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Metros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metros", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Nombre", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7483,8 +7483,8 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Id, IdJornada, NroCarrera, Estado, PorcentajeCasa, PorcentajeUltimoRemate,"& _ 
-                " Observaciones, TipoCarrera, Metros, Nombre FROM tb_Carreras"
+            Me._commandCollection(0).CommandText = "SELECT Id, IdJornada, NroCarrera, Nombre, Metros, Estado, PorcentajeCasa, Porcent"& _ 
+                "ajeUltimoRemate, Observaciones, TipoCarrera FROM tb_Carreras"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7544,55 +7544,55 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdJornada As Integer, ByVal Original_NroCarrera As Integer, ByVal Original_Estado As Global.System.Nullable(Of Integer), ByVal Original_PorcentajeCasa As Integer, ByVal Original_PorcentajeUltimoRemate As Global.System.Nullable(Of Integer), ByVal Original_Observaciones As String, ByVal Original_TipoCarrera As String, ByVal Original_Metros As Global.System.Nullable(Of Integer), ByVal Original_Nombre As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdJornada As Integer, ByVal Original_NroCarrera As Integer, ByVal Original_Nombre As String, ByVal Original_Metros As Global.System.Nullable(Of Integer), ByVal Original_Estado As Global.System.Nullable(Of Integer), ByVal Original_PorcentajeCasa As Integer, ByVal Original_PorcentajeUltimoRemate As Global.System.Nullable(Of Integer), ByVal Original_Observaciones As String, ByVal Original_TipoCarrera As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_IdJornada,Integer)
             Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
             Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_NroCarrera,Integer)
-            If (Original_Estado.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Estado.Value,Integer)
-            Else
+            If (Original_Nombre Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Nombre,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_PorcentajeCasa,Integer)
-            If (Original_PorcentajeUltimoRemate.HasValue = true) Then
+            If (Original_Metros.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Metros.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Estado.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_PorcentajeUltimoRemate.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Estado.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            If (Original_Observaciones Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_PorcentajeCasa,Integer)
+            If (Original_PorcentajeUltimoRemate.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_PorcentajeUltimoRemate.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Observaciones,String)
-            End If
-            If (Original_TipoCarrera Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_TipoCarrera,String)
             End If
-            If (Original_Metros.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Metros.Value,Integer)
-            Else
+            If (Original_Observaciones Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Observaciones,String)
             End If
-            If (Original_Nombre Is Nothing) Then
+            If (Original_TipoCarrera Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Nombre,String)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_TipoCarrera,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -7613,39 +7613,39 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IdJornada As Integer, ByVal NroCarrera As Integer, ByVal Estado As Global.System.Nullable(Of Integer), ByVal PorcentajeCasa As Integer, ByVal PorcentajeUltimoRemate As Global.System.Nullable(Of Integer), ByVal Observaciones As String, ByVal TipoCarrera As String, ByVal Metros As Global.System.Nullable(Of Integer), ByVal Nombre As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal IdJornada As Integer, ByVal NroCarrera As Integer, ByVal Nombre As String, ByVal Metros As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Integer), ByVal PorcentajeCasa As Integer, ByVal PorcentajeUltimoRemate As Global.System.Nullable(Of Integer), ByVal Observaciones As String, ByVal TipoCarrera As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdJornada,Integer)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(NroCarrera,Integer)
-            If (Estado.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Estado.Value,Integer)
-            Else
+            If (Nombre Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Nombre,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(PorcentajeCasa,Integer)
-            If (PorcentajeUltimoRemate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(PorcentajeUltimoRemate.Value,Integer)
+            If (Metros.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Metros.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Estado.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Estado.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (Observaciones Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Me.Adapter.InsertCommand.Parameters(5).Value = CType(PorcentajeCasa,Integer)
+            If (PorcentajeUltimoRemate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(PorcentajeUltimoRemate.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Observaciones,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Observaciones Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Observaciones,String)
             End If
             If (TipoCarrera Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(TipoCarrera,String)
-            End If
-            If (Metros.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Metros.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (Nombre Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Nombre,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(TipoCarrera,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -7669,104 +7669,104 @@ Namespace bdSIGAP_DataSetTableAdapters
         Public Overloads Overridable Function Update( _
                     ByVal IdJornada As Integer,  _
                     ByVal NroCarrera As Integer,  _
+                    ByVal Nombre As String,  _
+                    ByVal Metros As Global.System.Nullable(Of Integer),  _
                     ByVal Estado As Global.System.Nullable(Of Integer),  _
                     ByVal PorcentajeCasa As Integer,  _
                     ByVal PorcentajeUltimoRemate As Global.System.Nullable(Of Integer),  _
                     ByVal Observaciones As String,  _
                     ByVal TipoCarrera As String,  _
-                    ByVal Metros As Global.System.Nullable(Of Integer),  _
-                    ByVal Nombre As String,  _
                     ByVal Original_Id As Integer,  _
                     ByVal Original_IdJornada As Integer,  _
                     ByVal Original_NroCarrera As Integer,  _
+                    ByVal Original_Nombre As String,  _
+                    ByVal Original_Metros As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Estado As Global.System.Nullable(Of Integer),  _
                     ByVal Original_PorcentajeCasa As Integer,  _
                     ByVal Original_PorcentajeUltimoRemate As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Observaciones As String,  _
-                    ByVal Original_TipoCarrera As String,  _
-                    ByVal Original_Metros As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Nombre As String) As Integer
+                    ByVal Original_TipoCarrera As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdJornada,Integer)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(NroCarrera,Integer)
-            If (Estado.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Estado.Value,Integer)
-            Else
+            If (Nombre Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Nombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(PorcentajeCasa,Integer)
-            If (PorcentajeUltimoRemate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(PorcentajeUltimoRemate.Value,Integer)
+            If (Metros.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Metros.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Estado.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Estado.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (Observaciones Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(PorcentajeCasa,Integer)
+            If (PorcentajeUltimoRemate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(PorcentajeUltimoRemate.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Observaciones,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Observaciones Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Observaciones,String)
             End If
             If (TipoCarrera Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(TipoCarrera,String)
-            End If
-            If (Metros.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Metros.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (Nombre Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Nombre,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(TipoCarrera,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Id,Integer)
             Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
             Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_IdJornada,Integer)
             Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
             Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_NroCarrera,Integer)
-            If (Original_Estado.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Estado.Value,Integer)
-            Else
+            If (Original_Nombre Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Nombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_PorcentajeCasa,Integer)
-            If (Original_PorcentajeUltimoRemate.HasValue = true) Then
+            If (Original_Metros.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Metros.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Estado.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_PorcentajeUltimoRemate.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Estado.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            If (Original_Observaciones Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_PorcentajeCasa,Integer)
+            If (Original_PorcentajeUltimoRemate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_PorcentajeUltimoRemate.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Observaciones,String)
-            End If
-            If (Original_TipoCarrera Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_TipoCarrera,String)
             End If
-            If (Original_Metros.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Metros.Value,Integer)
-            Else
+            If (Original_Observaciones Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Observaciones,String)
             End If
-            If (Original_Nombre Is Nothing) Then
+            If (Original_TipoCarrera Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Nombre,String)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_TipoCarrera,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10817,6 +10817,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "VwTicket"
+            tableMapping.ColumnMappings.Add("IdDetalleRemate", "IdDetalleRemate")
             tableMapping.ColumnMappings.Add("Nombre", "Nombre")
             tableMapping.ColumnMappings.Add("Fecha", "Fecha")
             tableMapping.ColumnMappings.Add("NroCarrera", "NroCarrera")
@@ -10838,7 +10839,6 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("ApuC10", "ApuC10")
             tableMapping.ColumnMappings.Add("ApuC11", "ApuC11")
             tableMapping.ColumnMappings.Add("ApuC12", "ApuC12")
-            tableMapping.ColumnMappings.Add("IdDetalleRemate", "IdDetalleRemate")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -10855,9 +10855,9 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuest"& _ 
-                "a, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, Ap"& _ 
-                "uC9, ApuC10, ApuC11, ApuC12, IdDetalleRemate FROM VwTicket"
+            Me._commandCollection(0).CommandText = "SELECT IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNomb"& _ 
+                "re, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6,"& _ 
+                " ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12 FROM VwTicket"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

@@ -57,18 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""D:\GDrive\SIM REBORN\SIGAP\bdSIGAP"& _ 
-            "_be.accdb""")>  _
-        Public ReadOnly Property bdSIGAP_beConnectionString() As String
-            Get
-                Return CType(Me("bdSIGAP_beConnectionString"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\bdSIGAP_be.accdb")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\bd\bdSIGAP_be.accdb"& _ 
+            "")>  _
         Public ReadOnly Property bdSIGAP_ConnectionString() As String
             Get
                 Return CType(Me("bdSIGAP_ConnectionString"),String)
