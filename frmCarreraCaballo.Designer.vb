@@ -27,19 +27,17 @@ Partial Class frmCarreraCaballo
         Me.TbJornadasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cbTipo = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txMetros = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.nCarrera = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txNombre = New System.Windows.Forms.TextBox()
         Me.nProcentajeCasa = New System.Windows.Forms.NumericUpDown()
-        Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TableAdapterManagerCarrerasCaballos = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
-        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
         Me.agregarCaballo = New System.Windows.Forms.Button()
         Me.nbCaballo1 = New System.Windows.Forms.NumericUpDown()
         Me.nbCaballo2 = New System.Windows.Forms.NumericUpDown()
@@ -47,15 +45,6 @@ Partial Class frmCarreraCaballo
         Me.Tb_CaballosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo2 = New System.Windows.Forms.ComboBox()
         Me.Tb_CaballosBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
-        Me.Tb_CaballosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource6 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosBindingSource9 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.nbCaballo3 = New System.Windows.Forms.NumericUpDown()
         Me.nbCaballo4 = New System.Windows.Forms.NumericUpDown()
@@ -66,39 +55,41 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo9 = New System.Windows.Forms.NumericUpDown()
         Me.nbCaballo10 = New System.Windows.Forms.NumericUpDown()
         Me.cbCaballo3 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo4 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo5 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo6 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource6 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo7 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo8 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo9 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource9 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCaballo10 = New System.Windows.Forms.ComboBox()
         Me.Tb_CaballosBindingSource10 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.Tb_CaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
         Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txMetros = New System.Windows.Forms.TextBox()
+        Me.Tb_CarrerasCaballosTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
+        Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.TbJornadasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CaballosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CaballosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,8 +98,17 @@ Partial Class frmCarreraCaballo
         CType(Me.nbCaballo8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nbCaballo10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CaballosBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cbJornada
@@ -143,10 +143,6 @@ Partial Class frmCarreraCaballo
         Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Jornada:"
-        '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
         '
         'Label2
         '
@@ -209,6 +205,23 @@ Partial Class frmCarreraCaballo
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "General"
         '
+        'txMetros
+        '
+        Me.txMetros.Location = New System.Drawing.Point(88, 125)
+        Me.txMetros.Name = "txMetros"
+        Me.txMetros.Size = New System.Drawing.Size(100, 20)
+        Me.txMetros.TabIndex = 18
+        Me.txMetros.Text = "0"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(40, 128)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(42, 13)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Metros:"
+        '
         'nCarrera
         '
         Me.nCarrera.Location = New System.Drawing.Point(88, 63)
@@ -240,29 +253,6 @@ Partial Class frmCarreraCaballo
         Me.nProcentajeCasa.Size = New System.Drawing.Size(120, 20)
         Me.nProcentajeCasa.TabIndex = 13
         Me.nProcentajeCasa.Value = New Decimal(New Integer() {10, 0, 0, 0})
-        '
-        'TbCarrerasCaballosBindingSource
-        '
-        Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
-        Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'TableAdapterManagerCarrerasCaballos
-        '
-        Me.TableAdapterManagerCarrerasCaballos.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManagerCarrerasCaballos.tb_CaballosTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_CarrerasCaballosTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_CarrerasTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_DetalleRematesTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
-        Me.TableAdapterManagerCarrerasCaballos.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_RematesTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Tb_CaballosTableAdapter
-        '
-        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
         '
         'agregarCaballo
         '
@@ -309,6 +299,7 @@ Partial Class frmCarreraCaballo
         '
         'cbCaballo2
         '
+        Me.cbCaballo2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo2.DataSource = Me.Tb_CaballosBindingSource2
         Me.cbCaballo2.DisplayMember = "CaballoNombre"
@@ -323,50 +314,6 @@ Partial Class frmCarreraCaballo
         '
         Me.Tb_CaballosBindingSource2.DataMember = "tb_Caballos"
         Me.Tb_CaballosBindingSource2.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource
-        '
-        Me.Tb_CaballosBindingSource.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosTableAdapter1
-        '
-        Me.Tb_CaballosTableAdapter1.ClearBeforeFill = True
-        '
-        'Tb_CaballosBindingSource3
-        '
-        Me.Tb_CaballosBindingSource3.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource3.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource4
-        '
-        Me.Tb_CaballosBindingSource4.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource4.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource5
-        '
-        Me.Tb_CaballosBindingSource5.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource5.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource6
-        '
-        Me.Tb_CaballosBindingSource6.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource6.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource7
-        '
-        Me.Tb_CaballosBindingSource7.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource7.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource8
-        '
-        Me.Tb_CaballosBindingSource8.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource8.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosBindingSource9
-        '
-        Me.Tb_CaballosBindingSource9.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource9.DataSource = Me.BdSIGAP_DataSet
         '
         'Button1
         '
@@ -451,6 +398,7 @@ Partial Class frmCarreraCaballo
         '
         'cbCaballo3
         '
+        Me.cbCaballo3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo3.DataSource = Me.Tb_CaballosBindingSource3
         Me.cbCaballo3.DisplayMember = "CaballoNombre"
@@ -462,8 +410,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo3.ValueMember = "Id"
         Me.cbCaballo3.Visible = False
         '
+        'Tb_CaballosBindingSource3
+        '
+        Me.Tb_CaballosBindingSource3.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource3.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo4
         '
+        Me.cbCaballo4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo4.DataSource = Me.Tb_CaballosBindingSource4
         Me.cbCaballo4.DisplayMember = "CaballoNombre"
@@ -475,8 +429,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo4.ValueMember = "Id"
         Me.cbCaballo4.Visible = False
         '
+        'Tb_CaballosBindingSource4
+        '
+        Me.Tb_CaballosBindingSource4.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource4.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo5
         '
+        Me.cbCaballo5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo5.DataSource = Me.Tb_CaballosBindingSource5
         Me.cbCaballo5.DisplayMember = "CaballoNombre"
@@ -488,8 +448,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo5.ValueMember = "Id"
         Me.cbCaballo5.Visible = False
         '
+        'Tb_CaballosBindingSource5
+        '
+        Me.Tb_CaballosBindingSource5.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource5.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo6
         '
+        Me.cbCaballo6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo6.DataSource = Me.Tb_CaballosBindingSource6
         Me.cbCaballo6.DisplayMember = "CaballoNombre"
@@ -501,8 +467,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo6.ValueMember = "Id"
         Me.cbCaballo6.Visible = False
         '
+        'Tb_CaballosBindingSource6
+        '
+        Me.Tb_CaballosBindingSource6.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource6.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo7
         '
+        Me.cbCaballo7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo7.DataSource = Me.Tb_CaballosBindingSource7
         Me.cbCaballo7.DisplayMember = "CaballoNombre"
@@ -514,8 +486,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo7.ValueMember = "Id"
         Me.cbCaballo7.Visible = False
         '
+        'Tb_CaballosBindingSource7
+        '
+        Me.Tb_CaballosBindingSource7.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource7.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo8
         '
+        Me.cbCaballo8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo8.DataSource = Me.Tb_CaballosBindingSource8
         Me.cbCaballo8.DisplayMember = "CaballoNombre"
@@ -527,8 +505,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo8.ValueMember = "Id"
         Me.cbCaballo8.Visible = False
         '
+        'Tb_CaballosBindingSource8
+        '
+        Me.Tb_CaballosBindingSource8.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource8.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo9
         '
+        Me.cbCaballo9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo9.DataSource = Me.Tb_CaballosBindingSource9
         Me.cbCaballo9.DisplayMember = "CaballoNombre"
@@ -540,8 +524,14 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo9.ValueMember = "Id"
         Me.cbCaballo9.Visible = False
         '
+        'Tb_CaballosBindingSource9
+        '
+        Me.Tb_CaballosBindingSource9.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource9.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCaballo10
         '
+        Me.cbCaballo10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cbCaballo10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cbCaballo10.DataSource = Me.Tb_CaballosBindingSource10
         Me.cbCaballo10.DisplayMember = "CaballoNombre"
@@ -576,6 +566,23 @@ Partial Class frmCarreraCaballo
         Me.Button3.Text = "Crear Carrera"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Tb_JornadasTableAdapter
+        '
+        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CaballosBindingSource
+        '
+        Me.Tb_CaballosBindingSource.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosTableAdapter1
+        '
+        Me.Tb_CaballosTableAdapter1.ClearBeforeFill = True
+        '
         'TbCarrerasBindingSource
         '
         Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
@@ -589,7 +596,7 @@ Partial Class frmCarreraCaballo
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter1
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
@@ -599,22 +606,14 @@ Partial Class frmCarreraCaballo
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Label6
+        'Tb_CarrerasCaballosTableAdapter1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(40, 128)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 13)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "Metros:"
+        Me.Tb_CarrerasCaballosTableAdapter1.ClearBeforeFill = True
         '
-        'txMetros
+        'TbCarrerasCaballosBindingSource
         '
-        Me.txMetros.Location = New System.Drawing.Point(88, 125)
-        Me.txMetros.Name = "txMetros"
-        Me.txMetros.Size = New System.Drawing.Size(100, 20)
-        Me.txMetros.TabIndex = 18
-        Me.txMetros.Text = "0"
+        Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
+        Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'frmCarreraCaballo
         '
@@ -654,19 +653,10 @@ Partial Class frmCarreraCaballo
         Me.GroupBox1.PerformLayout()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CaballosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CaballosBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -675,8 +665,17 @@ Partial Class frmCarreraCaballo
         CType(Me.nbCaballo8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nbCaballo10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CaballosBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -690,11 +689,9 @@ Partial Class frmCarreraCaballo
     Friend WithEvents cbTipo As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents nProcentajeCasa As NumericUpDown
-    Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
     Friend WithEvents nCarrera As NumericUpDown
     Friend WithEvents Label3 As Label
     Friend WithEvents txNombre As TextBox
-    Friend WithEvents TableAdapterManagerCarrerasCaballos As bdSIGAP_DataSetTableAdapters.TableAdapterManager
     Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
     Friend WithEvents agregarCaballo As Button
     Friend WithEvents nbCaballo1 As NumericUpDown
@@ -738,4 +735,6 @@ Partial Class frmCarreraCaballo
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
     Friend WithEvents Label6 As Label
     Friend WithEvents txMetros As TextBox
+    Friend WithEvents Tb_CarrerasCaballosTableAdapter1 As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
+    Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
 End Class

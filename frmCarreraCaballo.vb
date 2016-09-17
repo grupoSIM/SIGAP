@@ -201,9 +201,6 @@
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim nro As Integer
-
-
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
         filaCarrera = TbCarrerasBindingSource.AddNew()
@@ -219,18 +216,68 @@
 
         Me.Validate()
         Me.TbCarrerasBindingSource.EndEdit()
-        nro = Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
 
-        MessageBox.Show(nro, "SiGAp", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk)
+        ' MessageBox.Show(nro, "SiGAp", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk)'
 
         '#2 CARGAR CARRERA - CABALLO'
         Dim filaCaballo As DataRowView
-        filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
 
+        If cbCaballo1.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo1.SelectedValue
+        End If
+        If cbCaballo2.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo2.SelectedValue
+        End If
+        If cbCaballo3.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo3.SelectedValue
+        End If
+        If cbCaballo4.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo4.SelectedValue
+        End If
+        If cbCaballo5.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo5.SelectedValue
+        End If
+        If cbCaballo6.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo6.SelectedValue
+        End If
+        If cbCaballo7.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo7.SelectedValue
+        End If
+        If cbCaballo8.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo8.SelectedValue
+        End If
+        If cbCaballo9.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo9.SelectedValue
+        End If
+        If cbCaballo10.Visible = True Then
+            filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+            filaCaballo("IdCarrera") = Tb_CarrerasTableAdapter.maxId()
+            filaCaballo("IdCaballo") = cbCaballo10.SelectedValue
+        End If
 
-
-
+        Me.Validate()
+        Me.TbCarrerasCaballosBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
     End Sub
 
