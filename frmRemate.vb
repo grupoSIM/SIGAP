@@ -1,5 +1,7 @@
 ﻿Public Class frmRemate
     Private Sub frmRemate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Jornadas' table. You can move, or remove it, as needed.
+        Me.Tb_JornadasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Jornadas)
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_CarrerasCaballos' table. You can move, or remove it, as needed.
         Me.Tb_CarrerasCaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_CarrerasCaballos)
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Caballos' table. You can move, or remove it, as needed.
@@ -44,9 +46,14 @@
     End Function
 
     Private Function CargarRemates()
+        Dim jornada As DataRow
         Dim carrera As DataRow
 
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cmbCarrera.SelectedValue)
+        jornada = BdSIGAP_DataSet.tb_Jornadas.FindById(carrera("IdJornada"))
+
+        txtJornada.Text = jornada("Descripcion")
+        txtFecha.Text = jornada("Fecha")
         txtPorcentajeCasa.Text = carrera("PorcentajeUltimoRemate")
 
     End Function
