@@ -111,6 +111,18 @@
     <Compile Include="frmCaballo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCabCarreList.Designer.vb">
+      <DependentUpon>frmCabCarreList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCabCarreList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarrera.Designer.vb">
+      <DependentUpon>frmCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCarreraCaballo.Designer.vb">
       <DependentUpon>frmCarreraCaballo.vb</DependentUpon>
     </Compile>
@@ -178,6 +190,12 @@
   <ItemGroup>
     <EmbeddedResource Include="frmCaballo.resx">
       <DependentUpon>frmCaballo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCabCarreList.resx">
+      <DependentUpon>frmCabCarreList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarrera.resx">
+      <DependentUpon>frmCarrera.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarreraCaballo.resx">
       <DependentUpon>frmCarreraCaballo.vb</DependentUpon>

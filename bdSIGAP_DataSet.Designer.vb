@@ -1371,6 +1371,8 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnLuz As Global.System.Data.DataColumn
         
+        Private columnOrden As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1455,6 +1457,14 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OrdenColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOrden
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1491,9 +1501,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtb_CarrerasCaballosRow(ByVal parenttb_CarrerasRowBytb_Carrerastb_CarrerasCaballos As tb_CarrerasRow, ByVal parenttb_CaballosRowBytb_Caballostb_CarrerasCaballos As tb_CaballosRow, ByVal NoTomaNuevosRemates As Boolean, ByVal Posicion As Integer, ByVal Luz As Boolean) As tb_CarrerasCaballosRow
+        Public Overloads Function Addtb_CarrerasCaballosRow(ByVal parenttb_CarrerasRowBytb_Carrerastb_CarrerasCaballos As tb_CarrerasRow, ByVal parenttb_CaballosRowBytb_Caballostb_CarrerasCaballos As tb_CaballosRow, ByVal NoTomaNuevosRemates As Boolean, ByVal Posicion As Integer, ByVal Luz As Boolean, ByVal Orden As Integer) As tb_CarrerasCaballosRow
             Dim rowtb_CarrerasCaballosRow As tb_CarrerasCaballosRow = CType(Me.NewRow,tb_CarrerasCaballosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, NoTomaNuevosRemates, Posicion, Luz}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, NoTomaNuevosRemates, Posicion, Luz, Orden}
             If (Not (parenttb_CarrerasRowBytb_Carrerastb_CarrerasCaballos) Is Nothing) Then
                 columnValuesArray(1) = parenttb_CarrerasRowBytb_Carrerastb_CarrerasCaballos(0)
             End If
@@ -1534,6 +1544,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnNoTomaNuevosRemates = MyBase.Columns("NoTomaNuevosRemates")
             Me.columnPosicion = MyBase.Columns("Posicion")
             Me.columnLuz = MyBase.Columns("Luz")
+            Me.columnOrden = MyBase.Columns("Orden")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1551,6 +1562,8 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnPosicion)
             Me.columnLuz = New Global.System.Data.DataColumn("Luz", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLuz)
+            Me.columnOrden = New Global.System.Data.DataColumn("Orden", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOrden)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
             Me.columnId.AutoIncrement = true
             Me.columnId.AutoIncrementSeed = -1
@@ -1712,6 +1725,8 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnImportePremio As Global.System.Data.DataColumn
         
+        Private columnIncluido As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1820,6 +1835,14 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IncluidoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIncluido
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1856,9 +1879,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtb_DetalleRematesRow(ByVal parenttb_RematesRowBytb_Rematestb_DetalleRemates As tb_RematesRow, ByVal parenttb_CarrerasCaballosRowBytb_CarrerasCaballostb_DetalleRemates As tb_CarrerasCaballosRow, ByVal NroCaballo As Integer, ByVal Apostador As String, ByVal ImporteApuesta As Decimal, ByVal Luz As String, ByVal Fila As String, ByVal ImportePremio As Decimal) As tb_DetalleRematesRow
+        Public Overloads Function Addtb_DetalleRematesRow(ByVal parenttb_RematesRowBytb_Rematestb_DetalleRemates As tb_RematesRow, ByVal parenttb_CarrerasCaballosRowBytb_CarrerasCaballostb_DetalleRemates As tb_CarrerasCaballosRow, ByVal NroCaballo As Integer, ByVal Apostador As String, ByVal ImporteApuesta As Decimal, ByVal Luz As String, ByVal Fila As String, ByVal ImportePremio As Decimal, ByVal Incluido As Boolean) As tb_DetalleRematesRow
             Dim rowtb_DetalleRematesRow As tb_DetalleRematesRow = CType(Me.NewRow,tb_DetalleRematesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, NroCaballo, Apostador, ImporteApuesta, Luz, Fila, ImportePremio}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, NroCaballo, Apostador, ImporteApuesta, Luz, Fila, ImportePremio, Incluido}
             If (Not (parenttb_RematesRowBytb_Rematestb_DetalleRemates) Is Nothing) Then
                 columnValuesArray(1) = parenttb_RematesRowBytb_Rematestb_DetalleRemates(0)
             End If
@@ -1902,6 +1925,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnLuz = MyBase.Columns("Luz")
             Me.columnFila = MyBase.Columns("Fila")
             Me.columnImportePremio = MyBase.Columns("ImportePremio")
+            Me.columnIncluido = MyBase.Columns("Incluido")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1925,6 +1949,8 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnFila)
             Me.columnImportePremio = New Global.System.Data.DataColumn("ImportePremio", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnImportePremio)
+            Me.columnIncluido = New Global.System.Data.DataColumn("Incluido", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIncluido)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
             Me.columnId.AutoIncrement = true
             Me.columnId.AutoIncrementSeed = -1
@@ -3300,6 +3326,8 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnImportePremio As Global.System.Data.DataColumn
         
+        Private columnNroRemate As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3400,6 +3428,14 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NroRemateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNroRemate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3436,9 +3472,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtb_RematesRow(ByVal parenttb_CarrerasRowBytb_Carrerastb_Remates As tb_CarrerasRow, ByVal parenttb_PalcosRowBytb_Palcostb_Remates As tb_PalcosRow, ByVal PorcentajeCasa As Integer, ByVal Premio As Integer, ByVal parenttb_RematadoresRowBytb_Rematadorestb_Remates As tb_RematadoresRow, ByVal TotalApuestas As Integer, ByVal ImportePremio As Integer) As tb_RematesRow
+        Public Overloads Function Addtb_RematesRow(ByVal parenttb_CarrerasRowBytb_Carrerastb_Remates As tb_CarrerasRow, ByVal parenttb_PalcosRowBytb_Palcostb_Remates As tb_PalcosRow, ByVal PorcentajeCasa As Integer, ByVal Premio As Integer, ByVal parenttb_RematadoresRowBytb_Rematadorestb_Remates As tb_RematadoresRow, ByVal TotalApuestas As Integer, ByVal ImportePremio As Integer, ByVal NroRemate As Integer) As tb_RematesRow
             Dim rowtb_RematesRow As tb_RematesRow = CType(Me.NewRow,tb_RematesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, PorcentajeCasa, Premio, Nothing, TotalApuestas, ImportePremio}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, PorcentajeCasa, Premio, Nothing, TotalApuestas, ImportePremio, NroRemate}
             If (Not (parenttb_CarrerasRowBytb_Carrerastb_Remates) Is Nothing) Then
                 columnValuesArray(1) = parenttb_CarrerasRowBytb_Carrerastb_Remates(0)
             End If
@@ -3484,6 +3520,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnIdRematador = MyBase.Columns("IdRematador")
             Me.columnTotalApuestas = MyBase.Columns("TotalApuestas")
             Me.columnImportePremio = MyBase.Columns("ImportePremio")
+            Me.columnNroRemate = MyBase.Columns("NroRemate")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3505,6 +3542,8 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnTotalApuestas)
             Me.columnImportePremio = New Global.System.Data.DataColumn("ImportePremio", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnImportePremio)
+            Me.columnNroRemate = New Global.System.Data.DataColumn("NroRemate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNroRemate)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
             Me.columnId.AutoIncrement = true
             Me.columnId.AutoIncrementSeed = -1
@@ -4767,6 +4806,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Orden() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletb_CarrerasCaballos.OrdenColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Orden' in table 'tb_CarrerasCaballos' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletb_CarrerasCaballos.OrdenColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property tb_CaballosRow() As tb_CaballosRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("tb_Caballostb_CarrerasCaballos")),tb_CaballosRow)
@@ -4845,6 +4899,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetLuzNull()
             Me(Me.tabletb_CarrerasCaballos.LuzColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOrdenNull() As Boolean
+            Return Me.IsNull(Me.tabletb_CarrerasCaballos.OrdenColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOrdenNull()
+            Me(Me.tabletb_CarrerasCaballos.OrdenColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5006,6 +5072,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Incluido() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletb_DetalleRemates.IncluidoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Incluido' in table 'tb_DetalleRemates' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletb_DetalleRemates.IncluidoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property tb_CarrerasCaballosRow() As tb_CarrerasCaballosRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("tb_CarrerasCaballostb_DetalleRemates")),tb_CarrerasCaballosRow)
@@ -5120,6 +5201,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetImportePremioNull()
             Me(Me.tabletb_DetalleRemates.ImportePremioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsIncluidoNull() As Boolean
+            Return Me.IsNull(Me.tabletb_DetalleRemates.IncluidoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetIncluidoNull()
+            Me(Me.tabletb_DetalleRemates.IncluidoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -5754,6 +5847,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NroRemate() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletb_Remates.NroRemateColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NroRemate' in table 'tb_Remates' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletb_Remates.NroRemateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property tb_CarrerasRow() As tb_CarrerasRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("tb_Carrerastb_Remates")),tb_CarrerasRow)
@@ -5867,6 +5975,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetImportePremioNull()
             Me(Me.tabletb_Remates.ImportePremioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNroRemateNull() As Boolean
+            Return Me.IsNull(Me.tabletb_Remates.NroRemateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNroRemateNull()
+            Me(Me.tabletb_Remates.NroRemateColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7480,12 +7600,22 @@ Namespace bdSIGAP_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id, IdJornada, NroCarrera, Nombre, Metros, Estado, PorcentajeCasa, Porcent"& _ 
                 "ajeUltimoRemate, Observaciones, TipoCarrera FROM tb_Carreras"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        Id, IdJornada, NroCarrera, Nombre, Metros, Estado, PorcentajeCasa, "& _ 
+                "PorcentajeUltimoRemate, Observaciones, TipoCarrera"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tb_Carreras"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id = ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT        MAX(Id) AS Expr1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tb_Carreras"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7507,6 +7637,32 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As bdSIGAP_DataSet.tb_CarrerasDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As bdSIGAP_DataSet.tb_CarrerasDataTable = New bdSIGAP_DataSet.tb_CarrerasDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillById(ByVal dataTable As bdSIGAP_DataSet.tb_CarrerasDataTable, ByVal Id As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Id,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataById(ByVal Id As Integer) As bdSIGAP_DataSet.tb_CarrerasDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Id,Integer)
             Dim dataTable As bdSIGAP_DataSet.tb_CarrerasDataTable = New bdSIGAP_DataSet.tb_CarrerasDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -7782,6 +7938,32 @@ Namespace bdSIGAP_DataSetTableAdapters
                 End If
             End Try
         End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function maxId() As Global.System.Nullable(Of Integer)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(2)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return New Global.System.Nullable(Of Integer)()
+            Else
+                Return New Global.System.Nullable(Of Integer)(CType(returnValue,Integer))
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -7917,6 +8099,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("NoTomaNuevosRemates", "NoTomaNuevosRemates")
             tableMapping.ColumnMappings.Add("Posicion", "Posicion")
             tableMapping.ColumnMappings.Add("Luz", "Luz")
+            tableMapping.ColumnMappings.Add("Orden", "Orden")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -7924,7 +8107,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                 "S NULL) OR (`IdCarrera` = ?)) AND ((? = 1 AND `IdCaballo` IS NULL) OR (`IdCaball"& _ 
                 "o` = ?)) AND ((? = 1 AND `NoTomaNuevosRemates` IS NULL) OR (`NoTomaNuevosRemates"& _ 
                 "` = ?)) AND ((? = 1 AND `Posicion` IS NULL) OR (`Posicion` = ?)) AND ((? = 1 AND"& _ 
-                " `Luz` IS NULL) OR (`Luz` = ?)))"
+                " `Luz` IS NULL) OR (`Luz` = ?)) AND ((? = 1 AND `Orden` IS NULL) OR (`Orden` = ?"& _ 
+                ")))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -7937,30 +8121,35 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Posicion", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Posicion", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Luz", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Luz", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_CarrerasCaballos` (`IdCarrera`, `IdCaballo`, `NoTomaNuevosRemates"& _ 
-                "`, `Posicion`, `Luz`) VALUES (?, ?, ?, ?, ?)"
+                "`, `Posicion`, `Luz`, `Orden`) VALUES (?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCaballo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCaballo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NoTomaNuevosRemates", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NoTomaNuevosRemates", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Posicion", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Posicion", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Luz", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_CarrerasCaballos` SET `IdCarrera` = ?, `IdCaballo` = ?, `NoTomaNuevosR"& _ 
-                "emates` = ?, `Posicion` = ?, `Luz` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `IdCarr"& _ 
-                "era` IS NULL) OR (`IdCarrera` = ?)) AND ((? = 1 AND `IdCaballo` IS NULL) OR (`Id"& _ 
-                "Caballo` = ?)) AND ((? = 1 AND `NoTomaNuevosRemates` IS NULL) OR (`NoTomaNuevosR"& _ 
-                "emates` = ?)) AND ((? = 1 AND `Posicion` IS NULL) OR (`Posicion` = ?)) AND ((? ="& _ 
-                " 1 AND `Luz` IS NULL) OR (`Luz` = ?)))"
+                "emates` = ?, `Posicion` = ?, `Luz` = ?, `Orden` = ? WHERE ((`Id` = ?) AND ((? = "& _ 
+                "1 AND `IdCarrera` IS NULL) OR (`IdCarrera` = ?)) AND ((? = 1 AND `IdCaballo` IS "& _ 
+                "NULL) OR (`IdCaballo` = ?)) AND ((? = 1 AND `NoTomaNuevosRemates` IS NULL) OR (`"& _ 
+                "NoTomaNuevosRemates` = ?)) AND ((? = 1 AND `Posicion` IS NULL) OR (`Posicion` = "& _ 
+                "?)) AND ((? = 1 AND `Luz` IS NULL) OR (`Luz` = ?)) AND ((? = 1 AND `Orden` IS NU"& _ 
+                "LL) OR (`Orden` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCaballo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCaballo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NoTomaNuevosRemates", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NoTomaNuevosRemates", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Posicion", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Posicion", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Luz", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -7972,6 +8161,8 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Posicion", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Posicion", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Luz", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Luz", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7984,12 +8175,18 @@ Namespace bdSIGAP_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Id, IdCarrera, IdCaballo, NoTomaNuevosRemates, Posicion, Luz FROM tb_Carre"& _ 
-                "rasCaballos"
+            Me._commandCollection(0).CommandText = "SELECT Id, IdCarrera, IdCaballo, NoTomaNuevosRemates, Posicion, Luz, Orden FROM t"& _ 
+                "b_CarrerasCaballos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT Id, IdCarrera, IdCaballo, NoTomaNuevosRemates, Posicion, Luz, Orden FROM t"& _ 
+                "b_CarrerasCaballos WHERE (IdCarrera = ?) AND (NoTomaNuevosRemates = False)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8011,6 +8208,40 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As bdSIGAP_DataSet.tb_CarrerasCaballosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As bdSIGAP_DataSet.tb_CarrerasCaballosDataTable = New bdSIGAP_DataSet.tb_CarrerasCaballosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByCarrera(ByVal dataTable As bdSIGAP_DataSet.tb_CarrerasCaballosDataTable, ByVal IdCarrera As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (IdCarrera.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByCarrera(ByVal IdCarrera As Global.System.Nullable(Of Integer)) As bdSIGAP_DataSet.tb_CarrerasCaballosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (IdCarrera.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             Dim dataTable As bdSIGAP_DataSet.tb_CarrerasCaballosDataTable = New bdSIGAP_DataSet.tb_CarrerasCaballosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -8048,7 +8279,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdCaballo As Global.System.Nullable(Of Integer), ByVal Original_NoTomaNuevosRemates As Boolean, ByVal Original_Posicion As Global.System.Nullable(Of Integer), ByVal Original_Luz As Boolean) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdCaballo As Global.System.Nullable(Of Integer), ByVal Original_NoTomaNuevosRemates As Boolean, ByVal Original_Posicion As Global.System.Nullable(Of Integer), ByVal Original_Luz As Boolean, ByVal Original_Orden As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             If (Original_IdCarrera.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -8075,6 +8306,13 @@ Namespace bdSIGAP_DataSetTableAdapters
             End If
             Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
             Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Luz,Boolean)
+            If (Original_Orden.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Orden.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8094,7 +8332,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdCaballo As Global.System.Nullable(Of Integer), ByVal NoTomaNuevosRemates As Boolean, ByVal Posicion As Global.System.Nullable(Of Integer), ByVal Luz As Boolean) As Integer
+        Public Overloads Overridable Function Insert(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdCaballo As Global.System.Nullable(Of Integer), ByVal NoTomaNuevosRemates As Boolean, ByVal Posicion As Global.System.Nullable(Of Integer), ByVal Luz As Boolean, ByVal Orden As Global.System.Nullable(Of Integer)) As Integer
             If (IdCarrera.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
             Else
@@ -8112,6 +8350,11 @@ Namespace bdSIGAP_DataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Me.Adapter.InsertCommand.Parameters(4).Value = CType(Luz,Boolean)
+            If (Orden.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Orden.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8131,7 +8374,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdCaballo As Global.System.Nullable(Of Integer), ByVal NoTomaNuevosRemates As Boolean, ByVal Posicion As Global.System.Nullable(Of Integer), ByVal Luz As Boolean, ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdCaballo As Global.System.Nullable(Of Integer), ByVal Original_NoTomaNuevosRemates As Boolean, ByVal Original_Posicion As Global.System.Nullable(Of Integer), ByVal Original_Luz As Boolean) As Integer
+        Public Overloads Overridable Function Update(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdCaballo As Global.System.Nullable(Of Integer), ByVal NoTomaNuevosRemates As Boolean, ByVal Posicion As Global.System.Nullable(Of Integer), ByVal Luz As Boolean, ByVal Orden As Global.System.Nullable(Of Integer), ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdCaballo As Global.System.Nullable(Of Integer), ByVal Original_NoTomaNuevosRemates As Boolean, ByVal Original_Posicion As Global.System.Nullable(Of Integer), ByVal Original_Luz As Boolean, ByVal Original_Orden As Global.System.Nullable(Of Integer)) As Integer
             If (IdCarrera.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
             Else
@@ -8149,32 +8392,44 @@ Namespace bdSIGAP_DataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Luz,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Id,Integer)
-            If (Original_IdCarrera.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_IdCarrera.Value,Integer)
+            If (Orden.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Orden.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Id,Integer)
+            If (Original_IdCarrera.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_IdCarrera.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             If (Original_IdCaballo.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_IdCaballo.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IdCaballo.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_NoTomaNuevosRemates,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_NoTomaNuevosRemates,Boolean)
             If (Original_Posicion.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Posicion.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Posicion.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Luz,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Luz,Boolean)
+            If (Original_Orden.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Orden.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8327,6 +8582,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("Luz", "Luz")
             tableMapping.ColumnMappings.Add("Fila", "Fila")
             tableMapping.ColumnMappings.Add("ImportePremio", "ImportePremio")
+            tableMapping.ColumnMappings.Add("Incluido", "Incluido")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -8336,7 +8592,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                 "AND ((? = 1 AND `Apostador` IS NULL) OR (`Apostador` = ?)) AND ((? = 1 AND `Impo"& _ 
                 "rteApuesta` IS NULL) OR (`ImporteApuesta` = ?)) AND ((? = 1 AND `Luz` IS NULL) O"& _ 
                 "R (`Luz` = ?)) AND ((? = 1 AND `Fila` IS NULL) OR (`Fila` = ?)) AND ((? = 1 AND "& _ 
-                "`ImportePremio` IS NULL) OR (`ImportePremio` = ?)))"
+                "`ImportePremio` IS NULL) OR (`ImportePremio` = ?)) AND ((? = 1 AND `Incluido` IS"& _ 
+                " NULL) OR (`Incluido` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -8355,11 +8612,13 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fila", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fila", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ImportePremio", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Incluido", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incluido", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Incluido", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incluido", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_DetalleRemates` (`IdRemate`, `IdCarreraCaballo`, `NroCaballo`, `A"& _ 
-                "postador`, `ImporteApuesta`, `Luz`, `Fila`, `ImportePremio`) VALUES (?, ?, ?, ?,"& _ 
-                " ?, ?, ?, ?)"
+                "postador`, `ImporteApuesta`, `Luz`, `Fila`, `ImportePremio`, `Incluido`) VALUES "& _ 
+                "(?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarreraCaballo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarreraCaballo", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -8369,17 +8628,19 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Luz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fila", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fila", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ImportePremio", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Incluido", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incluido", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_DetalleRemates` SET `IdRemate` = ?, `IdCarreraCaballo` = ?, `NroCaball"& _ 
                 "o` = ?, `Apostador` = ?, `ImporteApuesta` = ?, `Luz` = ?, `Fila` = ?, `ImportePr"& _ 
-                "emio` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `IdRemate` IS NULL) OR (`IdRemate` ="& _ 
-                " ?)) AND ((? = 1 AND `IdCarreraCaballo` IS NULL) OR (`IdCarreraCaballo` = ?)) AN"& _ 
-                "D ((? = 1 AND `NroCaballo` IS NULL) OR (`NroCaballo` = ?)) AND ((? = 1 AND `Apos"& _ 
-                "tador` IS NULL) OR (`Apostador` = ?)) AND ((? = 1 AND `ImporteApuesta` IS NULL) "& _ 
-                "OR (`ImporteApuesta` = ?)) AND ((? = 1 AND `Luz` IS NULL) OR (`Luz` = ?)) AND (("& _ 
-                "? = 1 AND `Fila` IS NULL) OR (`Fila` = ?)) AND ((? = 1 AND `ImportePremio` IS NU"& _ 
-                "LL) OR (`ImportePremio` = ?)))"
+                "emio` = ?, `Incluido` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `IdRemate` IS NULL) "& _ 
+                "OR (`IdRemate` = ?)) AND ((? = 1 AND `IdCarreraCaballo` IS NULL) OR (`IdCarreraC"& _ 
+                "aballo` = ?)) AND ((? = 1 AND `NroCaballo` IS NULL) OR (`NroCaballo` = ?)) AND ("& _ 
+                "(? = 1 AND `Apostador` IS NULL) OR (`Apostador` = ?)) AND ((? = 1 AND `ImporteAp"& _ 
+                "uesta` IS NULL) OR (`ImporteApuesta` = ?)) AND ((? = 1 AND `Luz` IS NULL) OR (`L"& _ 
+                "uz` = ?)) AND ((? = 1 AND `Fila` IS NULL) OR (`Fila` = ?)) AND ((? = 1 AND `Impo"& _ 
+                "rtePremio` IS NULL) OR (`ImportePremio` = ?)) AND ((? = 1 AND `Incluido` IS NULL"& _ 
+                ") OR (`Incluido` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarreraCaballo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarreraCaballo", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -8389,6 +8650,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Luz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Luz", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fila", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fila", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ImportePremio", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Incluido", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incluido", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -8406,6 +8668,8 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fila", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fila", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ImportePremio", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Incluido", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incluido", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Incluido", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incluido", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8422,7 +8686,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id, IdRemate, IdCarreraCaballo, NroCaballo, Apostador, ImporteApuesta, Luz"& _ 
-                ", Fila, ImportePremio FROM tb_DetalleRemates"
+                ", Fila, ImportePremio, Incluido FROM tb_DetalleRemates"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -8482,7 +8746,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdRemate As Global.System.Nullable(Of Integer), ByVal Original_IdCarreraCaballo As Global.System.Nullable(Of Integer), ByVal Original_NroCaballo As Global.System.Nullable(Of Integer), ByVal Original_Apostador As String, ByVal Original_ImporteApuesta As Global.System.Nullable(Of Decimal), ByVal Original_Luz As String, ByVal Original_Fila As String, ByVal Original_ImportePremio As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdRemate As Global.System.Nullable(Of Integer), ByVal Original_IdCarreraCaballo As Global.System.Nullable(Of Integer), ByVal Original_NroCaballo As Global.System.Nullable(Of Integer), ByVal Original_Apostador As String, ByVal Original_ImporteApuesta As Global.System.Nullable(Of Decimal), ByVal Original_Luz As String, ByVal Original_Fila As String, ByVal Original_ImportePremio As Global.System.Nullable(Of Decimal), ByVal Original_Incluido As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             If (Original_IdRemate.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -8540,6 +8804,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Incluido,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8559,7 +8825,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IdRemate As Global.System.Nullable(Of Integer), ByVal IdCarreraCaballo As Global.System.Nullable(Of Integer), ByVal NroCaballo As Global.System.Nullable(Of Integer), ByVal Apostador As String, ByVal ImporteApuesta As Global.System.Nullable(Of Decimal), ByVal Luz As String, ByVal Fila As String, ByVal ImportePremio As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Insert(ByVal IdRemate As Global.System.Nullable(Of Integer), ByVal IdCarreraCaballo As Global.System.Nullable(Of Integer), ByVal NroCaballo As Global.System.Nullable(Of Integer), ByVal Apostador As String, ByVal ImporteApuesta As Global.System.Nullable(Of Decimal), ByVal Luz As String, ByVal Fila As String, ByVal ImportePremio As Global.System.Nullable(Of Decimal), ByVal Incluido As Boolean) As Integer
             If (IdRemate.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdRemate.Value,Integer)
             Else
@@ -8600,6 +8866,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.InsertCommand.Parameters(8).Value = CType(Incluido,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8628,6 +8895,7 @@ Namespace bdSIGAP_DataSetTableAdapters
                     ByVal Luz As String,  _
                     ByVal Fila As String,  _
                     ByVal ImportePremio As Global.System.Nullable(Of Decimal),  _
+                    ByVal Incluido As Boolean,  _
                     ByVal Original_Id As Integer,  _
                     ByVal Original_IdRemate As Global.System.Nullable(Of Integer),  _
                     ByVal Original_IdCarreraCaballo As Global.System.Nullable(Of Integer),  _
@@ -8636,7 +8904,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                     ByVal Original_ImporteApuesta As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_Luz As String,  _
                     ByVal Original_Fila As String,  _
-                    ByVal Original_ImportePremio As Global.System.Nullable(Of Decimal)) As Integer
+                    ByVal Original_ImportePremio As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_Incluido As Boolean) As Integer
             If (IdRemate.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdRemate.Value,Integer)
             Else
@@ -8677,63 +8946,66 @@ Namespace bdSIGAP_DataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Incluido,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Id,Integer)
             If (Original_IdRemate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IdRemate.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_IdRemate.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
             If (Original_IdCarreraCaballo.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_IdCarreraCaballo.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_IdCarreraCaballo.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             End If
             If (Original_NroCaballo.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_NroCaballo.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_NroCaballo.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
             If (Original_Apostador Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Apostador,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Apostador,String)
             End If
             If (Original_ImporteApuesta.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_ImporteApuesta.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_ImporteApuesta.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
             If (Original_Luz Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Luz,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Luz,String)
             End If
             If (Original_Fila Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Fila,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Fila,String)
             End If
             If (Original_ImportePremio.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_ImportePremio.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_ImportePremio.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Incluido,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10317,6 +10589,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("IdRematador", "IdRematador")
             tableMapping.ColumnMappings.Add("TotalApuestas", "TotalApuestas")
             tableMapping.ColumnMappings.Add("ImportePremio", "ImportePremio")
+            tableMapping.ColumnMappings.Add("NroRemate", "NroRemate")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -10325,7 +10598,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                 "((? = 1 AND `PorcentajeCasa` IS NULL) OR (`PorcentajeCasa` = ?)) AND ((? = 1 AND"& _ 
                 " `Premio` IS NULL) OR (`Premio` = ?)) AND ((? = 1 AND `IdRematador` IS NULL) OR "& _ 
                 "(`IdRematador` = ?)) AND ((? = 1 AND `TotalApuestas` IS NULL) OR (`TotalApuestas"& _ 
-                "` = ?)) AND ((? = 1 AND `ImportePremio` IS NULL) OR (`ImportePremio` = ?)))"
+                "` = ?)) AND ((? = 1 AND `ImportePremio` IS NULL) OR (`ImportePremio` = ?)) AND ("& _ 
+                "(? = 1 AND `NroRemate` IS NULL) OR (`NroRemate` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -10342,10 +10616,13 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TotalApuestas", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TotalApuestas", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_NroRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroRemate", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NroRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroRemate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `tb_Remates` (`IdCarrera`, `IdPalco`, `PorcentajeCasa`, `Premio`, `Id"& _ 
-                "Rematador`, `TotalApuestas`, `ImportePremio`) VALUES (?, ?, ?, ?, ?, ?, ?)"
+                "Rematador`, `TotalApuestas`, `ImportePremio`, `NroRemate`) VALUES (?, ?, ?, ?, ?"& _ 
+                ", ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdPalco", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdPalco", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -10354,16 +10631,18 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRematador", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRematador", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TotalApuestas", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TotalApuestas", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NroRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `tb_Remates` SET `IdCarrera` = ?, `IdPalco` = ?, `PorcentajeCasa` = ?, `Pr"& _ 
-                "emio` = ?, `IdRematador` = ?, `TotalApuestas` = ?, `ImportePremio` = ? WHERE ((`"& _ 
-                "Id` = ?) AND ((? = 1 AND `IdCarrera` IS NULL) OR (`IdCarrera` = ?)) AND ((? = 1 "& _ 
-                "AND `IdPalco` IS NULL) OR (`IdPalco` = ?)) AND ((? = 1 AND `PorcentajeCasa` IS N"& _ 
-                "ULL) OR (`PorcentajeCasa` = ?)) AND ((? = 1 AND `Premio` IS NULL) OR (`Premio` ="& _ 
-                " ?)) AND ((? = 1 AND `IdRematador` IS NULL) OR (`IdRematador` = ?)) AND ((? = 1 "& _ 
-                "AND `TotalApuestas` IS NULL) OR (`TotalApuestas` = ?)) AND ((? = 1 AND `ImporteP"& _ 
-                "remio` IS NULL) OR (`ImportePremio` = ?)))"
+                "emio` = ?, `IdRematador` = ?, `TotalApuestas` = ?, `ImportePremio` = ?, `NroRema"& _ 
+                "te` = ? WHERE ((`Id` = ?) AND ((? = 1 AND `IdCarrera` IS NULL) OR (`IdCarrera` ="& _ 
+                " ?)) AND ((? = 1 AND `IdPalco` IS NULL) OR (`IdPalco` = ?)) AND ((? = 1 AND `Por"& _ 
+                "centajeCasa` IS NULL) OR (`PorcentajeCasa` = ?)) AND ((? = 1 AND `Premio` IS NUL"& _ 
+                "L) OR (`Premio` = ?)) AND ((? = 1 AND `IdRematador` IS NULL) OR (`IdRematador` ="& _ 
+                " ?)) AND ((? = 1 AND `TotalApuestas` IS NULL) OR (`TotalApuestas` = ?)) AND ((? "& _ 
+                "= 1 AND `ImportePremio` IS NULL) OR (`ImportePremio` = ?)) AND ((? = 1 AND `NroR"& _ 
+                "emate` IS NULL) OR (`NroRemate` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdPalco", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdPalco", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -10372,6 +10651,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRematador", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRematador", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TotalApuestas", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TotalApuestas", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NroRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -10387,6 +10667,8 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TotalApuestas", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TotalApuestas", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ImportePremio", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ImportePremio", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_NroRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroRemate", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NroRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NroRemate", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10403,7 +10685,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id, IdCarrera, IdPalco, PorcentajeCasa, Premio, IdRematador, TotalApuestas"& _ 
-                ", ImportePremio FROM tb_Remates"
+                ", ImportePremio, NroRemate FROM tb_Remates"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10463,7 +10745,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdPalco As Global.System.Nullable(Of Integer), ByVal Original_PorcentajeCasa As Global.System.Nullable(Of Integer), ByVal Original_Premio As Global.System.Nullable(Of Integer), ByVal Original_IdRematador As Global.System.Nullable(Of Integer), ByVal Original_TotalApuestas As Global.System.Nullable(Of Integer), ByVal Original_ImportePremio As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdPalco As Global.System.Nullable(Of Integer), ByVal Original_PorcentajeCasa As Global.System.Nullable(Of Integer), ByVal Original_Premio As Global.System.Nullable(Of Integer), ByVal Original_IdRematador As Global.System.Nullable(Of Integer), ByVal Original_TotalApuestas As Global.System.Nullable(Of Integer), ByVal Original_ImportePremio As Global.System.Nullable(Of Integer), ByVal Original_NroRemate As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             If (Original_IdCarrera.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -10514,6 +10796,13 @@ Namespace bdSIGAP_DataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
+            If (Original_NroRemate.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_NroRemate.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10533,7 +10822,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdPalco As Global.System.Nullable(Of Integer), ByVal PorcentajeCasa As Global.System.Nullable(Of Integer), ByVal Premio As Global.System.Nullable(Of Integer), ByVal IdRematador As Global.System.Nullable(Of Integer), ByVal TotalApuestas As Global.System.Nullable(Of Integer), ByVal ImportePremio As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdPalco As Global.System.Nullable(Of Integer), ByVal PorcentajeCasa As Global.System.Nullable(Of Integer), ByVal Premio As Global.System.Nullable(Of Integer), ByVal IdRematador As Global.System.Nullable(Of Integer), ByVal TotalApuestas As Global.System.Nullable(Of Integer), ByVal ImportePremio As Global.System.Nullable(Of Integer), ByVal NroRemate As Global.System.Nullable(Of Integer)) As Integer
             If (IdCarrera.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
             Else
@@ -10569,6 +10858,11 @@ Namespace bdSIGAP_DataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
+            If (NroRemate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(NroRemate.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10588,7 +10882,24 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IdCarrera As Global.System.Nullable(Of Integer), ByVal IdPalco As Global.System.Nullable(Of Integer), ByVal PorcentajeCasa As Global.System.Nullable(Of Integer), ByVal Premio As Global.System.Nullable(Of Integer), ByVal IdRematador As Global.System.Nullable(Of Integer), ByVal TotalApuestas As Global.System.Nullable(Of Integer), ByVal ImportePremio As Global.System.Nullable(Of Integer), ByVal Original_Id As Integer, ByVal Original_IdCarrera As Global.System.Nullable(Of Integer), ByVal Original_IdPalco As Global.System.Nullable(Of Integer), ByVal Original_PorcentajeCasa As Global.System.Nullable(Of Integer), ByVal Original_Premio As Global.System.Nullable(Of Integer), ByVal Original_IdRematador As Global.System.Nullable(Of Integer), ByVal Original_TotalApuestas As Global.System.Nullable(Of Integer), ByVal Original_ImportePremio As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal IdCarrera As Global.System.Nullable(Of Integer),  _
+                    ByVal IdPalco As Global.System.Nullable(Of Integer),  _
+                    ByVal PorcentajeCasa As Global.System.Nullable(Of Integer),  _
+                    ByVal Premio As Global.System.Nullable(Of Integer),  _
+                    ByVal IdRematador As Global.System.Nullable(Of Integer),  _
+                    ByVal TotalApuestas As Global.System.Nullable(Of Integer),  _
+                    ByVal ImportePremio As Global.System.Nullable(Of Integer),  _
+                    ByVal NroRemate As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Id As Integer,  _
+                    ByVal Original_IdCarrera As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_IdPalco As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PorcentajeCasa As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Premio As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_IdRematador As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_TotalApuestas As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_ImportePremio As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_NroRemate As Global.System.Nullable(Of Integer)) As Integer
             If (IdCarrera.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
             Else
@@ -10624,55 +10935,67 @@ Namespace bdSIGAP_DataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Id,Integer)
-            If (Original_IdCarrera.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_IdCarrera.Value,Integer)
+            If (NroRemate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(NroRemate.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Id,Integer)
+            If (Original_IdCarrera.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IdCarrera.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             If (Original_IdPalco.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_IdPalco.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_IdPalco.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
             If (Original_PorcentajeCasa.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_PorcentajeCasa.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_PorcentajeCasa.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
             If (Original_Premio.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Premio.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Premio.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
             If (Original_IdRematador.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_IdRematador.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_IdRematador.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
             If (Original_TotalApuestas.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_TotalApuestas.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_TotalApuestas.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
             If (Original_ImportePremio.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_ImportePremio.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_ImportePremio.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_NroRemate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_NroRemate.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
