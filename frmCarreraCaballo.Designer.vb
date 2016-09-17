@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmCarreraCaballo
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,84 +20,115 @@ Partial Class frmCarreraCaballo
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCarreraCaballo))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cbJornada = New System.Windows.Forms.ComboBox()
+        Me.TbJornadasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbTipo = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.nCarrera = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.txNombre = New System.Windows.Forms.TextBox()
+        Me.nProcentajeCasa = New System.Windows.Forms.NumericUpDown()
         Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
         Me.TableAdapterManagerCarrerasCaballos = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
-        Me.Tb_CarrerasCaballosTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
-        Me.TbCarrerasCaballosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.agregarCaballo = New System.Windows.Forms.Button()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PosicionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LuzDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.nbCaballo1 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo2 = New System.Windows.Forms.NumericUpDown()
+        Me.cbCaballo1 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cbCaballo2 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.Tb_CaballosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource6 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosBindingSource9 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.nbCaballo3 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo4 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo5 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo6 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo7 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo8 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo9 = New System.Windows.Forms.NumericUpDown()
+        Me.nbCaballo10 = New System.Windows.Forms.NumericUpDown()
+        Me.cbCaballo3 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo4 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo5 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo6 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo7 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo8 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo9 = New System.Windows.Forms.ComboBox()
+        Me.cbCaballo10 = New System.Windows.Forms.ComboBox()
+        Me.Tb_CaballosBindingSource10 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txMetros = New System.Windows.Forms.TextBox()
+        CType(Me.TbJornadasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasCaballosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BindingNavigator1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nbCaballo10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_CaballosBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cbJornada
         '
-        Me.ComboBox1.DataSource = Me.TbJornadasBindingSource
-        Me.ComboBox1.DisplayMember = "Descripcion"
-        Me.ComboBox1.DropDownWidth = 333
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(88, 32)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(457, 21)
-        Me.ComboBox1.TabIndex = 0
-        Me.ComboBox1.ValueMember = "Id"
+        Me.cbJornada.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbJornada.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbJornada.DataSource = Me.TbJornadasBindingSource1
+        Me.cbJornada.DisplayMember = "Descripcion"
+        Me.cbJornada.DropDownWidth = 333
+        Me.cbJornada.FormattingEnabled = True
+        Me.cbJornada.Location = New System.Drawing.Point(88, 32)
+        Me.cbJornada.Name = "cbJornada"
+        Me.cbJornada.Size = New System.Drawing.Size(457, 21)
+        Me.cbJornada.TabIndex = 0
+        Me.cbJornada.ValueMember = "Id"
         '
-        'TbJornadasBindingSource
+        'TbJornadasBindingSource1
         '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        Me.TbJornadasBindingSource1.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource1.DataSource = Me.BdSIGAP_DataSet
         '
         'BdSIGAP_DataSet
         '
@@ -112,11 +143,6 @@ Partial Class frmCarreraCaballo
         Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Jornada:"
-        '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Tb_JornadasTableAdapter
         '
@@ -149,41 +175,47 @@ Partial Class frmCarreraCaballo
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Tipo:"
         '
-        'ComboBox2
+        'cbTipo
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Normal", "Llave"})
-        Me.ComboBox2.Location = New System.Drawing.Point(88, 95)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 9
+        Me.cbTipo.AutoCompleteCustomSource.AddRange(New String() {"Normal", "Llave"})
+        Me.cbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cbTipo.FormattingEnabled = True
+        Me.cbTipo.Items.AddRange(New Object() {"Normal", "Llave"})
+        Me.cbTipo.Location = New System.Drawing.Point(87, 95)
+        Me.cbTipo.Name = "cbTipo"
+        Me.cbTipo.Size = New System.Drawing.Size(121, 21)
+        Me.cbTipo.TabIndex = 9
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox1.Controls.Add(Me.txMetros)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.nCarrera)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.txNombre)
+        Me.GroupBox1.Controls.Add(Me.nProcentajeCasa)
+        Me.GroupBox1.Controls.Add(Me.cbJornada)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.cbTipo)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(585, 135)
+        Me.GroupBox1.Size = New System.Drawing.Size(570, 174)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "General"
         '
-        'NumericUpDown2
+        'nCarrera
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(88, 63)
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown2.TabIndex = 16
+        Me.nCarrera.Location = New System.Drawing.Point(88, 63)
+        Me.nCarrera.Name = "nCarrera"
+        Me.nCarrera.Size = New System.Drawing.Size(120, 20)
+        Me.nCarrera.TabIndex = 16
+        Me.nCarrera.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label3
         '
@@ -194,34 +226,31 @@ Partial Class frmCarreraCaballo
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Nombre:"
         '
-        'TextBox2
+        'txNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(295, 63)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(250, 20)
-        Me.TextBox2.TabIndex = 14
+        Me.txNombre.Location = New System.Drawing.Point(295, 63)
+        Me.txNombre.Name = "txNombre"
+        Me.txNombre.Size = New System.Drawing.Size(250, 20)
+        Me.txNombre.TabIndex = 14
         '
-        'NumericUpDown1
+        'nProcentajeCasa
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(322, 96)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown1.TabIndex = 13
+        Me.nProcentajeCasa.Location = New System.Drawing.Point(322, 96)
+        Me.nProcentajeCasa.Name = "nProcentajeCasa"
+        Me.nProcentajeCasa.Size = New System.Drawing.Size(120, 20)
+        Me.nProcentajeCasa.TabIndex = 13
+        Me.nProcentajeCasa.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'TbCarrerasCaballosBindingSource
         '
         Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
         Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'Tb_CarrerasCaballosTableAdapter
-        '
-        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
-        '
         'TableAdapterManagerCarrerasCaballos
         '
         Me.TableAdapterManagerCarrerasCaballos.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManagerCarrerasCaballos.tb_CaballosTableAdapter = Nothing
-        Me.TableAdapterManagerCarrerasCaballos.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter
+        Me.TableAdapterManagerCarrerasCaballos.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManagerCarrerasCaballos.tb_CarrerasTableAdapter = Nothing
         Me.TableAdapterManagerCarrerasCaballos.tb_DetalleRematesTableAdapter = Nothing
         Me.TableAdapterManagerCarrerasCaballos.tb_HipodromosTableAdapter = Nothing
@@ -231,290 +260,482 @@ Partial Class frmCarreraCaballo
         Me.TableAdapterManagerCarrerasCaballos.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManagerCarrerasCaballos.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Tb_CarrerasCaballosTableAdapter1
-        '
-        Me.Tb_CarrerasCaballosTableAdapter1.ClearBeforeFill = True
-        '
-        'TbCarrerasCaballosBindingSource1
-        '
-        Me.TbCarrerasCaballosBindingSource1.DataMember = "tb_CarrerasCaballos"
-        Me.TbCarrerasCaballosBindingSource1.DataSource = Me.BdSIGAP_DataSet
-        '
-        'TbCaballosBindingSource
-        '
-        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
-        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_CaballosTableAdapter
         '
         Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
         '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
-        '
-        'PrintToolStripButton
-        '
-        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
-        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PrintToolStripButton.Name = "PrintToolStripButton"
-        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PrintToolStripButton.Text = "&Print"
-        '
-        'BindingNavigator1
-        '
-        Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.BindingNavigator1.BindingSource = Me.TbCarrerasCaballosBindingSource
-        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
-        Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.PrintToolStripButton})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(12, 163)
-        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.BindingNavigator1.Name = "BindingNavigator1"
-        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(301, 25)
-        Me.BindingNavigator1.TabIndex = 13
-        Me.BindingNavigator1.Text = "BindingNavigator1"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdCarreraDataGridViewTextBoxColumn, Me.IdCaballoDataGridViewTextBoxColumn, Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn, Me.PosicionDataGridViewTextBoxColumn, Me.LuzDataGridViewCheckBoxColumn})
-        Me.DataGridView1.DataSource = Me.TbCarrerasCaballosBindingSource1
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 191)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(461, 287)
-        Me.DataGridView1.TabIndex = 12
-        '
         'agregarCaballo
         '
-        Me.agregarCaballo.Location = New System.Drawing.Point(494, 191)
+        Me.agregarCaballo.Location = New System.Drawing.Point(284, 265)
         Me.agregarCaballo.Name = "agregarCaballo"
         Me.agregarCaballo.Size = New System.Drawing.Size(103, 23)
         Me.agregarCaballo.TabIndex = 18
         Me.agregarCaballo.Text = "Agregar Caballo"
         Me.agregarCaballo.UseVisualStyleBackColor = True
         '
-        'IdDataGridViewTextBoxColumn
+        'nbCaballo1
         '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Visible = False
+        Me.nbCaballo1.Location = New System.Drawing.Point(19, 201)
+        Me.nbCaballo1.Name = "nbCaballo1"
+        Me.nbCaballo1.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo1.TabIndex = 20
+        Me.nbCaballo1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'IdCarreraDataGridViewTextBoxColumn
+        'nbCaballo2
         '
-        Me.IdCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera"
-        Me.IdCarreraDataGridViewTextBoxColumn.HeaderText = "Carrera"
-        Me.IdCarreraDataGridViewTextBoxColumn.Name = "IdCarreraDataGridViewTextBoxColumn"
-        Me.IdCarreraDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdCarreraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.IdCarreraDataGridViewTextBoxColumn.Width = 50
+        Me.nbCaballo2.Location = New System.Drawing.Point(19, 227)
+        Me.nbCaballo2.Name = "nbCaballo2"
+        Me.nbCaballo2.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo2.TabIndex = 22
+        Me.nbCaballo2.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
-        'IdCaballoDataGridViewTextBoxColumn
+        'cbCaballo1
         '
-        Me.IdCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCaballo"
-        Me.IdCaballoDataGridViewTextBoxColumn.DataSource = Me.TbCaballosBindingSource
-        Me.IdCaballoDataGridViewTextBoxColumn.DisplayMember = "CaballoNombre"
-        Me.IdCaballoDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.IdCaballoDataGridViewTextBoxColumn.DisplayStyleForCurrentCellOnly = True
-        Me.IdCaballoDataGridViewTextBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IdCaballoDataGridViewTextBoxColumn.HeaderText = "Caballo"
-        Me.IdCaballoDataGridViewTextBoxColumn.Name = "IdCaballoDataGridViewTextBoxColumn"
-        Me.IdCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.IdCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdCaballoDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdCaballoDataGridViewTextBoxColumn.Width = 250
+        Me.cbCaballo1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbCaballo1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo1.DataSource = Me.Tb_CaballosBindingSource1
+        Me.cbCaballo1.DisplayMember = "CaballoNombre"
+        Me.cbCaballo1.FormattingEnabled = True
+        Me.cbCaballo1.Location = New System.Drawing.Point(82, 201)
+        Me.cbCaballo1.Name = "cbCaballo1"
+        Me.cbCaballo1.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo1.TabIndex = 29
+        Me.cbCaballo1.ValueMember = "Id"
         '
-        'NoTomaNuevosRematesDataGridViewCheckBoxColumn
+        'Tb_CaballosBindingSource1
         '
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.DataPropertyName = "NoTomaNuevosRemates"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.HeaderText = "NoTomaNuevosRemates"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Name = "NoTomaNuevosRematesDataGridViewCheckBoxColumn"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Visible = False
+        Me.Tb_CaballosBindingSource1.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource1.DataSource = Me.BdSIGAP_DataSet
         '
-        'PosicionDataGridViewTextBoxColumn
+        'cbCaballo2
         '
-        Me.PosicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion"
-        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posicion"
-        Me.PosicionDataGridViewTextBoxColumn.Name = "PosicionDataGridViewTextBoxColumn"
-        Me.PosicionDataGridViewTextBoxColumn.Visible = False
+        Me.cbCaballo2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo2.DataSource = Me.Tb_CaballosBindingSource2
+        Me.cbCaballo2.DisplayMember = "CaballoNombre"
+        Me.cbCaballo2.FormattingEnabled = True
+        Me.cbCaballo2.Location = New System.Drawing.Point(82, 227)
+        Me.cbCaballo2.Name = "cbCaballo2"
+        Me.cbCaballo2.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo2.TabIndex = 30
+        Me.cbCaballo2.ValueMember = "Id"
         '
-        'LuzDataGridViewCheckBoxColumn
+        'Tb_CaballosBindingSource2
         '
-        Me.LuzDataGridViewCheckBoxColumn.DataPropertyName = "Luz"
-        Me.LuzDataGridViewCheckBoxColumn.HeaderText = "Luz"
-        Me.LuzDataGridViewCheckBoxColumn.Name = "LuzDataGridViewCheckBoxColumn"
-        Me.LuzDataGridViewCheckBoxColumn.Visible = False
+        Me.Tb_CaballosBindingSource2.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource2.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource
+        '
+        Me.Tb_CaballosBindingSource.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosTableAdapter1
+        '
+        Me.Tb_CaballosTableAdapter1.ClearBeforeFill = True
+        '
+        'Tb_CaballosBindingSource3
+        '
+        Me.Tb_CaballosBindingSource3.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource3.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource4
+        '
+        Me.Tb_CaballosBindingSource4.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource4.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource5
+        '
+        Me.Tb_CaballosBindingSource5.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource5.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource6
+        '
+        Me.Tb_CaballosBindingSource6.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource6.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource7
+        '
+        Me.Tb_CaballosBindingSource7.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource7.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource8
+        '
+        Me.Tb_CaballosBindingSource8.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource8.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosBindingSource9
+        '
+        Me.Tb_CaballosBindingSource9.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource9.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(284, 201)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "Agregar Fila"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'nbCaballo3
+        '
+        Me.nbCaballo3.Location = New System.Drawing.Point(19, 253)
+        Me.nbCaballo3.Name = "nbCaballo3"
+        Me.nbCaballo3.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo3.TabIndex = 45
+        Me.nbCaballo3.Value = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.nbCaballo3.Visible = False
+        '
+        'nbCaballo4
+        '
+        Me.nbCaballo4.Location = New System.Drawing.Point(19, 279)
+        Me.nbCaballo4.Name = "nbCaballo4"
+        Me.nbCaballo4.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo4.TabIndex = 46
+        Me.nbCaballo4.Value = New Decimal(New Integer() {4, 0, 0, 0})
+        Me.nbCaballo4.Visible = False
+        '
+        'nbCaballo5
+        '
+        Me.nbCaballo5.Location = New System.Drawing.Point(19, 305)
+        Me.nbCaballo5.Name = "nbCaballo5"
+        Me.nbCaballo5.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo5.TabIndex = 47
+        Me.nbCaballo5.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.nbCaballo5.Visible = False
+        '
+        'nbCaballo6
+        '
+        Me.nbCaballo6.Location = New System.Drawing.Point(19, 331)
+        Me.nbCaballo6.Name = "nbCaballo6"
+        Me.nbCaballo6.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo6.TabIndex = 48
+        Me.nbCaballo6.Value = New Decimal(New Integer() {6, 0, 0, 0})
+        Me.nbCaballo6.Visible = False
+        '
+        'nbCaballo7
+        '
+        Me.nbCaballo7.Location = New System.Drawing.Point(19, 357)
+        Me.nbCaballo7.Name = "nbCaballo7"
+        Me.nbCaballo7.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo7.TabIndex = 49
+        Me.nbCaballo7.Value = New Decimal(New Integer() {7, 0, 0, 0})
+        Me.nbCaballo7.Visible = False
+        '
+        'nbCaballo8
+        '
+        Me.nbCaballo8.Location = New System.Drawing.Point(19, 384)
+        Me.nbCaballo8.Name = "nbCaballo8"
+        Me.nbCaballo8.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo8.TabIndex = 50
+        Me.nbCaballo8.Value = New Decimal(New Integer() {8, 0, 0, 0})
+        Me.nbCaballo8.Visible = False
+        '
+        'nbCaballo9
+        '
+        Me.nbCaballo9.Location = New System.Drawing.Point(19, 409)
+        Me.nbCaballo9.Name = "nbCaballo9"
+        Me.nbCaballo9.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo9.TabIndex = 51
+        Me.nbCaballo9.Value = New Decimal(New Integer() {9, 0, 0, 0})
+        Me.nbCaballo9.Visible = False
+        '
+        'nbCaballo10
+        '
+        Me.nbCaballo10.Location = New System.Drawing.Point(19, 437)
+        Me.nbCaballo10.Name = "nbCaballo10"
+        Me.nbCaballo10.Size = New System.Drawing.Size(57, 20)
+        Me.nbCaballo10.TabIndex = 52
+        Me.nbCaballo10.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.nbCaballo10.Visible = False
+        '
+        'cbCaballo3
+        '
+        Me.cbCaballo3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo3.DataSource = Me.Tb_CaballosBindingSource3
+        Me.cbCaballo3.DisplayMember = "CaballoNombre"
+        Me.cbCaballo3.FormattingEnabled = True
+        Me.cbCaballo3.Location = New System.Drawing.Point(82, 253)
+        Me.cbCaballo3.Name = "cbCaballo3"
+        Me.cbCaballo3.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo3.TabIndex = 53
+        Me.cbCaballo3.ValueMember = "Id"
+        Me.cbCaballo3.Visible = False
+        '
+        'cbCaballo4
+        '
+        Me.cbCaballo4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo4.DataSource = Me.Tb_CaballosBindingSource4
+        Me.cbCaballo4.DisplayMember = "CaballoNombre"
+        Me.cbCaballo4.FormattingEnabled = True
+        Me.cbCaballo4.Location = New System.Drawing.Point(82, 279)
+        Me.cbCaballo4.Name = "cbCaballo4"
+        Me.cbCaballo4.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo4.TabIndex = 54
+        Me.cbCaballo4.ValueMember = "Id"
+        Me.cbCaballo4.Visible = False
+        '
+        'cbCaballo5
+        '
+        Me.cbCaballo5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo5.DataSource = Me.Tb_CaballosBindingSource5
+        Me.cbCaballo5.DisplayMember = "CaballoNombre"
+        Me.cbCaballo5.FormattingEnabled = True
+        Me.cbCaballo5.Location = New System.Drawing.Point(82, 305)
+        Me.cbCaballo5.Name = "cbCaballo5"
+        Me.cbCaballo5.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo5.TabIndex = 55
+        Me.cbCaballo5.ValueMember = "Id"
+        Me.cbCaballo5.Visible = False
+        '
+        'cbCaballo6
+        '
+        Me.cbCaballo6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo6.DataSource = Me.Tb_CaballosBindingSource6
+        Me.cbCaballo6.DisplayMember = "CaballoNombre"
+        Me.cbCaballo6.FormattingEnabled = True
+        Me.cbCaballo6.Location = New System.Drawing.Point(82, 331)
+        Me.cbCaballo6.Name = "cbCaballo6"
+        Me.cbCaballo6.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo6.TabIndex = 56
+        Me.cbCaballo6.ValueMember = "Id"
+        Me.cbCaballo6.Visible = False
+        '
+        'cbCaballo7
+        '
+        Me.cbCaballo7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo7.DataSource = Me.Tb_CaballosBindingSource7
+        Me.cbCaballo7.DisplayMember = "CaballoNombre"
+        Me.cbCaballo7.FormattingEnabled = True
+        Me.cbCaballo7.Location = New System.Drawing.Point(82, 357)
+        Me.cbCaballo7.Name = "cbCaballo7"
+        Me.cbCaballo7.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo7.TabIndex = 57
+        Me.cbCaballo7.ValueMember = "Id"
+        Me.cbCaballo7.Visible = False
+        '
+        'cbCaballo8
+        '
+        Me.cbCaballo8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo8.DataSource = Me.Tb_CaballosBindingSource8
+        Me.cbCaballo8.DisplayMember = "CaballoNombre"
+        Me.cbCaballo8.FormattingEnabled = True
+        Me.cbCaballo8.Location = New System.Drawing.Point(82, 384)
+        Me.cbCaballo8.Name = "cbCaballo8"
+        Me.cbCaballo8.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo8.TabIndex = 58
+        Me.cbCaballo8.ValueMember = "Id"
+        Me.cbCaballo8.Visible = False
+        '
+        'cbCaballo9
+        '
+        Me.cbCaballo9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo9.DataSource = Me.Tb_CaballosBindingSource9
+        Me.cbCaballo9.DisplayMember = "CaballoNombre"
+        Me.cbCaballo9.FormattingEnabled = True
+        Me.cbCaballo9.Location = New System.Drawing.Point(82, 409)
+        Me.cbCaballo9.Name = "cbCaballo9"
+        Me.cbCaballo9.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo9.TabIndex = 59
+        Me.cbCaballo9.ValueMember = "Id"
+        Me.cbCaballo9.Visible = False
+        '
+        'cbCaballo10
+        '
+        Me.cbCaballo10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbCaballo10.DataSource = Me.Tb_CaballosBindingSource10
+        Me.cbCaballo10.DisplayMember = "CaballoNombre"
+        Me.cbCaballo10.FormattingEnabled = True
+        Me.cbCaballo10.Location = New System.Drawing.Point(82, 437)
+        Me.cbCaballo10.Name = "cbCaballo10"
+        Me.cbCaballo10.Size = New System.Drawing.Size(186, 21)
+        Me.cbCaballo10.TabIndex = 60
+        Me.cbCaballo10.ValueMember = "Id"
+        Me.cbCaballo10.Visible = False
+        '
+        'Tb_CaballosBindingSource10
+        '
+        Me.Tb_CaballosBindingSource10.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource10.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(284, 224)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 61
+        Me.Button2.Text = "Ocultar Fila"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(463, 201)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(119, 23)
+        Me.Button3.TabIndex = 62
+        Me.Button3.Text = "Crear Carrera"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
+        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(40, 128)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(42, 13)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Metros:"
+        '
+        'txMetros
+        '
+        Me.txMetros.Location = New System.Drawing.Point(88, 125)
+        Me.txMetros.Name = "txMetros"
+        Me.txMetros.Size = New System.Drawing.Size(100, 20)
+        Me.txMetros.TabIndex = 18
+        Me.txMetros.Text = "0"
         '
         'frmCarreraCaballo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 487)
+        Me.ClientSize = New System.Drawing.Size(602, 478)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.cbCaballo10)
+        Me.Controls.Add(Me.cbCaballo9)
+        Me.Controls.Add(Me.cbCaballo8)
+        Me.Controls.Add(Me.cbCaballo7)
+        Me.Controls.Add(Me.cbCaballo6)
+        Me.Controls.Add(Me.cbCaballo5)
+        Me.Controls.Add(Me.cbCaballo4)
+        Me.Controls.Add(Me.cbCaballo3)
+        Me.Controls.Add(Me.nbCaballo10)
+        Me.Controls.Add(Me.nbCaballo9)
+        Me.Controls.Add(Me.nbCaballo8)
+        Me.Controls.Add(Me.nbCaballo7)
+        Me.Controls.Add(Me.nbCaballo6)
+        Me.Controls.Add(Me.nbCaballo5)
+        Me.Controls.Add(Me.nbCaballo4)
+        Me.Controls.Add(Me.nbCaballo3)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cbCaballo2)
+        Me.Controls.Add(Me.cbCaballo1)
+        Me.Controls.Add(Me.nbCaballo2)
+        Me.Controls.Add(Me.nbCaballo1)
         Me.Controls.Add(Me.agregarCaballo)
-        Me.Controls.Add(Me.BindingNavigator1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Name = "frmCarreraCaballo"
-        Me.Text = "Carrera"
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbJornadasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasCaballosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.BindingNavigator1.ResumeLayout(False)
-        Me.BindingNavigator1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nbCaballo10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_CaballosBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbJornada As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
-    Friend WithEvents TbJornadasBindingSource As BindingSource
     Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbTipo As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents nProcentajeCasa As NumericUpDown
     Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
-    Friend WithEvents Tb_CarrerasCaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
-    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents nCarrera As NumericUpDown
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txNombre As TextBox
     Friend WithEvents TableAdapterManagerCarrerasCaballos As bdSIGAP_DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Tb_CarrerasCaballosTableAdapter1 As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
-    Friend WithEvents TbCarrerasCaballosBindingSource1 As BindingSource
-    Friend WithEvents TbCaballosBindingSource As BindingSource
     Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents SaveToolStripButton As ToolStripButton
-    Friend WithEvents PrintToolStripButton As ToolStripButton
-    Friend WithEvents BindingNavigator1 As BindingNavigator
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents agregarCaballo As Button
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdCarreraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdCaballoDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
-    Friend WithEvents NoTomaNuevosRematesDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents PosicionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LuzDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents nbCaballo1 As NumericUpDown
+    Friend WithEvents nbCaballo2 As NumericUpDown
+    Friend WithEvents cbCaballo1 As ComboBox
+    Friend WithEvents cbCaballo2 As ComboBox
+    Friend WithEvents TbJornadasBindingSource1 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource1 As BindingSource
+    Friend WithEvents Tb_CaballosTableAdapter1 As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
+    Friend WithEvents Tb_CaballosBindingSource2 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource3 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource4 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource5 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource6 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource7 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource8 As BindingSource
+    Friend WithEvents Tb_CaballosBindingSource9 As BindingSource
+    Friend WithEvents Button1 As Button
+    Friend WithEvents nbCaballo3 As NumericUpDown
+    Friend WithEvents nbCaballo4 As NumericUpDown
+    Friend WithEvents nbCaballo5 As NumericUpDown
+    Friend WithEvents nbCaballo6 As NumericUpDown
+    Friend WithEvents nbCaballo7 As NumericUpDown
+    Friend WithEvents nbCaballo8 As NumericUpDown
+    Friend WithEvents nbCaballo9 As NumericUpDown
+    Friend WithEvents nbCaballo10 As NumericUpDown
+    Friend WithEvents cbCaballo3 As ComboBox
+    Friend WithEvents cbCaballo4 As ComboBox
+    Friend WithEvents cbCaballo5 As ComboBox
+    Friend WithEvents cbCaballo6 As ComboBox
+    Friend WithEvents cbCaballo7 As ComboBox
+    Friend WithEvents cbCaballo8 As ComboBox
+    Friend WithEvents cbCaballo9 As ComboBox
+    Friend WithEvents cbCaballo10 As ComboBox
+    Friend WithEvents Tb_CaballosBindingSource10 As BindingSource
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents TbCarrerasBindingSource As BindingSource
+    Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
+    Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txMetros As TextBox
 End Class
