@@ -201,22 +201,36 @@
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
-        '#1 CARGAR CARRERA'
-        Dim filaNueva As DataRowView
-        filaNueva = TbCarrerasBindingSource.AddNew()
+        Dim nro As Integer
 
-        filaNueva("IdJornada") = cbJornada.SelectedValue
-        filaNueva("NroCarrera") = nCarrera.Value
-        filaNueva("Nombre") = txNombre.Text
-        filaNueva("Metros") = txMetros.Text
-        filaNueva("Estado") = 0
-        filaNueva("PorcentajeCasa") = nProcentajeCasa.Value
-        filaNueva("PorcentajeUltimoRemate") = nProcentajeCasa.Value
-        filaNueva("TipoCarrera") = cbTipo.Text
+
+        '#1 CARGAR CARRERA'
+        Dim filaCarrera As DataRowView
+        filaCarrera = TbCarrerasBindingSource.AddNew()
+
+        filaCarrera("IdJornada") = cbJornada.SelectedValue
+        filaCarrera("NroCarrera") = nCarrera.Value
+        filaCarrera("Nombre") = txNombre.Text
+        filaCarrera("Metros") = txMetros.Text
+        filaCarrera("Estado") = 0
+        filaCarrera("PorcentajeCasa") = nProcentajeCasa.Value
+        filaCarrera("PorcentajeUltimoRemate") = nProcentajeCasa.Value
+        filaCarrera("TipoCarrera") = cbTipo.Text
 
         Me.Validate()
         Me.TbCarrerasBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+        nro = Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+
+        MessageBox.Show(nro, "SiGAp", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk)
+
+        '#2 CARGAR CARRERA - CABALLO'
+        Dim filaCaballo As DataRowView
+        filaCaballo = TbCarrerasCaballosBindingSource.AddNew()
+
+
+
+
 
     End Sub
 

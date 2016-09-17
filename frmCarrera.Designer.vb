@@ -24,10 +24,10 @@ Partial Class frmCarrera
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdJornadaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -40,9 +40,9 @@ Partial Class frmCarrera
         Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipoCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -56,24 +56,24 @@ Partial Class frmCarrera
         Me.DataGridView1.Size = New System.Drawing.Size(848, 253)
         Me.DataGridView1.TabIndex = 0
         '
-        'TbCarrerasBindingSource
+        'TbJornadasBindingSource
         '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'BdSIGAP_DataSet
         '
         Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
         Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'Tb_CarrerasTableAdapter
         '
         Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Tb_JornadasTableAdapter
         '
@@ -84,7 +84,6 @@ Partial Class frmCarrera
         Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
         Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Visible = False
         '
         'IdJornadaDataGridViewTextBoxColumn
         '
@@ -161,14 +160,14 @@ Partial Class frmCarrera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(857, 308)
+        Me.ClientSize = New System.Drawing.Size(896, 308)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmCarrera"
         Me.Text = "Carreras"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
