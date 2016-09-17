@@ -28,12 +28,13 @@ Partial Class frmPrincipal
         Me.JornadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PalcosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RematadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RematadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListadoDeCarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -77,9 +78,15 @@ Partial Class frmPrincipal
         Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PalcosToolStripMenuItem.Text = "Palcos"
         '
+        'RematadorToolStripMenuItem
+        '
+        Me.RematadorToolStripMenuItem.Name = "RematadorToolStripMenuItem"
+        Me.RematadorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RematadorToolStripMenuItem.Text = "Rematador"
+        '
         'CarrerasToolStripMenuItem1
         '
-        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem})
+        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem})
         Me.CarrerasToolStripMenuItem1.Name = "CarrerasToolStripMenuItem1"
         Me.CarrerasToolStripMenuItem1.Size = New System.Drawing.Size(62, 20)
         Me.CarrerasToolStripMenuItem1.Text = "Carreras"
@@ -109,11 +116,11 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
-        'RematadorToolStripMenuItem
+        'ListadoDeCarrerasToolStripMenuItem
         '
-        Me.RematadorToolStripMenuItem.Name = "RematadorToolStripMenuItem"
-        Me.RematadorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RematadorToolStripMenuItem.Text = "Rematador"
+        Me.ListadoDeCarrerasToolStripMenuItem.Name = "ListadoDeCarrerasToolStripMenuItem"
+        Me.ListadoDeCarrerasToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ListadoDeCarrerasToolStripMenuItem.Text = "Listado de Carreras"
         '
         'frmPrincipal
         '
@@ -144,4 +151,5 @@ Partial Class frmPrincipal
     Friend WithEvents CargarCarreraCaballosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PalcosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RematadorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListadoDeCarrerasToolStripMenuItem As ToolStripMenuItem
 End Class
