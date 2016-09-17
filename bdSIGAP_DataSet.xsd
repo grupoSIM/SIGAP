@@ -701,7 +701,19 @@
               <Mapping SourceColumn="ApuC11" DataSetColumn="ApuC11" />
               <Mapping SourceColumn="ApuC12" DataSetColumn="ApuC12" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectName="VwTicket" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByIdDetalleRemate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdDetalleRemate" GeneratorSourceName="FillByIdDetalleRemate" GetMethodModifier="Public" GetMethodName="GetDataByIdDetalleRemate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdDetalleRemate" UserSourceName="FillByIdDetalleRemate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, 
+                         ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12
+FROM            VwTicket
+WHERE        (IdDetalleRemate=1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
