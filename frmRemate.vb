@@ -56,6 +56,11 @@
 
         txtJornada.Text = jornada("Descripcion")
         txtFecha.Text = jornada("Fecha")
+        If (Tb_RematesTableAdapter.MaxNroRemateByCarrera(cmbCarrera.SelectedValue)) Then
+            txtRemate.Text = Tb_RematesTableAdapter.MaxNroRemateByCarrera(cmbCarrera.SelectedValue) + 1
+        Else
+            txtRemate.Text = 1
+        End If
         txtPorcentajeCasa.Text = carrera("PorcentajeUltimoRemate")
 
     End Function
@@ -85,8 +90,18 @@
 
         Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, 1, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
 
+        For i As Integer = 0 To DataGridView1.RowCount - 1
+            DataGridView1.Rows(i).Cells(1).Value = Tb_RematesTableAdapter.MaxId()
+            DataGridView1.Rows(i).Cells(10).Value = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
+        Next
 
-        MsgBox(Tb_RematesTableAdapter.MaxId(), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+        Me.TbDetalleRematesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+        'MsgBox(Tb_RematesTableAdapter.MaxId(), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+        CargarRemates()
+        CargarDetallesRemates()
+        txtPorcentajeCasa.Focus()
 
     End Sub
 End Class
