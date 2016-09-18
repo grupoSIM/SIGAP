@@ -117,6 +117,12 @@
     <Compile Include="frmCabCarreList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCargarResultado.Designer.vb">
+      <DependentUpon>frmCargarResultado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarResultado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCarrera.Designer.vb">
       <DependentUpon>frmCarrera.vb</DependentUpon>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCabCarreList.resx">
       <DependentUpon>frmCabCarreList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarResultado.resx">
+      <DependentUpon>frmCargarResultado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarrera.resx">
       <DependentUpon>frmCarrera.vb</DependentUpon>

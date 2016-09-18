@@ -35,4 +35,8 @@
     Private Sub CarCabPruebaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CarCabPruebaToolStripMenuItem.Click
         frmCabCarreList.Show()
     End Sub
+
+    Private Sub CargarResultadoCarreraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarResultadoCarreraToolStripMenuItem.Click
+        frmCargarResultado.Show()
+    End Sub
 End Class
