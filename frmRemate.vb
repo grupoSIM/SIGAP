@@ -106,4 +106,21 @@
         txtPorcentajeCasa.Focus()
 
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        Imprimir()
+    End Sub
+    ' INICIO Codigo de Impresion
+    Private Declare Function GetTickCount Lib "kernel32" () As Integer
+    Private Sub Imprimir()
+        Form1.Show()
+
+        Dim retraso As Integer
+        retraso = 1000 + GetTickCount
+        While retraso >= GetTickCount
+            Application.DoEvents()
+        End While
+        Form1.Close()
+    End Sub
+    ' FIN Codigo de Impresion
 End Class
