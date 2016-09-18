@@ -755,7 +755,17 @@ WHERE        (tb_CarrerasCaballos.Posicion = 1)</CommandText>
               <Mapping SourceColumn="ImportePremio" DataSetColumn="ImportePremio" />
               <Mapping SourceColumn="NroRemate" DataSetColumn="NroRemate" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MaxId" Modifier="Public" Name="MaxId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MaxId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(Id) AS Expr1
+FROM            tb_Remates</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VwTicketTableAdapter" GeneratorDataComponentClassName="VwTicketTableAdapter" Name="VwTicket" UserDataComponentName="VwTicketTableAdapter">
             <MainSource>

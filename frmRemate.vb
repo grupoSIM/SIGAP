@@ -35,6 +35,8 @@
 
             filaNueva = TbDetalleRematesBindingSource.AddNew()
             filaNueva("IdCarreraCaballo") = row("Id")
+            filaNueva("NroCaballo") = row("Orden")
+            filaNueva("Incluido") = True
             DataGridView1.Rows(fila).Cells("Caballo").Value = caballo("CaballoNombre")
             fila = fila + 1
             'MsgBox(caballo("CaballoNombre"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
@@ -60,9 +62,31 @@
 
     Private Sub cmbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCarrera.SelectedIndexChanged
 
-        CargarRemates()
-        CargarDetallesRemates()
+        If (cmbCarrera.SelectedValue) Then
+            CargarRemates()
+            CargarDetallesRemates()
+        End If
 
     End Sub
 
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        'Dim remateNuevo As DataRowView
+        Dim remateNuevo As Integer
+        Dim totalApuestas As Integer
+
+        'totalApuestas = DataGridView1.Rows.Cast(Of DataGridViewRow).Sum(Function(r) Val(r.Cells(6).Value))
+        For i As Integer = 0 To DataGridView1.RowCount - 1
+            If (Not IsDBNull(DataGridView1.Rows(i).Cells(6).Value) And DataGridView1.Rows(i).Cells(7).Value) Then
+                totalApuestas += DataGridView1.Rows(i).Cells(6).Value
+                'Change the number 2 to your column index number (The first column has a 0 index column)
+                'In this example the column index of Price is 2
+            End If
+        Next
+
+        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, 1, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
+
+
+        MsgBox(Tb_RematesTableAdapter.MaxId(), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+    End Sub
 End Class

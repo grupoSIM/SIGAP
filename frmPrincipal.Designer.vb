@@ -27,8 +27,8 @@ Partial Class frmPrincipal
         Me.HipódromoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JornadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PalcosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PalcosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeCarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +38,7 @@ Partial Class frmPrincipal
         Me.ResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarResultadoCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RematesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,7 +53,7 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem, Me.RematesToolStripMenuItem1})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -75,17 +76,17 @@ Partial Class frmPrincipal
         Me.CarrerasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CarrerasToolStripMenuItem.Text = "Caballos"
         '
-        'PalcosToolStripMenuItem
-        '
-        Me.PalcosToolStripMenuItem.Name = "PalcosToolStripMenuItem"
-        Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PalcosToolStripMenuItem.Text = "Palcos"
-        '
         'RematadorToolStripMenuItem
         '
         Me.RematadorToolStripMenuItem.Name = "RematadorToolStripMenuItem"
         Me.RematadorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RematadorToolStripMenuItem.Text = "Rematador"
+        '
+        'PalcosToolStripMenuItem
+        '
+        Me.PalcosToolStripMenuItem.Name = "PalcosToolStripMenuItem"
+        Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PalcosToolStripMenuItem.Text = "Palcos"
         '
         'CarrerasToolStripMenuItem1
         '
@@ -144,6 +145,12 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
+        'RematesToolStripMenuItem1
+        '
+        Me.RematesToolStripMenuItem1.Name = "RematesToolStripMenuItem1"
+        Me.RematesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.RematesToolStripMenuItem1.Text = "Remates"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -177,4 +184,5 @@ Partial Class frmPrincipal
     Friend WithEvents CarCabPruebaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResultadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarResultadoCarreraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RematesToolStripMenuItem1 As ToolStripMenuItem
 End Class
