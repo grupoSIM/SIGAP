@@ -79,6 +79,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bdSIGAP_DataSet.vb">
+      <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCaballo.Designer.vb">
       <DependentUpon>frmCaballo.vb</DependentUpon>
     </Compile>
@@ -139,6 +142,12 @@
     <Compile Include="frmRemate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRemates.Designer.vb">
+      <DependentUpon>frmRemates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemates.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTicket.Designer.vb">
       <DependentUpon>frmTicket.vb</DependentUpon>
     </Compile>
@@ -191,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemate.resx">
       <DependentUpon>frmRemate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemates.resx">
+      <DependentUpon>frmRemates.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.vb</DependentUpon>

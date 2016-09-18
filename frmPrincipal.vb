@@ -35,4 +35,8 @@
     Private Sub CarCabPruebaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CarCabPruebaToolStripMenuItem.Click
         frmCabCarreList.Show()
     End Sub
+
+    Private Sub RematesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RematesToolStripMenuItem1.Click
+        frmRemates.Show()
+    End Sub
 End Class
