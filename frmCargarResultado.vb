@@ -51,8 +51,19 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim totalGanadores As Integer
+
+        For i As Integer = 0 To DataGridView1.RowCount - 1
+            If DataGridView1.Rows(i).Cells(5).Value = 1 Then
+                totalGanadores = totalGanadores + 1
+            End If
+        Next
+
         frmVerResultados.Show()
+        frmVerResultados.txResultado.Text = totalGanadores.ToString()
+        frmVerResultados.nResultados.Value = totalGanadores
         frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
+
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click

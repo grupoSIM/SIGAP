@@ -415,7 +415,21 @@ Where IdCarrera = ?</CommandText>
               <Mapping SourceColumn="Incluido" DataSetColumn="Incluido" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectName="tb_DetalleRemates" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByResultado" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByResultado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByResultado" UserSourceName="FillBy">
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetResultadosBy1Ganador" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetResultadosBy1Ganador" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetResultadosBy1Ganador" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tb_DetalleRemates.Id, tb_DetalleRemates.IdRemate, tb_DetalleRemates.IdCarreraCaballo, tb_DetalleRemates.NroCaballo, tb_DetalleRemates.Apostador, 
+                         tb_DetalleRemates.ImporteApuesta, tb_DetalleRemates.Luz, tb_DetalleRemates.Fila, tb_DetalleRemates.ImportePremio, tb_DetalleRemates.Incluido, 
+                         tb_CarrerasCaballos.Id AS Expr1, tb_CarrerasCaballos.IdCarrera, tb_CarrerasCaballos.IdCaballo, tb_CarrerasCaballos.Orden, 
+                         tb_CarrerasCaballos.NoTomaNuevosRemates, tb_CarrerasCaballos.Posicion, tb_CarrerasCaballos.Luz AS Expr2
+FROM            (tb_DetalleRemates INNER JOIN
+                         tb_CarrerasCaballos ON tb_DetalleRemates.IdCarreraCaballo = tb_CarrerasCaballos.Id)
+WHERE        (tb_DetalleRemates.Luz IS NULL) AND (tb_CarrerasCaballos.Posicion = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectName="tb_DetalleRemates" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByGetDataByResultado" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByResultado" GeneratorSourceName="FillByGetDataByResultado" GetMethodModifier="Public" GetMethodName="GetDataByResultado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByResultado" UserSourceName="FillByGetDataByResultado">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tb_DetalleRemates.Id, tb_DetalleRemates.IdRemate, tb_DetalleRemates.IdCarreraCaballo, tb_DetalleRemates.NroCaballo, tb_DetalleRemates.Apostador, 
@@ -427,16 +441,15 @@ WHERE        (tb_CarrerasCaballos.Posicion = 1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetResultadosBy1Ganador" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetResultadosBy1Ganador" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetResultadosBy1Ganador" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectName="tb_DetalleRemates" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByGetDataByResultadoPuesta" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByResultadoPuesta" GeneratorSourceName="FillByGetDataByResultadoPuesta" GetMethodModifier="Public" GetMethodName="GetDataByResultadoPuesta" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByResultadoPuesta" UserSourceName="FillByGetDataByResultadoPuesta">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        tb_DetalleRemates.Id, tb_DetalleRemates.IdRemate, tb_DetalleRemates.IdCarreraCaballo, tb_DetalleRemates.NroCaballo, tb_DetalleRemates.Apostador, 
-                         tb_DetalleRemates.ImporteApuesta, tb_DetalleRemates.Luz, tb_DetalleRemates.Fila, tb_DetalleRemates.ImportePremio, tb_DetalleRemates.Incluido, 
-                         tb_CarrerasCaballos.Id AS Expr1, tb_CarrerasCaballos.IdCarrera, tb_CarrerasCaballos.IdCaballo, tb_CarrerasCaballos.Orden, 
-                         tb_CarrerasCaballos.NoTomaNuevosRemates, tb_CarrerasCaballos.Posicion, tb_CarrerasCaballos.Luz AS Expr2
+                    <CommandText>SELECT        tb_DetalleRemates.Id AS Expr1, tb_DetalleRemates.IdRemate, tb_DetalleRemates.IdCarreraCaballo, tb_DetalleRemates.NroCaballo, tb_DetalleRemates.Apostador, 
+                         tb_DetalleRemates.ImporteApuesta, tb_DetalleRemates.Luz AS Expr2, tb_DetalleRemates.Fila, tb_DetalleRemates.ImportePremio, 
+                         tb_DetalleRemates.Incluido
 FROM            (tb_DetalleRemates INNER JOIN
                          tb_CarrerasCaballos ON tb_DetalleRemates.IdCarreraCaballo = tb_CarrerasCaballos.Id)
-WHERE        (tb_DetalleRemates.Luz IS NULL) AND (tb_CarrerasCaballos.Posicion = 1)</CommandText>
+WHERE        (tb_CarrerasCaballos.Posicion = 1)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
