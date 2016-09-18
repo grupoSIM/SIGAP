@@ -8738,12 +8738,22 @@ Namespace bdSIGAP_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id, IdRemate, IdCarreraCaballo, NroCaballo, Apostador, ImporteApuesta, Luz"& _ 
                 ", Fila, ImportePremio, Incluido FROM tb_DetalleRemates"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        tb_DetalleRemates.Id, tb_DetalleRemates.IdRemate, tb_DetalleRemates"& _ 
+                ".IdCarreraCaballo, tb_DetalleRemates.NroCaballo, tb_DetalleRemates.Apostador, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "                         tb_DetalleRemates.ImporteApuesta, tb_DetalleRemates.Luz"& _ 
+                ", tb_DetalleRemates.Fila, tb_DetalleRemates.ImportePremio, tb_DetalleRemates.Inc"& _ 
+                "luido"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            (tb_DetalleRemates INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         t"& _ 
+                "b_CarrerasCaballos ON tb_DetalleRemates.IdCarreraCaballo = tb_CarrerasCaballos.I"& _ 
+                "d)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tb_CarrerasCaballos.Posicion = 1)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8765,6 +8775,30 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As bdSIGAP_DataSet.tb_DetalleRematesDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable = New bdSIGAP_DataSet.tb_DetalleRematesDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByResultado() As bdSIGAP_DataSet.tb_DetalleRematesDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
             Dim dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable = New bdSIGAP_DataSet.tb_DetalleRematesDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
