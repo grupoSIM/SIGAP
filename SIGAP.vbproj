@@ -183,6 +183,12 @@
     <Compile Include="frmTicket.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmVerResultados.Designer.vb">
+      <DependentUpon>frmVerResultados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerResultados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerResultados.resx">
+      <DependentUpon>frmVerResultados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
