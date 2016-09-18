@@ -36,7 +36,7 @@
         frmCabCarreList.Show()
     End Sub
 
-    Private Sub RematesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RematesToolStripMenuItem1.Click
-        frmRemates.Show()
+    Private Sub CargarResultadoCarreraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarResultadoCarreraToolStripMenuItem.Click
+        frmCargarResultado.Show()
     End Sub
 End Class

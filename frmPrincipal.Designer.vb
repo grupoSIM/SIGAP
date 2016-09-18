@@ -35,14 +35,15 @@ Partial Class frmPrincipal
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargarResultadoCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RematesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ParámetrosToolStripMenuItem, Me.CarrerasToolStripMenuItem1, Me.RematesToolStripMenuItem, Me.ConsultasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ParámetrosToolStripMenuItem, Me.CarrerasToolStripMenuItem1, Me.RematesToolStripMenuItem, Me.ResultadosToolStripMenuItem, Me.ConsultasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(629, 24)
@@ -51,7 +52,7 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.PalcosToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.RematesToolStripMenuItem1})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -124,17 +125,24 @@ Partial Class frmPrincipal
         Me.CargarRematesToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.CargarRematesToolStripMenuItem.Text = "Cargar Remates"
         '
+        'ResultadosToolStripMenuItem
+        '
+        Me.ResultadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarResultadoCarreraToolStripMenuItem})
+        Me.ResultadosToolStripMenuItem.Name = "ResultadosToolStripMenuItem"
+        Me.ResultadosToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.ResultadosToolStripMenuItem.Text = "Resultados"
+        '
+        'CargarResultadoCarreraToolStripMenuItem
+        '
+        Me.CargarResultadoCarreraToolStripMenuItem.Name = "CargarResultadoCarreraToolStripMenuItem"
+        Me.CargarResultadoCarreraToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.CargarResultadoCarreraToolStripMenuItem.Text = "Cargar Resultado Carrera"
+        '
         'ConsultasToolStripMenuItem
         '
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
-        '
-        'RematesToolStripMenuItem1
-        '
-        Me.RematesToolStripMenuItem1.Name = "RematesToolStripMenuItem1"
-        Me.RematesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.RematesToolStripMenuItem1.Text = "Remates"
         '
         'frmPrincipal
         '
@@ -167,5 +175,6 @@ Partial Class frmPrincipal
     Friend WithEvents RematadorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeCarrerasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CarCabPruebaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RematesToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ResultadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CargarResultadoCarreraToolStripMenuItem As ToolStripMenuItem
 End Class
