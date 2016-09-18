@@ -56,6 +56,15 @@ Partial Class frmRemate
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.btnImprimir = New System.Windows.Forms.Button()
         Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Tb_PalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
+        Me.cmbPalco = New System.Windows.Forms.ComboBox()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +72,7 @@ Partial Class frmRemate
         CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BdSIGAP_DataSet
@@ -185,7 +195,7 @@ Partial Class frmRemate
         Me.cmbCarrera.DisplayMember = "NroCarrera"
         Me.cmbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbCarrera.FormattingEnabled = True
-        Me.cmbCarrera.Location = New System.Drawing.Point(6, 65)
+        Me.cmbCarrera.Location = New System.Drawing.Point(81, 64)
         Me.cmbCarrera.Name = "cmbCarrera"
         Me.cmbCarrera.Size = New System.Drawing.Size(121, 21)
         Me.cmbCarrera.TabIndex = 1
@@ -239,7 +249,7 @@ Partial Class frmRemate
         'txtRemate
         '
         Me.txtRemate.Enabled = False
-        Me.txtRemate.Location = New System.Drawing.Point(226, 66)
+        Me.txtRemate.Location = New System.Drawing.Point(308, 64)
         Me.txtRemate.Name = "txtRemate"
         Me.txtRemate.ReadOnly = True
         Me.txtRemate.Size = New System.Drawing.Size(100, 20)
@@ -247,7 +257,7 @@ Partial Class frmRemate
         '
         'txtPorcentajeCasa
         '
-        Me.txtPorcentajeCasa.Location = New System.Drawing.Point(439, 65)
+        Me.txtPorcentajeCasa.Location = New System.Drawing.Point(478, 64)
         Me.txtPorcentajeCasa.Name = "txtPorcentajeCasa"
         Me.txtPorcentajeCasa.Size = New System.Drawing.Size(100, 20)
         Me.txtPorcentajeCasa.TabIndex = 3
@@ -264,7 +274,7 @@ Partial Class frmRemate
         'txtJornada
         '
         Me.txtJornada.Enabled = False
-        Me.txtJornada.Location = New System.Drawing.Point(126, 27)
+        Me.txtJornada.Location = New System.Drawing.Point(102, 27)
         Me.txtJornada.Name = "txtJornada"
         Me.txtJornada.ReadOnly = True
         Me.txtJornada.Size = New System.Drawing.Size(100, 20)
@@ -273,7 +283,7 @@ Partial Class frmRemate
         'txtFecha
         '
         Me.txtFecha.Enabled = False
-        Me.txtFecha.Location = New System.Drawing.Point(328, 27)
+        Me.txtFecha.Location = New System.Drawing.Point(276, 27)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
         Me.txtFecha.Size = New System.Drawing.Size(100, 20)
@@ -297,11 +307,94 @@ Partial Class frmRemate
         Me.TbRematesBindingSource.DataMember = "tb_Remates"
         Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(408, 30)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Palco"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(233, 30)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Fecha"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(34, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Jornada"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(34, 67)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 13)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Carrera"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(220, 67)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Nro. de Remate"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(414, 68)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(58, 13)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "Porcentaje"
+        '
+        'Tb_PalcosBindingSource
+        '
+        Me.Tb_PalcosBindingSource.DataMember = "tb_Palcos"
+        Me.Tb_PalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_PalcosTableAdapter
+        '
+        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
+        '
+        'cmbPalco
+        '
+        Me.cmbPalco.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tb_PalcosBindingSource, "Palco", True))
+        Me.cmbPalco.DataSource = Me.Tb_PalcosBindingSource
+        Me.cmbPalco.DisplayMember = "Palco"
+        Me.cmbPalco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbPalco.FormattingEnabled = True
+        Me.cmbPalco.Location = New System.Drawing.Point(457, 26)
+        Me.cmbPalco.Name = "cmbPalco"
+        Me.cmbPalco.Size = New System.Drawing.Size(121, 21)
+        Me.cmbPalco.TabIndex = 16
+        Me.cmbPalco.ValueMember = "Id"
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 362)
+        Me.ClientSize = New System.Drawing.Size(606, 377)
+        Me.Controls.Add(Me.cmbPalco)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.txtJornada)
@@ -321,6 +414,7 @@ Partial Class frmRemate
         CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -358,4 +452,13 @@ Partial Class frmRemate
     Friend WithEvents ImportePremioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents btnImprimir As Button
     Friend WithEvents TbRematesBindingSource As BindingSource
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Tb_PalcosBindingSource As BindingSource
+    Friend WithEvents Tb_PalcosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter
+    Friend WithEvents cmbPalco As ComboBox
 End Class
