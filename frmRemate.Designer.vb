@@ -238,8 +238,10 @@ Partial Class frmRemate
         '
         'txtRemate
         '
+        Me.txtRemate.Enabled = False
         Me.txtRemate.Location = New System.Drawing.Point(226, 66)
         Me.txtRemate.Name = "txtRemate"
+        Me.txtRemate.ReadOnly = True
         Me.txtRemate.Size = New System.Drawing.Size(100, 20)
         Me.txtRemate.TabIndex = 2
         '
