@@ -43,4 +43,12 @@
     Private Sub RematesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RematesToolStripMenuItem1.Click
         frmRemates.Show()
     End Sub
+
+    Private Sub VerResultadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerResultadosToolStripMenuItem.Click
+        frmVerResultados.Show()
+    End Sub
+
+    Private Sub ListadoDeDetalleRematesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeDetalleRematesToolStripMenuItem.Click
+        frmDetalleRemate.Show()
+    End Sub
 End Class
