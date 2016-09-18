@@ -10,4 +10,14 @@
         Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
 
     End Sub
+
+    Private Function CargarRemates()
+
+        Me.Tb_DetalleRematesTableAdapter.GetDataByResultado()
+
+    End Function
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rbUnGanador.CheckedChanged
+
+    End Sub
 End Class
