@@ -108,8 +108,46 @@
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
-        Imprimir()
+
+        Dim totalApuestas As Integer
+        Dim detalles As DataTable
+
+        'totalApuestas = DataGridView1.Rows.Cast(Of DataGridViewRow).Sum(Function(r) Val(r.Cells(6).Value))
+        For i As Integer = 0 To DataGridView1.RowCount - 1
+            If (Not IsDBNull(DataGridView1.Rows(i).Cells(6).Value) And DataGridView1.Rows(i).Cells(7).Value) Then
+                totalApuestas += DataGridView1.Rows(i).Cells(6).Value
+                'Change the number 2 to your column index number (The first column has a 0 index column)
+                'In this example the column index of Price is 2
+            End If
+        Next
+
+        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
+
+        For i As Integer = 0 To DataGridView1.RowCount - 1
+            DataGridView1.Rows(i).Cells(1).Value = Tb_RematesTableAdapter.MaxId()
+            DataGridView1.Rows(i).Cells(10).Value = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
+        Next
+
+        Me.TbDetalleRematesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+        detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
+
+        For Each row As DataRow In detalles.Rows
+
+            Imprimir()
+
+        Next
+
+        MsgBox("Remate Guardado.", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+
+        CargarRemates()
+        CargarDetallesRemates()
+        txtPorcentajeCasa.Focus()
+
+
     End Sub
+
     ' INICIO Codigo de Impresion
     Private Declare Function GetTickCount Lib "kernel32" () As Integer
     Private Sub Imprimir()
