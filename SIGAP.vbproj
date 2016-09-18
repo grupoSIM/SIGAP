@@ -117,6 +117,12 @@
     <Compile Include="frmCabCarreList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCargarResultado.Designer.vb">
+      <DependentUpon>frmCargarResultado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarResultado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCarrera.Designer.vb">
       <DependentUpon>frmCarrera.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,12 @@
       <DependentUpon>frmCarreraCaballo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCarreraCaballo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleRemate.Designer.vb">
+      <DependentUpon>frmDetalleRemate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalleRemate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHipodromo.Designer.vb">
@@ -165,10 +177,22 @@
     <Compile Include="frmRemate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRemates.Designer.vb">
+      <DependentUpon>frmRemates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemates.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTicket.Designer.vb">
       <DependentUpon>frmTicket.vb</DependentUpon>
     </Compile>
     <Compile Include="frmTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerResultados.Designer.vb">
+      <DependentUpon>frmVerResultados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerResultados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -194,11 +218,17 @@
     <EmbeddedResource Include="frmCabCarreList.resx">
       <DependentUpon>frmCabCarreList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarResultado.resx">
+      <DependentUpon>frmCargarResultado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarrera.resx">
       <DependentUpon>frmCarrera.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarreraCaballo.resx">
       <DependentUpon>frmCarreraCaballo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleRemate.resx">
+      <DependentUpon>frmDetalleRemate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHipodromo.resx">
       <DependentUpon>frmHipodromo.vb</DependentUpon>
@@ -218,8 +248,14 @@
     <EmbeddedResource Include="frmRemate.resx">
       <DependentUpon>frmRemate.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRemates.resx">
+      <DependentUpon>frmRemates.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerResultados.resx">
+      <DependentUpon>frmVerResultados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

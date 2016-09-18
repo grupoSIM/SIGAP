@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:tb_Caballos" ZOrder="21" X="1003" Y="70" Height="172" Width="211" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:tb_Carreras" ZOrder="1" X="352" Y="388" Height="286" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
-    <Shape ID="DesignTable:tb_CarrerasCaballos" ZOrder="20" X="675" Y="70" Height="229" Width="258" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:tb_CarrerasCaballos" ZOrder="20" X="675" Y="70" Height="248" Width="266" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:tb_DetalleRemates" ZOrder="19" X="352" Y="70" Height="267" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:tb_Hipodromos" ZOrder="18" X="916" Y="388" Height="134" Width="235" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:tb_Jornadas" ZOrder="17" X="632" Y="388" Height="153" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
@@ -37,7 +37,7 @@
           <Y>156</Y>
         </Point>
         <Point>
-          <X>933</X>
+          <X>941</X>
           <Y>156</Y>
         </Point>
       </RoutePoints>
