@@ -23,9 +23,38 @@ Partial Class frmRemate
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TbDetalleRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.cmbCarrera = New System.Windows.Forms.ComboBox()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.txtRemate = New System.Windows.Forms.TextBox()
+        Me.txtPorcentajeCasa = New System.Windows.Forms.TextBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtJornada = New System.Windows.Forms.TextBox()
+        Me.txtFecha = New System.Windows.Forms.TextBox()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmbPalco = New System.Windows.Forms.ComboBox()
+        Me.Tb_PalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.Tb_CaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.Tb_CarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
+        Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
+        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
+        Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
+        Me.txtId = New System.Windows.Forms.TextBox()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,48 +66,15 @@ Partial Class frmRemate
         Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ImportePremioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TbDetalleRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
-        Me.cmbCarrera = New System.Windows.Forms.ComboBox()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        Me.Tb_CaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
-        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
-        Me.Tb_CarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
-        Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
-        Me.txtRemate = New System.Windows.Forms.TextBox()
-        Me.txtPorcentajeCasa = New System.Windows.Forms.TextBox()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.txtJornada = New System.Windows.Forms.TextBox()
-        Me.txtFecha = New System.Windows.Forms.TextBox()
-        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
-        Me.btnImprimir = New System.Windows.Forms.Button()
-        Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Tb_PalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
-        Me.cmbPalco = New System.Windows.Forms.ComboBox()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblTitulo
         '
@@ -102,92 +98,15 @@ Partial Class frmRemate
         Me.DataGridView1.Size = New System.Drawing.Size(595, 225)
         Me.DataGridView1.TabIndex = 4
         '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Visible = False
-        '
-        'IdRemateDataGridViewTextBoxColumn
-        '
-        Me.IdRemateDataGridViewTextBoxColumn.DataPropertyName = "IdRemate"
-        Me.IdRemateDataGridViewTextBoxColumn.HeaderText = "IdRemate"
-        Me.IdRemateDataGridViewTextBoxColumn.Name = "IdRemateDataGridViewTextBoxColumn"
-        Me.IdRemateDataGridViewTextBoxColumn.Visible = False
-        '
-        'IdCarreraCaballoDataGridViewTextBoxColumn
-        '
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCarreraCaballo"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.HeaderText = "IdCarreraCaballo"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Name = "IdCarreraCaballoDataGridViewTextBoxColumn"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Visible = False
-        '
-        'NroCaballoDataGridViewTextBoxColumn
-        '
-        Me.NroCaballoDataGridViewTextBoxColumn.DataPropertyName = "NroCaballo"
-        Me.NroCaballoDataGridViewTextBoxColumn.HeaderText = "Número"
-        Me.NroCaballoDataGridViewTextBoxColumn.Name = "NroCaballoDataGridViewTextBoxColumn"
-        Me.NroCaballoDataGridViewTextBoxColumn.Width = 50
-        '
-        'Caballo
-        '
-        Me.Caballo.HeaderText = "Caballo"
-        Me.Caballo.Name = "Caballo"
-        Me.Caballo.ReadOnly = True
-        '
-        'ApostadorDataGridViewTextBoxColumn
-        '
-        Me.ApostadorDataGridViewTextBoxColumn.DataPropertyName = "Apostador"
-        Me.ApostadorDataGridViewTextBoxColumn.HeaderText = "Apostador"
-        Me.ApostadorDataGridViewTextBoxColumn.Name = "ApostadorDataGridViewTextBoxColumn"
-        '
-        'ImporteApuestaDataGridViewTextBoxColumn
-        '
-        Me.ImporteApuestaDataGridViewTextBoxColumn.DataPropertyName = "ImporteApuesta"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.HeaderText = "ImporteApuesta"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.Name = "ImporteApuestaDataGridViewTextBoxColumn"
-        '
-        'Incluido
-        '
-        Me.Incluido.DataPropertyName = "Incluido"
-        Me.Incluido.HeaderText = "Incluido"
-        Me.Incluido.Name = "Incluido"
-        Me.Incluido.Width = 50
-        '
-        'LuzDataGridViewTextBoxColumn
-        '
-        Me.LuzDataGridViewTextBoxColumn.DataPropertyName = "Luz"
-        Me.LuzDataGridViewTextBoxColumn.HeaderText = "Luz"
-        Me.LuzDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Da", "Recibe"})
-        Me.LuzDataGridViewTextBoxColumn.Name = "LuzDataGridViewTextBoxColumn"
-        Me.LuzDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.LuzDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'FilaDataGridViewTextBoxColumn
-        '
-        Me.FilaDataGridViewTextBoxColumn.DataPropertyName = "Fila"
-        Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
-        Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
-        Me.FilaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FilaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.FilaDataGridViewTextBoxColumn.Width = 50
-        '
-        'ImportePremioDataGridViewTextBoxColumn
-        '
-        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
-        Me.ImportePremioDataGridViewTextBoxColumn.Visible = False
-        '
         'TbDetalleRematesBindingSource
         '
         Me.TbDetalleRematesBindingSource.DataMember = "tb_DetalleRemates"
         Me.TbDetalleRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'Tb_DetalleRematesTableAdapter
+        'BdSIGAP_DataSet
         '
-        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'cmbCarrera
         '
@@ -205,46 +124,6 @@ Partial Class frmRemate
         '
         Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
         Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CarrerasTableAdapter
-        '
-        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_CaballosBindingSource
-        '
-        Me.Tb_CaballosBindingSource.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosTableAdapter
-        '
-        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tb_CaballosTableAdapter = Me.Tb_CaballosTableAdapter
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
-        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Me.Tb_DetalleRematesTableAdapter
-        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
-        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Tb_CarrerasCaballosBindingSource
-        '
-        Me.Tb_CarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
-        Me.Tb_CarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CarrerasCaballosTableAdapter
-        '
-        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_RematesTableAdapter
-        '
-        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
         '
         'txtRemate
         '
@@ -289,10 +168,6 @@ Partial Class frmRemate
         Me.txtFecha.Size = New System.Drawing.Size(100, 20)
         Me.txtFecha.TabIndex = 0
         '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
-        '
         'btnImprimir
         '
         Me.btnImprimir.Location = New System.Drawing.Point(497, 334)
@@ -301,11 +176,6 @@ Partial Class frmRemate
         Me.btnImprimir.TabIndex = 7
         Me.btnImprimir.Text = "Guardar e Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = True
-        '
-        'TbRematesBindingSource
-        '
-        Me.TbRematesBindingSource.DataMember = "tb_Remates"
-        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Label1
         '
@@ -361,15 +231,6 @@ Partial Class frmRemate
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Porcentaje"
         '
-        'Tb_PalcosBindingSource
-        '
-        Me.Tb_PalcosBindingSource.DataMember = "tb_Palcos"
-        Me.Tb_PalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_PalcosTableAdapter
-        '
-        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
-        '
         'cmbPalco
         '
         Me.cmbPalco.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tb_PalcosBindingSource, "Palco", True))
@@ -383,11 +244,173 @@ Partial Class frmRemate
         Me.cmbPalco.TabIndex = 16
         Me.cmbPalco.ValueMember = "Id"
         '
+        'Tb_PalcosBindingSource
+        '
+        Me.Tb_PalcosBindingSource.DataMember = "tb_Palcos"
+        Me.Tb_PalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_DetalleRematesTableAdapter
+        '
+        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CaballosBindingSource
+        '
+        Me.Tb_CaballosBindingSource.DataMember = "tb_Caballos"
+        Me.Tb_CaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tb_CaballosTableAdapter = Me.Tb_CaballosTableAdapter
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
+        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Me.Tb_DetalleRematesTableAdapter
+        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tb_CarrerasCaballosBindingSource
+        '
+        Me.Tb_CarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
+        Me.Tb_CarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CarrerasCaballosTableAdapter
+        '
+        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_RematesTableAdapter
+        '
+        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_JornadasTableAdapter
+        '
+        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
+        '
+        'TbRematesBindingSource
+        '
+        Me.TbRematesBindingSource.DataMember = "tb_Remates"
+        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_PalcosTableAdapter
+        '
+        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
+        '
+        'txtId
+        '
+        Me.txtId.Location = New System.Drawing.Point(505, 342)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(100, 20)
+        Me.txtId.TabIndex = 17
+        Me.txtId.Visible = False
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IdDataGridViewTextBoxColumn.Visible = False
+        '
+        'IdRemateDataGridViewTextBoxColumn
+        '
+        Me.IdRemateDataGridViewTextBoxColumn.DataPropertyName = "IdRemate"
+        Me.IdRemateDataGridViewTextBoxColumn.HeaderText = "IdRemate"
+        Me.IdRemateDataGridViewTextBoxColumn.Name = "IdRemateDataGridViewTextBoxColumn"
+        Me.IdRemateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdRemateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IdRemateDataGridViewTextBoxColumn.Visible = False
+        '
+        'IdCarreraCaballoDataGridViewTextBoxColumn
+        '
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCarreraCaballo"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.HeaderText = "IdCarreraCaballo"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Name = "IdCarreraCaballoDataGridViewTextBoxColumn"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Visible = False
+        '
+        'NroCaballoDataGridViewTextBoxColumn
+        '
+        Me.NroCaballoDataGridViewTextBoxColumn.DataPropertyName = "NroCaballo"
+        Me.NroCaballoDataGridViewTextBoxColumn.HeaderText = "Número"
+        Me.NroCaballoDataGridViewTextBoxColumn.Name = "NroCaballoDataGridViewTextBoxColumn"
+        Me.NroCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NroCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.NroCaballoDataGridViewTextBoxColumn.Width = 50
+        '
+        'Caballo
+        '
+        Me.Caballo.HeaderText = "Caballo"
+        Me.Caballo.Name = "Caballo"
+        Me.Caballo.ReadOnly = True
+        Me.Caballo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Caballo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ApostadorDataGridViewTextBoxColumn
+        '
+        Me.ApostadorDataGridViewTextBoxColumn.DataPropertyName = "Apostador"
+        Me.ApostadorDataGridViewTextBoxColumn.HeaderText = "Apostador"
+        Me.ApostadorDataGridViewTextBoxColumn.Name = "ApostadorDataGridViewTextBoxColumn"
+        Me.ApostadorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ApostadorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ImporteApuestaDataGridViewTextBoxColumn
+        '
+        Me.ImporteApuestaDataGridViewTextBoxColumn.DataPropertyName = "ImporteApuesta"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.HeaderText = "ImporteApuesta"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.Name = "ImporteApuestaDataGridViewTextBoxColumn"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ImporteApuestaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Incluido
+        '
+        Me.Incluido.DataPropertyName = "Incluido"
+        Me.Incluido.HeaderText = "Incluido"
+        Me.Incluido.Name = "Incluido"
+        Me.Incluido.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Incluido.Width = 50
+        '
+        'LuzDataGridViewTextBoxColumn
+        '
+        Me.LuzDataGridViewTextBoxColumn.DataPropertyName = "Luz"
+        Me.LuzDataGridViewTextBoxColumn.HeaderText = "Luz"
+        Me.LuzDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Da", "Recibe"})
+        Me.LuzDataGridViewTextBoxColumn.Name = "LuzDataGridViewTextBoxColumn"
+        '
+        'FilaDataGridViewTextBoxColumn
+        '
+        Me.FilaDataGridViewTextBoxColumn.DataPropertyName = "Fila"
+        Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
+        Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
+        Me.FilaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FilaDataGridViewTextBoxColumn.Width = 50
+        '
+        'ImportePremioDataGridViewTextBoxColumn
+        '
+        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
+        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
+        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
+        Me.ImportePremioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ImportePremioDataGridViewTextBoxColumn.Visible = False
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 377)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.cmbPalco)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -407,14 +430,14 @@ Partial Class frmRemate
         Me.Name = "frmRemate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Remate"
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -439,17 +462,6 @@ Partial Class frmRemate
     Friend WithEvents txtJornada As TextBox
     Friend WithEvents txtFecha As TextBox
     Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdRemateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdCarreraCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NroCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Caballo As DataGridViewTextBoxColumn
-    Friend WithEvents ApostadorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ImporteApuestaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Incluido As DataGridViewCheckBoxColumn
-    Friend WithEvents LuzDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
-    Friend WithEvents FilaDataGridViewTextBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents ImportePremioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents btnImprimir As Button
     Friend WithEvents TbRematesBindingSource As BindingSource
     Friend WithEvents Label1 As Label
@@ -461,4 +473,16 @@ Partial Class frmRemate
     Friend WithEvents Tb_PalcosBindingSource As BindingSource
     Friend WithEvents Tb_PalcosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter
     Friend WithEvents cmbPalco As ComboBox
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdRemateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdCarreraCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NroCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Caballo As DataGridViewTextBoxColumn
+    Friend WithEvents ApostadorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ImporteApuestaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Incluido As DataGridViewCheckBoxColumn
+    Friend WithEvents LuzDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
+    Friend WithEvents FilaDataGridViewTextBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents ImportePremioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

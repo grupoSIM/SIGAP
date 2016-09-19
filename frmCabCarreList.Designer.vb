@@ -42,9 +42,13 @@ Partial Class frmCabCarreList
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Tb_CarrerasCaballosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Tb_CarrerasCaballosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -54,6 +58,8 @@ Partial Class frmCabCarreList
         CType(Me.Tb_CarrerasCaballosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tb_CarrerasCaballosBindingNavigator.SuspendLayout()
         CType(Me.Tb_CarrerasCaballosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BdSIGAP_DataSet
@@ -98,7 +104,7 @@ Partial Class frmCabCarreList
         Me.Tb_CarrerasCaballosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Tb_CarrerasCaballosBindingNavigator.Name = "Tb_CarrerasCaballosBindingNavigator"
         Me.Tb_CarrerasCaballosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tb_CarrerasCaballosBindingNavigator.Size = New System.Drawing.Size(730, 25)
+        Me.Tb_CarrerasCaballosBindingNavigator.Size = New System.Drawing.Size(880, 25)
         Me.Tb_CarrerasCaballosBindingNavigator.TabIndex = 0
         Me.Tb_CarrerasCaballosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -203,8 +209,26 @@ Partial Class frmCabCarreList
         Me.Tb_CarrerasCaballosDataGridView.DataSource = Me.Tb_CarrerasCaballosBindingSource
         Me.Tb_CarrerasCaballosDataGridView.Location = New System.Drawing.Point(0, 28)
         Me.Tb_CarrerasCaballosDataGridView.Name = "Tb_CarrerasCaballosDataGridView"
-        Me.Tb_CarrerasCaballosDataGridView.Size = New System.Drawing.Size(851, 220)
+        Me.Tb_CarrerasCaballosDataGridView.Size = New System.Drawing.Size(851, 464)
         Me.Tb_CarrerasCaballosDataGridView.TabIndex = 1
+        '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'TbCaballosBindingSource
+        '
+        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
+        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -215,14 +239,24 @@ Partial Class frmCabCarreList
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "IdCarrera"
+        Me.DataGridViewTextBoxColumn2.DataSource = Me.TbCarrerasBindingSource
+        Me.DataGridViewTextBoxColumn2.DisplayMember = "Nombre"
         Me.DataGridViewTextBoxColumn2.HeaderText = "IdCarrera"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn2.ValueMember = "Id"
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "IdCaballo"
+        Me.DataGridViewTextBoxColumn3.DataSource = Me.TbCaballosBindingSource
+        Me.DataGridViewTextBoxColumn3.DisplayMember = "CaballoNombre"
         Me.DataGridViewTextBoxColumn3.HeaderText = "IdCaballo"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn3.ValueMember = "Id"
         '
         'DataGridViewCheckBoxColumn1
         '
@@ -252,7 +286,7 @@ Partial Class frmCabCarreList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 504)
+        Me.ClientSize = New System.Drawing.Size(880, 504)
         Me.Controls.Add(Me.Tb_CarrerasCaballosDataGridView)
         Me.Controls.Add(Me.Tb_CarrerasCaballosBindingNavigator)
         Me.Name = "frmCabCarreList"
@@ -263,6 +297,8 @@ Partial Class frmCabCarreList
         Me.Tb_CarrerasCaballosBindingNavigator.ResumeLayout(False)
         Me.Tb_CarrerasCaballosBindingNavigator.PerformLayout()
         CType(Me.Tb_CarrerasCaballosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -286,9 +322,13 @@ Partial Class frmCabCarreList
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents Tb_CarrerasCaballosBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents Tb_CarrerasCaballosDataGridView As DataGridView
+    Friend WithEvents TbCarrerasBindingSource As BindingSource
+    Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
+    Friend WithEvents TbCaballosBindingSource As BindingSource
+    Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewComboBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewComboBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn

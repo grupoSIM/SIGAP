@@ -135,7 +135,7 @@
 
         For Each row As DataRow In detalles.Rows
 
-            Imprimir()
+            Imprimir(row("Id"))
 
         Next
 
@@ -150,11 +150,13 @@
 
     ' INICIO Codigo de Impresion
     Private Declare Function GetTickCount Lib "kernel32" () As Integer
-    Private Sub Imprimir()
+    Private Sub Imprimir(id)
+        'MsgBox(id, MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+        txtId.Text = id
         Form1.Show()
 
         Dim retraso As Integer
-        retraso = 1000 + GetTickCount
+        retraso = 500 + GetTickCount
         While retraso >= GetTickCount
             Application.DoEvents()
         End While

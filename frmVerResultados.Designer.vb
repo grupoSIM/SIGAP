@@ -59,9 +59,9 @@ Partial Class frmVerResultados
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdRemateDataGridViewTextBoxColumn, Me.IdCarreraCaballoDataGridViewTextBoxColumn, Me.NroCaballoDataGridViewTextBoxColumn, Me.ApostadorDataGridViewTextBoxColumn, Me.ImporteApuestaDataGridViewTextBoxColumn, Me.LuzDataGridViewTextBoxColumn, Me.FilaDataGridViewTextBoxColumn, Me.ImportePremioDataGridViewTextBoxColumn, Me.IncluidoDataGridViewCheckBoxColumn})
         Me.DataGridView1.DataSource = Me.TbDetalleRematesBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 57)
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 52)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1079, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(1079, 481)
         Me.DataGridView1.TabIndex = 0
         '
         'IdDataGridViewTextBoxColumn
@@ -204,7 +204,7 @@ Partial Class frmVerResultados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1109, 354)
+        Me.ClientSize = New System.Drawing.Size(1109, 570)
         Me.Controls.Add(Me.nResultados)
         Me.Controls.Add(Me.rbPuesta)
         Me.Controls.Add(Me.rbUnGanador)

@@ -26,8 +26,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.NombreLabel1 = New System.Windows.Forms.Label()
-        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.FechaLabel1 = New System.Windows.Forms.Label()
         Me.NroCarreraLabel1 = New System.Windows.Forms.Label()
         Me.PalcoLabel1 = New System.Windows.Forms.Label()
@@ -53,8 +51,14 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PremioLabel1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.NroRemateLabel1 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.VwTicketBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,21 +81,11 @@ Partial Class Form1
         Me.NombreLabel1.TabIndex = 3
         Me.NombreLabel1.Text = "Lbl_Hipodromo"
         '
-        'VwTicketBindingSource
-        '
-        Me.VwTicketBindingSource.DataMember = "VwTicket"
-        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FechaLabel1
         '
         Me.FechaLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Fecha", True))
         Me.FechaLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FechaLabel1.Location = New System.Drawing.Point(-3, 40)
+        Me.FechaLabel1.Location = New System.Drawing.Point(-3, 43)
         Me.FechaLabel1.Name = "FechaLabel1"
         Me.FechaLabel1.Size = New System.Drawing.Size(80, 15)
         Me.FechaLabel1.TabIndex = 5
@@ -100,8 +94,8 @@ Partial Class Form1
         'NroCarreraLabel1
         '
         Me.NroCarreraLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "NroCarrera", True))
-        Me.NroCarreraLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NroCarreraLabel1.Location = New System.Drawing.Point(167, 40)
+        Me.NroCarreraLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NroCarreraLabel1.Location = New System.Drawing.Point(93, 71)
         Me.NroCarreraLabel1.Name = "NroCarreraLabel1"
         Me.NroCarreraLabel1.Size = New System.Drawing.Size(43, 15)
         Me.NroCarreraLabel1.TabIndex = 7
@@ -111,56 +105,60 @@ Partial Class Form1
         '
         Me.PalcoLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Palco", True))
         Me.PalcoLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PalcoLabel1.Location = New System.Drawing.Point(216, 40)
+        Me.PalcoLabel1.Location = New System.Drawing.Point(251, 43)
         Me.PalcoLabel1.Name = "PalcoLabel1"
-        Me.PalcoLabel1.Size = New System.Drawing.Size(117, 15)
+        Me.PalcoLabel1.Size = New System.Drawing.Size(33, 15)
         Me.PalcoLabel1.TabIndex = 9
         Me.PalcoLabel1.Text = "Lbl_Palco"
         '
         'NroCaballoLabel1
         '
         Me.NroCaballoLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "NroCaballo", True))
-        Me.NroCaballoLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NroCaballoLabel1.Location = New System.Drawing.Point(70, 74)
+        Me.NroCaballoLabel1.Font = New System.Drawing.Font("Arial Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NroCaballoLabel1.Location = New System.Drawing.Point(-5, 136)
         Me.NroCaballoLabel1.Name = "NroCaballoLabel1"
-        Me.NroCaballoLabel1.Size = New System.Drawing.Size(37, 15)
+        Me.NroCaballoLabel1.Size = New System.Drawing.Size(57, 41)
         Me.NroCaballoLabel1.TabIndex = 11
         Me.NroCaballoLabel1.Text = "Lbl__NroCaballo"
+        Me.NroCaballoLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'CaballoNombreLabel1
         '
         Me.CaballoNombreLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "CaballoNombre", True))
-        Me.CaballoNombreLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CaballoNombreLabel1.Location = New System.Drawing.Point(109, 74)
+        Me.CaballoNombreLabel1.Font = New System.Drawing.Font("Arial Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CaballoNombreLabel1.Location = New System.Drawing.Point(51, 136)
         Me.CaballoNombreLabel1.Name = "CaballoNombreLabel1"
-        Me.CaballoNombreLabel1.Size = New System.Drawing.Size(117, 15)
+        Me.CaballoNombreLabel1.Size = New System.Drawing.Size(260, 41)
         Me.CaballoNombreLabel1.TabIndex = 13
         Me.CaballoNombreLabel1.Text = "Lbl_NombreCaballo"
         '
         'ImporteApuestaLabel1
         '
         Me.ImporteApuestaLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ImporteApuesta", True))
-        Me.ImporteApuestaLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ImporteApuestaLabel1.Location = New System.Drawing.Point(232, 74)
+        Me.ImporteApuestaLabel1.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ImporteApuestaLabel1.Location = New System.Drawing.Point(1, 223)
         Me.ImporteApuestaLabel1.Name = "ImporteApuestaLabel1"
-        Me.ImporteApuestaLabel1.Size = New System.Drawing.Size(65, 15)
+        Me.ImporteApuestaLabel1.Size = New System.Drawing.Size(138, 25)
         Me.ImporteApuestaLabel1.TabIndex = 15
         Me.ImporteApuestaLabel1.Text = "Lbl_ImporteApuesta"
+        Me.ImporteApuestaLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'ApostadorLabel1
         '
         Me.ApostadorLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Apostador", True))
-        Me.ApostadorLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ApostadorLabel1.Location = New System.Drawing.Point(50, 107)
+        Me.ApostadorLabel1.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApostadorLabel1.Location = New System.Drawing.Point(0, 298)
         Me.ApostadorLabel1.Name = "ApostadorLabel1"
-        Me.ApostadorLabel1.Size = New System.Drawing.Size(105, 15)
+        Me.ApostadorLabel1.Size = New System.Drawing.Size(271, 21)
         Me.ApostadorLabel1.TabIndex = 17
         Me.ApostadorLabel1.Text = "Lbl_Apostador"
+        Me.ApostadorLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'ApuC1Label1
         '
         Me.ApuC1Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC1", True))
-        Me.ApuC1Label1.Location = New System.Drawing.Point(-2, 138)
+        Me.ApuC1Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC1Label1.Location = New System.Drawing.Point(-2, 360)
         Me.ApuC1Label1.Name = "ApuC1Label1"
         Me.ApuC1Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC1Label1.TabIndex = 21
@@ -169,7 +167,8 @@ Partial Class Form1
         'ApuC2Label1
         '
         Me.ApuC2Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC2", True))
-        Me.ApuC2Label1.Location = New System.Drawing.Point(99, 140)
+        Me.ApuC2Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC2Label1.Location = New System.Drawing.Point(99, 360)
         Me.ApuC2Label1.Name = "ApuC2Label1"
         Me.ApuC2Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC2Label1.TabIndex = 23
@@ -178,7 +177,8 @@ Partial Class Form1
         'ApuC3Label1
         '
         Me.ApuC3Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC3", True))
-        Me.ApuC3Label1.Location = New System.Drawing.Point(202, 138)
+        Me.ApuC3Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC3Label1.Location = New System.Drawing.Point(202, 360)
         Me.ApuC3Label1.Name = "ApuC3Label1"
         Me.ApuC3Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC3Label1.TabIndex = 25
@@ -187,7 +187,8 @@ Partial Class Form1
         'ApuC4Label1
         '
         Me.ApuC4Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC4", True))
-        Me.ApuC4Label1.Location = New System.Drawing.Point(-2, 160)
+        Me.ApuC4Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC4Label1.Location = New System.Drawing.Point(-2, 382)
         Me.ApuC4Label1.Name = "ApuC4Label1"
         Me.ApuC4Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC4Label1.TabIndex = 27
@@ -196,7 +197,8 @@ Partial Class Form1
         'ApuC5Label1
         '
         Me.ApuC5Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC5", True))
-        Me.ApuC5Label1.Location = New System.Drawing.Point(99, 160)
+        Me.ApuC5Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC5Label1.Location = New System.Drawing.Point(99, 382)
         Me.ApuC5Label1.Name = "ApuC5Label1"
         Me.ApuC5Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC5Label1.TabIndex = 29
@@ -205,7 +207,8 @@ Partial Class Form1
         'ApuC6Label1
         '
         Me.ApuC6Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC6", True))
-        Me.ApuC6Label1.Location = New System.Drawing.Point(202, 161)
+        Me.ApuC6Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC6Label1.Location = New System.Drawing.Point(202, 382)
         Me.ApuC6Label1.Name = "ApuC6Label1"
         Me.ApuC6Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC6Label1.TabIndex = 31
@@ -214,7 +217,8 @@ Partial Class Form1
         'ApuC7Label1
         '
         Me.ApuC7Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC7", True))
-        Me.ApuC7Label1.Location = New System.Drawing.Point(-2, 182)
+        Me.ApuC7Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC7Label1.Location = New System.Drawing.Point(-2, 404)
         Me.ApuC7Label1.Name = "ApuC7Label1"
         Me.ApuC7Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC7Label1.TabIndex = 33
@@ -223,7 +227,8 @@ Partial Class Form1
         'ApuC8Label1
         '
         Me.ApuC8Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC8", True))
-        Me.ApuC8Label1.Location = New System.Drawing.Point(99, 180)
+        Me.ApuC8Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC8Label1.Location = New System.Drawing.Point(99, 404)
         Me.ApuC8Label1.Name = "ApuC8Label1"
         Me.ApuC8Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC8Label1.TabIndex = 35
@@ -232,7 +237,8 @@ Partial Class Form1
         'ApuC9Label1
         '
         Me.ApuC9Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC9", True))
-        Me.ApuC9Label1.Location = New System.Drawing.Point(202, 183)
+        Me.ApuC9Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC9Label1.Location = New System.Drawing.Point(202, 404)
         Me.ApuC9Label1.Name = "ApuC9Label1"
         Me.ApuC9Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC9Label1.TabIndex = 37
@@ -241,7 +247,8 @@ Partial Class Form1
         'ApuC10Label1
         '
         Me.ApuC10Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC10", True))
-        Me.ApuC10Label1.Location = New System.Drawing.Point(-2, 206)
+        Me.ApuC10Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC10Label1.Location = New System.Drawing.Point(-2, 428)
         Me.ApuC10Label1.Name = "ApuC10Label1"
         Me.ApuC10Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC10Label1.TabIndex = 39
@@ -250,7 +257,8 @@ Partial Class Form1
         'ApuC11Label1
         '
         Me.ApuC11Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC11", True))
-        Me.ApuC11Label1.Location = New System.Drawing.Point(99, 204)
+        Me.ApuC11Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC11Label1.Location = New System.Drawing.Point(99, 428)
         Me.ApuC11Label1.Name = "ApuC11Label1"
         Me.ApuC11Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC11Label1.TabIndex = 41
@@ -259,7 +267,8 @@ Partial Class Form1
         'ApuC12Label1
         '
         Me.ApuC12Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ApuC12", True))
-        Me.ApuC12Label1.Location = New System.Drawing.Point(202, 206)
+        Me.ApuC12Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApuC12Label1.Location = New System.Drawing.Point(202, 428)
         Me.ApuC12Label1.Name = "ApuC12Label1"
         Me.ApuC12Label1.Size = New System.Drawing.Size(100, 16)
         Me.ApuC12Label1.TabIndex = 43
@@ -277,48 +286,82 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(83, 40)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(-2, 71)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 13)
+        Me.Label1.Size = New System.Drawing.Size(90, 15)
         Me.Label1.TabIndex = 45
         Me.Label1.Text = "CARRERA Nº"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(-3, 74)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(99, 164)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 16)
+        Me.Label2.Size = New System.Drawing.Size(62, 13)
         Me.Label2.TabIndex = 46
         Me.Label2.Text = "CABALLO"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(-3, 107)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(89, 324)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 13)
+        Me.Label3.Size = New System.Drawing.Size(83, 13)
         Me.Label3.TabIndex = 47
-        Me.Label3.Text = "APOST:"
+        Me.Label3.Text = "APOSTADOR"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(166, 107)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(200, 248)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 13)
+        Me.Label4.Size = New System.Drawing.Size(55, 13)
         Me.Label4.TabIndex = 48
-        Me.Label4.Text = "A COBRAR"
+        Me.Label4.Text = "PREMIO"
         '
         'PremioLabel1
         '
         Me.PremioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Premio", True))
-        Me.PremioLabel1.Location = New System.Drawing.Point(234, 106)
+        Me.PremioLabel1.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PremioLabel1.Location = New System.Drawing.Point(163, 223)
         Me.PremioLabel1.Name = "PremioLabel1"
-        Me.PremioLabel1.Size = New System.Drawing.Size(60, 15)
+        Me.PremioLabel1.Size = New System.Drawing.Size(128, 25)
         Me.PremioLabel1.TabIndex = 49
         Me.PremioLabel1.Text = "Lbl_Premio"
+        Me.PremioLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(208, 44)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.TabIndex = 50
+        Me.Label5.Text = "PALCO"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(182, 71)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 15)
+        Me.Label6.TabIndex = 51
+        Me.Label6.Text = "REMATE"
+        '
+        'VwTicketBindingSource
+        '
+        Me.VwTicketBindingSource.DataMember = "VwTicket"
+        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VwTicketTableAdapter
         '
@@ -339,13 +382,37 @@ Partial Class Form1
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'NroRemateLabel1
+        '
+        Me.NroRemateLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "NroRemate", True))
+        Me.NroRemateLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NroRemateLabel1.Location = New System.Drawing.Point(242, 72)
+        Me.NroRemateLabel1.Name = "NroRemateLabel1"
+        Me.NroRemateLabel1.Size = New System.Drawing.Size(46, 13)
+        Me.NroRemateLabel1.TabIndex = 52
+        Me.NroRemateLabel1.Text = "Label7"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(38, 248)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(64, 13)
+        Me.Label7.TabIndex = 53
+        Me.Label7.Text = "APUESTA"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(338, 242)
+        Me.ClientSize = New System.Drawing.Size(356, 448)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.NroRemateLabel1)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PremioLabel1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -417,4 +484,8 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PremioLabel1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents NroRemateLabel1 As Label
+    Friend WithEvents Label7 As Label
 End Class

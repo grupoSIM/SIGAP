@@ -29,13 +29,6 @@ Partial Class frmCargarResultado
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OrdenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PosicionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LuzDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
@@ -64,6 +57,16 @@ Partial Class frmCargarResultado
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.nGanadores = New System.Windows.Forms.NumericUpDown()
         Me.txResultado = New System.Windows.Forms.TextBox()
+        Me.TbCarrerasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.OrdenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PosicionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LuzDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +76,8 @@ Partial Class frmCargarResultado
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.nGanadores, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -119,49 +124,6 @@ Partial Class frmCargarResultado
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(655, 150)
         Me.DataGridView1.TabIndex = 6
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        '
-        'IdCarreraDataGridViewTextBoxColumn
-        '
-        Me.IdCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera"
-        Me.IdCarreraDataGridViewTextBoxColumn.HeaderText = "Carrera"
-        Me.IdCarreraDataGridViewTextBoxColumn.Name = "IdCarreraDataGridViewTextBoxColumn"
-        '
-        'OrdenDataGridViewTextBoxColumn
-        '
-        Me.OrdenDataGridViewTextBoxColumn.DataPropertyName = "Orden"
-        Me.OrdenDataGridViewTextBoxColumn.HeaderText = "Orden"
-        Me.OrdenDataGridViewTextBoxColumn.Name = "OrdenDataGridViewTextBoxColumn"
-        '
-        'IdCaballoDataGridViewTextBoxColumn
-        '
-        Me.IdCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCaballo"
-        Me.IdCaballoDataGridViewTextBoxColumn.HeaderText = "Caballo"
-        Me.IdCaballoDataGridViewTextBoxColumn.Name = "IdCaballoDataGridViewTextBoxColumn"
-        '
-        'NoTomaNuevosRematesDataGridViewCheckBoxColumn
-        '
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.DataPropertyName = "NoTomaNuevosRemates"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.HeaderText = "NoTomaNuevosRemates"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Name = "NoTomaNuevosRematesDataGridViewCheckBoxColumn"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Visible = False
-        '
-        'PosicionDataGridViewTextBoxColumn
-        '
-        Me.PosicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion"
-        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posicion"
-        Me.PosicionDataGridViewTextBoxColumn.Name = "PosicionDataGridViewTextBoxColumn"
-        '
-        'LuzDataGridViewCheckBoxColumn
-        '
-        Me.LuzDataGridViewCheckBoxColumn.DataPropertyName = "Luz"
-        Me.LuzDataGridViewCheckBoxColumn.HeaderText = "Luz"
-        Me.LuzDataGridViewCheckBoxColumn.Name = "LuzDataGridViewCheckBoxColumn"
         '
         'TbCarrerasCaballosBindingSource
         '
@@ -381,6 +343,74 @@ Partial Class frmCargarResultado
         Me.txResultado.Size = New System.Drawing.Size(100, 20)
         Me.txResultado.TabIndex = 13
         '
+        'TbCarrerasBindingSource1
+        '
+        Me.TbCarrerasBindingSource1.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource1.DataSource = Me.BdSIGAP_DataSet
+        '
+        'TbCaballosBindingSource
+        '
+        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
+        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        '
+        'IdCarreraDataGridViewTextBoxColumn
+        '
+        Me.IdCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera"
+        Me.IdCarreraDataGridViewTextBoxColumn.DataSource = Me.TbCarrerasBindingSource
+        Me.IdCarreraDataGridViewTextBoxColumn.DisplayMember = "Nombre"
+        Me.IdCarreraDataGridViewTextBoxColumn.HeaderText = "Carrera"
+        Me.IdCarreraDataGridViewTextBoxColumn.Name = "IdCarreraDataGridViewTextBoxColumn"
+        Me.IdCarreraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdCarreraDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdCarreraDataGridViewTextBoxColumn.ValueMember = "Id"
+        '
+        'OrdenDataGridViewTextBoxColumn
+        '
+        Me.OrdenDataGridViewTextBoxColumn.DataPropertyName = "Orden"
+        Me.OrdenDataGridViewTextBoxColumn.HeaderText = "Orden"
+        Me.OrdenDataGridViewTextBoxColumn.Name = "OrdenDataGridViewTextBoxColumn"
+        '
+        'IdCaballoDataGridViewTextBoxColumn
+        '
+        Me.IdCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCaballo"
+        Me.IdCaballoDataGridViewTextBoxColumn.DataSource = Me.TbCaballosBindingSource
+        Me.IdCaballoDataGridViewTextBoxColumn.DisplayMember = "CaballoNombre"
+        Me.IdCaballoDataGridViewTextBoxColumn.HeaderText = "Caballo"
+        Me.IdCaballoDataGridViewTextBoxColumn.Name = "IdCaballoDataGridViewTextBoxColumn"
+        Me.IdCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdCaballoDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdCaballoDataGridViewTextBoxColumn.Width = 150
+        '
+        'NoTomaNuevosRematesDataGridViewCheckBoxColumn
+        '
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.DataPropertyName = "NoTomaNuevosRemates"
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.HeaderText = "NoTomaNuevosRemates"
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Name = "NoTomaNuevosRematesDataGridViewCheckBoxColumn"
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Visible = False
+        '
+        'PosicionDataGridViewTextBoxColumn
+        '
+        Me.PosicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion"
+        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posicion"
+        Me.PosicionDataGridViewTextBoxColumn.Name = "PosicionDataGridViewTextBoxColumn"
+        '
+        'LuzDataGridViewCheckBoxColumn
+        '
+        Me.LuzDataGridViewCheckBoxColumn.DataPropertyName = "Luz"
+        Me.LuzDataGridViewCheckBoxColumn.HeaderText = "Luz"
+        Me.LuzDataGridViewCheckBoxColumn.Name = "LuzDataGridViewCheckBoxColumn"
+        '
         'frmCargarResultado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -409,6 +439,8 @@ Partial Class frmCargarResultado
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         CType(Me.nGanadores, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -428,13 +460,6 @@ Partial Class frmCargarResultado
     Friend WithEvents BdSIGAP_DataSet1 As bdSIGAP_DataSet
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdCarreraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents OrdenDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NoTomaNuevosRematesDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents PosicionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LuzDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents Button1 As Button
     Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
@@ -453,4 +478,14 @@ Partial Class frmCargarResultado
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
     Friend WithEvents nGanadores As NumericUpDown
     Friend WithEvents txResultado As TextBox
+    Friend WithEvents TbCarrerasBindingSource1 As BindingSource
+    Friend WithEvents TbCaballosBindingSource As BindingSource
+    Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdCarreraDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
+    Friend WithEvents OrdenDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdCaballoDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
+    Friend WithEvents NoTomaNuevosRematesDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents PosicionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LuzDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
 End Class

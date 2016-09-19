@@ -3731,6 +3731,8 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnApuC12 As Global.System.Data.DataColumn
         
+        Private columnNroRemate As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3943,6 +3945,14 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NroRemateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNroRemate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4000,9 +4010,10 @@ Partial Public Class bdSIGAP_DataSet
                     ByVal ApuC9 As String,  _
                     ByVal ApuC10 As String,  _
                     ByVal ApuC11 As String,  _
-                    ByVal ApuC12 As String) As VwTicketRow
+                    ByVal ApuC12 As String,  _
+                    ByVal NroRemate As Integer) As VwTicketRow
             Dim rowVwTicketRow As VwTicketRow = CType(Me.NewRow,VwTicketRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate}
             rowVwTicketRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwTicketRow)
             Return rowVwTicketRow
@@ -4047,6 +4058,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnApuC10 = MyBase.Columns("ApuC10")
             Me.columnApuC11 = MyBase.Columns("ApuC11")
             Me.columnApuC12 = MyBase.Columns("ApuC12")
+            Me.columnNroRemate = MyBase.Columns("NroRemate")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4096,6 +4108,8 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnApuC11)
             Me.columnApuC12 = New Global.System.Data.DataColumn("ApuC12", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnApuC12)
+            Me.columnNroRemate = New Global.System.Data.DataColumn("NroRemate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNroRemate)
             Me.columnIdDetalleRemate.AutoIncrement = true
             Me.columnIdDetalleRemate.AutoIncrementSeed = -1
             Me.columnIdDetalleRemate.AutoIncrementStep = -1
@@ -6347,6 +6361,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NroRemate() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwTicket.NroRemateColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NroRemate' in table 'VwTicket' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwTicket.NroRemateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsIdDetalleRemateNull() As Boolean
             Return Me.IsNull(Me.tableVwTicket.IdDetalleRemateColumn)
         End Function
@@ -6607,6 +6636,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetApuC12Null()
             Me(Me.tableVwTicket.ApuC12Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNroRemateNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.NroRemateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNroRemateNull()
+            Me(Me.tableVwTicket.NroRemateColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -11433,6 +11474,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("ApuC10", "ApuC10")
             tableMapping.ColumnMappings.Add("ApuC11", "ApuC11")
             tableMapping.ColumnMappings.Add("ApuC12", "ApuC12")
+            tableMapping.ColumnMappings.Add("NroRemate", "NroRemate")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -11451,15 +11493,16 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNomb"& _ 
                 "re, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6,"& _ 
-                " ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12 FROM VwTicket"
+                " ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate FROM VwTicket"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, Caba"& _ 
-                "lloNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5,"& _ 
-                " ApuC6, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "FROM            VwTicket"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (IdDetalleRemate=1)"
+            Me._commandCollection(1).CommandText = "SELECT IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNomb"& _ 
+                "re, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6,"& _ 
+                " ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate FROM VwTicket WHERE (IdD"& _ 
+                "etalleRemate = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdDetalleRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdDetalleRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11490,8 +11533,9 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByIdDetalleRemate(ByVal dataTable As bdSIGAP_DataSet.VwTicketDataTable) As Integer
+        Public Overloads Overridable Function FillByIdDetalleRemate(ByVal dataTable As bdSIGAP_DataSet.VwTicketDataTable, ByVal IdDetalleRemate As Integer) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdDetalleRemate,Integer)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -11503,8 +11547,9 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByIdDetalleRemate() As bdSIGAP_DataSet.VwTicketDataTable
+        Public Overloads Overridable Function GetDataByIdDetalleRemate(ByVal IdDetalleRemate As Integer) As bdSIGAP_DataSet.VwTicketDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdDetalleRemate,Integer)
             Dim dataTable As bdSIGAP_DataSet.VwTicketDataTable = New bdSIGAP_DataSet.VwTicketDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

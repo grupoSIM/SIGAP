@@ -246,7 +246,7 @@ Partial Class frmCarrera
         Me.IdJornadaDataGridViewTextBoxColumn.HeaderText = "Jornada"
         Me.IdJornadaDataGridViewTextBoxColumn.Name = "IdJornadaDataGridViewTextBoxColumn"
         Me.IdJornadaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"
         Me.IdJornadaDataGridViewTextBoxColumn.Width = 150
@@ -256,7 +256,6 @@ Partial Class frmCarrera
         Me.NroCarreraDataGridViewTextBoxColumn.DataPropertyName = "NroCarrera"
         Me.NroCarreraDataGridViewTextBoxColumn.HeaderText = "Nro Carrera"
         Me.NroCarreraDataGridViewTextBoxColumn.Name = "NroCarreraDataGridViewTextBoxColumn"
-        Me.NroCarreraDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NombreDataGridViewTextBoxColumn
         '
@@ -269,7 +268,6 @@ Partial Class frmCarrera
         Me.MetrosDataGridViewTextBoxColumn.DataPropertyName = "Metros"
         Me.MetrosDataGridViewTextBoxColumn.HeaderText = "Metros"
         Me.MetrosDataGridViewTextBoxColumn.Name = "MetrosDataGridViewTextBoxColumn"
-        Me.MetrosDataGridViewTextBoxColumn.ReadOnly = True
         Me.MetrosDataGridViewTextBoxColumn.Width = 50
         '
         'EstadoDataGridViewTextBoxColumn
@@ -277,14 +275,12 @@ Partial Class frmCarrera
         Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
         Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
         Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PorcentajeCasaDataGridViewTextBoxColumn
         '
         Me.PorcentajeCasaDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeCasa"
         Me.PorcentajeCasaDataGridViewTextBoxColumn.HeaderText = "% Casa"
         Me.PorcentajeCasaDataGridViewTextBoxColumn.Name = "PorcentajeCasaDataGridViewTextBoxColumn"
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PorcentajeUltimoRemateDataGridViewTextBoxColumn
         '
@@ -298,14 +294,12 @@ Partial Class frmCarrera
         Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
-        Me.ObservacionesDataGridViewTextBoxColumn.ReadOnly = True
         '
         'TipoCarreraDataGridViewTextBoxColumn
         '
         Me.TipoCarreraDataGridViewTextBoxColumn.DataPropertyName = "TipoCarrera"
         Me.TipoCarreraDataGridViewTextBoxColumn.HeaderText = "Tipo"
         Me.TipoCarreraDataGridViewTextBoxColumn.Name = "TipoCarreraDataGridViewTextBoxColumn"
-        Me.TipoCarreraDataGridViewTextBoxColumn.ReadOnly = True
         '
         'frmCarrera
         '
