@@ -73,6 +73,7 @@ Partial Class frmModificarCarrera
         Me.btModificar = New System.Windows.Forms.Button()
         Me.btCancelar = New System.Windows.Forms.Button()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,7 +90,7 @@ Partial Class frmModificarCarrera
         Me.cbJornada.DataSource = Me.TbJornadasBindingSource
         Me.cbJornada.DisplayMember = "Descripcion"
         Me.cbJornada.FormattingEnabled = True
-        Me.cbJornada.Location = New System.Drawing.Point(105, 38)
+        Me.cbJornada.Location = New System.Drawing.Point(80, 38)
         Me.cbJornada.Name = "cbJornada"
         Me.cbJornada.Size = New System.Drawing.Size(221, 21)
         Me.cbJornada.TabIndex = 0
@@ -112,7 +113,7 @@ Partial Class frmModificarCarrera
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 42)
+        Me.Label1.Location = New System.Drawing.Point(30, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 1
@@ -123,7 +124,7 @@ Partial Class frmModificarCarrera
         Me.cbCarrera.DataSource = Me.TbCarrerasBindingSource
         Me.cbCarrera.DisplayMember = "Nombre"
         Me.cbCarrera.FormattingEnabled = True
-        Me.cbCarrera.Location = New System.Drawing.Point(105, 65)
+        Me.cbCarrera.Location = New System.Drawing.Point(80, 65)
         Me.cbCarrera.Name = "cbCarrera"
         Me.cbCarrera.Size = New System.Drawing.Size(221, 21)
         Me.cbCarrera.TabIndex = 2
@@ -141,7 +142,7 @@ Partial Class frmModificarCarrera
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(59, 69)
+        Me.Label2.Location = New System.Drawing.Point(34, 69)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 3
@@ -149,14 +150,14 @@ Partial Class frmModificarCarrera
         '
         'nNumero
         '
-        Me.nNumero.Location = New System.Drawing.Point(105, 93)
+        Me.nNumero.Location = New System.Drawing.Point(80, 93)
         Me.nNumero.Name = "nNumero"
         Me.nNumero.Size = New System.Drawing.Size(120, 20)
         Me.nNumero.TabIndex = 5
         '
         'txMetros
         '
-        Me.txMetros.Location = New System.Drawing.Point(105, 149)
+        Me.txMetros.Location = New System.Drawing.Point(80, 149)
         Me.txMetros.Name = "txMetros"
         Me.txMetros.Size = New System.Drawing.Size(120, 20)
         Me.txMetros.TabIndex = 6
@@ -164,7 +165,7 @@ Partial Class frmModificarCarrera
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(61, 153)
+        Me.Label3.Location = New System.Drawing.Point(36, 153)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 7
@@ -173,7 +174,7 @@ Partial Class frmModificarCarrera
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(39, 97)
+        Me.Label4.Location = New System.Drawing.Point(14, 97)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 13)
         Me.Label4.TabIndex = 8
@@ -181,14 +182,14 @@ Partial Class frmModificarCarrera
         '
         'txNombre
         '
-        Me.txNombre.Location = New System.Drawing.Point(332, 65)
+        Me.txNombre.Location = New System.Drawing.Point(307, 65)
         Me.txNombre.Name = "txNombre"
         Me.txNombre.Size = New System.Drawing.Size(271, 20)
         Me.txNombre.TabIndex = 9
         '
         'txObservacion
         '
-        Me.txObservacion.Location = New System.Drawing.Point(332, 149)
+        Me.txObservacion.Location = New System.Drawing.Point(307, 149)
         Me.txObservacion.Multiline = True
         Me.txObservacion.Name = "txObservacion"
         Me.txObservacion.Size = New System.Drawing.Size(271, 71)
@@ -198,23 +199,24 @@ Partial Class frmModificarCarrera
         '
         Me.cbEstado.FormattingEnabled = True
         Me.cbEstado.Items.AddRange(New Object() {"0", "1"})
-        Me.cbEstado.Location = New System.Drawing.Point(105, 121)
+        Me.cbEstado.Location = New System.Drawing.Point(80, 121)
         Me.cbEstado.Name = "cbEstado"
         Me.cbEstado.Size = New System.Drawing.Size(121, 21)
         Me.cbEstado.TabIndex = 11
         '
         'cbTipo
         '
+        Me.cbTipo.AutoCompleteCustomSource.AddRange(New String() {"Normal", "Llave"})
         Me.cbTipo.FormattingEnabled = True
         Me.cbTipo.Items.AddRange(New Object() {"Normal", "Llave"})
-        Me.cbTipo.Location = New System.Drawing.Point(332, 121)
+        Me.cbTipo.Location = New System.Drawing.Point(307, 121)
         Me.cbTipo.Name = "cbTipo"
         Me.cbTipo.Size = New System.Drawing.Size(121, 21)
         Me.cbTipo.TabIndex = 12
         '
         'txPorcCasa
         '
-        Me.txPorcCasa.Location = New System.Drawing.Point(332, 93)
+        Me.txPorcCasa.Location = New System.Drawing.Point(307, 93)
         Me.txPorcCasa.Name = "txPorcCasa"
         Me.txPorcCasa.Size = New System.Drawing.Size(121, 20)
         Me.txPorcCasa.TabIndex = 13
@@ -222,7 +224,7 @@ Partial Class frmModificarCarrera
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(60, 125)
+        Me.Label5.Location = New System.Drawing.Point(35, 125)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 13)
         Me.Label5.TabIndex = 14
@@ -231,7 +233,7 @@ Partial Class frmModificarCarrera
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(295, 125)
+        Me.Label6.Location = New System.Drawing.Point(270, 125)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(31, 13)
         Me.Label6.TabIndex = 15
@@ -240,7 +242,7 @@ Partial Class frmModificarCarrera
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(284, 97)
+        Me.Label7.Location = New System.Drawing.Point(259, 97)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(42, 13)
         Me.Label7.TabIndex = 16
@@ -249,7 +251,7 @@ Partial Class frmModificarCarrera
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(245, 153)
+        Me.Label8.Location = New System.Drawing.Point(220, 153)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 13)
         Me.Label8.TabIndex = 17
@@ -261,7 +263,7 @@ Partial Class frmModificarCarrera
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdCarreraDataGridViewTextBoxColumn, Me.OrdenDataGridViewTextBoxColumn, Me.IdCaballoDataGridViewTextBoxColumn, Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn, Me.PosicionDataGridViewTextBoxColumn, Me.LuzDataGridViewCheckBoxColumn})
         Me.DataGridView1.DataSource = Me.TbCarrerasCaballosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(58, 280)
+        Me.DataGridView1.Location = New System.Drawing.Point(33, 280)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(545, 305)
         Me.DataGridView1.TabIndex = 18
@@ -336,7 +338,7 @@ Partial Class frmModificarCarrera
         Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(58, 252)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(33, 252)
         Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -442,7 +444,7 @@ Partial Class frmModificarCarrera
         '
         'btModificar
         '
-        Me.btModificar.Location = New System.Drawing.Point(401, 599)
+        Me.btModificar.Location = New System.Drawing.Point(375, 599)
         Me.btModificar.Name = "btModificar"
         Me.btModificar.Size = New System.Drawing.Size(100, 23)
         Me.btModificar.TabIndex = 20
@@ -451,7 +453,7 @@ Partial Class frmModificarCarrera
         '
         'btCancelar
         '
-        Me.btCancelar.Location = New System.Drawing.Point(503, 599)
+        Me.btCancelar.Location = New System.Drawing.Point(477, 599)
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(100, 23)
         Me.btCancelar.TabIndex = 21
@@ -472,11 +474,15 @@ Partial Class frmModificarCarrera
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Tb_DetalleRematesTableAdapter
+        '
+        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
+        '
         'frmModificarCarrera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(619, 634)
+        Me.ClientSize = New System.Drawing.Size(606, 634)
         Me.Controls.Add(Me.btCancelar)
         Me.Controls.Add(Me.btModificar)
         Me.Controls.Add(Me.BindingNavigator1)
@@ -564,4 +570,5 @@ Partial Class frmModificarCarrera
     Friend WithEvents btModificar As Button
     Friend WithEvents btCancelar As Button
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Tb_DetalleRematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter
 End Class

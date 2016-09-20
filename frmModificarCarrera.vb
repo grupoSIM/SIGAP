@@ -38,10 +38,39 @@
 
     End Function
 
+    Private Function CambioPorcCasa()
+        'busco todos los remates de esa carrera caballo y los sobreescribo,
+        'tener en cuenta que si era x ejemplo el 20 para 4 cab y se cambió
+        'a 15 pero en un remate entraron 3 debe soobrescribirse pero 
+        'teniendo en cta los parámetros
+
+
+    End Function
+
+    Private Function CambioCaballoIncluido()
+        'busco todos los remates de esa carrera caballo y los sobreescribo,
+        'tener en cuenta que al sacar un caballo se debe restar el importe del remate 
+        'para ese caballo y  recalcular el importe premio
+
+        Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+
+        For Each row As DataRow In dtDetalleRemates.Rows
+            MsgBox(row("NroCaballo"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+        Next
+
+    End Function
+
     Private Sub btModificar_Click(sender As Object, e As EventArgs) Handles btModificar.Click
         Me.Validate()
+
+        CambioCaballoIncluido()
+
         Me.TbCarrerasBindingSource.EndEdit()
         Me.TbCarrerasCaballosBindingSource.EndEdit()
+
+
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
     End Sub
+
+
 End Class
