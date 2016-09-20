@@ -25,6 +25,17 @@ Partial Class frmRemate
         Me.components = New System.ComponentModel.Container()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Caballo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApostadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImporteApuestaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ImportePremioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TbDetalleRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.cmbCarrera = New System.Windows.Forms.ComboBox()
@@ -55,17 +66,6 @@ Partial Class frmRemate
         Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
         Me.txtId = New System.Windows.Forms.TextBox()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Caballo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApostadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImporteApuestaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ImportePremioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,6 +98,97 @@ Partial Class frmRemate
         Me.DataGridView1.Size = New System.Drawing.Size(595, 225)
         Me.DataGridView1.TabIndex = 4
         '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IdDataGridViewTextBoxColumn.Visible = False
+        '
+        'IdRemateDataGridViewTextBoxColumn
+        '
+        Me.IdRemateDataGridViewTextBoxColumn.DataPropertyName = "IdRemate"
+        Me.IdRemateDataGridViewTextBoxColumn.HeaderText = "IdRemate"
+        Me.IdRemateDataGridViewTextBoxColumn.Name = "IdRemateDataGridViewTextBoxColumn"
+        Me.IdRemateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdRemateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IdRemateDataGridViewTextBoxColumn.Visible = False
+        '
+        'IdCarreraCaballoDataGridViewTextBoxColumn
+        '
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCarreraCaballo"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.HeaderText = "IdCarreraCaballo"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Name = "IdCarreraCaballoDataGridViewTextBoxColumn"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Visible = False
+        '
+        'NroCaballoDataGridViewTextBoxColumn
+        '
+        Me.NroCaballoDataGridViewTextBoxColumn.DataPropertyName = "NroCaballo"
+        Me.NroCaballoDataGridViewTextBoxColumn.HeaderText = "Número"
+        Me.NroCaballoDataGridViewTextBoxColumn.Name = "NroCaballoDataGridViewTextBoxColumn"
+        Me.NroCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NroCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.NroCaballoDataGridViewTextBoxColumn.Width = 50
+        '
+        'Caballo
+        '
+        Me.Caballo.HeaderText = "Caballo"
+        Me.Caballo.Name = "Caballo"
+        Me.Caballo.ReadOnly = True
+        Me.Caballo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Caballo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ApostadorDataGridViewTextBoxColumn
+        '
+        Me.ApostadorDataGridViewTextBoxColumn.DataPropertyName = "Apostador"
+        Me.ApostadorDataGridViewTextBoxColumn.HeaderText = "Apostador"
+        Me.ApostadorDataGridViewTextBoxColumn.Name = "ApostadorDataGridViewTextBoxColumn"
+        Me.ApostadorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ApostadorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ImporteApuestaDataGridViewTextBoxColumn
+        '
+        Me.ImporteApuestaDataGridViewTextBoxColumn.DataPropertyName = "ImporteApuesta"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.HeaderText = "ImporteApuesta"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.Name = "ImporteApuestaDataGridViewTextBoxColumn"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ImporteApuestaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Incluido
+        '
+        Me.Incluido.DataPropertyName = "Incluido"
+        Me.Incluido.HeaderText = "Incluido"
+        Me.Incluido.Name = "Incluido"
+        Me.Incluido.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Incluido.Width = 50
+        '
+        'LuzDataGridViewTextBoxColumn
+        '
+        Me.LuzDataGridViewTextBoxColumn.DataPropertyName = "Luz"
+        Me.LuzDataGridViewTextBoxColumn.HeaderText = "Luz"
+        Me.LuzDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Da", "Recibe"})
+        Me.LuzDataGridViewTextBoxColumn.Name = "LuzDataGridViewTextBoxColumn"
+        '
+        'FilaDataGridViewTextBoxColumn
+        '
+        Me.FilaDataGridViewTextBoxColumn.DataPropertyName = "Fila"
+        Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
+        Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
+        Me.FilaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FilaDataGridViewTextBoxColumn.Width = 50
+        '
+        'ImportePremioDataGridViewTextBoxColumn
+        '
+        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
+        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
+        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
+        Me.ImportePremioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ImportePremioDataGridViewTextBoxColumn.Visible = False
+        '
         'TbDetalleRematesBindingSource
         '
         Me.TbDetalleRematesBindingSource.DataMember = "tb_DetalleRemates"
@@ -118,6 +209,7 @@ Partial Class frmRemate
         Me.cmbCarrera.Name = "cmbCarrera"
         Me.cmbCarrera.Size = New System.Drawing.Size(121, 21)
         Me.cmbCarrera.TabIndex = 1
+        Me.cmbCarrera.TabStop = False
         Me.cmbCarrera.ValueMember = "Id"
         '
         'TbCarrerasBindingSource
@@ -140,6 +232,7 @@ Partial Class frmRemate
         Me.txtPorcentajeCasa.Name = "txtPorcentajeCasa"
         Me.txtPorcentajeCasa.Size = New System.Drawing.Size(100, 20)
         Me.txtPorcentajeCasa.TabIndex = 3
+        Me.txtPorcentajeCasa.TabStop = False
         '
         'btnGuardar
         '
@@ -147,6 +240,7 @@ Partial Class frmRemate
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 5
+        Me.btnGuardar.TabStop = False
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -242,6 +336,7 @@ Partial Class frmRemate
         Me.cmbPalco.Name = "cmbPalco"
         Me.cmbPalco.Size = New System.Drawing.Size(121, 21)
         Me.cmbPalco.TabIndex = 16
+        Me.cmbPalco.TabStop = False
         Me.cmbPalco.ValueMember = "Id"
         '
         'Tb_PalcosBindingSource
@@ -308,102 +403,11 @@ Partial Class frmRemate
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(505, 342)
+        Me.txtId.Location = New System.Drawing.Point(6, 354)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
         Me.txtId.TabIndex = 17
         Me.txtId.Visible = False
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.IdDataGridViewTextBoxColumn.Visible = False
-        '
-        'IdRemateDataGridViewTextBoxColumn
-        '
-        Me.IdRemateDataGridViewTextBoxColumn.DataPropertyName = "IdRemate"
-        Me.IdRemateDataGridViewTextBoxColumn.HeaderText = "IdRemate"
-        Me.IdRemateDataGridViewTextBoxColumn.Name = "IdRemateDataGridViewTextBoxColumn"
-        Me.IdRemateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IdRemateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.IdRemateDataGridViewTextBoxColumn.Visible = False
-        '
-        'IdCarreraCaballoDataGridViewTextBoxColumn
-        '
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCarreraCaballo"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.HeaderText = "IdCarreraCaballo"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Name = "IdCarreraCaballoDataGridViewTextBoxColumn"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Visible = False
-        '
-        'NroCaballoDataGridViewTextBoxColumn
-        '
-        Me.NroCaballoDataGridViewTextBoxColumn.DataPropertyName = "NroCaballo"
-        Me.NroCaballoDataGridViewTextBoxColumn.HeaderText = "Número"
-        Me.NroCaballoDataGridViewTextBoxColumn.Name = "NroCaballoDataGridViewTextBoxColumn"
-        Me.NroCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NroCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.NroCaballoDataGridViewTextBoxColumn.Width = 50
-        '
-        'Caballo
-        '
-        Me.Caballo.HeaderText = "Caballo"
-        Me.Caballo.Name = "Caballo"
-        Me.Caballo.ReadOnly = True
-        Me.Caballo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Caballo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'ApostadorDataGridViewTextBoxColumn
-        '
-        Me.ApostadorDataGridViewTextBoxColumn.DataPropertyName = "Apostador"
-        Me.ApostadorDataGridViewTextBoxColumn.HeaderText = "Apostador"
-        Me.ApostadorDataGridViewTextBoxColumn.Name = "ApostadorDataGridViewTextBoxColumn"
-        Me.ApostadorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ApostadorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'ImporteApuestaDataGridViewTextBoxColumn
-        '
-        Me.ImporteApuestaDataGridViewTextBoxColumn.DataPropertyName = "ImporteApuesta"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.HeaderText = "ImporteApuesta"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.Name = "ImporteApuestaDataGridViewTextBoxColumn"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ImporteApuestaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Incluido
-        '
-        Me.Incluido.DataPropertyName = "Incluido"
-        Me.Incluido.HeaderText = "Incluido"
-        Me.Incluido.Name = "Incluido"
-        Me.Incluido.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Incluido.Width = 50
-        '
-        'LuzDataGridViewTextBoxColumn
-        '
-        Me.LuzDataGridViewTextBoxColumn.DataPropertyName = "Luz"
-        Me.LuzDataGridViewTextBoxColumn.HeaderText = "Luz"
-        Me.LuzDataGridViewTextBoxColumn.Items.AddRange(New Object() {"Da", "Recibe"})
-        Me.LuzDataGridViewTextBoxColumn.Name = "LuzDataGridViewTextBoxColumn"
-        '
-        'FilaDataGridViewTextBoxColumn
-        '
-        Me.FilaDataGridViewTextBoxColumn.DataPropertyName = "Fila"
-        Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
-        Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
-        Me.FilaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FilaDataGridViewTextBoxColumn.Width = 50
-        '
-        'ImportePremioDataGridViewTextBoxColumn
-        '
-        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
-        Me.ImportePremioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ImportePremioDataGridViewTextBoxColumn.Visible = False
         '
         'frmRemate
         '

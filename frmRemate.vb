@@ -22,6 +22,14 @@
 
     End Sub
 
+    Private Sub frmRemate_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        MsgBox("Tecla presionada", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+            e.Handled = True
+            SendKeys.Send(Keys.Tab)
+        End If
+    End Sub
+
     Private Function CargarDetallesRemates()
         Dim fila As Integer = 0
         Dim caballo As DataRow
@@ -143,7 +151,7 @@
 
         CargarRemates()
         CargarDetallesRemates()
-        txtPorcentajeCasa.Focus()
+        DataGridView1.Focus()
 
 
     End Sub
@@ -161,6 +169,12 @@
             Application.DoEvents()
         End While
         Form1.Close()
+        ' FIN Codigo de Impresion
     End Sub
-    ' FIN Codigo de Impresion
+
+    Private Sub DataGridView1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DataGridView1.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+            btnImprimir.Focus()
+        End If
+    End Sub
 End Class
