@@ -51,12 +51,28 @@
         'busco todos los remates de esa carrera caballo y los sobreescribo,
         'tener en cuenta que al sacar un caballo se debe restar el importe del remate 
         'para ese caballo y  recalcular el importe premio
+        Dim NroRemate As Integer
+        Dim Porc As Integer
+        Dim importeJugado As Decimal
+
 
         Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
 
+        Porc = Me.txPorcCasa.Text
+
         For Each row As DataRow In dtDetalleRemates.Rows
-            MsgBox(row("NroCaballo"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+            'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+            'busco los remates los detalles remates del mismo remate
+            Dim dtRematesSeleccionados = Tb_DetalleRematesTableAdapter.GetDataByRemate(row("IdRemate"))
+            importeJugado = 0
+            For Each rowSel As DataRow In dtRematesSeleccionados.Rows
+                'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+                importeJugado = importeJugado + rowSel("ImporteApuesta")
+                MsgBox(rowSel("ImporteApuesta") & " " & importeJugado, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+            Next
         Next
+
 
     End Function
 

@@ -8808,7 +8808,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                 "luido"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ((tb_DetalleRemates INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
                 "tb_CarrerasCaballos ON tb_DetalleRemates.IdCarreraCaballo = tb_CarrerasCaballos."& _ 
                 "Id) INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         tb_Carreras ON tb_CarrerasCaballos.IdCa"& _ 
-                "rrera = tb_Carreras.Id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tb_Carreras.Id = ?)"
+                "rrera = tb_Carreras.Id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tb_Carreras.Id = ?) AND (tb_DetalleRemate"& _ 
+                "s.Incluido = True)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
