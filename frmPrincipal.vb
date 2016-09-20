@@ -51,4 +51,8 @@
     Private Sub ListadoDeDetalleRematesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeDetalleRematesToolStripMenuItem.Click
         frmDetalleRemate.Show()
     End Sub
+
+    Private Sub ModificarCarreraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarCarreraToolStripMenuItem.Click
+        frmModificarCarrera.Show()
+    End Sub
 End Class

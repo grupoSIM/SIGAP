@@ -36,11 +36,12 @@ Partial Class frmPrincipal
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListadoDeDetalleRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarResultadoCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListadoDeDetalleRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,7 +99,7 @@ Partial Class frmPrincipal
         '
         'CarrerasToolStripMenuItem1
         '
-        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
+        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.ModificarCarreraToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
         Me.CarrerasToolStripMenuItem1.Name = "CarrerasToolStripMenuItem1"
         Me.CarrerasToolStripMenuItem1.Size = New System.Drawing.Size(62, 20)
         Me.CarrerasToolStripMenuItem1.Text = "Carreras"
@@ -134,6 +135,12 @@ Partial Class frmPrincipal
         Me.CargarRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.CargarRematesToolStripMenuItem.Text = "Cargar Remates"
         '
+        'ListadoDeDetalleRematesToolStripMenuItem
+        '
+        Me.ListadoDeDetalleRematesToolStripMenuItem.Name = "ListadoDeDetalleRematesToolStripMenuItem"
+        Me.ListadoDeDetalleRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.ListadoDeDetalleRematesToolStripMenuItem.Text = "Listado de Detalle Remates"
+        '
         'ResultadosToolStripMenuItem
         '
         Me.ResultadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarResultadoCarreraToolStripMenuItem, Me.VerResultadosToolStripMenuItem})
@@ -159,11 +166,11 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
-        'ListadoDeDetalleRematesToolStripMenuItem
+        'ModificarCarreraToolStripMenuItem
         '
-        Me.ListadoDeDetalleRematesToolStripMenuItem.Name = "ListadoDeDetalleRematesToolStripMenuItem"
-        Me.ListadoDeDetalleRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
-        Me.ListadoDeDetalleRematesToolStripMenuItem.Text = "Listado de Detalle Remates"
+        Me.ModificarCarreraToolStripMenuItem.Name = "ModificarCarreraToolStripMenuItem"
+        Me.ModificarCarreraToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ModificarCarreraToolStripMenuItem.Text = "Modificar Carrera"
         '
         'frmPrincipal
         '
@@ -201,4 +208,5 @@ Partial Class frmPrincipal
     Friend WithEvents RematesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents VerResultadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeDetalleRematesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarCarreraToolStripMenuItem As ToolStripMenuItem
 End Class
