@@ -58,19 +58,22 @@
 
         Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
 
-        Porc = Me.txPorcCasa.Text
-
         For Each row As DataRow In dtDetalleRemates.Rows
             'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
 
             'busco los remates los detalles remates del mismo remate
-            Dim dtRematesSeleccionados = Tb_DetalleRematesTableAdapter.GetDataByRemate(row("IdRemate"))
+            Dim dtRematesSeleccionados = Tb_DetalleRematesTableAdapter.GetDataByRematesIncluidos(row("IdRemate"))
+
             importeJugado = 0
             For Each rowSel As DataRow In dtRematesSeleccionados.Rows
                 'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
                 importeJugado = importeJugado + rowSel("ImporteApuesta")
-                MsgBox(rowSel("ImporteApuesta") & " " & importeJugado, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+                'MsgBox(rowSel("ImporteApuesta") & " " & importeJugado, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
             Next
+            For Each rowSelCam As DataRow In dtRematesSeleccionados.Rows
+                rowSelCam("ImportePremio") = (importeJugado * ((100 - Me.txPorcCasa.Text) / 100))
+            Next
+
         Next
 
 
@@ -86,6 +89,10 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+        Me.Close()
+
+
     End Sub
 
 
