@@ -32,6 +32,7 @@ Partial Class frmPrincipal
         Me.RematesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeCarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,7 +42,6 @@ Partial Class frmPrincipal
         Me.CargarResultadoCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,19 +107,25 @@ Partial Class frmPrincipal
         'CargarCarreraCaballosToolStripMenuItem
         '
         Me.CargarCarreraCaballosToolStripMenuItem.Name = "CargarCarreraCaballosToolStripMenuItem"
-        Me.CargarCarreraCaballosToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.CargarCarreraCaballosToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
         Me.CargarCarreraCaballosToolStripMenuItem.Text = "Cargar carrera / caballos"
+        '
+        'ModificarCarreraToolStripMenuItem
+        '
+        Me.ModificarCarreraToolStripMenuItem.Name = "ModificarCarreraToolStripMenuItem"
+        Me.ModificarCarreraToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
+        Me.ModificarCarreraToolStripMenuItem.Text = "Modificar Carrera con Remates"
         '
         'ListadoDeCarrerasToolStripMenuItem
         '
         Me.ListadoDeCarrerasToolStripMenuItem.Name = "ListadoDeCarrerasToolStripMenuItem"
-        Me.ListadoDeCarrerasToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ListadoDeCarrerasToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
         Me.ListadoDeCarrerasToolStripMenuItem.Text = "Listado de Carreras"
         '
         'CarCabPruebaToolStripMenuItem
         '
         Me.CarCabPruebaToolStripMenuItem.Name = "CarCabPruebaToolStripMenuItem"
-        Me.CarCabPruebaToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.CarCabPruebaToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
         Me.CarCabPruebaToolStripMenuItem.Text = "Listado Carrera Caballo"
         '
         'RematesToolStripMenuItem
@@ -165,12 +171,6 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
-        '
-        'ModificarCarreraToolStripMenuItem
-        '
-        Me.ModificarCarreraToolStripMenuItem.Name = "ModificarCarreraToolStripMenuItem"
-        Me.ModificarCarreraToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.ModificarCarreraToolStripMenuItem.Text = "Modificar Carrera"
         '
         'frmPrincipal
         '

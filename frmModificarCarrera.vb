@@ -44,37 +44,40 @@
         'a 15 pero en un remate entraron 3 debe soobrescribirse pero 
         'teniendo en cta los parámetros
 
+        Dim importeJugado As Decimal
 
+
+        Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+
+        'OJO HAY Q VALIDAR LA CANTIDAD DE CABALLOS Y COMPARAR CONTRA LOS PARAMETROS
+
+        '#recorro los remates y  lso modifico
+
+        '#recorro los detalles remates y  los modifico
+        For Each row As DataRow In dtDetalleRemates.Rows
+            'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
+            '#busco los remates los detalles remates del mismo remate
+            Dim dtRematesSeleccionados = Tb_DetalleRematesTableAdapter.GetDataByRematesIncluidos(row("IdRemate"))
+
+            importeJugado = 0
+            For Each rowSel As DataRow In dtRematesSeleccionados.Rows
+                importeJugado = importeJugado + rowSel("ImporteApuesta")
+                'MsgBox(rowSel("ImporteApuesta") & " " & importeJugado, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+            Next
+            For Each rowSelCam As DataRow In dtRematesSeleccionados.Rows
+                rowSelCam("ImportePremio") = (importeJugado * ((100 - Me.txPorcCasa.Text) / 100))
+                Tb_DetalleRematesTableAdapter.Update(dtRematesSeleccionados)
+            Next
+
+        Next
     End Function
 
     Private Function CambioCaballoIncluido()
         'busco todos los remates de esa carrera caballo y los sobreescribo,
         'tener en cuenta que al sacar un caballo se debe restar el importe del remate 
         'para ese caballo y  recalcular el importe premio
-        Dim NroRemate As Integer
-        Dim Porc As Integer
-        Dim importeJugado As Decimal
 
-
-        Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
-
-        For Each row As DataRow In dtDetalleRemates.Rows
-            'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
-
-            'busco los remates los detalles remates del mismo remate
-            Dim dtRematesSeleccionados = Tb_DetalleRematesTableAdapter.GetDataByRematesIncluidos(row("IdRemate"))
-
-            importeJugado = 0
-            For Each rowSel As DataRow In dtRematesSeleccionados.Rows
-                'MsgBox(row("IdCarreraCaballo") & " " & row("NroCaballo") & " " & row("Apostador") & " " & row("ImportePremio"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
-                importeJugado = importeJugado + rowSel("ImporteApuesta")
-                'MsgBox(rowSel("ImporteApuesta") & " " & importeJugado, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
-            Next
-            For Each rowSelCam As DataRow In dtRematesSeleccionados.Rows
-                rowSelCam("ImportePremio") = (importeJugado * ((100 - Me.txPorcCasa.Text) / 100))
-            Next
-
-        Next
 
 
     End Function
@@ -83,6 +86,7 @@
         Me.Validate()
 
         CambioCaballoIncluido()
+        CambioPorcCasa()
 
         Me.TbCarrerasBindingSource.EndEdit()
         Me.TbCarrerasCaballosBindingSource.EndEdit()
@@ -90,8 +94,8 @@
 
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
-        Me.Close()
-
+        'Me.Close()
+        MsgBox("listorti ", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
 
     End Sub
 
