@@ -108,10 +108,6 @@
     <Compile Include="bdSIGAP_DataSet.vb">
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.vb" />
     <Compile Include="frmCaballo.Designer.vb">
       <DependentUpon>frmCaballo.vb</DependentUpon>
     </Compile>
@@ -225,9 +221,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCaballo.resx">
       <DependentUpon>frmCaballo.vb</DependentUpon>
     </EmbeddedResource>
