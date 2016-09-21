@@ -45,13 +45,11 @@
         'teniendo en cta los parámetros
 
         Dim importeJugado As Decimal
-
-
         Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
 
         'OJO HAY Q VALIDAR LA CANTIDAD DE CABALLOS Y COMPARAR CONTRA LOS PARAMETROS
 
-        '#recorro los remates y  lso modifico
+        '#recorro los remates y  los modifico
 
         '#recorro los detalles remates y  los modifico
         For Each row As DataRow In dtDetalleRemates.Rows
@@ -78,6 +76,8 @@
         'tener en cuenta que al sacar un caballo se debe restar el importe del remate 
         'para ese caballo y  recalcular el importe premio
 
+        '# ver quese va a hacer si  hay remates de ese caballo que se excluye
+        Dim dtDetalleRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
 
 
     End Function

@@ -105,6 +105,11 @@
     <Compile Include="bdSIGAP_DataSet.vb">
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bdSIGAP_DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCaballo.Designer.vb">
       <DependentUpon>frmCaballo.vb</DependentUpon>
     </Compile>
@@ -279,8 +284,8 @@
     </None>
     <None Include="bdSIGAP_DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdSIGAP_DataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>bdSIGAP_DataSet1.Designer.vb</LastGenOutput>
     </None>
     <None Include="bdSIGAP_DataSet.xss">
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
