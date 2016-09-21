@@ -38,10 +38,15 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Hipodromo.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hipodromo</rd:DefaultName>
@@ -422,7 +427,7 @@
     <Height>3.82292in</Height>
     <Style />
   </Body>
-  <Width>3.26042in</Width>
+  <Width>3.23959in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
