@@ -2,9 +2,10 @@
 <xs:schema id="bdSIGAP_DataSet" targetNamespace="http://tempuri.org/bdSIGAP_DataSet.xsd" xmlns:mstns="http://tempuri.org/bdSIGAP_DataSet.xsd" xmlns="http://tempuri.org/bdSIGAP_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bdSIGAP_ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdSIGAP_ConnectionString (MySettings)" PropertyReference="ApplicationSettings.SIGAP.My.MySettings.GlobalReference.Default.bdSIGAP_ConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bdSIGAP_beConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdSIGAP_beConnectionString (MySettings)" PropertyReference="ApplicationSettings.SIGAP.My.MySettings.GlobalReference.Default.bdSIGAP_beConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_CaballosTableAdapter" GeneratorDataComponentClassName="tb_CaballosTableAdapter" Name="tb_Caballos" UserDataComponentName="tb_CaballosTableAdapter">
@@ -894,6 +895,69 @@ WHERE        (IdCarrera = ?)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VwPremiosTableAdapter" GeneratorDataComponentClassName="VwPremiosTableAdapter" Name="VwPremios" UserDataComponentName="VwPremiosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdSIGAP_beConnectionString (MySettings)" DbObjectName="VwPremios" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Hipodromo, Palco, NroCarrera, Apostador, NroCaballo, ImportePremio, NroRemate, IdCarrera
+FROM            VwPremios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Hipodromo" DataSetColumn="Hipodromo" />
+              <Mapping SourceColumn="Palco" DataSetColumn="Palco" />
+              <Mapping SourceColumn="NroCarrera" DataSetColumn="NroCarrera" />
+              <Mapping SourceColumn="Apostador" DataSetColumn="Apostador" />
+              <Mapping SourceColumn="NroCaballo" DataSetColumn="NroCaballo" />
+              <Mapping SourceColumn="ImportePremio" DataSetColumn="ImportePremio" />
+              <Mapping SourceColumn="NroRemate" DataSetColumn="NroRemate" />
+              <Mapping SourceColumn="IdCarrera" DataSetColumn="IdCarrera" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="bdSIGAP_ConnectionString (MySettings)" DbObjectName="VwPremios" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByIdCarrera" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdCarrera" GeneratorSourceName="FillByIdCarrera" GetMethodModifier="Public" GetMethodName="GetDataByIdCarrera" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdCarrera" UserSourceName="FillByIdCarrera">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Hipodromo, Palco, NroCarrera, Apostador, NroCaballo, ImportePremio, NroRemate, IdCarrera FROM VwPremios WHERE (IdCarrera=?)
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="IdCarrera" DataSourceName="VwPremios" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="IdCarrera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="IdCarrera" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VwCajaPalcoTableAdapter" GeneratorDataComponentClassName="VwCajaPalcoTableAdapter" Name="VwCajaPalco" UserDataComponentName="VwCajaPalcoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdSIGAP_beConnectionString (MySettings)" DbObjectName="VwCajaPalco" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Hipodromo, Id, Fecha, IdPalco, Palco, IdCarrera, NroCarrera, CantRemates, SumaApuestas, SumaPremios, ComisionRematador, ComisionHipodromo FROM VwCajaPalco</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Hipodromo" DataSetColumn="Hipodromo" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="IdPalco" DataSetColumn="IdPalco" />
+              <Mapping SourceColumn="Palco" DataSetColumn="Palco" />
+              <Mapping SourceColumn="IdCarrera" DataSetColumn="IdCarrera" />
+              <Mapping SourceColumn="NroCarrera" DataSetColumn="NroCarrera" />
+              <Mapping SourceColumn="CantRemates" DataSetColumn="CantRemates" />
+              <Mapping SourceColumn="SumaApuestas" DataSetColumn="SumaApuestas" />
+              <Mapping SourceColumn="SumaPremios" DataSetColumn="SumaPremios" />
+              <Mapping SourceColumn="ComisionRematador" DataSetColumn="ComisionRematador" />
+              <Mapping SourceColumn="ComisionHipodromo" DataSetColumn="ComisionHipodromo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1218,6 +1282,68 @@ WHERE        (IdCarrera = ?)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="NroRemate" msprop:Generator_ColumnVarNameInTable="columnNroRemate" msprop:Generator_ColumnPropNameInRow="NroRemate" msprop:Generator_ColumnPropNameInTable="NroRemateColumn" msprop:Generator_UserColumnName="NroRemate" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VwPremios" msprop:Generator_TableClassName="VwPremiosDataTable" msprop:Generator_TableVarName="tableVwPremios" msprop:Generator_RowChangedName="VwPremiosRowChanged" msprop:Generator_TablePropName="VwPremios" msprop:Generator_RowDeletingName="VwPremiosRowDeleting" msprop:Generator_RowChangingName="VwPremiosRowChanging" msprop:Generator_RowEvHandlerName="VwPremiosRowChangeEventHandler" msprop:Generator_RowDeletedName="VwPremiosRowDeleted" msprop:Generator_RowClassName="VwPremiosRow" msprop:Generator_UserTableName="VwPremios" msprop:Generator_RowEvArgName="VwPremiosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hipodromo" msprop:Generator_ColumnVarNameInTable="columnHipodromo" msprop:Generator_ColumnPropNameInRow="Hipodromo" msprop:Generator_ColumnPropNameInTable="HipodromoColumn" msprop:Generator_UserColumnName="Hipodromo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Palco" msprop:Generator_ColumnVarNameInTable="columnPalco" msprop:Generator_ColumnPropNameInRow="Palco" msprop:Generator_ColumnPropNameInTable="PalcoColumn" msprop:Generator_UserColumnName="Palco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NroCarrera" msprop:Generator_ColumnVarNameInTable="columnNroCarrera" msprop:Generator_ColumnPropNameInRow="NroCarrera" msprop:Generator_ColumnPropNameInTable="NroCarreraColumn" msprop:Generator_UserColumnName="NroCarrera" type="xs:int" minOccurs="0" />
+              <xs:element name="Apostador" msprop:Generator_ColumnVarNameInTable="columnApostador" msprop:Generator_ColumnPropNameInRow="Apostador" msprop:Generator_ColumnPropNameInTable="ApostadorColumn" msprop:Generator_UserColumnName="Apostador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NroCaballo" msprop:Generator_ColumnVarNameInTable="columnNroCaballo" msprop:Generator_ColumnPropNameInRow="NroCaballo" msprop:Generator_ColumnPropNameInTable="NroCaballoColumn" msprop:Generator_UserColumnName="NroCaballo" type="xs:int" minOccurs="0" />
+              <xs:element name="ImportePremio" msprop:Generator_ColumnVarNameInTable="columnImportePremio" msprop:Generator_ColumnPropNameInRow="ImportePremio" msprop:Generator_ColumnPropNameInTable="ImportePremioColumn" msprop:Generator_UserColumnName="ImportePremio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NroRemate" msprop:Generator_ColumnVarNameInTable="columnNroRemate" msprop:Generator_ColumnPropNameInRow="NroRemate" msprop:Generator_ColumnPropNameInTable="NroRemateColumn" msprop:Generator_UserColumnName="NroRemate" type="xs:int" minOccurs="0" />
+              <xs:element name="IdCarrera" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdCarrera" msprop:Generator_ColumnPropNameInRow="IdCarrera" msprop:Generator_ColumnPropNameInTable="IdCarreraColumn" msprop:Generator_UserColumnName="IdCarrera" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VwCajaPalco" msprop:Generator_TableClassName="VwCajaPalcoDataTable" msprop:Generator_TableVarName="tableVwCajaPalco" msprop:Generator_TablePropName="VwCajaPalco" msprop:Generator_RowDeletingName="VwCajaPalcoRowDeleting" msprop:Generator_RowChangingName="VwCajaPalcoRowChanging" msprop:Generator_RowEvHandlerName="VwCajaPalcoRowChangeEventHandler" msprop:Generator_RowDeletedName="VwCajaPalcoRowDeleted" msprop:Generator_UserTableName="VwCajaPalco" msprop:Generator_RowChangedName="VwCajaPalcoRowChanged" msprop:Generator_RowEvArgName="VwCajaPalcoRowChangeEvent" msprop:Generator_RowClassName="VwCajaPalcoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hipodromo" msprop:Generator_ColumnVarNameInTable="columnHipodromo" msprop:Generator_ColumnPropNameInRow="Hipodromo" msprop:Generator_ColumnPropNameInTable="HipodromoColumn" msprop:Generator_UserColumnName="Hipodromo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IdPalco" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdPalco" msprop:Generator_ColumnPropNameInRow="IdPalco" msprop:Generator_ColumnPropNameInTable="IdPalcoColumn" msprop:Generator_UserColumnName="IdPalco" type="xs:int" minOccurs="0" />
+              <xs:element name="Palco" msprop:Generator_ColumnVarNameInTable="columnPalco" msprop:Generator_ColumnPropNameInRow="Palco" msprop:Generator_ColumnPropNameInTable="PalcoColumn" msprop:Generator_UserColumnName="Palco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCarrera" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdCarrera" msprop:Generator_ColumnPropNameInRow="IdCarrera" msprop:Generator_ColumnPropNameInTable="IdCarreraColumn" msprop:Generator_UserColumnName="IdCarrera" type="xs:int" minOccurs="0" />
+              <xs:element name="NroCarrera" msprop:Generator_ColumnVarNameInTable="columnNroCarrera" msprop:Generator_ColumnPropNameInRow="NroCarrera" msprop:Generator_ColumnPropNameInTable="NroCarreraColumn" msprop:Generator_UserColumnName="NroCarrera" type="xs:int" minOccurs="0" />
+              <xs:element name="CantRemates" msprop:Generator_ColumnVarNameInTable="columnCantRemates" msprop:Generator_ColumnPropNameInRow="CantRemates" msprop:Generator_ColumnPropNameInTable="CantRematesColumn" msprop:Generator_UserColumnName="CantRemates" type="xs:int" minOccurs="0" />
+              <xs:element name="SumaApuestas" msprop:Generator_ColumnVarNameInTable="columnSumaApuestas" msprop:Generator_ColumnPropNameInRow="SumaApuestas" msprop:Generator_ColumnPropNameInTable="SumaApuestasColumn" msprop:Generator_UserColumnName="SumaApuestas" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SumaPremios" msprop:Generator_ColumnVarNameInTable="columnSumaPremios" msprop:Generator_ColumnPropNameInRow="SumaPremios" msprop:Generator_ColumnPropNameInTable="SumaPremiosColumn" msprop:Generator_UserColumnName="SumaPremios" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ComisionRematador" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnComisionRematador" msprop:Generator_ColumnPropNameInRow="ComisionRematador" msprop:Generator_ColumnPropNameInTable="ComisionRematadorColumn" msprop:Generator_UserColumnName="ComisionRematador" type="xs:int" minOccurs="0" />
+              <xs:element name="ComisionHipodromo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnComisionHipodromo" msprop:Generator_ColumnPropNameInRow="ComisionHipodromo" msprop:Generator_ColumnPropNameInTable="ComisionHipodromoColumn" msprop:Generator_UserColumnName="ComisionHipodromo" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

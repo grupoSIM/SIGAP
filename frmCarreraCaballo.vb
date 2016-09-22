@@ -213,8 +213,6 @@
         filaCarrera("PorcentajeCasa") = nProcentajeCasa.Value
         filaCarrera("PorcentajeUltimoRemate") = nProcentajeCasa.Value
         filaCarrera("TipoCarrera") = cbTipo.Text
-        filaCarrera("Observaciones") = ""
-
 
         Me.Validate()
         Me.TbCarrerasBindingSource.EndEdit()
