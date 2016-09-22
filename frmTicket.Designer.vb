@@ -26,6 +26,8 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.NombreLabel1 = New System.Windows.Forms.Label()
+        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.FechaLabel1 = New System.Windows.Forms.Label()
         Me.NroCarreraLabel1 = New System.Windows.Forms.Label()
         Me.PalcoLabel1 = New System.Windows.Forms.Label()
@@ -53,8 +55,6 @@ Partial Class Form1
         Me.PremioLabel1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.NroRemateLabel1 = New System.Windows.Forms.Label()
@@ -80,6 +80,16 @@ Partial Class Form1
         Me.NombreLabel1.Size = New System.Drawing.Size(295, 23)
         Me.NombreLabel1.TabIndex = 3
         Me.NombreLabel1.Text = "Lbl_Hipodromo"
+        '
+        'VwTicketBindingSource
+        '
+        Me.VwTicketBindingSource.DataMember = "VwTicket"
+        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FechaLabel1
         '
@@ -353,16 +363,6 @@ Partial Class Form1
         Me.Label6.TabIndex = 51
         Me.Label6.Text = "REMATE"
         '
-        'VwTicketBindingSource
-        '
-        Me.VwTicketBindingSource.DataMember = "VwTicket"
-        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'VwTicketTableAdapter
         '
         Me.VwTicketTableAdapter.ClearBeforeFill = True
@@ -408,7 +408,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(356, 448)
+        Me.ClientSize = New System.Drawing.Size(336, 448)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.NroRemateLabel1)
         Me.Controls.Add(Me.Label6)
