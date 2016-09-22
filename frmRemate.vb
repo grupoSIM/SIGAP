@@ -166,9 +166,13 @@
     End Sub
 
     Private Sub txtPorcentajeCasa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPorcentajeCasa.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
@@ -184,135 +188,211 @@
     End Sub
 
     Private Sub txtNumero1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero1.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero2.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero3.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero4.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero5.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero6.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero7.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero8.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtNumero9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero9.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta0_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta0.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta1.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta2.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta3.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta4.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta5.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta6.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta7.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta8.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
     Private Sub txtapuesta9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta9.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
@@ -386,4 +466,63 @@
         End If
     End Sub
 
+    Private Sub txtApostador0_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador0.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador1.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador2.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador3.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador4.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador5.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador6.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador7.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador8.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
+
+    Private Sub txtApostador9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador9.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            SelectNextControl(ActiveControl, True, True, True, True)
+        End If
+    End Sub
 End Class
