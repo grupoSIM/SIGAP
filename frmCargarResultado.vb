@@ -73,4 +73,8 @@
         Me.TbCarrerasCaballosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
     End Sub
+
+    Private Sub cbJornada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJornada.SelectedIndexChanged
+
+    End Sub
 End Class
