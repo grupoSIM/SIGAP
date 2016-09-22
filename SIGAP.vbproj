@@ -126,6 +126,12 @@
     <Compile Include="frmCajaPalco.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCargarLlave.Designer.vb">
+      <DependentUpon>frmCargarLlave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarLlave.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCargarResultado.Designer.vb">
       <DependentUpon>frmCargarResultado.vb</DependentUpon>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCajaPalco.resx">
       <DependentUpon>frmCajaPalco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarLlave.resx">
+      <DependentUpon>frmCargarLlave.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCargarResultado.resx">
       <DependentUpon>frmCargarResultado.vb</DependentUpon>
