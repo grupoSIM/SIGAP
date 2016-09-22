@@ -243,6 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-/frmModificarCarrera.Designer.vb
-/frmModificarCarrera.resx
-/frmModificarCarrera.vb
+/bd/bdSIGAP_be.laccdb
