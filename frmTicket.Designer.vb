@@ -26,8 +26,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.NombreLabel1 = New System.Windows.Forms.Label()
-        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.FechaLabel1 = New System.Windows.Forms.Label()
         Me.NroCarreraLabel1 = New System.Windows.Forms.Label()
         Me.PalcoLabel1 = New System.Windows.Forms.Label()
@@ -55,10 +53,12 @@ Partial Class Form1
         Me.PremioLabel1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
-        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.NroRemateLabel1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
+        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         CType(Me.VwTicketBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,16 +80,6 @@ Partial Class Form1
         Me.NombreLabel1.Size = New System.Drawing.Size(295, 23)
         Me.NombreLabel1.TabIndex = 3
         Me.NombreLabel1.Text = "Lbl_Hipodromo"
-        '
-        'VwTicketBindingSource
-        '
-        Me.VwTicketBindingSource.DataMember = "VwTicket"
-        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FechaLabel1
         '
@@ -138,13 +128,13 @@ Partial Class Form1
         Me.CaballoNombreLabel1.Font = New System.Drawing.Font("Arial Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CaballoNombreLabel1.Location = New System.Drawing.Point(51, 136)
         Me.CaballoNombreLabel1.Name = "CaballoNombreLabel1"
-        Me.CaballoNombreLabel1.Size = New System.Drawing.Size(260, 41)
+        Me.CaballoNombreLabel1.Size = New System.Drawing.Size(260, 28)
         Me.CaballoNombreLabel1.TabIndex = 13
         Me.CaballoNombreLabel1.Text = "Lbl_NombreCaballo"
         '
         'ImporteApuestaLabel1
         '
-        Me.ImporteApuestaLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ImporteApuesta", True))
+        Me.ImporteApuestaLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "ImporteApuesta", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.ImporteApuestaLabel1.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ImporteApuestaLabel1.Location = New System.Drawing.Point(1, 223)
         Me.ImporteApuestaLabel1.Name = "ImporteApuestaLabel1"
@@ -335,7 +325,7 @@ Partial Class Form1
         '
         'PremioLabel1
         '
-        Me.PremioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Premio", True))
+        Me.PremioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Premio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.PremioLabel1.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PremioLabel1.Location = New System.Drawing.Point(163, 223)
         Me.PremioLabel1.Name = "PremioLabel1"
@@ -363,25 +353,6 @@ Partial Class Form1
         Me.Label6.TabIndex = 51
         Me.Label6.Text = "REMATE"
         '
-        'VwTicketTableAdapter
-        '
-        Me.VwTicketTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
-        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
-        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
-        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'NroRemateLabel1
         '
         Me.NroRemateLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "NroRemate", True))
@@ -401,6 +372,35 @@ Partial Class Form1
         Me.Label7.Size = New System.Drawing.Size(64, 13)
         Me.Label7.TabIndex = 53
         Me.Label7.Text = "APUESTA"
+        '
+        'VwTicketBindingSource
+        '
+        Me.VwTicketBindingSource.DataMember = "VwTicket"
+        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VwTicketTableAdapter
+        '
+        Me.VwTicketTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
+        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Form1
         '

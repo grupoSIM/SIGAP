@@ -5,8 +5,8 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.VwTicket' table. You can move, or remove it, as needed.
         'Me.VwTicketTableAdapter.Fill(Me.BdSIGAP_DataSet.VwTicket)
-        'VwTicketTableAdapter.FillByIdDetalleRemate(BdSIGAP_DataSet.VwTicket, frmRemate.txtId.Text)
-        VwTicketTableAdapter.FillByIdDetalleRemate(BdSIGAP_DataSet.VwTicket, 50)
+        VwTicketTableAdapter.FillByIdDetalleRemate(BdSIGAP_DataSet.VwTicket, frmRemate.txtId.Text)
+        'VwTicketTableAdapter.FillByIdDetalleRemate(BdSIGAP_DataSet.VwTicket, 50)
 
     End Sub
 

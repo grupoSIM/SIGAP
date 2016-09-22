@@ -24,10 +24,7 @@ Partial Class frmRemate
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.TbDetalleRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.cmbCarrera = New System.Windows.Forms.ComboBox()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtRemate = New System.Windows.Forms.TextBox()
         Me.txtPorcentajeCasa = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -41,18 +38,6 @@ Partial Class frmRemate
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbPalco = New System.Windows.Forms.ComboBox()
-        Me.Tb_PalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        Me.Tb_CaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
-        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
-        Me.Tb_CarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
-        Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
-        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
-        Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.lblNumero = New System.Windows.Forms.Label()
         Me.lblCaballo = New System.Windows.Forms.Label()
@@ -131,13 +116,19 @@ Partial Class frmRemate
         Me.txtApostador8 = New System.Windows.Forms.TextBox()
         Me.txtCaballo8 = New System.Windows.Forms.TextBox()
         Me.txtNumero8 = New System.Windows.Forms.TextBox()
-        CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
+        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
+        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
+        Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
+        Me.TbPalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -148,16 +139,6 @@ Partial Class frmRemate
         Me.lblTitulo.Size = New System.Drawing.Size(44, 13)
         Me.lblTitulo.TabIndex = 6
         Me.lblTitulo.Text = "Remate"
-        '
-        'TbDetalleRematesBindingSource
-        '
-        Me.TbDetalleRematesBindingSource.DataMember = "tb_DetalleRemates"
-        Me.TbDetalleRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'cmbCarrera
         '
@@ -171,11 +152,6 @@ Partial Class frmRemate
         Me.cmbCarrera.TabIndex = 1
         Me.cmbCarrera.TabStop = False
         Me.cmbCarrera.ValueMember = "Id"
-        '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'txtRemate
         '
@@ -287,8 +263,7 @@ Partial Class frmRemate
         '
         'cmbPalco
         '
-        Me.cmbPalco.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tb_PalcosBindingSource, "Palco", True))
-        Me.cmbPalco.DataSource = Me.Tb_PalcosBindingSource
+        Me.cmbPalco.DataSource = Me.TbPalcosBindingSource
         Me.cmbPalco.DisplayMember = "Palco"
         Me.cmbPalco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbPalco.FormattingEnabled = True
@@ -298,68 +273,6 @@ Partial Class frmRemate
         Me.cmbPalco.TabIndex = 0
         Me.cmbPalco.TabStop = False
         Me.cmbPalco.ValueMember = "Id"
-        '
-        'Tb_PalcosBindingSource
-        '
-        Me.Tb_PalcosBindingSource.DataMember = "tb_Palcos"
-        Me.Tb_PalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_DetalleRematesTableAdapter
-        '
-        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_CarrerasTableAdapter
-        '
-        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_CaballosBindingSource
-        '
-        Me.Tb_CaballosBindingSource.DataMember = "tb_Caballos"
-        Me.Tb_CaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CaballosTableAdapter
-        '
-        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tb_CaballosTableAdapter = Me.Tb_CaballosTableAdapter
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
-        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Me.Tb_DetalleRematesTableAdapter
-        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
-        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Tb_CarrerasCaballosBindingSource
-        '
-        Me.Tb_CarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
-        Me.Tb_CarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CarrerasCaballosTableAdapter
-        '
-        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_RematesTableAdapter
-        '
-        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
-        '
-        'TbRematesBindingSource
-        '
-        Me.TbRematesBindingSource.DataMember = "tb_Remates"
-        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_PalcosTableAdapter
-        '
-        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
         '
         'txtId
         '
@@ -1148,6 +1061,49 @@ Partial Class frmRemate
         Me.txtNumero8.TabStop = False
         Me.txtNumero8.Visible = False
         '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tb_PalcosTableAdapter
+        '
+        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_JornadasTableAdapter
+        '
+        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CarrerasCaballosTableAdapter
+        '
+        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_DetalleRematesTableAdapter
+        '
+        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_RematesTableAdapter
+        '
+        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
+        '
+        'TbPalcosBindingSource
+        '
+        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
+        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1249,46 +1205,27 @@ Partial Class frmRemate
         Me.Name = "frmRemate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Remate"
-        CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
     Friend WithEvents lblTitulo As Label
-    Friend WithEvents TbDetalleRematesBindingSource As BindingSource
-    Friend WithEvents Tb_DetalleRematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter
     Friend WithEvents cmbCarrera As ComboBox
-    Friend WithEvents TbCarrerasBindingSource As BindingSource
-    Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
-    Friend WithEvents Tb_CaballosBindingSource As BindingSource
-    Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
-    Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Tb_CarrerasCaballosBindingSource As BindingSource
-    Friend WithEvents Tb_CarrerasCaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
-    Friend WithEvents Tb_RematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter
     Friend WithEvents txtRemate As TextBox
     Friend WithEvents txtPorcentajeCasa As TextBox
     Friend WithEvents btnGuardar As Button
     Friend WithEvents txtJornada As TextBox
     Friend WithEvents txtFecha As TextBox
-    Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
     Friend WithEvents btnImprimir As Button
-    Friend WithEvents TbRematesBindingSource As BindingSource
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Tb_PalcosBindingSource As BindingSource
-    Friend WithEvents Tb_PalcosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter
     Friend WithEvents cmbPalco As ComboBox
     Friend WithEvents txtId As TextBox
     Friend WithEvents lblNumero As Label
@@ -1368,4 +1305,14 @@ Partial Class frmRemate
     Friend WithEvents txtApostador8 As TextBox
     Friend WithEvents txtCaballo8 As TextBox
     Friend WithEvents txtNumero8 As TextBox
+    Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
+    Friend WithEvents Tb_PalcosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter
+    Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
+    Friend WithEvents Tb_CarrerasCaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
+    Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
+    Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
+    Friend WithEvents Tb_DetalleRematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter
+    Friend WithEvents Tb_RematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter
+    Friend WithEvents TbPalcosBindingSource As BindingSource
+    Friend WithEvents TbCarrerasBindingSource As BindingSource
 End Class
