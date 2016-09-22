@@ -3775,7 +3775,7 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnApostador As Global.System.Data.DataColumn
         
-        Private _columnFormat_Premio_______0_00__ As Global.System.Data.DataColumn
+        Private columnPremio As Global.System.Data.DataColumn
         
         Private columnApuC1 As Global.System.Data.DataColumn
         
@@ -3912,9 +3912,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property _Format_Premio_______0_00__Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property PremioColumn() As Global.System.Data.DataColumn
             Get
-                Return Me._columnFormat_Premio_______0_00__
+                Return Me.columnPremio
             End Get
         End Property
         
@@ -4068,7 +4068,7 @@ Partial Public Class bdSIGAP_DataSet
                     ByVal CaballoNombre As String,  _
                     ByVal ImporteApuesta As Decimal,  _
                     ByVal Apostador As String,  _
-                    ByVal _Format_Premio_______0_00__ As Integer,  _
+                    ByVal Premio As Integer,  _
                     ByVal ApuC1 As String,  _
                     ByVal ApuC2 As String,  _
                     ByVal ApuC3 As String,  _
@@ -4083,7 +4083,7 @@ Partial Public Class bdSIGAP_DataSet
                     ByVal ApuC12 As String,  _
                     ByVal NroRemate As Integer) As VwTicketRow
             Dim rowVwTicketRow As VwTicketRow = CType(Me.NewRow,VwTicketRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, _Format_Premio_______0_00__, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate}
             rowVwTicketRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwTicketRow)
             Return rowVwTicketRow
@@ -4115,7 +4115,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnCaballoNombre = MyBase.Columns("CaballoNombre")
             Me.columnImporteApuesta = MyBase.Columns("ImporteApuesta")
             Me.columnApostador = MyBase.Columns("Apostador")
-            Me._columnFormat_Premio_______0_00__ = MyBase.Columns("Format(Premio, ""#.##0,00"")")
+            Me.columnPremio = MyBase.Columns("Premio")
             Me.columnApuC1 = MyBase.Columns("ApuC1")
             Me.columnApuC2 = MyBase.Columns("ApuC2")
             Me.columnApuC3 = MyBase.Columns("ApuC3")
@@ -4152,10 +4152,8 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnImporteApuesta)
             Me.columnApostador = New Global.System.Data.DataColumn("Apostador", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnApostador)
-            Me._columnFormat_Premio_______0_00__ = New Global.System.Data.DataColumn("Format(Premio, ""#.##0,00"")", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            Me._columnFormat_Premio_______0_00__.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnFormat_Premio_______0_00__")
-            Me._columnFormat_Premio_______0_00__.ExtendedProperties.Add("Generator_UserColumnName", "Format(Premio, ""#.##0,00"")")
-            MyBase.Columns.Add(Me._columnFormat_Premio_______0_00__)
+            Me.columnPremio = New Global.System.Data.DataColumn("Premio", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPremio)
             Me.columnApuC1 = New Global.System.Data.DataColumn("ApuC1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnApuC1)
             Me.columnApuC2 = New Global.System.Data.DataColumn("ApuC2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -6998,16 +6996,16 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property _Format_Premio_______0_00__() As Integer
+        Public Property Premio() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableVwTicket._Format_Premio_______0_00__Column),Integer)
+                    Return CType(Me(Me.tableVwTicket.PremioColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Format(Premio, ""#.##0,00"")' in table 'VwTicket' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Premio' in table 'VwTicket' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableVwTicket._Format_Premio_______0_00__Column) = value
+                Me(Me.tableVwTicket.PremioColumn) = value
             End Set
         End Property
         
@@ -7316,14 +7314,14 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Is_Format_Premio_______0_00__Null() As Boolean
-            Return Me.IsNull(Me.tableVwTicket._Format_Premio_______0_00__Column)
+        Public Function IsPremioNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.PremioColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Set_Format_Premio_______0_00__Null()
-            Me(Me.tableVwTicket._Format_Premio_______0_00__Column) = Global.System.Convert.DBNull
+        Public Sub SetPremioNull()
+            Me(Me.tableVwTicket.PremioColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13017,7 +13015,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("CaballoNombre", "CaballoNombre")
             tableMapping.ColumnMappings.Add("ImporteApuesta", "ImporteApuesta")
             tableMapping.ColumnMappings.Add("Apostador", "Apostador")
-            tableMapping.ColumnMappings.Add("Premio", "Format(Premio, ""#.##0,00"")")
+            tableMapping.ColumnMappings.Add("Premio", "Premio")
             tableMapping.ColumnMappings.Add("ApuC1", "ApuC1")
             tableMapping.ColumnMappings.Add("ApuC2", "ApuC2")
             tableMapping.ColumnMappings.Add("ApuC3", "ApuC3")
