@@ -9,8 +9,8 @@
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Jornadas' table. You can move, or remove it, as needed.
         Me.Tb_JornadasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Jornadas)
 
-        CargarCaballos(cbCarrera1.SelectedValue)
-        CargarCaballos(cbCarrera2.SelectedValue)
+        CargarCaballos1()
+        CargarCaballos2()
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
