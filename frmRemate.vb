@@ -173,9 +173,13 @@
     End Sub
 
     Private Sub txtNumero0_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero0.KeyPress
-        ' Controlar que ingrese un número
-        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-            e.Handled = True
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SelectNextControl(ActiveControl, True, True, True, True)
         End If
     End Sub
 
@@ -381,4 +385,5 @@
             txtapuesta9.Select(txtapuesta9.TextLength, 0)
         End If
     End Sub
+
 End Class

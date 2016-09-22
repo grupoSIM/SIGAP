@@ -184,14 +184,14 @@ Partial Class frmRemate
         Me.txtRemate.Name = "txtRemate"
         Me.txtRemate.ReadOnly = True
         Me.txtRemate.Size = New System.Drawing.Size(100, 20)
-        Me.txtRemate.TabIndex = 2
+        Me.txtRemate.TabIndex = 0
         '
         'txtPorcentajeCasa
         '
         Me.txtPorcentajeCasa.Location = New System.Drawing.Point(478, 64)
         Me.txtPorcentajeCasa.Name = "txtPorcentajeCasa"
         Me.txtPorcentajeCasa.Size = New System.Drawing.Size(100, 20)
-        Me.txtPorcentajeCasa.TabIndex = 3
+        Me.txtPorcentajeCasa.TabIndex = 2
         Me.txtPorcentajeCasa.TabStop = False
         '
         'btnGuardar
@@ -199,7 +199,7 @@ Partial Class frmRemate
         Me.btnGuardar.Location = New System.Drawing.Point(395, 386)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardar.TabIndex = 94
+        Me.btnGuardar.TabIndex = 95
         Me.btnGuardar.TabStop = False
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
@@ -227,7 +227,7 @@ Partial Class frmRemate
         Me.btnImprimir.Location = New System.Drawing.Point(481, 386)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(104, 23)
-        Me.btnImprimir.TabIndex = 150
+        Me.btnImprimir.TabIndex = 100
         Me.btnImprimir.Text = "Guardar e Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = True
         '
@@ -295,7 +295,7 @@ Partial Class frmRemate
         Me.cmbPalco.Location = New System.Drawing.Point(457, 26)
         Me.cmbPalco.Name = "cmbPalco"
         Me.cmbPalco.Size = New System.Drawing.Size(121, 21)
-        Me.cmbPalco.TabIndex = 16
+        Me.cmbPalco.TabIndex = 0
         Me.cmbPalco.TabStop = False
         Me.cmbPalco.ValueMember = "Id"
         '
@@ -1030,7 +1030,7 @@ Partial Class frmRemate
         Me.radFila9.Location = New System.Drawing.Point(566, 351)
         Me.radFila9.Name = "radFila9"
         Me.radFila9.Size = New System.Drawing.Size(14, 13)
-        Me.radFila9.TabIndex = 104
+        Me.radFila9.TabIndex = 94
         Me.radFila9.UseVisualStyleBackColor = True
         Me.radFila9.Visible = False
         '
@@ -1042,7 +1042,7 @@ Partial Class frmRemate
         Me.cmbLuz9.Location = New System.Drawing.Point(473, 347)
         Me.cmbLuz9.Name = "cmbLuz9"
         Me.cmbLuz9.Size = New System.Drawing.Size(81, 21)
-        Me.cmbLuz9.TabIndex = 103
+        Me.cmbLuz9.TabIndex = 93
         Me.cmbLuz9.TabStop = False
         Me.cmbLuz9.Visible = False
         '
@@ -1054,7 +1054,7 @@ Partial Class frmRemate
         Me.chbincluido9.Location = New System.Drawing.Point(441, 350)
         Me.chbincluido9.Name = "chbincluido9"
         Me.chbincluido9.Size = New System.Drawing.Size(15, 14)
-        Me.chbincluido9.TabIndex = 102
+        Me.chbincluido9.TabIndex = 92
         Me.chbincluido9.TabStop = False
         Me.chbincluido9.UseVisualStyleBackColor = True
         Me.chbincluido9.Visible = False
@@ -1073,7 +1073,7 @@ Partial Class frmRemate
         Me.txtCaballo9.Name = "txtCaballo9"
         Me.txtCaballo9.ReadOnly = True
         Me.txtCaballo9.Size = New System.Drawing.Size(170, 20)
-        Me.txtCaballo9.TabIndex = 99
+        Me.txtCaballo9.TabIndex = 89
         Me.txtCaballo9.TabStop = False
         Me.txtCaballo9.Visible = False
         '
@@ -1082,7 +1082,7 @@ Partial Class frmRemate
         Me.txtNumero9.Location = New System.Drawing.Point(8, 347)
         Me.txtNumero9.Name = "txtNumero9"
         Me.txtNumero9.Size = New System.Drawing.Size(55, 20)
-        Me.txtNumero9.TabIndex = 98
+        Me.txtNumero9.TabIndex = 88
         Me.txtNumero9.TabStop = False
         Me.txtNumero9.Visible = False
         '
@@ -1092,7 +1092,7 @@ Partial Class frmRemate
         Me.radFila8.Location = New System.Drawing.Point(566, 327)
         Me.radFila8.Name = "radFila8"
         Me.radFila8.Size = New System.Drawing.Size(14, 13)
-        Me.radFila8.TabIndex = 97
+        Me.radFila8.TabIndex = 87
         Me.radFila8.UseVisualStyleBackColor = True
         Me.radFila8.Visible = False
         '
@@ -1104,7 +1104,7 @@ Partial Class frmRemate
         Me.cmbLuz8.Location = New System.Drawing.Point(473, 323)
         Me.cmbLuz8.Name = "cmbLuz8"
         Me.cmbLuz8.Size = New System.Drawing.Size(81, 21)
-        Me.cmbLuz8.TabIndex = 96
+        Me.cmbLuz8.TabIndex = 86
         Me.cmbLuz8.TabStop = False
         Me.cmbLuz8.Visible = False
         '
@@ -1116,7 +1116,7 @@ Partial Class frmRemate
         Me.chbincluido8.Location = New System.Drawing.Point(441, 326)
         Me.chbincluido8.Name = "chbincluido8"
         Me.chbincluido8.Size = New System.Drawing.Size(15, 14)
-        Me.chbincluido8.TabIndex = 95
+        Me.chbincluido8.TabIndex = 85
         Me.chbincluido8.TabStop = False
         Me.chbincluido8.UseVisualStyleBackColor = True
         Me.chbincluido8.Visible = False
@@ -1135,7 +1135,7 @@ Partial Class frmRemate
         Me.txtCaballo8.Name = "txtCaballo8"
         Me.txtCaballo8.ReadOnly = True
         Me.txtCaballo8.Size = New System.Drawing.Size(170, 20)
-        Me.txtCaballo8.TabIndex = 92
+        Me.txtCaballo8.TabIndex = 82
         Me.txtCaballo8.TabStop = False
         Me.txtCaballo8.Visible = False
         '
@@ -1144,7 +1144,7 @@ Partial Class frmRemate
         Me.txtNumero8.Location = New System.Drawing.Point(8, 323)
         Me.txtNumero8.Name = "txtNumero8"
         Me.txtNumero8.Size = New System.Drawing.Size(55, 20)
-        Me.txtNumero8.TabIndex = 91
+        Me.txtNumero8.TabIndex = 81
         Me.txtNumero8.TabStop = False
         Me.txtNumero8.Visible = False
         '
