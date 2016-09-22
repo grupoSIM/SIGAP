@@ -17,7 +17,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.57795cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -121,7 +121,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.57795cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -207,6 +207,7 @@
                               <Value>=Fields!ImportePremio.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -252,8 +253,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DS_Premios</DataSetName>
-        <Top>0.14111cm</Top>
-        <Height>1.2cm</Height>
+        <Height>1.1559cm</Height>
         <Width>7.32516cm</Width>
         <Style>
           <Border>
@@ -262,13 +262,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.00695in</Height>
     <Style />
   </Body>
   <Width>3.5455in</Width>
   <Page>
     <PageHeader>
-      <Height>1.5875cm</Height>
+      <Height>2.54318cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -281,7 +281,7 @@
                 <TextRun>
                   <Value>=First(Fields!Hipodromo.Value, "DS_Premios")</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
                   </Style>
@@ -323,8 +323,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.89366cm</Top>
-          <Height>0.6cm</Height>
+          <Top>1.24644cm</Top>
+          <Height>0.56472cm</Height>
           <Width>1.4cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -355,9 +355,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Palco</rd:DefaultName>
-          <Top>0.85838cm</Top>
-          <Left>1.34938cm</Left>
-          <Height>0.6cm</Height>
+          <Top>1.24644cm</Top>
+          <Left>1.4cm</Left>
+          <Height>0.56472cm</Height>
           <Width>1.09771cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -384,14 +384,15 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.85838cm</Top>
-          <Left>4.06104cm</Left>
+          <Top>1.87262cm</Top>
           <Height>0.6cm</Height>
-          <Width>2.44708cm</Width>
+          <Width>2.49771cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -421,11 +422,46 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.85838cm</Top>
-          <Left>6.51694cm</Left>
+          <Top>1.87262cm</Top>
+          <Left>2.49771cm</Left>
           <Height>0.6cm</Height>
           <Width>0.80822cm</Width>
           <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>REPORTE DE PAGOS</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextDecoration>Underline</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.71727cm</Top>
+          <Height>0.49389cm</Height>
+          <Width>7.32516cm</Width>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
