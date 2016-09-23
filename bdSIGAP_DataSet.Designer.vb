@@ -4833,8 +4833,6 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnHipodromo As Global.System.Data.DataColumn
         
-        Private columnId As Global.System.Data.DataColumn
-        
         Private columnFecha As Global.System.Data.DataColumn
         
         Private columnIdPalco As Global.System.Data.DataColumn
@@ -4856,6 +4854,8 @@ Partial Public Class bdSIGAP_DataSet
         Private columnComisionHipodromo As Global.System.Data.DataColumn
         
         Private columnNombreCarrera As Global.System.Data.DataColumn
+        
+        Private columnIdJornada As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -4897,14 +4897,6 @@ Partial Public Class bdSIGAP_DataSet
         Public ReadOnly Property HipodromoColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnHipodromo
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property IdColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnId
             End Get
         End Property
         
@@ -4997,6 +4989,14 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IdJornadaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdJornada
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -5035,7 +5035,7 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddVwCajaPalcoRow(ByVal Hipodromo As String, ByVal Fecha As Date, ByVal Palco As String, ByVal NroCarrera As Integer, ByVal CantRemates As Integer, ByVal SumaApuestas As Decimal, ByVal SumaPremios As Decimal, ByVal ComisionRematador As Integer, ByVal ComisionHipodromo As Integer, ByVal NombreCarrera As String) As VwCajaPalcoRow
             Dim rowVwCajaPalcoRow As VwCajaPalcoRow = CType(Me.NewRow,VwCajaPalcoRow)
-            Dim columnValuesArray() As Object = New Object() {Hipodromo, Nothing, Fecha, Nothing, Palco, Nothing, NroCarrera, CantRemates, SumaApuestas, SumaPremios, ComisionRematador, ComisionHipodromo, NombreCarrera}
+            Dim columnValuesArray() As Object = New Object() {Hipodromo, Fecha, Nothing, Palco, Nothing, NroCarrera, CantRemates, SumaApuestas, SumaPremios, ComisionRematador, ComisionHipodromo, NombreCarrera, Nothing}
             rowVwCajaPalcoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwCajaPalcoRow)
             Return rowVwCajaPalcoRow
@@ -5059,7 +5059,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnHipodromo = MyBase.Columns("Hipodromo")
-            Me.columnId = MyBase.Columns("Id")
             Me.columnFecha = MyBase.Columns("Fecha")
             Me.columnIdPalco = MyBase.Columns("IdPalco")
             Me.columnPalco = MyBase.Columns("Palco")
@@ -5071,6 +5070,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnComisionRematador = MyBase.Columns("ComisionRematador")
             Me.columnComisionHipodromo = MyBase.Columns("ComisionHipodromo")
             Me.columnNombreCarrera = MyBase.Columns("NombreCarrera")
+            Me.columnIdJornada = MyBase.Columns("IdJornada")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5078,8 +5078,6 @@ Partial Public Class bdSIGAP_DataSet
         Private Sub InitClass()
             Me.columnHipodromo = New Global.System.Data.DataColumn("Hipodromo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHipodromo)
-            Me.columnId = New Global.System.Data.DataColumn("Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnId)
             Me.columnFecha = New Global.System.Data.DataColumn("Fecha", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFecha)
             Me.columnIdPalco = New Global.System.Data.DataColumn("IdPalco", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -5102,10 +5100,9 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnComisionHipodromo)
             Me.columnNombreCarrera = New Global.System.Data.DataColumn("NombreCarrera", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombreCarrera)
+            Me.columnIdJornada = New Global.System.Data.DataColumn("IdJornada", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdJornada)
             Me.columnHipodromo.MaxLength = 255
-            Me.columnId.AutoIncrement = true
-            Me.columnId.AutoIncrementSeed = -1
-            Me.columnId.AutoIncrementStep = -1
             Me.columnIdPalco.AutoIncrement = true
             Me.columnIdPalco.AutoIncrementSeed = -1
             Me.columnIdPalco.AutoIncrementStep = -1
@@ -5118,6 +5115,9 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnComisionRematador.ReadOnly = true
             Me.columnComisionHipodromo.ReadOnly = true
             Me.columnNombreCarrera.MaxLength = 255
+            Me.columnIdJornada.AutoIncrement = true
+            Me.columnIdJornada.AutoIncrementSeed = -1
+            Me.columnIdJornada.AutoIncrementStep = -1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8611,21 +8611,6 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Id() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableVwCajaPalco.IdColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Id' in table 'VwCajaPalco' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVwCajaPalco.IdColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Fecha() As Date
             Get
                 Try 
@@ -8791,6 +8776,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property IdJornada() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwCajaPalco.IdJornadaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdJornada' in table 'VwCajaPalco' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwCajaPalco.IdJornadaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHipodromoNull() As Boolean
             Return Me.IsNull(Me.tableVwCajaPalco.HipodromoColumn)
         End Function
@@ -8799,18 +8799,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetHipodromoNull()
             Me(Me.tableVwCajaPalco.HipodromoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsIdNull() As Boolean
-            Return Me.IsNull(Me.tableVwCajaPalco.IdColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetIdNull()
-            Me(Me.tableVwCajaPalco.IdColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8943,6 +8931,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNombreCarreraNull()
             Me(Me.tableVwCajaPalco.NombreCarreraColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsIdJornadaNull() As Boolean
+            Return Me.IsNull(Me.tableVwCajaPalco.IdJornadaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetIdJornadaNull()
+            Me(Me.tableVwCajaPalco.IdJornadaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -14724,7 +14724,6 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "VwCajaPalco"
             tableMapping.ColumnMappings.Add("Hipodromo", "Hipodromo")
-            tableMapping.ColumnMappings.Add("Id", "Id")
             tableMapping.ColumnMappings.Add("Fecha", "Fecha")
             tableMapping.ColumnMappings.Add("IdPalco", "IdPalco")
             tableMapping.ColumnMappings.Add("Palco", "Palco")
@@ -14736,6 +14735,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("ComisionRematador", "ComisionRematador")
             tableMapping.ColumnMappings.Add("ComisionHipodromo", "ComisionHipodromo")
             tableMapping.ColumnMappings.Add("NombreCarrera", "NombreCarrera")
+            tableMapping.ColumnMappings.Add("IdJornada", "IdJornada")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -14749,13 +14749,20 @@ Namespace bdSIGAP_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Hipodromo, Id, Fecha, IdPalco, Palco, IdCarrera, NroCarrera, CantRemates, "& _ 
-                "SumaApuestas, SumaPremios, ComisionRematador, ComisionHipodromo, NombreCarrera F"& _ 
-                "ROM VwCajaPalco"
+            Me._commandCollection(0).CommandText = "SELECT Hipodromo, Fecha, IdPalco, Palco, IdCarrera, NroCarrera, CantRemates, Suma"& _ 
+                "Apuestas, SumaPremios, ComisionRematador, ComisionHipodromo, NombreCarrera, IdJo"& _ 
+                "rnada FROM VwCajaPalco"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT Hipodromo, Fecha, IdPalco, Palco, IdCarrera, NroCarrera, CantRemates, Suma"& _ 
+                "Apuestas, SumaPremios, ComisionRematador, ComisionHipodromo, NombreCarrera, IdJo"& _ 
+                "rnada FROM VwCajaPalco WHERE IdCarrera=?"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14777,6 +14784,32 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As bdSIGAP_DataSet.VwCajaPalcoDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As bdSIGAP_DataSet.VwCajaPalcoDataTable = New bdSIGAP_DataSet.VwCajaPalcoDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByIdCarrera(ByVal dataTable As bdSIGAP_DataSet.VwCajaPalcoDataTable, ByVal IdCarrera As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdCarrera,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByIdCarrera(ByVal IdCarrera As Integer) As bdSIGAP_DataSet.VwCajaPalcoDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdCarrera,Integer)
             Dim dataTable As bdSIGAP_DataSet.VwCajaPalcoDataTable = New bdSIGAP_DataSet.VwCajaPalcoDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
