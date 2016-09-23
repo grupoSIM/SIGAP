@@ -3834,8 +3834,6 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnIdDetalleRemate As Global.System.Data.DataColumn
         
-        Private columnNombre As Global.System.Data.DataColumn
-        
         Private columnFecha As Global.System.Data.DataColumn
         
         Private columnNroCarrera As Global.System.Data.DataColumn
@@ -3878,6 +3876,14 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnNroRemate As Global.System.Data.DataColumn
         
+        Private columnHipodromo As Global.System.Data.DataColumn
+        
+        Private columnNombreCarrera As Global.System.Data.DataColumn
+        
+        Private columnDesLuz As Global.System.Data.DataColumn
+        
+        Private columnDesFila As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3918,14 +3924,6 @@ Partial Public Class bdSIGAP_DataSet
         Public ReadOnly Property IdDetalleRemateColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnIdDetalleRemate
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property NombreColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnNombre
             End Get
         End Property
         
@@ -4098,6 +4096,38 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HipodromoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHipodromo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NombreCarreraColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombreCarrera
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DesLuzColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDesLuz
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DesFilaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDesFila
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4135,7 +4165,6 @@ Partial Public Class bdSIGAP_DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddVwTicketRow( _
-                    ByVal Nombre As String,  _
                     ByVal Fecha As Date,  _
                     ByVal NroCarrera As Integer,  _
                     ByVal Palco As String,  _
@@ -4156,9 +4185,13 @@ Partial Public Class bdSIGAP_DataSet
                     ByVal ApuC10 As String,  _
                     ByVal ApuC11 As String,  _
                     ByVal ApuC12 As String,  _
-                    ByVal NroRemate As Integer) As VwTicketRow
+                    ByVal NroRemate As Integer,  _
+                    ByVal Hipodromo As String,  _
+                    ByVal NombreCarrera As String,  _
+                    ByVal DesLuz As String,  _
+                    ByVal DesFila As String) As VwTicketRow
             Dim rowVwTicketRow As VwTicketRow = CType(Me.NewRow,VwTicketRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate, Hipodromo, NombreCarrera, DesLuz, DesFila}
             rowVwTicketRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwTicketRow)
             Return rowVwTicketRow
@@ -4182,7 +4215,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnIdDetalleRemate = MyBase.Columns("IdDetalleRemate")
-            Me.columnNombre = MyBase.Columns("Nombre")
             Me.columnFecha = MyBase.Columns("Fecha")
             Me.columnNroCarrera = MyBase.Columns("NroCarrera")
             Me.columnPalco = MyBase.Columns("Palco")
@@ -4204,6 +4236,10 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnApuC11 = MyBase.Columns("ApuC11")
             Me.columnApuC12 = MyBase.Columns("ApuC12")
             Me.columnNroRemate = MyBase.Columns("NroRemate")
+            Me.columnHipodromo = MyBase.Columns("Hipodromo")
+            Me.columnNombreCarrera = MyBase.Columns("NombreCarrera")
+            Me.columnDesLuz = MyBase.Columns("DesLuz")
+            Me.columnDesFila = MyBase.Columns("DesFila")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4211,8 +4247,6 @@ Partial Public Class bdSIGAP_DataSet
         Private Sub InitClass()
             Me.columnIdDetalleRemate = New Global.System.Data.DataColumn("IdDetalleRemate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIdDetalleRemate)
-            Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNombre)
             Me.columnFecha = New Global.System.Data.DataColumn("Fecha", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFecha)
             Me.columnNroCarrera = New Global.System.Data.DataColumn("NroCarrera", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -4255,10 +4289,17 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnApuC12)
             Me.columnNroRemate = New Global.System.Data.DataColumn("NroRemate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNroRemate)
+            Me.columnHipodromo = New Global.System.Data.DataColumn("Hipodromo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHipodromo)
+            Me.columnNombreCarrera = New Global.System.Data.DataColumn("NombreCarrera", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombreCarrera)
+            Me.columnDesLuz = New Global.System.Data.DataColumn("DesLuz", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDesLuz)
+            Me.columnDesFila = New Global.System.Data.DataColumn("DesFila", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDesFila)
             Me.columnIdDetalleRemate.AutoIncrement = true
             Me.columnIdDetalleRemate.AutoIncrementSeed = -1
             Me.columnIdDetalleRemate.AutoIncrementStep = -1
-            Me.columnNombre.MaxLength = 255
             Me.columnPalco.MaxLength = 255
             Me.columnCaballoNombre.MaxLength = 255
             Me.columnImporteApuesta.Caption = "Format(ImporteApuesta, ""#.##0,00"")"
@@ -4287,6 +4328,13 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnApuC11.MaxLength = 536870910
             Me.columnApuC12.ReadOnly = true
             Me.columnApuC12.MaxLength = 536870910
+            Me.columnHipodromo.ReadOnly = true
+            Me.columnHipodromo.MaxLength = 536870910
+            Me.columnNombreCarrera.MaxLength = 255
+            Me.columnDesLuz.ReadOnly = true
+            Me.columnDesLuz.MaxLength = 536870910
+            Me.columnDesFila.ReadOnly = true
+            Me.columnDesFila.MaxLength = 536870910
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4442,6 +4490,8 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnNombreCarrera As Global.System.Data.DataColumn
         
+        Private columnFecha As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -4550,6 +4600,14 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FechaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFecha
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4586,9 +4644,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddVwPremiosRow(ByVal Hipodromo As String, ByVal Palco As String, ByVal NroCarrera As Integer, ByVal Apostador As String, ByVal NroCaballo As Integer, ByVal ImportePremio As Decimal, ByVal NroRemate As Integer, ByVal NombreCarrera As String) As VwPremiosRow
+        Public Overloads Function AddVwPremiosRow(ByVal Hipodromo As String, ByVal Palco As String, ByVal NroCarrera As Integer, ByVal Apostador As String, ByVal NroCaballo As Integer, ByVal ImportePremio As Decimal, ByVal NroRemate As Integer, ByVal NombreCarrera As String, ByVal Fecha As Date) As VwPremiosRow
             Dim rowVwPremiosRow As VwPremiosRow = CType(Me.NewRow,VwPremiosRow)
-            Dim columnValuesArray() As Object = New Object() {Hipodromo, Palco, NroCarrera, Apostador, NroCaballo, ImportePremio, NroRemate, Nothing, NombreCarrera}
+            Dim columnValuesArray() As Object = New Object() {Hipodromo, Palco, NroCarrera, Apostador, NroCaballo, ImportePremio, NroRemate, Nothing, NombreCarrera, Fecha}
             rowVwPremiosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwPremiosRow)
             Return rowVwPremiosRow
@@ -4620,6 +4678,7 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnNroRemate = MyBase.Columns("NroRemate")
             Me.columnIdCarrera = MyBase.Columns("IdCarrera")
             Me.columnNombreCarrera = MyBase.Columns("NombreCarrera")
+            Me.columnFecha = MyBase.Columns("Fecha")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4643,6 +4702,8 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnIdCarrera)
             Me.columnNombreCarrera = New Global.System.Data.DataColumn("NombreCarrera", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombreCarrera)
+            Me.columnFecha = New Global.System.Data.DataColumn("Fecha", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFecha)
             Me.columnHipodromo.MaxLength = 255
             Me.columnPalco.MaxLength = 255
             Me.columnApostador.MaxLength = 255
@@ -7590,21 +7651,6 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Nombre() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableVwTicket.NombreColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nombre' in table 'VwTicket' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVwTicket.NombreColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Fecha() As Date
             Get
                 Try 
@@ -7920,6 +7966,66 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Hipodromo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwTicket.HipodromoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Hipodromo' in table 'VwTicket' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwTicket.HipodromoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NombreCarrera() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwTicket.NombreCarreraColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NombreCarrera' in table 'VwTicket' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwTicket.NombreCarreraColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DesLuz() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwTicket.DesLuzColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DesLuz' in table 'VwTicket' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwTicket.DesLuzColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DesFila() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwTicket.DesFilaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DesFila' in table 'VwTicket' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwTicket.DesFilaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsIdDetalleRemateNull() As Boolean
             Return Me.IsNull(Me.tableVwTicket.IdDetalleRemateColumn)
         End Function
@@ -7928,18 +8034,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetIdDetalleRemateNull()
             Me(Me.tableVwTicket.IdDetalleRemateColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsNombreNull() As Boolean
-            Return Me.IsNull(Me.tableVwTicket.NombreColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetNombreNull()
-            Me(Me.tableVwTicket.NombreColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8193,6 +8287,54 @@ Partial Public Class bdSIGAP_DataSet
         Public Sub SetNroRemateNull()
             Me(Me.tableVwTicket.NroRemateColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHipodromoNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.HipodromoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHipodromoNull()
+            Me(Me.tableVwTicket.HipodromoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNombreCarreraNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.NombreCarreraColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNombreCarreraNull()
+            Me(Me.tableVwTicket.NombreCarreraColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDesLuzNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.DesLuzColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDesLuzNull()
+            Me(Me.tableVwTicket.DesLuzColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDesFilaNull() As Boolean
+            Return Me.IsNull(Me.tableVwTicket.DesFilaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDesFilaNull()
+            Me(Me.tableVwTicket.DesFilaColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -8347,6 +8489,21 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Fecha() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableVwPremios.FechaColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha' in table 'VwPremios' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVwPremios.FechaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHipodromoNull() As Boolean
             Return Me.IsNull(Me.tableVwPremios.HipodromoColumn)
         End Function
@@ -8451,6 +8608,18 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNombreCarreraNull()
             Me(Me.tableVwPremios.NombreCarreraColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFechaNull() As Boolean
+            Return Me.IsNull(Me.tableVwPremios.FechaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFechaNull()
+            Me(Me.tableVwPremios.FechaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -14084,7 +14253,6 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "VwTicket"
             tableMapping.ColumnMappings.Add("IdDetalleRemate", "IdDetalleRemate")
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre")
             tableMapping.ColumnMappings.Add("Fecha", "Fecha")
             tableMapping.ColumnMappings.Add("NroCarrera", "NroCarrera")
             tableMapping.ColumnMappings.Add("Palco", "Palco")
@@ -14106,6 +14274,10 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("ApuC11", "ApuC11")
             tableMapping.ColumnMappings.Add("ApuC12", "ApuC12")
             tableMapping.ColumnMappings.Add("NroRemate", "NroRemate")
+            tableMapping.ColumnMappings.Add("Hipodromo", "Hipodromo")
+            tableMapping.ColumnMappings.Add("NombreCarrera", "NombreCarrera")
+            tableMapping.ColumnMappings.Add("DesLuz", "DesLuz")
+            tableMapping.ColumnMappings.Add("DesFila", "DesFila")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -14122,16 +14294,17 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNomb"& _ 
-                "re, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6,"& _ 
-                " ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate FROM VwTicket"
+            Me._commandCollection(0).CommandText = "SELECT IdDetalleRemate, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, Impo"& _ 
+                "rteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, "& _ 
+                "ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate, Hipodromo, NombreCarrera, DesFi"& _ 
+                "la, DesLuz FROM VwTicket"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT IdDetalleRemate, Nombre, Fecha, NroCarrera, Palco, NroCaballo, CaballoNomb"& _ 
-                "re, ImporteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6,"& _ 
-                " ApuC7, ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate FROM VwTicket WHERE (IdD"& _ 
-                "etalleRemate = ?)"
+            Me._commandCollection(1).CommandText = "SELECT IdDetalleRemate, Fecha, NroCarrera, Palco, NroCaballo, CaballoNombre, Impo"& _ 
+                "rteApuesta, Apostador, Premio, ApuC1, ApuC2, ApuC3, ApuC4, ApuC5, ApuC6, ApuC7, "& _ 
+                "ApuC8, ApuC9, ApuC10, ApuC11, ApuC12, NroRemate, Hipodromo, NombreCarrera, DesFi"& _ 
+                "la, DesLuz FROM VwTicket WHERE (IdDetalleRemate = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdDetalleRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdDetalleRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -14323,6 +14496,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("NroRemate", "NroRemate")
             tableMapping.ColumnMappings.Add("IdCarrera", "IdCarrera")
             tableMapping.ColumnMappings.Add("NombreCarrera", "NombreCarrera")
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -14340,12 +14514,12 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Hipodromo, Palco, NroCarrera, Apostador, NroCaballo, ImportePremio, NroRem"& _ 
-                "ate, IdCarrera, NombreCarrera FROM VwPremios"
+                "ate, IdCarrera, NombreCarrera, Fecha FROM VwPremios"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = New Global.System.Data.OleDb.OleDbConnection(Global.SIGAP.My.MySettings.Default.bdSIGAP_ConnectionString)
             Me._commandCollection(1).CommandText = "SELECT Hipodromo, Palco, NroCarrera, Apostador, NroCaballo, ImportePremio, NroRem"& _ 
-                "ate, IdCarrera FROM VwPremios WHERE (IdCarrera=?)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+                "ate, IdCarrera, Fecha FROM VwPremios WHERE (IdCarrera = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub

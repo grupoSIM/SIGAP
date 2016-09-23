@@ -265,10 +265,10 @@
     <Height>2.00695in</Height>
     <Style />
   </Body>
-  <Width>3.5455in</Width>
+  <Width>4.108in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54318cm</Height>
+      <Height>2.63412cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -319,11 +319,14 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>1.24644cm</Top>
+          <Top>1.23734cm</Top>
+          <Left>4.82745cm</Left>
           <Height>0.56472cm</Height>
           <Width>1.4cm</Width>
           <ZIndex>1</ZIndex>
@@ -351,12 +354,14 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Palco</rd:DefaultName>
-          <Top>1.24644cm</Top>
-          <Left>1.4cm</Left>
+          <Top>1.23734cm</Top>
+          <Left>6.22745cm</Left>
           <Height>0.56472cm</Height>
           <Width>1.09771cm</Width>
           <ZIndex>2</ZIndex>
@@ -377,7 +382,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>CARRERA NRO:</Value>
+                  <Value>CARRERA Nº:</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -385,23 +390,23 @@
                 </TextRun>
               </TextRuns>
               <Style>
-                <TextAlign>Right</TextAlign>
+                <TextAlign>Left</TextAlign>
               </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
           <Top>1.87262cm</Top>
           <Height>0.6cm</Height>
-          <Width>2.49771cm</Width>
+          <Width>2.29715cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
+            <PaddingLeft>1pt</PaddingLeft>
+            <PaddingRight>1pt</PaddingRight>
+            <PaddingTop>1pt</PaddingTop>
+            <PaddingBottom>1pt</PaddingBottom>
           </Style>
         </Textbox>
         <Textbox Name="Textbox6">
@@ -418,14 +423,16 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>1.87262cm</Top>
-          <Left>2.49771cm</Left>
+          <Left>2.33243cm</Left>
           <Height>0.6cm</Height>
-          <Width>0.80822cm</Width>
+          <Width>0.69128cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
@@ -462,6 +469,76 @@
           <Height>0.49389cm</Height>
           <Width>7.32516cm</Width>
           <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Fecha">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!Fecha.Value, "DS_Premios")</Value>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Format>=CDate(Fields!Fecha.Value).ToString("dd/MM/yyyy")</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Fecha</rd:DefaultName>
+          <Top>1.23734cm</Top>
+          <Height>0.49417cm</Height>
+          <Width>2.15604cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="NombreCarrera">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!NombreCarrera.Value, "DS_Premios")</Value>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>NombreCarrera</rd:DefaultName>
+          <Top>1.87262cm</Top>
+          <Left>3.05899cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.26617cm</Width>
+          <ZIndex>7</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -547,10 +624,18 @@
           <DataField>IdCarrera</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="NombreCarrera">
+          <DataField>NombreCarrera</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>bdSIGAP_DataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Gustavo\SIM\SIGAP\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Gustavo\SIM\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
         <rd:TableName>VwPremios</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

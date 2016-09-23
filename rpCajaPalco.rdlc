@@ -87,13 +87,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Right</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NroCarrera</rd:DefaultName>
-        <Top>1.31699cm</Top>
-        <Left>6.50558cm</Left>
+        <Top>1.88172cm</Top>
+        <Left>2.33715cm</Left>
         <Height>0.6cm</Height>
         <Width>0.83313cm</Width>
         <ZIndex>2</ZIndex>
@@ -127,7 +127,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Palco</rd:DefaultName>
-        <Top>1.95227cm</Top>
+        <Top>1.28172cm</Top>
         <Left>6.50558cm</Left>
         <Height>0.56472cm</Height>
         <Width>0.85958cm</Width>
@@ -563,7 +563,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>1.95227cm</Top>
+        <Top>1.28172cm</Top>
         <Left>4.9821cm</Left>
         <Height>0.56472cm</Height>
         <Width>1.52347cm</Width>
@@ -585,7 +585,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>CARRERA NRO:</Value>
+                <Value>CARRERA Nº:</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -593,16 +593,51 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Right</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>1.31699cm</Top>
-        <Left>3.50287cm</Left>
+        <Top>1.88172cm</Top>
+        <Left>0.04cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.0027cm</Width>
+        <Width>2.29715cm</Width>
         <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>1pt</PaddingLeft>
+          <PaddingRight>1pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="NombreCarrera">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!NombreCarrera.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>NombreCarrera</rd:DefaultName>
+        <Top>1.88172cm</Top>
+        <Left>3.20556cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.1596cm</Width>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -617,7 +652,7 @@
     <Height>3.82292in</Height>
     <Style />
   </Body>
-  <Width>3.00001in</Width>
+  <Width>3.20175in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -693,10 +728,14 @@
           <DataField>ComisionHipodromo</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="NombreCarrera">
+          <DataField>NombreCarrera</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>bdSIGAP_DataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Gustavo\SIM\SIGAP\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Gustavo\SIM\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
         <rd:TableName>VwCajaPalco</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
