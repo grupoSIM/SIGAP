@@ -60,8 +60,7 @@ Partial Class Form1
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
-        Me.DesLuzLabel1 = New System.Windows.Forms.Label()
-        Me.DesFilaLabel1 = New System.Windows.Forms.Label()
+        Me.ObservacionesLabel1 = New System.Windows.Forms.Label()
         CType(Me.VwTicketBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -417,23 +416,14 @@ Partial Class Form1
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'DesLuzLabel1
+        'ObservacionesLabel1
         '
-        Me.DesLuzLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "DesLuz", True))
-        Me.DesLuzLabel1.Location = New System.Drawing.Point(12, 190)
-        Me.DesLuzLabel1.Name = "DesLuzLabel1"
-        Me.DesLuzLabel1.Size = New System.Drawing.Size(100, 23)
-        Me.DesLuzLabel1.TabIndex = 55
-        Me.DesLuzLabel1.Text = "Lbl_Luz"
-        '
-        'DesFilaLabel1
-        '
-        Me.DesFilaLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "DesFila", True))
-        Me.DesFilaLabel1.Location = New System.Drawing.Point(188, 190)
-        Me.DesFilaLabel1.Name = "DesFilaLabel1"
-        Me.DesFilaLabel1.Size = New System.Drawing.Size(100, 23)
-        Me.DesFilaLabel1.TabIndex = 56
-        Me.DesFilaLabel1.Text = "Lbl_Fila"
+        Me.ObservacionesLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Observaciones", True))
+        Me.ObservacionesLabel1.Location = New System.Drawing.Point(6, 275)
+        Me.ObservacionesLabel1.Name = "ObservacionesLabel1"
+        Me.ObservacionesLabel1.Size = New System.Drawing.Size(278, 23)
+        Me.ObservacionesLabel1.TabIndex = 55
+        Me.ObservacionesLabel1.Text = "Label8"
         '
         'Form1
         '
@@ -442,8 +432,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(413, 464)
-        Me.Controls.Add(Me.DesFilaLabel1)
-        Me.Controls.Add(Me.DesLuzLabel1)
+        Me.Controls.Add(Me.ObservacionesLabel1)
         Me.Controls.Add(Me.NombreCarreraLabel1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.NroRemateLabel1)
@@ -525,6 +514,5 @@ Partial Class Form1
     Friend WithEvents NroRemateLabel1 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents NombreCarreraLabel1 As Label
-    Friend WithEvents DesFilaLabel1 As Label
-    Friend WithEvents DesLuzLabel1 As Label
+    Friend WithEvents ObservacionesLabel1 As Label
 End Class
