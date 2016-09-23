@@ -29,21 +29,21 @@ Partial Class frmCargarLlave
         Me.txNombre = New System.Windows.Forms.TextBox()
         Me.nProcentajeCasa = New System.Windows.Forms.NumericUpDown()
         Me.cbJornada = New System.Windows.Forms.ComboBox()
+        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbTipo = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.cbCarrera1 = New System.Windows.Forms.ComboBox()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbCarrera2 = New System.Windows.Forms.ComboBox()
+        Me.TbCarrerasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        Me.TbCarrerasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.txCar1Nro1 = New System.Windows.Forms.TextBox()
         Me.txCar1Cab1 = New System.Windows.Forms.TextBox()
         Me.txCar2Cab1 = New System.Windows.Forms.TextBox()
@@ -51,6 +51,7 @@ Partial Class frmCargarLlave
         Me.Tb_CarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
         Me.txCar1Cab2 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro2 = New System.Windows.Forms.TextBox()
         Me.txCar1Cab3 = New System.Windows.Forms.TextBox()
@@ -90,7 +91,6 @@ Partial Class frmCargarLlave
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro17 = New System.Windows.Forms.TextBox()
         Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
@@ -129,15 +129,18 @@ Partial Class frmCargarLlave
         Me.TextBox52 = New System.Windows.Forms.TextBox()
         Me.TextBox53 = New System.Windows.Forms.TextBox()
         Me.TextBox54 = New System.Windows.Forms.TextBox()
+        Me.BindingSourceCarCab = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btCreaCarrera = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSourceCarCab, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -206,6 +209,16 @@ Partial Class frmCargarLlave
         Me.cbJornada.TabIndex = 0
         Me.cbJornada.ValueMember = "Id"
         '
+        'TbJornadasBindingSource
+        '
+        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -255,16 +268,6 @@ Partial Class frmCargarLlave
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Porcentaje Casa:"
         '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_JornadasTableAdapter
         '
         Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
@@ -273,6 +276,7 @@ Partial Class frmCargarLlave
         '
         Me.cbCarrera1.DataSource = Me.TbCarrerasBindingSource
         Me.cbCarrera1.DisplayMember = "Nombre"
+        Me.cbCarrera1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCarrera1.FormattingEnabled = True
         Me.cbCarrera1.Location = New System.Drawing.Point(86, 123)
         Me.cbCarrera1.Name = "cbCarrera1"
@@ -280,16 +284,27 @@ Partial Class frmCargarLlave
         Me.cbCarrera1.TabIndex = 13
         Me.cbCarrera1.ValueMember = "Id"
         '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'cbCarrera2
         '
         Me.cbCarrera2.DataSource = Me.TbCarrerasBindingSource1
         Me.cbCarrera2.DisplayMember = "Nombre"
+        Me.cbCarrera2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCarrera2.FormattingEnabled = True
         Me.cbCarrera2.Location = New System.Drawing.Point(389, 123)
         Me.cbCarrera2.Name = "cbCarrera2"
         Me.cbCarrera2.Size = New System.Drawing.Size(212, 21)
         Me.cbCarrera2.TabIndex = 14
         Me.cbCarrera2.ValueMember = "Id"
+        '
+        'TbCarrerasBindingSource1
+        '
+        Me.TbCarrerasBindingSource1.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource1.DataSource = Me.BdSIGAP_DataSet
         '
         'Label6
         '
@@ -309,19 +324,9 @@ Partial Class frmCargarLlave
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Carrera N° 2:"
         '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_CarrerasTableAdapter
         '
         Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'TbCarrerasBindingSource1
-        '
-        Me.TbCarrerasBindingSource1.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource1.DataSource = Me.BdSIGAP_DataSet
         '
         'txCar1Nro1
         '
@@ -372,12 +377,18 @@ Partial Class frmCargarLlave
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
         Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
         Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
         '
         'txCar1Cab2
         '
@@ -688,10 +699,6 @@ Partial Class frmCargarLlave
         Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
         Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'Tb_CaballosTableAdapter
-        '
-        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
-        '
         'TextBox8
         '
         Me.TextBox8.Location = New System.Drawing.Point(404, 357)
@@ -996,11 +1003,26 @@ Partial Class frmCargarLlave
         Me.TextBox54.TabIndex = 93
         Me.TextBox54.Visible = False
         '
+        'BindingSourceCarCab
+        '
+        Me.BindingSourceCarCab.DataMember = "tb_CarrerasCaballos"
+        Me.BindingSourceCarCab.DataSource = Me.BdSIGAP_DataSet
+        '
+        'btCreaCarrera
+        '
+        Me.btCreaCarrera.Location = New System.Drawing.Point(620, 10)
+        Me.btCreaCarrera.Name = "btCreaCarrera"
+        Me.btCreaCarrera.Size = New System.Drawing.Size(139, 23)
+        Me.btCreaCarrera.TabIndex = 100
+        Me.btCreaCarrera.Text = "Crear Llave"
+        Me.btCreaCarrera.UseVisualStyleBackColor = True
+        '
         'frmCargarLlave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(658, 750)
+        Me.ClientSize = New System.Drawing.Size(1111, 750)
+        Me.Controls.Add(Me.btCreaCarrera)
         Me.Controls.Add(Me.TextBox49)
         Me.Controls.Add(Me.TextBox50)
         Me.Controls.Add(Me.TextBox51)
@@ -1093,12 +1115,13 @@ Partial Class frmCargarLlave
         Me.GroupBox1.PerformLayout()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSourceCarCab, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1210,4 +1233,8 @@ Partial Class frmCargarLlave
     Friend WithEvents TextBox52 As TextBox
     Friend WithEvents TextBox53 As TextBox
     Friend WithEvents TextBox54 As TextBox
+    Friend WithEvents BindingSourceCarCab As BindingSource
+    Friend WithEvents btCreaCarrera As Button
+    Friend WithEvents txref1 As TextBox
+    Friend WithEvents txref2 As TextBox
 End Class
