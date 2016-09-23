@@ -58,44 +58,44 @@ Partial Class frmCargarLlave
         Me.txCar1Nro3 = New System.Windows.Forms.TextBox()
         Me.txCar1Cab4 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro4 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab8 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro8 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab7 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro7 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab6 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab5 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro5 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab16 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro16 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab15 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro15 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab14 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro14 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab13 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro13 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab12 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro12 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab11 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro11 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab10 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro10 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab9 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro9 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab20 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro20 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab19 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro19 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab18 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro18 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.txCar1Cab17 = New System.Windows.Forms.TextBox()
         Me.txCar1Nro17 = New System.Windows.Forms.TextBox()
         Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab9 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro9 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab8 = New System.Windows.Forms.TextBox()
         Me.txCar2Nro8 = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab7 = New System.Windows.Forms.TextBox()
         Me.txCar2Nro7 = New System.Windows.Forms.TextBox()
         Me.txCar2Cab6 = New System.Windows.Forms.TextBox()
         Me.txCar2Nro6 = New System.Windows.Forms.TextBox()
@@ -107,33 +107,34 @@ Partial Class frmCargarLlave
         Me.txCar2Nro3 = New System.Windows.Forms.TextBox()
         Me.txCar2Cab2 = New System.Windows.Forms.TextBox()
         Me.txCar2Nro2 = New System.Windows.Forms.TextBox()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
-        Me.TextBox36 = New System.Windows.Forms.TextBox()
-        Me.TextBox37 = New System.Windows.Forms.TextBox()
-        Me.TextBox38 = New System.Windows.Forms.TextBox()
-        Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.TextBox40 = New System.Windows.Forms.TextBox()
-        Me.TextBox41 = New System.Windows.Forms.TextBox()
-        Me.TextBox42 = New System.Windows.Forms.TextBox()
-        Me.TextBox43 = New System.Windows.Forms.TextBox()
-        Me.TextBox44 = New System.Windows.Forms.TextBox()
-        Me.TextBox45 = New System.Windows.Forms.TextBox()
-        Me.TextBox46 = New System.Windows.Forms.TextBox()
-        Me.TextBox47 = New System.Windows.Forms.TextBox()
-        Me.TextBox48 = New System.Windows.Forms.TextBox()
-        Me.TextBox49 = New System.Windows.Forms.TextBox()
-        Me.TextBox50 = New System.Windows.Forms.TextBox()
-        Me.TextBox51 = New System.Windows.Forms.TextBox()
-        Me.TextBox52 = New System.Windows.Forms.TextBox()
-        Me.TextBox53 = New System.Windows.Forms.TextBox()
-        Me.TextBox54 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab17 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro17 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab16 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro16 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab15 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro15 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab14 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro14 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab13 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro13 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab12 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro12 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab11 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro11 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab10 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro10 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab20 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro20 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab19 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro19 = New System.Windows.Forms.TextBox()
+        Me.txCar2Cab18 = New System.Windows.Forms.TextBox()
+        Me.txCar2Nro18 = New System.Windows.Forms.TextBox()
         Me.BindingSourceCarCab = New System.Windows.Forms.BindingSource(Me.components)
         Me.btCreaCarrera = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.ColorDialog2 = New System.Windows.Forms.ColorDialog()
         Me.ColorDialog3 = New System.Windows.Forms.ColorDialog()
+        Me.btCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -445,14 +446,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro4.TabIndex = 27
         Me.txCar1Nro4.Visible = False
         '
-        'TextBox1
+        'txCar1Cab8
         '
-        Me.TextBox1.Location = New System.Drawing.Point(74, 325)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox1.TabIndex = 36
-        Me.TextBox1.Visible = False
+        Me.txCar1Cab8.Location = New System.Drawing.Point(74, 325)
+        Me.txCar1Cab8.Name = "txCar1Cab8"
+        Me.txCar1Cab8.ReadOnly = True
+        Me.txCar1Cab8.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab8.TabIndex = 36
+        Me.txCar1Cab8.Visible = False
         '
         'txCar1Nro8
         '
@@ -462,14 +463,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro8.TabIndex = 35
         Me.txCar1Nro8.Visible = False
         '
-        'TextBox3
+        'txCar1Cab7
         '
-        Me.TextBox3.Location = New System.Drawing.Point(74, 300)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox3.TabIndex = 34
-        Me.TextBox3.Visible = False
+        Me.txCar1Cab7.Location = New System.Drawing.Point(74, 300)
+        Me.txCar1Cab7.Name = "txCar1Cab7"
+        Me.txCar1Cab7.ReadOnly = True
+        Me.txCar1Cab7.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab7.TabIndex = 34
+        Me.txCar1Cab7.Visible = False
         '
         'txCar1Nro7
         '
@@ -479,14 +480,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro7.TabIndex = 33
         Me.txCar1Nro7.Visible = False
         '
-        'TextBox5
+        'txCar1Cab6
         '
-        Me.TextBox5.Location = New System.Drawing.Point(74, 275)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox5.TabIndex = 32
-        Me.TextBox5.Visible = False
+        Me.txCar1Cab6.Location = New System.Drawing.Point(74, 275)
+        Me.txCar1Cab6.Name = "txCar1Cab6"
+        Me.txCar1Cab6.ReadOnly = True
+        Me.txCar1Cab6.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab6.TabIndex = 32
+        Me.txCar1Cab6.Visible = False
         '
         'txCar1Nro6
         '
@@ -496,14 +497,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro6.TabIndex = 31
         Me.txCar1Nro6.Visible = False
         '
-        'TextBox7
+        'txCar1Cab5
         '
-        Me.TextBox7.Location = New System.Drawing.Point(74, 250)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox7.TabIndex = 30
-        Me.TextBox7.Visible = False
+        Me.txCar1Cab5.Location = New System.Drawing.Point(74, 250)
+        Me.txCar1Cab5.Name = "txCar1Cab5"
+        Me.txCar1Cab5.ReadOnly = True
+        Me.txCar1Cab5.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab5.TabIndex = 30
+        Me.txCar1Cab5.Visible = False
         '
         'txCar1Nro5
         '
@@ -513,14 +514,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro5.TabIndex = 29
         Me.txCar1Nro5.Visible = False
         '
-        'TextBox2
+        'txCar1Cab16
         '
-        Me.TextBox2.Location = New System.Drawing.Point(74, 525)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox2.TabIndex = 52
-        Me.TextBox2.Visible = False
+        Me.txCar1Cab16.Location = New System.Drawing.Point(74, 525)
+        Me.txCar1Cab16.Name = "txCar1Cab16"
+        Me.txCar1Cab16.ReadOnly = True
+        Me.txCar1Cab16.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab16.TabIndex = 52
+        Me.txCar1Cab16.Visible = False
         '
         'txCar1Nro16
         '
@@ -530,14 +531,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro16.TabIndex = 51
         Me.txCar1Nro16.Visible = False
         '
-        'TextBox6
+        'txCar1Cab15
         '
-        Me.TextBox6.Location = New System.Drawing.Point(74, 500)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox6.TabIndex = 50
-        Me.TextBox6.Visible = False
+        Me.txCar1Cab15.Location = New System.Drawing.Point(74, 500)
+        Me.txCar1Cab15.Name = "txCar1Cab15"
+        Me.txCar1Cab15.ReadOnly = True
+        Me.txCar1Cab15.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab15.TabIndex = 50
+        Me.txCar1Cab15.Visible = False
         '
         'txCar1Nro15
         '
@@ -547,14 +548,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro15.TabIndex = 49
         Me.txCar1Nro15.Visible = False
         '
-        'TextBox9
+        'txCar1Cab14
         '
-        Me.TextBox9.Location = New System.Drawing.Point(74, 475)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox9.TabIndex = 48
-        Me.TextBox9.Visible = False
+        Me.txCar1Cab14.Location = New System.Drawing.Point(74, 475)
+        Me.txCar1Cab14.Name = "txCar1Cab14"
+        Me.txCar1Cab14.ReadOnly = True
+        Me.txCar1Cab14.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab14.TabIndex = 48
+        Me.txCar1Cab14.Visible = False
         '
         'txCar1Nro14
         '
@@ -564,14 +565,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro14.TabIndex = 47
         Me.txCar1Nro14.Visible = False
         '
-        'TextBox11
+        'txCar1Cab13
         '
-        Me.TextBox11.Location = New System.Drawing.Point(74, 450)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox11.TabIndex = 46
-        Me.TextBox11.Visible = False
+        Me.txCar1Cab13.Location = New System.Drawing.Point(74, 450)
+        Me.txCar1Cab13.Name = "txCar1Cab13"
+        Me.txCar1Cab13.ReadOnly = True
+        Me.txCar1Cab13.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab13.TabIndex = 46
+        Me.txCar1Cab13.Visible = False
         '
         'txCar1Nro13
         '
@@ -581,14 +582,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro13.TabIndex = 45
         Me.txCar1Nro13.Visible = False
         '
-        'TextBox13
+        'txCar1Cab12
         '
-        Me.TextBox13.Location = New System.Drawing.Point(74, 425)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox13.TabIndex = 44
-        Me.TextBox13.Visible = False
+        Me.txCar1Cab12.Location = New System.Drawing.Point(74, 425)
+        Me.txCar1Cab12.Name = "txCar1Cab12"
+        Me.txCar1Cab12.ReadOnly = True
+        Me.txCar1Cab12.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab12.TabIndex = 44
+        Me.txCar1Cab12.Visible = False
         '
         'txCar1Nro12
         '
@@ -598,14 +599,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro12.TabIndex = 43
         Me.txCar1Nro12.Visible = False
         '
-        'TextBox15
+        'txCar1Cab11
         '
-        Me.TextBox15.Location = New System.Drawing.Point(74, 400)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox15.TabIndex = 42
-        Me.TextBox15.Visible = False
+        Me.txCar1Cab11.Location = New System.Drawing.Point(74, 400)
+        Me.txCar1Cab11.Name = "txCar1Cab11"
+        Me.txCar1Cab11.ReadOnly = True
+        Me.txCar1Cab11.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab11.TabIndex = 42
+        Me.txCar1Cab11.Visible = False
         '
         'txCar1Nro11
         '
@@ -615,14 +616,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro11.TabIndex = 41
         Me.txCar1Nro11.Visible = False
         '
-        'TextBox17
+        'txCar1Cab10
         '
-        Me.TextBox17.Location = New System.Drawing.Point(74, 375)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox17.TabIndex = 40
-        Me.TextBox17.Visible = False
+        Me.txCar1Cab10.Location = New System.Drawing.Point(74, 375)
+        Me.txCar1Cab10.Name = "txCar1Cab10"
+        Me.txCar1Cab10.ReadOnly = True
+        Me.txCar1Cab10.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab10.TabIndex = 40
+        Me.txCar1Cab10.Visible = False
         '
         'txCar1Nro10
         '
@@ -632,14 +633,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro10.TabIndex = 39
         Me.txCar1Nro10.Visible = False
         '
-        'TextBox19
+        'txCar1Cab9
         '
-        Me.TextBox19.Location = New System.Drawing.Point(74, 350)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.ReadOnly = True
-        Me.TextBox19.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox19.TabIndex = 38
-        Me.TextBox19.Visible = False
+        Me.txCar1Cab9.Location = New System.Drawing.Point(74, 350)
+        Me.txCar1Cab9.Name = "txCar1Cab9"
+        Me.txCar1Cab9.ReadOnly = True
+        Me.txCar1Cab9.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab9.TabIndex = 38
+        Me.txCar1Cab9.Visible = False
         '
         'txCar1Nro9
         '
@@ -649,14 +650,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro9.TabIndex = 37
         Me.txCar1Nro9.Visible = False
         '
-        'TextBox4
+        'txCar1Cab20
         '
-        Me.TextBox4.Location = New System.Drawing.Point(74, 625)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox4.TabIndex = 60
-        Me.TextBox4.Visible = False
+        Me.txCar1Cab20.Location = New System.Drawing.Point(74, 625)
+        Me.txCar1Cab20.Name = "txCar1Cab20"
+        Me.txCar1Cab20.ReadOnly = True
+        Me.txCar1Cab20.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab20.TabIndex = 60
+        Me.txCar1Cab20.Visible = False
         '
         'txCar1Nro20
         '
@@ -666,14 +667,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro20.TabIndex = 59
         Me.txCar1Nro20.Visible = False
         '
-        'TextBox10
+        'txCar1Cab19
         '
-        Me.TextBox10.Location = New System.Drawing.Point(74, 600)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox10.TabIndex = 58
-        Me.TextBox10.Visible = False
+        Me.txCar1Cab19.Location = New System.Drawing.Point(74, 600)
+        Me.txCar1Cab19.Name = "txCar1Cab19"
+        Me.txCar1Cab19.ReadOnly = True
+        Me.txCar1Cab19.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab19.TabIndex = 58
+        Me.txCar1Cab19.Visible = False
         '
         'txCar1Nro19
         '
@@ -683,14 +684,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro19.TabIndex = 57
         Me.txCar1Nro19.Visible = False
         '
-        'TextBox14
+        'txCar1Cab18
         '
-        Me.TextBox14.Location = New System.Drawing.Point(74, 575)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.ReadOnly = True
-        Me.TextBox14.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox14.TabIndex = 56
-        Me.TextBox14.Visible = False
+        Me.txCar1Cab18.Location = New System.Drawing.Point(74, 575)
+        Me.txCar1Cab18.Name = "txCar1Cab18"
+        Me.txCar1Cab18.ReadOnly = True
+        Me.txCar1Cab18.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab18.TabIndex = 56
+        Me.txCar1Cab18.Visible = False
         '
         'txCar1Nro18
         '
@@ -700,14 +701,14 @@ Partial Class frmCargarLlave
         Me.txCar1Nro18.TabIndex = 55
         Me.txCar1Nro18.Visible = False
         '
-        'TextBox18
+        'txCar1Cab17
         '
-        Me.TextBox18.Location = New System.Drawing.Point(74, 550)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox18.TabIndex = 54
-        Me.TextBox18.Visible = False
+        Me.txCar1Cab17.Location = New System.Drawing.Point(74, 550)
+        Me.txCar1Cab17.Name = "txCar1Cab17"
+        Me.txCar1Cab17.ReadOnly = True
+        Me.txCar1Cab17.Size = New System.Drawing.Size(199, 20)
+        Me.txCar1Cab17.TabIndex = 54
+        Me.txCar1Cab17.Visible = False
         '
         'txCar1Nro17
         '
@@ -722,31 +723,31 @@ Partial Class frmCargarLlave
         Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
         Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'TextBox8
+        'txCar2Cab9
         '
-        Me.TextBox8.Location = New System.Drawing.Point(335, 350)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox8.TabIndex = 76
-        Me.TextBox8.Visible = False
+        Me.txCar2Cab9.Location = New System.Drawing.Point(335, 350)
+        Me.txCar2Cab9.Name = "txCar2Cab9"
+        Me.txCar2Cab9.ReadOnly = True
+        Me.txCar2Cab9.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab9.TabIndex = 76
+        Me.txCar2Cab9.Visible = False
         '
-        'TextBox12
+        'txCar2Nro9
         '
-        Me.TextBox12.Location = New System.Drawing.Point(280, 350)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox12.TabIndex = 75
-        Me.TextBox12.Visible = False
+        Me.txCar2Nro9.Location = New System.Drawing.Point(280, 350)
+        Me.txCar2Nro9.Name = "txCar2Nro9"
+        Me.txCar2Nro9.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro9.TabIndex = 75
+        Me.txCar2Nro9.Visible = False
         '
-        'TextBox16
+        'txCar2Cab8
         '
-        Me.TextBox16.Location = New System.Drawing.Point(335, 325)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.ReadOnly = True
-        Me.TextBox16.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox16.TabIndex = 74
-        Me.TextBox16.Visible = False
+        Me.txCar2Cab8.Location = New System.Drawing.Point(335, 325)
+        Me.txCar2Cab8.Name = "txCar2Cab8"
+        Me.txCar2Cab8.ReadOnly = True
+        Me.txCar2Cab8.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab8.TabIndex = 74
+        Me.txCar2Cab8.Visible = False
         '
         'txCar2Nro8
         '
@@ -756,14 +757,14 @@ Partial Class frmCargarLlave
         Me.txCar2Nro8.TabIndex = 73
         Me.txCar2Nro8.Visible = False
         '
-        'TextBox21
+        'txCar2Cab7
         '
-        Me.TextBox21.Location = New System.Drawing.Point(335, 300)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.ReadOnly = True
-        Me.TextBox21.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox21.TabIndex = 72
-        Me.TextBox21.Visible = False
+        Me.txCar2Cab7.Location = New System.Drawing.Point(335, 300)
+        Me.txCar2Cab7.Name = "txCar2Cab7"
+        Me.txCar2Cab7.ReadOnly = True
+        Me.txCar2Cab7.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab7.TabIndex = 72
+        Me.txCar2Cab7.Visible = False
         '
         'txCar2Nro7
         '
@@ -858,192 +859,192 @@ Partial Class frmCargarLlave
         Me.txCar2Nro2.TabIndex = 61
         Me.txCar2Nro2.Visible = False
         '
-        'TextBox33
+        'txCar2Cab17
         '
-        Me.TextBox33.Location = New System.Drawing.Point(335, 550)
-        Me.TextBox33.Name = "TextBox33"
-        Me.TextBox33.ReadOnly = True
-        Me.TextBox33.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox33.TabIndex = 92
-        Me.TextBox33.Visible = False
+        Me.txCar2Cab17.Location = New System.Drawing.Point(335, 550)
+        Me.txCar2Cab17.Name = "txCar2Cab17"
+        Me.txCar2Cab17.ReadOnly = True
+        Me.txCar2Cab17.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab17.TabIndex = 92
+        Me.txCar2Cab17.Visible = False
         '
-        'TextBox34
+        'txCar2Nro17
         '
-        Me.TextBox34.Location = New System.Drawing.Point(280, 550)
-        Me.TextBox34.Name = "TextBox34"
-        Me.TextBox34.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox34.TabIndex = 91
-        Me.TextBox34.Visible = False
+        Me.txCar2Nro17.Location = New System.Drawing.Point(280, 550)
+        Me.txCar2Nro17.Name = "txCar2Nro17"
+        Me.txCar2Nro17.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro17.TabIndex = 91
+        Me.txCar2Nro17.Visible = False
         '
-        'TextBox35
+        'txCar2Cab16
         '
-        Me.TextBox35.Location = New System.Drawing.Point(335, 525)
-        Me.TextBox35.Name = "TextBox35"
-        Me.TextBox35.ReadOnly = True
-        Me.TextBox35.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox35.TabIndex = 90
-        Me.TextBox35.Visible = False
+        Me.txCar2Cab16.Location = New System.Drawing.Point(335, 525)
+        Me.txCar2Cab16.Name = "txCar2Cab16"
+        Me.txCar2Cab16.ReadOnly = True
+        Me.txCar2Cab16.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab16.TabIndex = 90
+        Me.txCar2Cab16.Visible = False
         '
-        'TextBox36
+        'txCar2Nro16
         '
-        Me.TextBox36.Location = New System.Drawing.Point(280, 525)
-        Me.TextBox36.Name = "TextBox36"
-        Me.TextBox36.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox36.TabIndex = 89
-        Me.TextBox36.Visible = False
+        Me.txCar2Nro16.Location = New System.Drawing.Point(280, 525)
+        Me.txCar2Nro16.Name = "txCar2Nro16"
+        Me.txCar2Nro16.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro16.TabIndex = 89
+        Me.txCar2Nro16.Visible = False
         '
-        'TextBox37
+        'txCar2Cab15
         '
-        Me.TextBox37.Location = New System.Drawing.Point(335, 500)
-        Me.TextBox37.Name = "TextBox37"
-        Me.TextBox37.ReadOnly = True
-        Me.TextBox37.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox37.TabIndex = 88
-        Me.TextBox37.Visible = False
+        Me.txCar2Cab15.Location = New System.Drawing.Point(335, 500)
+        Me.txCar2Cab15.Name = "txCar2Cab15"
+        Me.txCar2Cab15.ReadOnly = True
+        Me.txCar2Cab15.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab15.TabIndex = 88
+        Me.txCar2Cab15.Visible = False
         '
-        'TextBox38
+        'txCar2Nro15
         '
-        Me.TextBox38.Location = New System.Drawing.Point(280, 500)
-        Me.TextBox38.Name = "TextBox38"
-        Me.TextBox38.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox38.TabIndex = 87
-        Me.TextBox38.Visible = False
+        Me.txCar2Nro15.Location = New System.Drawing.Point(280, 500)
+        Me.txCar2Nro15.Name = "txCar2Nro15"
+        Me.txCar2Nro15.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro15.TabIndex = 87
+        Me.txCar2Nro15.Visible = False
         '
-        'TextBox39
+        'txCar2Cab14
         '
-        Me.TextBox39.Location = New System.Drawing.Point(335, 475)
-        Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.ReadOnly = True
-        Me.TextBox39.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox39.TabIndex = 86
-        Me.TextBox39.Visible = False
+        Me.txCar2Cab14.Location = New System.Drawing.Point(335, 475)
+        Me.txCar2Cab14.Name = "txCar2Cab14"
+        Me.txCar2Cab14.ReadOnly = True
+        Me.txCar2Cab14.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab14.TabIndex = 86
+        Me.txCar2Cab14.Visible = False
         '
-        'TextBox40
+        'txCar2Nro14
         '
-        Me.TextBox40.Location = New System.Drawing.Point(280, 475)
-        Me.TextBox40.Name = "TextBox40"
-        Me.TextBox40.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox40.TabIndex = 85
-        Me.TextBox40.Visible = False
+        Me.txCar2Nro14.Location = New System.Drawing.Point(280, 475)
+        Me.txCar2Nro14.Name = "txCar2Nro14"
+        Me.txCar2Nro14.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro14.TabIndex = 85
+        Me.txCar2Nro14.Visible = False
         '
-        'TextBox41
+        'txCar2Cab13
         '
-        Me.TextBox41.Location = New System.Drawing.Point(335, 450)
-        Me.TextBox41.Name = "TextBox41"
-        Me.TextBox41.ReadOnly = True
-        Me.TextBox41.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox41.TabIndex = 84
-        Me.TextBox41.Visible = False
+        Me.txCar2Cab13.Location = New System.Drawing.Point(335, 450)
+        Me.txCar2Cab13.Name = "txCar2Cab13"
+        Me.txCar2Cab13.ReadOnly = True
+        Me.txCar2Cab13.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab13.TabIndex = 84
+        Me.txCar2Cab13.Visible = False
         '
-        'TextBox42
+        'txCar2Nro13
         '
-        Me.TextBox42.Location = New System.Drawing.Point(280, 450)
-        Me.TextBox42.Name = "TextBox42"
-        Me.TextBox42.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox42.TabIndex = 83
-        Me.TextBox42.Visible = False
+        Me.txCar2Nro13.Location = New System.Drawing.Point(280, 450)
+        Me.txCar2Nro13.Name = "txCar2Nro13"
+        Me.txCar2Nro13.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro13.TabIndex = 83
+        Me.txCar2Nro13.Visible = False
         '
-        'TextBox43
+        'txCar2Cab12
         '
-        Me.TextBox43.Location = New System.Drawing.Point(335, 425)
-        Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.ReadOnly = True
-        Me.TextBox43.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox43.TabIndex = 82
-        Me.TextBox43.Visible = False
+        Me.txCar2Cab12.Location = New System.Drawing.Point(335, 425)
+        Me.txCar2Cab12.Name = "txCar2Cab12"
+        Me.txCar2Cab12.ReadOnly = True
+        Me.txCar2Cab12.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab12.TabIndex = 82
+        Me.txCar2Cab12.Visible = False
         '
-        'TextBox44
+        'txCar2Nro12
         '
-        Me.TextBox44.Location = New System.Drawing.Point(280, 425)
-        Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox44.TabIndex = 81
-        Me.TextBox44.Visible = False
+        Me.txCar2Nro12.Location = New System.Drawing.Point(280, 425)
+        Me.txCar2Nro12.Name = "txCar2Nro12"
+        Me.txCar2Nro12.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro12.TabIndex = 81
+        Me.txCar2Nro12.Visible = False
         '
-        'TextBox45
+        'txCar2Cab11
         '
-        Me.TextBox45.Location = New System.Drawing.Point(335, 400)
-        Me.TextBox45.Name = "TextBox45"
-        Me.TextBox45.ReadOnly = True
-        Me.TextBox45.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox45.TabIndex = 80
-        Me.TextBox45.Visible = False
+        Me.txCar2Cab11.Location = New System.Drawing.Point(335, 400)
+        Me.txCar2Cab11.Name = "txCar2Cab11"
+        Me.txCar2Cab11.ReadOnly = True
+        Me.txCar2Cab11.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab11.TabIndex = 80
+        Me.txCar2Cab11.Visible = False
         '
-        'TextBox46
+        'txCar2Nro11
         '
-        Me.TextBox46.Location = New System.Drawing.Point(280, 400)
-        Me.TextBox46.Name = "TextBox46"
-        Me.TextBox46.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox46.TabIndex = 79
-        Me.TextBox46.Visible = False
+        Me.txCar2Nro11.Location = New System.Drawing.Point(280, 400)
+        Me.txCar2Nro11.Name = "txCar2Nro11"
+        Me.txCar2Nro11.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro11.TabIndex = 79
+        Me.txCar2Nro11.Visible = False
         '
-        'TextBox47
+        'txCar2Cab10
         '
-        Me.TextBox47.Location = New System.Drawing.Point(335, 375)
-        Me.TextBox47.Name = "TextBox47"
-        Me.TextBox47.ReadOnly = True
-        Me.TextBox47.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox47.TabIndex = 78
-        Me.TextBox47.Visible = False
+        Me.txCar2Cab10.Location = New System.Drawing.Point(335, 375)
+        Me.txCar2Cab10.Name = "txCar2Cab10"
+        Me.txCar2Cab10.ReadOnly = True
+        Me.txCar2Cab10.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab10.TabIndex = 78
+        Me.txCar2Cab10.Visible = False
         '
-        'TextBox48
+        'txCar2Nro10
         '
-        Me.TextBox48.Location = New System.Drawing.Point(280, 375)
-        Me.TextBox48.Name = "TextBox48"
-        Me.TextBox48.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox48.TabIndex = 77
-        Me.TextBox48.Visible = False
+        Me.txCar2Nro10.Location = New System.Drawing.Point(280, 375)
+        Me.txCar2Nro10.Name = "txCar2Nro10"
+        Me.txCar2Nro10.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro10.TabIndex = 77
+        Me.txCar2Nro10.Visible = False
         '
-        'TextBox49
+        'txCar2Cab20
         '
-        Me.TextBox49.Location = New System.Drawing.Point(335, 625)
-        Me.TextBox49.Name = "TextBox49"
-        Me.TextBox49.ReadOnly = True
-        Me.TextBox49.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox49.TabIndex = 98
-        Me.TextBox49.Visible = False
+        Me.txCar2Cab20.Location = New System.Drawing.Point(335, 625)
+        Me.txCar2Cab20.Name = "txCar2Cab20"
+        Me.txCar2Cab20.ReadOnly = True
+        Me.txCar2Cab20.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab20.TabIndex = 98
+        Me.txCar2Cab20.Visible = False
         '
-        'TextBox50
+        'txCar2Nro20
         '
-        Me.TextBox50.Location = New System.Drawing.Point(280, 625)
-        Me.TextBox50.Name = "TextBox50"
-        Me.TextBox50.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox50.TabIndex = 97
-        Me.TextBox50.Visible = False
+        Me.txCar2Nro20.Location = New System.Drawing.Point(280, 625)
+        Me.txCar2Nro20.Name = "txCar2Nro20"
+        Me.txCar2Nro20.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro20.TabIndex = 97
+        Me.txCar2Nro20.Visible = False
         '
-        'TextBox51
+        'txCar2Cab19
         '
-        Me.TextBox51.Location = New System.Drawing.Point(335, 600)
-        Me.TextBox51.Name = "TextBox51"
-        Me.TextBox51.ReadOnly = True
-        Me.TextBox51.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox51.TabIndex = 96
-        Me.TextBox51.Visible = False
+        Me.txCar2Cab19.Location = New System.Drawing.Point(335, 600)
+        Me.txCar2Cab19.Name = "txCar2Cab19"
+        Me.txCar2Cab19.ReadOnly = True
+        Me.txCar2Cab19.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab19.TabIndex = 96
+        Me.txCar2Cab19.Visible = False
         '
-        'TextBox52
+        'txCar2Nro19
         '
-        Me.TextBox52.Location = New System.Drawing.Point(280, 600)
-        Me.TextBox52.Name = "TextBox52"
-        Me.TextBox52.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox52.TabIndex = 95
-        Me.TextBox52.Visible = False
+        Me.txCar2Nro19.Location = New System.Drawing.Point(280, 600)
+        Me.txCar2Nro19.Name = "txCar2Nro19"
+        Me.txCar2Nro19.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro19.TabIndex = 95
+        Me.txCar2Nro19.Visible = False
         '
-        'TextBox53
+        'txCar2Cab18
         '
-        Me.TextBox53.Location = New System.Drawing.Point(335, 575)
-        Me.TextBox53.Name = "TextBox53"
-        Me.TextBox53.ReadOnly = True
-        Me.TextBox53.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox53.TabIndex = 94
-        Me.TextBox53.Visible = False
+        Me.txCar2Cab18.Location = New System.Drawing.Point(335, 575)
+        Me.txCar2Cab18.Name = "txCar2Cab18"
+        Me.txCar2Cab18.ReadOnly = True
+        Me.txCar2Cab18.Size = New System.Drawing.Size(199, 20)
+        Me.txCar2Cab18.TabIndex = 94
+        Me.txCar2Cab18.Visible = False
         '
-        'TextBox54
+        'txCar2Nro18
         '
-        Me.TextBox54.Location = New System.Drawing.Point(280, 575)
-        Me.TextBox54.Name = "TextBox54"
-        Me.TextBox54.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox54.TabIndex = 93
-        Me.TextBox54.Visible = False
+        Me.txCar2Nro18.Location = New System.Drawing.Point(280, 575)
+        Me.txCar2Nro18.Name = "txCar2Nro18"
+        Me.txCar2Nro18.Size = New System.Drawing.Size(50, 20)
+        Me.txCar2Nro18.TabIndex = 93
+        Me.txCar2Nro18.Visible = False
         '
         'BindingSourceCarCab
         '
@@ -1059,39 +1060,49 @@ Partial Class frmCargarLlave
         Me.btCreaCarrera.Text = "Crear Llave"
         Me.btCreaCarrera.UseVisualStyleBackColor = True
         '
+        'btCancelar
+        '
+        Me.btCancelar.Location = New System.Drawing.Point(551, 180)
+        Me.btCancelar.Name = "btCancelar"
+        Me.btCancelar.Size = New System.Drawing.Size(106, 23)
+        Me.btCancelar.TabIndex = 101
+        Me.btCancelar.Text = "Cancelar"
+        Me.btCancelar.UseVisualStyleBackColor = True
+        '
         'frmCargarLlave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 655)
+        Me.Controls.Add(Me.btCancelar)
         Me.Controls.Add(Me.btCreaCarrera)
-        Me.Controls.Add(Me.TextBox49)
-        Me.Controls.Add(Me.TextBox50)
-        Me.Controls.Add(Me.TextBox51)
-        Me.Controls.Add(Me.TextBox52)
-        Me.Controls.Add(Me.TextBox53)
-        Me.Controls.Add(Me.TextBox54)
-        Me.Controls.Add(Me.TextBox33)
-        Me.Controls.Add(Me.TextBox34)
-        Me.Controls.Add(Me.TextBox35)
-        Me.Controls.Add(Me.TextBox36)
-        Me.Controls.Add(Me.TextBox37)
-        Me.Controls.Add(Me.TextBox38)
-        Me.Controls.Add(Me.TextBox39)
-        Me.Controls.Add(Me.TextBox40)
-        Me.Controls.Add(Me.TextBox41)
-        Me.Controls.Add(Me.TextBox42)
-        Me.Controls.Add(Me.TextBox43)
-        Me.Controls.Add(Me.TextBox44)
-        Me.Controls.Add(Me.TextBox45)
-        Me.Controls.Add(Me.TextBox46)
-        Me.Controls.Add(Me.TextBox47)
-        Me.Controls.Add(Me.TextBox48)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox12)
-        Me.Controls.Add(Me.TextBox16)
+        Me.Controls.Add(Me.txCar2Cab20)
+        Me.Controls.Add(Me.txCar2Nro20)
+        Me.Controls.Add(Me.txCar2Cab19)
+        Me.Controls.Add(Me.txCar2Nro19)
+        Me.Controls.Add(Me.txCar2Cab18)
+        Me.Controls.Add(Me.txCar2Nro18)
+        Me.Controls.Add(Me.txCar2Cab17)
+        Me.Controls.Add(Me.txCar2Nro17)
+        Me.Controls.Add(Me.txCar2Cab16)
+        Me.Controls.Add(Me.txCar2Nro16)
+        Me.Controls.Add(Me.txCar2Cab15)
+        Me.Controls.Add(Me.txCar2Nro15)
+        Me.Controls.Add(Me.txCar2Cab14)
+        Me.Controls.Add(Me.txCar2Nro14)
+        Me.Controls.Add(Me.txCar2Cab13)
+        Me.Controls.Add(Me.txCar2Nro13)
+        Me.Controls.Add(Me.txCar2Cab12)
+        Me.Controls.Add(Me.txCar2Nro12)
+        Me.Controls.Add(Me.txCar2Cab11)
+        Me.Controls.Add(Me.txCar2Nro11)
+        Me.Controls.Add(Me.txCar2Cab10)
+        Me.Controls.Add(Me.txCar2Nro10)
+        Me.Controls.Add(Me.txCar2Cab9)
+        Me.Controls.Add(Me.txCar2Nro9)
+        Me.Controls.Add(Me.txCar2Cab8)
         Me.Controls.Add(Me.txCar2Nro8)
-        Me.Controls.Add(Me.TextBox21)
+        Me.Controls.Add(Me.txCar2Cab7)
         Me.Controls.Add(Me.txCar2Nro7)
         Me.Controls.Add(Me.txCar2Cab6)
         Me.Controls.Add(Me.txCar2Nro6)
@@ -1103,37 +1114,37 @@ Partial Class frmCargarLlave
         Me.Controls.Add(Me.txCar2Nro3)
         Me.Controls.Add(Me.txCar2Cab2)
         Me.Controls.Add(Me.txCar2Nro2)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txCar1Cab20)
         Me.Controls.Add(Me.txCar1Nro20)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.txCar1Cab19)
         Me.Controls.Add(Me.txCar1Nro19)
-        Me.Controls.Add(Me.TextBox14)
+        Me.Controls.Add(Me.txCar1Cab18)
         Me.Controls.Add(Me.txCar1Nro18)
-        Me.Controls.Add(Me.TextBox18)
+        Me.Controls.Add(Me.txCar1Cab17)
         Me.Controls.Add(Me.txCar1Nro17)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txCar1Cab16)
         Me.Controls.Add(Me.txCar1Nro16)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txCar1Cab15)
         Me.Controls.Add(Me.txCar1Nro15)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.txCar1Cab14)
         Me.Controls.Add(Me.txCar1Nro14)
-        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.txCar1Cab13)
         Me.Controls.Add(Me.txCar1Nro13)
-        Me.Controls.Add(Me.TextBox13)
+        Me.Controls.Add(Me.txCar1Cab12)
         Me.Controls.Add(Me.txCar1Nro12)
-        Me.Controls.Add(Me.TextBox15)
+        Me.Controls.Add(Me.txCar1Cab11)
         Me.Controls.Add(Me.txCar1Nro11)
-        Me.Controls.Add(Me.TextBox17)
+        Me.Controls.Add(Me.txCar1Cab10)
         Me.Controls.Add(Me.txCar1Nro10)
-        Me.Controls.Add(Me.TextBox19)
+        Me.Controls.Add(Me.txCar1Cab9)
         Me.Controls.Add(Me.txCar1Nro9)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txCar1Cab8)
         Me.Controls.Add(Me.txCar1Nro8)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txCar1Cab7)
         Me.Controls.Add(Me.txCar1Nro7)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txCar1Cab6)
         Me.Controls.Add(Me.txCar1Nro6)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.txCar1Cab5)
         Me.Controls.Add(Me.txCar1Nro5)
         Me.Controls.Add(Me.txCar1Cab4)
         Me.Controls.Add(Me.txCar1Nro4)
@@ -1203,45 +1214,45 @@ Partial Class frmCargarLlave
     Friend WithEvents txCar1Nro3 As TextBox
     Friend WithEvents txCar1Cab4 As TextBox
     Friend WithEvents txCar1Nro4 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txCar1Cab8 As TextBox
     Friend WithEvents txCar1Nro8 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txCar1Cab7 As TextBox
     Friend WithEvents txCar1Nro7 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txCar1Cab6 As TextBox
     Friend WithEvents txCar1Nro6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txCar1Cab5 As TextBox
     Friend WithEvents txCar1Nro5 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txCar1Cab16 As TextBox
     Friend WithEvents txCar1Nro16 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txCar1Cab15 As TextBox
     Friend WithEvents txCar1Nro15 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txCar1Cab14 As TextBox
     Friend WithEvents txCar1Nro14 As TextBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txCar1Cab13 As TextBox
     Friend WithEvents txCar1Nro13 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents txCar1Cab12 As TextBox
     Friend WithEvents txCar1Nro12 As TextBox
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents txCar1Cab11 As TextBox
     Friend WithEvents txCar1Nro11 As TextBox
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents txCar1Cab10 As TextBox
     Friend WithEvents txCar1Nro10 As TextBox
-    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents txCar1Cab9 As TextBox
     Friend WithEvents txCar1Nro9 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txCar1Cab20 As TextBox
     Friend WithEvents txCar1Nro20 As TextBox
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents txCar1Cab19 As TextBox
     Friend WithEvents txCar1Nro19 As TextBox
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents txCar1Cab18 As TextBox
     Friend WithEvents txCar1Nro18 As TextBox
-    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents txCar1Cab17 As TextBox
     Friend WithEvents txCar1Nro17 As TextBox
     Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
     Friend WithEvents TbCaballosBindingSource As BindingSource
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents txCar2Cab9 As TextBox
+    Friend WithEvents txCar2Nro9 As TextBox
+    Friend WithEvents txCar2Cab8 As TextBox
     Friend WithEvents txCar2Nro8 As TextBox
-    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents txCar2Cab7 As TextBox
     Friend WithEvents txCar2Nro7 As TextBox
     Friend WithEvents txCar2Cab6 As TextBox
     Friend WithEvents txCar2Nro6 As TextBox
@@ -1253,28 +1264,28 @@ Partial Class frmCargarLlave
     Friend WithEvents txCar2Nro3 As TextBox
     Friend WithEvents txCar2Cab2 As TextBox
     Friend WithEvents txCar2Nro2 As TextBox
-    Friend WithEvents TextBox33 As TextBox
-    Friend WithEvents TextBox34 As TextBox
-    Friend WithEvents TextBox35 As TextBox
-    Friend WithEvents TextBox36 As TextBox
-    Friend WithEvents TextBox37 As TextBox
-    Friend WithEvents TextBox38 As TextBox
-    Friend WithEvents TextBox39 As TextBox
-    Friend WithEvents TextBox40 As TextBox
-    Friend WithEvents TextBox41 As TextBox
-    Friend WithEvents TextBox42 As TextBox
-    Friend WithEvents TextBox43 As TextBox
-    Friend WithEvents TextBox44 As TextBox
-    Friend WithEvents TextBox45 As TextBox
-    Friend WithEvents TextBox46 As TextBox
-    Friend WithEvents TextBox47 As TextBox
-    Friend WithEvents TextBox48 As TextBox
-    Friend WithEvents TextBox49 As TextBox
-    Friend WithEvents TextBox50 As TextBox
-    Friend WithEvents TextBox51 As TextBox
-    Friend WithEvents TextBox52 As TextBox
-    Friend WithEvents TextBox53 As TextBox
-    Friend WithEvents TextBox54 As TextBox
+    Friend WithEvents txCar2Cab17 As TextBox
+    Friend WithEvents txCar2Nro17 As TextBox
+    Friend WithEvents txCar2Cab16 As TextBox
+    Friend WithEvents txCar2Nro16 As TextBox
+    Friend WithEvents txCar2Cab15 As TextBox
+    Friend WithEvents txCar2Nro15 As TextBox
+    Friend WithEvents txCar2Cab14 As TextBox
+    Friend WithEvents txCar2Nro14 As TextBox
+    Friend WithEvents txCar2Cab13 As TextBox
+    Friend WithEvents txCar2Nro13 As TextBox
+    Friend WithEvents txCar2Cab12 As TextBox
+    Friend WithEvents txCar2Nro12 As TextBox
+    Friend WithEvents txCar2Cab11 As TextBox
+    Friend WithEvents txCar2Nro11 As TextBox
+    Friend WithEvents txCar2Cab10 As TextBox
+    Friend WithEvents txCar2Nro10 As TextBox
+    Friend WithEvents txCar2Cab20 As TextBox
+    Friend WithEvents txCar2Nro20 As TextBox
+    Friend WithEvents txCar2Cab19 As TextBox
+    Friend WithEvents txCar2Nro19 As TextBox
+    Friend WithEvents txCar2Cab18 As TextBox
+    Friend WithEvents txCar2Nro18 As TextBox
     Friend WithEvents BindingSourceCarCab As BindingSource
     Friend WithEvents btCreaCarrera As Button
     Friend WithEvents txref1 As TextBox
@@ -1282,4 +1293,5 @@ Partial Class frmCargarLlave
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents ColorDialog2 As ColorDialog
     Friend WithEvents ColorDialog3 As ColorDialog
+    Friend WithEvents btCancelar As Button
 End Class

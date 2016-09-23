@@ -17,9 +17,6 @@
         CargarCaballos2()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
 
     Private Sub cbCarrera1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera1.SelectedIndexChanged
         CargarCaballos1()
@@ -101,13 +98,13 @@
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
         idCarreraNueva = Tb_CarrerasTableAdapter.maxId()
 
-        MessageBox.Show("Se ha creado la carrera" & car1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("Se ha creado la carrera" & car1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
         Return car1
     End Function
 
     Private Function CreaCaballos(ByVal car1 As Integer, ByVal car2 As Integer)
-        MessageBox.Show("cre cab ref 1" & ref1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("cre cab ref 1" & ref1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         '#2 CARGAR CARRERA - CABALLO'
         Dim filaCaballo As DataRowView
         Dim dtCarrerasCaballos1 As DataTable = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(ref1)
@@ -141,7 +138,7 @@
             i = i + 1
         Next
         Return car1
-        MessageBox.Show("Se ha creado el caballo: " & cab, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        ' MessageBox.Show("Se ha creado el caballo: " & cab, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
     End Function
 
     Private Sub CreaCaballosCarrera(ByVal car1 As Integer, ByVal car2 As Integer)
@@ -166,7 +163,7 @@
                 Me.Tb_CarrerasCaballosBindingSource.EndEdit()
                 Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
-                MessageBox.Show("Se ha creado la carreraCAballo", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                'MessageBox.Show("Se ha creado la carreraCAballo", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
                 y = y + 1
             Next
@@ -192,13 +189,16 @@
         cbCarrera1.SelectedValue = idCarrera1
         CreaCaballosCarrera(idCarrera1, cbCarrera2.SelectedValue)
 
-    End Sub
-
-    Private Sub btCrearCaballos_Click(sender As Object, e As EventArgs)
+        MessageBox.Show("Se ha creado la llave", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
     End Sub
+
 
     Private Sub btCrearLlave_Click(sender As Object, e As EventArgs)
         CreaCaballosCarrera(cbCarrera1.SelectedValue, cbCarrera2.SelectedValue)
+    End Sub
+
+    Private Sub btCancelar_Click(sender As Object, e As EventArgs) Handles btCancelar.Click
+        Me.Close()
     End Sub
 End Class
