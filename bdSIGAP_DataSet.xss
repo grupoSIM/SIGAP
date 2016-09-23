@@ -16,8 +16,8 @@
     <Shape ID="DesignTable:tb_Rematadores" ZOrder="21" X="352" Y="967" Height="134" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:tb_Remates" ZOrder="7" X="70" Y="70" Height="286" Width="212" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
     <Shape ID="DesignTable:VwTicket" ZOrder="8" X="1284" Y="70" Height="324" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:VwPremios" ZOrder="5" X="42" Y="619" Height="174" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="104" />
-    <Shape ID="DesignTable:VwCajaPalco" ZOrder="4" X="39" Y="413" Height="188" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="120" />
+    <Shape ID="DesignTable:VwPremios" ZOrder="5" X="42" Y="619" Height="286" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="216" />
+    <Shape ID="DesignTable:VwCajaPalco" ZOrder="4" X="39" Y="413" Height="305" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:tb_Eventos" ZOrder="3" X="1654" Y="7" Height="153" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:tb_PorcentajesCasa" ZOrder="2" X="1931" Y="7" Height="153" Width="256" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
   </Shapes>

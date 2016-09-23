@@ -55,10 +55,12 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.NroRemateLabel1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.NombreCarreraLabel1 = New System.Windows.Forms.Label()
         Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.ObservacionesLabel1 = New System.Windows.Forms.Label()
         CType(Me.VwTicketBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,7 +75,7 @@ Partial Class Form1
         '
         'NombreLabel1
         '
-        Me.NombreLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Nombre", True))
+        Me.NombreLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Hipodromo", True))
         Me.NombreLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreLabel1.Location = New System.Drawing.Point(-4, 9)
         Me.NombreLabel1.Name = "NombreLabel1"
@@ -373,6 +375,16 @@ Partial Class Form1
         Me.Label7.TabIndex = 53
         Me.Label7.Text = "APUESTA"
         '
+        'NombreCarreraLabel1
+        '
+        Me.NombreCarreraLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "NombreCarrera", True))
+        Me.NombreCarreraLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreCarreraLabel1.Location = New System.Drawing.Point(93, 86)
+        Me.NombreCarreraLabel1.Name = "NombreCarreraLabel1"
+        Me.NombreCarreraLabel1.Size = New System.Drawing.Size(198, 18)
+        Me.NombreCarreraLabel1.TabIndex = 54
+        Me.NombreCarreraLabel1.Text = "Lbl_NombreCarrera"
+        '
         'VwTicketBindingSource
         '
         Me.VwTicketBindingSource.DataMember = "VwTicket"
@@ -395,12 +407,23 @@ Partial Class Form1
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
         Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
         Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ObservacionesLabel1
+        '
+        Me.ObservacionesLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VwTicketBindingSource, "Observaciones", True))
+        Me.ObservacionesLabel1.Location = New System.Drawing.Point(6, 275)
+        Me.ObservacionesLabel1.Name = "ObservacionesLabel1"
+        Me.ObservacionesLabel1.Size = New System.Drawing.Size(278, 23)
+        Me.ObservacionesLabel1.TabIndex = 55
+        Me.ObservacionesLabel1.Text = "Label8"
         '
         'Form1
         '
@@ -408,7 +431,9 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(336, 448)
+        Me.ClientSize = New System.Drawing.Size(413, 464)
+        Me.Controls.Add(Me.ObservacionesLabel1)
+        Me.Controls.Add(Me.NombreCarreraLabel1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.NroRemateLabel1)
         Me.Controls.Add(Me.Label6)
@@ -488,4 +513,6 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents NroRemateLabel1 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents NombreCarreraLabel1 As Label
+    Friend WithEvents ObservacionesLabel1 As Label
 End Class

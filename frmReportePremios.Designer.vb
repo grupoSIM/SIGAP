@@ -24,13 +24,23 @@ Partial Class frmReportePremios
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.VwPremiosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.bdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.VwPremiosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwPremiosTableAdapter()
         CType(Me.VwPremiosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'VwPremiosBindingSource
+        '
+        Me.VwPremiosBindingSource.DataMember = "VwPremios"
+        Me.VwPremiosBindingSource.DataSource = Me.bdSIGAP_DataSet
+        '
+        'bdSIGAP_DataSet
+        '
+        Me.bdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.bdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class frmReportePremios
         Me.ReportViewer1.ShowBackButton = False
         Me.ReportViewer1.Size = New System.Drawing.Size(328, 246)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'VwPremiosBindingSource
-        '
-        Me.VwPremiosBindingSource.DataMember = "VwPremios"
-        Me.VwPremiosBindingSource.DataSource = Me.bdSIGAP_DataSet
-        '
-        'bdSIGAP_DataSet
-        '
-        Me.bdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.bdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VwPremiosTableAdapter
         '
