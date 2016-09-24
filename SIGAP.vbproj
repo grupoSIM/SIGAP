@@ -168,6 +168,12 @@
     <Compile Include="frmJornada.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmModificarCarrera.Designer.vb">
+      <DependentUpon>frmModificarCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPalco.Designer.vb">
       <DependentUpon>frmPalco.vb</DependentUpon>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJornada.resx">
       <DependentUpon>frmJornada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarCarrera.resx">
+      <DependentUpon>frmModificarCarrera.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPalco.resx">
       <DependentUpon>frmPalco.vb</DependentUpon>

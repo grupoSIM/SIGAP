@@ -55,4 +55,8 @@
     Private Sub CargarLlaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarLLaveToolStripMenuItem.Click
         frmCargarLlave.Show()
     End Sub
+
+    Private Sub ModificarCarreraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarCarreraToolStripMenuItem.Click
+        frmModificarCarrera.Show()
+    End Sub
 End Class
