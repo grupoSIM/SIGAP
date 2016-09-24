@@ -224,9 +224,11 @@ Partial Class frmCarrera
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
         Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
         Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -245,7 +247,6 @@ Partial Class frmCarrera
         Me.IdJornadaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
         Me.IdJornadaDataGridViewTextBoxColumn.HeaderText = "Jornada"
         Me.IdJornadaDataGridViewTextBoxColumn.Name = "IdJornadaDataGridViewTextBoxColumn"
-        Me.IdJornadaDataGridViewTextBoxColumn.ReadOnly = True
         Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"

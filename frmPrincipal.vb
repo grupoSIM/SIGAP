@@ -59,4 +59,8 @@
     Private Sub ModificarCarreraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarCarreraToolStripMenuItem.Click
         frmModificarCarrera.Show()
     End Sub
+
+    Private Sub ReportePremiosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportePremiosToolStripMenuItem.Click
+        frmReportePremioSeleccionar.Show()
+    End Sub
 End Class
