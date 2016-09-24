@@ -24,6 +24,7 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ParámetrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EventoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HipódromoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JornadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PorcentajesDeLaCasaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,7 +47,7 @@ Partial Class frmPrincipal
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportePremiosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EventoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDevolucionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,6 +66,12 @@ Partial Class frmPrincipal
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
+        '
+        'EventoToolStripMenuItem
+        '
+        Me.EventoToolStripMenuItem.Name = "EventoToolStripMenuItem"
+        Me.EventoToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.EventoToolStripMenuItem.Text = "Eventos"
         '
         'HipódromoToolStripMenuItem
         '
@@ -185,7 +192,7 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -202,11 +209,11 @@ Partial Class frmPrincipal
         Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReporteCierreDeCajaToolStripMenuItem.Text = "Reporte Cierre de Caja"
         '
-        'EventoToolStripMenuItem
+        'ReporteDevolucionesToolStripMenuItem
         '
-        Me.EventoToolStripMenuItem.Name = "EventoToolStripMenuItem"
-        Me.EventoToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.EventoToolStripMenuItem.Text = "Eventos"
+        Me.ReporteDevolucionesToolStripMenuItem.Name = "ReporteDevolucionesToolStripMenuItem"
+        Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReporteDevolucionesToolStripMenuItem.Text = "Reporte Devoluciones"
         '
         'frmPrincipal
         '
@@ -250,4 +257,5 @@ Partial Class frmPrincipal
     Friend WithEvents ReporteCierreDeCajaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PorcentajesDeLaCasaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EventoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDevolucionesToolStripMenuItem As ToolStripMenuItem
 End Class

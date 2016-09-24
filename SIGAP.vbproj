@@ -228,6 +228,12 @@
     <Compile Include="frmReporteDevoluciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReporteDevolucionesSeleccionar.Designer.vb">
+      <DependentUpon>frmReporteDevolucionesSeleccionar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteDevolucionesSeleccionar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportePremios.Designer.vb">
       <DependentUpon>frmReportePremios.vb</DependentUpon>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteDevoluciones.resx">
       <DependentUpon>frmReporteDevoluciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteDevolucionesSeleccionar.resx">
+      <DependentUpon>frmReporteDevolucionesSeleccionar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportePremios.resx">
       <DependentUpon>frmReportePremios.vb</DependentUpon>

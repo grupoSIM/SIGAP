@@ -75,4 +75,8 @@
     Private Sub EventoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventoToolStripMenuItem.Click
         frmEvento.Show()
     End Sub
+
+    Private Sub ReporteDevolucionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDevolucionesToolStripMenuItem.Click
+        frmReporteDevolucionesSeleccionar.Show()
+    End Sub
 End Class
