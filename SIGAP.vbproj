@@ -168,10 +168,22 @@
     <Compile Include="frmJornada.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmModificarCarrera.Designer.vb">
+      <DependentUpon>frmModificarCarrera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarCarrera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPalco.Designer.vb">
       <DependentUpon>frmPalco.vb</DependentUpon>
     </Compile>
     <Compile Include="frmPalco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPorcentajesCasa.Designer.vb">
+      <DependentUpon>frmPorcentajesCasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPorcentajesCasa.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
@@ -198,10 +210,22 @@
     <Compile Include="frmRemates.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReporteCierreCaja.Designer.vb">
+      <DependentUpon>frmReporteCierreCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCierreCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportePremios.Designer.vb">
       <DependentUpon>frmReportePremios.vb</DependentUpon>
     </Compile>
     <Compile Include="frmReportePremios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportePremioSeleccionar.Designer.vb">
+      <DependentUpon>frmReportePremioSeleccionar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePremioSeleccionar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTicket.Designer.vb">
@@ -263,8 +287,14 @@
     <EmbeddedResource Include="frmJornada.resx">
       <DependentUpon>frmJornada.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarCarrera.resx">
+      <DependentUpon>frmModificarCarrera.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPalco.resx">
       <DependentUpon>frmPalco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPorcentajesCasa.resx">
+      <DependentUpon>frmPorcentajesCasa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
@@ -278,8 +308,14 @@
     <EmbeddedResource Include="frmRemates.resx">
       <DependentUpon>frmRemates.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCierreCaja.resx">
+      <DependentUpon>frmReporteCierreCaja.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportePremios.resx">
       <DependentUpon>frmReportePremios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePremioSeleccionar.resx">
+      <DependentUpon>frmReportePremioSeleccionar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.vb</DependentUpon>

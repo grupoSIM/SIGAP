@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCarrera
+Partial Class frmPorcentajesCasa
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,83 +23,69 @@ Partial Class frmCarrera
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCarrera))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPorcentajesCasa))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
+        Me.TbPorcentajesCasaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.TbEventosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_EventosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_EventosTableAdapter()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdJornadaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.NroCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MetrosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorcentajeCasaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadCaballosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PorcentajeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEventoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbPorcentajesCasaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
+        CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdJornadaDataGridViewTextBoxColumn, Me.NroCarreraDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.MetrosDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.PorcentajeCasaDataGridViewTextBoxColumn, Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn, Me.ObservacionesDataGridViewTextBoxColumn, Me.TipoCarreraDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TbCarrerasBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 24)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CantidadCaballosDataGridViewTextBoxColumn, Me.PorcentajeDataGridViewTextBoxColumn, Me.IdEventoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TbPorcentajesCasaBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 28)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(960, 253)
+        Me.DataGridView1.Size = New System.Drawing.Size(572, 256)
         Me.DataGridView1.TabIndex = 0
-        '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'BdSIGAP_DataSet
         '
         Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
         Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TbCarrerasBindingSource
+        'TbPorcentajesCasaBindingSource
         '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        Me.TbPorcentajesCasaBindingSource.DataMember = "tb_PorcentajesCasa"
+        Me.TbPorcentajesCasaBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'Tb_CarrerasTableAdapter
+        'Tb_PorcentajesCasaTableAdapter
         '
-        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
         '
         'BindingNavigator1
         '
         Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.BindingNavigator1.BindingSource = Me.TbPorcentajesCasaBindingSource
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.PrintToolStripButton})
@@ -110,34 +96,9 @@ Partial Class frmCarrera
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(975, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(573, 25)
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -171,9 +132,16 @@ Partial Class frmCarrera
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -196,8 +164,26 @@ Partial Class frmCarrera
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'SaveToolStripButton
         '
@@ -222,16 +208,25 @@ Partial Class frmCarrera
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
-        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Me.Tb_EventosTableAdapter
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
         Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Me.Tb_PorcentajesCasaTableAdapter
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'TbEventosBindingSource
+        '
+        Me.TbEventosBindingSource.DataMember = "tb_Eventos"
+        Me.TbEventosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_EventosTableAdapter
+        '
+        Me.Tb_EventosTableAdapter.ClearBeforeFill = True
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -239,85 +234,46 @@ Partial Class frmCarrera
         Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
         '
-        'IdJornadaDataGridViewTextBoxColumn
+        'CantidadCaballosDataGridViewTextBoxColumn
         '
-        Me.IdJornadaDataGridViewTextBoxColumn.DataPropertyName = "IdJornada"
-        Me.IdJornadaDataGridViewTextBoxColumn.DataSource = Me.TbJornadasBindingSource
-        Me.IdJornadaDataGridViewTextBoxColumn.DisplayMember = "Descripcion"
-        Me.IdJornadaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
-        Me.IdJornadaDataGridViewTextBoxColumn.HeaderText = "Jornada"
-        Me.IdJornadaDataGridViewTextBoxColumn.Name = "IdJornadaDataGridViewTextBoxColumn"
-        Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdJornadaDataGridViewTextBoxColumn.Width = 150
+        Me.CantidadCaballosDataGridViewTextBoxColumn.DataPropertyName = "CantidadCaballos"
+        Me.CantidadCaballosDataGridViewTextBoxColumn.HeaderText = "Cantidad Caballos"
+        Me.CantidadCaballosDataGridViewTextBoxColumn.Name = "CantidadCaballosDataGridViewTextBoxColumn"
         '
-        'NroCarreraDataGridViewTextBoxColumn
+        'PorcentajeDataGridViewTextBoxColumn
         '
-        Me.NroCarreraDataGridViewTextBoxColumn.DataPropertyName = "NroCarrera"
-        Me.NroCarreraDataGridViewTextBoxColumn.HeaderText = "Nro Carrera"
-        Me.NroCarreraDataGridViewTextBoxColumn.Name = "NroCarreraDataGridViewTextBoxColumn"
+        Me.PorcentajeDataGridViewTextBoxColumn.DataPropertyName = "Porcentaje"
+        Me.PorcentajeDataGridViewTextBoxColumn.HeaderText = "Porcentaje"
+        Me.PorcentajeDataGridViewTextBoxColumn.Name = "PorcentajeDataGridViewTextBoxColumn"
         '
-        'NombreDataGridViewTextBoxColumn
+        'IdEventoDataGridViewTextBoxColumn
         '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.IdEventoDataGridViewTextBoxColumn.DataPropertyName = "IdEvento"
+        Me.IdEventoDataGridViewTextBoxColumn.DataSource = Me.TbEventosBindingSource
+        Me.IdEventoDataGridViewTextBoxColumn.DisplayMember = "NombreEvento"
+        Me.IdEventoDataGridViewTextBoxColumn.HeaderText = "Evento"
+        Me.IdEventoDataGridViewTextBoxColumn.Name = "IdEventoDataGridViewTextBoxColumn"
+        Me.IdEventoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdEventoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdEventoDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdEventoDataGridViewTextBoxColumn.Width = 200
         '
-        'MetrosDataGridViewTextBoxColumn
-        '
-        Me.MetrosDataGridViewTextBoxColumn.DataPropertyName = "Metros"
-        Me.MetrosDataGridViewTextBoxColumn.HeaderText = "Metros"
-        Me.MetrosDataGridViewTextBoxColumn.Name = "MetrosDataGridViewTextBoxColumn"
-        Me.MetrosDataGridViewTextBoxColumn.Width = 50
-        '
-        'EstadoDataGridViewTextBoxColumn
-        '
-        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
-        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
-        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        '
-        'PorcentajeCasaDataGridViewTextBoxColumn
-        '
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeCasa"
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.HeaderText = "% Casa"
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.Name = "PorcentajeCasaDataGridViewTextBoxColumn"
-        '
-        'PorcentajeUltimoRemateDataGridViewTextBoxColumn
-        '
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeUltimoRemate"
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.HeaderText = "PorcentajeUltimoRemate"
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.Name = "PorcentajeUltimoRemateDataGridViewTextBoxColumn"
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.Visible = False
-        '
-        'ObservacionesDataGridViewTextBoxColumn
-        '
-        Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
-        Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
-        Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
-        '
-        'TipoCarreraDataGridViewTextBoxColumn
-        '
-        Me.TipoCarreraDataGridViewTextBoxColumn.DataPropertyName = "TipoCarrera"
-        Me.TipoCarreraDataGridViewTextBoxColumn.HeaderText = "Tipo"
-        Me.TipoCarreraDataGridViewTextBoxColumn.Name = "TipoCarreraDataGridViewTextBoxColumn"
-        '
-        'frmCarrera
+        'frmPorcentajesCasa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(975, 308)
+        Me.ClientSize = New System.Drawing.Size(573, 285)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "frmCarrera"
-        Me.Text = "Carreras"
+        Me.Name = "frmPorcentajesCasa"
+        Me.Text = "Porcentajes de la Casa"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbPorcentajesCasaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
+        CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -325,10 +281,8 @@ Partial Class frmCarrera
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
-    Friend WithEvents TbCarrerasBindingSource As BindingSource
-    Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
-    Friend WithEvents TbJornadasBindingSource As BindingSource
-    Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
+    Friend WithEvents TbPorcentajesCasaBindingSource As BindingSource
+    Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
     Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
@@ -344,14 +298,10 @@ Partial Class frmCarrera
     Friend WithEvents SaveToolStripButton As ToolStripButton
     Friend WithEvents PrintToolStripButton As ToolStripButton
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Tb_EventosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_EventosTableAdapter
+    Friend WithEvents TbEventosBindingSource As BindingSource
     Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdJornadaDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
-    Friend WithEvents NroCarreraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MetrosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PorcentajeCasaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PorcentajeUltimoRemateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TipoCarreraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CantidadCaballosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PorcentajeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdEventoDataGridViewTextBoxColumn As DataGridViewComboBoxColumn
 End Class

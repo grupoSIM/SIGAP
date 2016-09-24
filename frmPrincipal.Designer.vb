@@ -32,6 +32,8 @@ Partial Class frmPrincipal
         Me.RematesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargarLLaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeCarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,7 +43,9 @@ Partial Class frmPrincipal
         Me.CargarResultadoCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargarLLaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportePremiosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PorcentajesDeLaCasaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,7 +60,7 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem, Me.RematesToolStripMenuItem1})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.PorcentajesDeLaCasaToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem, Me.RematesToolStripMenuItem1})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -64,42 +68,42 @@ Partial Class frmPrincipal
         'HipódromoToolStripMenuItem
         '
         Me.HipódromoToolStripMenuItem.Name = "HipódromoToolStripMenuItem"
-        Me.HipódromoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.HipódromoToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.HipódromoToolStripMenuItem.Text = "Hipódromos"
         '
         'JornadasToolStripMenuItem
         '
         Me.JornadasToolStripMenuItem.Name = "JornadasToolStripMenuItem"
-        Me.JornadasToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.JornadasToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.JornadasToolStripMenuItem.Text = "Jornadas"
         '
         'CarrerasToolStripMenuItem
         '
         Me.CarrerasToolStripMenuItem.Name = "CarrerasToolStripMenuItem"
-        Me.CarrerasToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.CarrerasToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.CarrerasToolStripMenuItem.Text = "Caballos"
         '
         'RematadorToolStripMenuItem
         '
         Me.RematadorToolStripMenuItem.Name = "RematadorToolStripMenuItem"
-        Me.RematadorToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.RematadorToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.RematadorToolStripMenuItem.Text = "Rematador"
         '
         'PalcosToolStripMenuItem
         '
         Me.PalcosToolStripMenuItem.Name = "PalcosToolStripMenuItem"
-        Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.PalcosToolStripMenuItem.Text = "Palcos"
         '
         'RematesToolStripMenuItem1
         '
         Me.RematesToolStripMenuItem1.Name = "RematesToolStripMenuItem1"
-        Me.RematesToolStripMenuItem1.Size = New System.Drawing.Size(141, 22)
+        Me.RematesToolStripMenuItem1.Size = New System.Drawing.Size(191, 22)
         Me.RematesToolStripMenuItem1.Text = "Remates"
         '
         'CarrerasToolStripMenuItem1
         '
-        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.CargarLLaveToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
+        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.CargarLLaveToolStripMenuItem, Me.ModificarCarreraToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
         Me.CarrerasToolStripMenuItem1.Name = "CarrerasToolStripMenuItem1"
         Me.CarrerasToolStripMenuItem1.Size = New System.Drawing.Size(62, 20)
         Me.CarrerasToolStripMenuItem1.Text = "Carreras"
@@ -109,6 +113,18 @@ Partial Class frmPrincipal
         Me.CargarCarreraCaballosToolStripMenuItem.Name = "CargarCarreraCaballosToolStripMenuItem"
         Me.CargarCarreraCaballosToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.CargarCarreraCaballosToolStripMenuItem.Text = "Cargar carrera / caballos"
+        '
+        'CargarLLaveToolStripMenuItem
+        '
+        Me.CargarLLaveToolStripMenuItem.Name = "CargarLLaveToolStripMenuItem"
+        Me.CargarLLaveToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.CargarLLaveToolStripMenuItem.Text = "Cargar Llave"
+        '
+        'ModificarCarreraToolStripMenuItem
+        '
+        Me.ModificarCarreraToolStripMenuItem.Name = "ModificarCarreraToolStripMenuItem"
+        Me.ModificarCarreraToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ModificarCarreraToolStripMenuItem.Text = "Modificar Carrera"
         '
         'ListadoDeCarrerasToolStripMenuItem
         '
@@ -162,15 +178,28 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
-        'CargarLLaveToolStripMenuItem
+        'ReportePremiosToolStripMenuItem
         '
-        Me.CargarLLaveToolStripMenuItem.Name = "CargarLLaveToolStripMenuItem"
-        Me.CargarLLaveToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.CargarLLaveToolStripMenuItem.Text = "Cargar Llave"
+        Me.ReportePremiosToolStripMenuItem.Name = "ReportePremiosToolStripMenuItem"
+        Me.ReportePremiosToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReportePremiosToolStripMenuItem.Text = "Reporte Premios"
+        '
+        'ReporteCierreDeCajaToolStripMenuItem
+        '
+        Me.ReporteCierreDeCajaToolStripMenuItem.Name = "ReporteCierreDeCajaToolStripMenuItem"
+        Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReporteCierreDeCajaToolStripMenuItem.Text = "Reporte Cierre de Caja"
+        '
+        'PorcentajesDeLaCasaToolStripMenuItem
+        '
+        Me.PorcentajesDeLaCasaToolStripMenuItem.Name = "PorcentajesDeLaCasaToolStripMenuItem"
+        Me.PorcentajesDeLaCasaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.PorcentajesDeLaCasaToolStripMenuItem.Text = "Porcentajes de la Casa"
         '
         'frmPrincipal
         '
@@ -209,4 +238,8 @@ Partial Class frmPrincipal
     Friend WithEvents VerResultadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeDetalleRematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarLLaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarCarreraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportePremiosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteCierreDeCajaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PorcentajesDeLaCasaToolStripMenuItem As ToolStripMenuItem
 End Class
