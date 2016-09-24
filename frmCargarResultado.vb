@@ -69,6 +69,7 @@
                 End If
                 'MsgBox(drCarreraCaballo("IdCaballo"))
             Next
+            Tb_DetalleRematesTableAdapter.Update(dtDetallesRemates)
         Next
 
     End Function
@@ -102,12 +103,14 @@
             End If
         Next
 
-        frmVerResultados.Show()
+        'frmVerResultados.Show()
         'frmVerResultados.txResultado.Text = totalGanadores.ToString()
         'frmVerResultados.nResultados.Value = totalGanadores
-        frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
 
-        'MarcarGanadores()
+
+        MarcarGanadores()
+        frmVerResultados.Show()
+        frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click

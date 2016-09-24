@@ -113,25 +113,25 @@
         For Each row As DataRow In dtCarrerasCaballos.Rows
             Select Case i
                 Case 0
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido0.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido0.Checked, "")
                 Case 1
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido1.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido1.Checked, "")
                 Case 2
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido2.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido2.Checked, "")
                 Case 3
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido3.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido3.Checked, "")
                 Case 4
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido4.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido4.Checked, "")
                 Case 5
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido5.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido5.Checked, "")
                 Case 6
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido6.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido6.Checked, "")
                 Case 7
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido7.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido7.Checked, "")
                 Case 8
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido8.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido8.Checked, "")
                 Case 9
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido9.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido9.Checked, "")
             End Select
             i += 1
         Next
@@ -157,25 +157,25 @@
         For Each row As DataRow In dtCarrerasCaballos.Rows
             Select Case i
                 Case 0
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido0.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido0.Checked, "")
                 Case 1
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido1.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido1.Checked, "")
                 Case 2
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido2.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido2.Checked, "")
                 Case 3
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido3.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido3.Checked, "")
                 Case 4
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido4.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido4.Checked, "")
                 Case 5
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido5.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido5.Checked, "")
                 Case 6
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido6.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido6.Checked, "")
                 Case 7
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido7.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido7.Checked, "")
                 Case 8
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido8.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido8.Checked, "")
                 Case 9
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido9.Checked, vbNull)
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), chbincluido9.Checked, "")
             End Select
             i += 1
         Next
