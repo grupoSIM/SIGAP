@@ -245,3 +245,6 @@ ModelManifest.xml
 .fake/
 /bd/bdSIGAP_be.laccdb
 /bdSIGAP_be.laccdb
+/frmReporteDevolucionesSeleccionar.vb
+/frmReporteDevolucionesSeleccionar.resx
+/frmReporteDevolucionesSeleccionar.Designer.vb

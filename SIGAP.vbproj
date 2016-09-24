@@ -338,6 +338,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="rpDevoluciones.rdlc" />
     <EmbeddedResource Include="rpCajaPalco.rdlc" />
     <EmbeddedResource Include="rpPremios.rdlc" />
   </ItemGroup>
