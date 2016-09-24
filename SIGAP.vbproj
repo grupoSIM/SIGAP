@@ -156,6 +156,12 @@
     <Compile Include="frmDetalleRemate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEvento.Designer.vb">
+      <DependentUpon>frmEvento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmHipodromo.Designer.vb">
       <DependentUpon>frmHipodromo.vb</DependentUpon>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDetalleRemate.resx">
       <DependentUpon>frmDetalleRemate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvento.resx">
+      <DependentUpon>frmEvento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHipodromo.resx">
       <DependentUpon>frmHipodromo.vb</DependentUpon>

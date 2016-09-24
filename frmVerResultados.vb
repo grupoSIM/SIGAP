@@ -14,7 +14,7 @@
 
     Private Function CargarRemates()
         If rbUnGanador.Checked = True Then
-            Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultado(Me.BdSIGAP_DataSet.tb_DetalleRemates)
+            Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultado(Me.BdSIGAP_DataSet.tb_DetalleRemates, cbCarrera.SelectedValue)
         End If
         If rbPuesta.Checked = True Then
             For i As Integer = 0 To DataGridView1.RowCount - 1

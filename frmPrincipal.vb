@@ -71,4 +71,8 @@
     Private Sub PorcentajesDeLaCasaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PorcentajesDeLaCasaToolStripMenuItem.Click
         frmPorcentajesCasa.Show()
     End Sub
+
+    Private Sub EventoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventoToolStripMenuItem.Click
+        frmEvento.Show()
+    End Sub
 End Class

@@ -11562,8 +11562,10 @@ Namespace bdSIGAP_DataSetTableAdapters
                 ", tb_DetalleRemates.Fila, tb_DetalleRemates.ImportePremio, tb_DetalleRemates.Inc"& _ 
                 "luido"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            (tb_DetalleRemates INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         t"& _ 
                 "b_CarrerasCaballos ON tb_DetalleRemates.IdCarreraCaballo = tb_CarrerasCaballos.I"& _ 
-                "d)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tb_CarrerasCaballos.Posicion = 1)"
+                "d)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tb_CarrerasCaballos.Posicion = 1) AND (tb_DetalleRemates.Impor"& _ 
+                "tePremio > 0) AND (tb_CarrerasCaballos.IdCarrera = ?)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "SELECT        tb_DetalleRemates.Id AS Expr1, tb_DetalleRemates.IdRemate, tb_Detal"& _ 
@@ -11669,8 +11671,13 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByGetDataByResultado(ByVal dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable) As Integer
+        Public Overloads Overridable Function FillByGetDataByResultado(ByVal dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable, ByVal IdCarrera As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (IdCarrera.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -11682,8 +11689,13 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByResultado() As bdSIGAP_DataSet.tb_DetalleRematesDataTable
+        Public Overloads Overridable Function GetDataByResultado(ByVal IdCarrera As Global.System.Nullable(Of Integer)) As bdSIGAP_DataSet.tb_DetalleRematesDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (IdCarrera.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdCarrera.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             Dim dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable = New bdSIGAP_DataSet.tb_DetalleRematesDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

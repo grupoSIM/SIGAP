@@ -145,7 +145,7 @@ Partial Class frmVerResultados
         '
         'txResultado
         '
-        Me.txResultado.Location = New System.Drawing.Point(85, 13)
+        Me.txResultado.Location = New System.Drawing.Point(22, 13)
         Me.txResultado.Name = "txResultado"
         Me.txResultado.Size = New System.Drawing.Size(100, 20)
         Me.txResultado.TabIndex = 1
