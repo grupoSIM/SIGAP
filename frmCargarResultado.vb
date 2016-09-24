@@ -103,8 +103,8 @@
         Next
 
         frmVerResultados.Show()
-        frmVerResultados.txResultado.Text = totalGanadores.ToString()
-        frmVerResultados.nResultados.Value = totalGanadores
+        'frmVerResultados.txResultado.Text = totalGanadores.ToString()
+        'frmVerResultados.nResultados.Value = totalGanadores
         frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
 
         'MarcarGanadores()
