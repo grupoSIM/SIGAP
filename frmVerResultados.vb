@@ -13,15 +13,18 @@
     End Sub
 
     Private Function CargarRemates()
-        If rbUnGanador.Checked = True Then
-            Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultado(Me.BdSIGAP_DataSet.tb_DetalleRemates, cbCarrera.SelectedValue)
-        End If
-        If rbPuesta.Checked = True Then
-            For i As Integer = 0 To DataGridView1.RowCount - 1
-                DataGridView1.Rows(i).Cells(9).Value = (DataGridView1.Rows(i).Cells(9).Value / Me.nResultados.Value)
-            Next
-            Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultadoPuesta(Me.BdSIGAP_DataSet.tb_DetalleRemates)
-        End If
+        Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultado(Me.BdSIGAP_DataSet.tb_DetalleRemates, cbCarrera.SelectedValue)
+        'If rbUnGanador.Checked = True Then
+        'Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultado(Me.BdSIGAP_DataSet.tb_DetalleRemates, cbCarrera.SelectedValue)
+        'End If
+
+        ' If rbPuesta.Checked = True Then
+        'For i As Integer = 0 To DataGridView1.RowCount - 1
+        'DataGridView1.Rows(i).Cells(9).Value = (DataGridView1.Rows(i).Cells(9).Value / Me.nResultados.Value)
+        'Next
+        'Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultadoPuesta(Me.BdSIGAP_DataSet.tb_DetalleRemates)
+        '  Me.Tb_DetalleRematesTableAdapter.FillByGetDataByResultado(Me.BdSIGAP_DataSet.tb_DetalleRemates, cbCarrera.SelectedValue)
+        'End If
 
     End Function
 
@@ -31,5 +34,13 @@
 
     Private Sub rbPuesta_CheckedChanged(sender As Object, e As EventArgs) Handles rbPuesta.CheckedChanged
         CargarRemates()
+    End Sub
+
+    Private Sub cbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera.SelectedIndexChanged
+        CargarRemates()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

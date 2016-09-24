@@ -38,19 +38,17 @@ Partial Class frmVerResultados
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.BdSIGAPDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
-        Me.txResultado = New System.Windows.Forms.TextBox()
         Me.cbCarrera = New System.Windows.Forms.ComboBox()
         Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.rbUnGanador = New System.Windows.Forms.RadioButton()
         Me.rbPuesta = New System.Windows.Forms.RadioButton()
-        Me.nResultados = New System.Windows.Forms.NumericUpDown()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAPDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nResultados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -143,21 +141,14 @@ Partial Class frmVerResultados
         '
         Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
         '
-        'txResultado
-        '
-        Me.txResultado.Location = New System.Drawing.Point(22, 13)
-        Me.txResultado.Name = "txResultado"
-        Me.txResultado.Size = New System.Drawing.Size(100, 20)
-        Me.txResultado.TabIndex = 1
-        '
         'cbCarrera
         '
         Me.cbCarrera.DataSource = Me.TbCarrerasBindingSource
         Me.cbCarrera.DisplayMember = "Nombre"
         Me.cbCarrera.FormattingEnabled = True
-        Me.cbCarrera.Location = New System.Drawing.Point(215, 11)
+        Me.cbCarrera.Location = New System.Drawing.Point(58, 22)
         Me.cbCarrera.Name = "cbCarrera"
-        Me.cbCarrera.Size = New System.Drawing.Size(121, 21)
+        Me.cbCarrera.Size = New System.Drawing.Size(199, 21)
         Me.cbCarrera.TabIndex = 2
         Me.cbCarrera.ValueMember = "Id"
         '
@@ -193,32 +184,32 @@ Partial Class frmVerResultados
         Me.rbPuesta.Text = "Puesta"
         Me.rbPuesta.UseVisualStyleBackColor = True
         '
-        'nResultados
+        'Label1
         '
-        Me.nResultados.Location = New System.Drawing.Point(584, 12)
-        Me.nResultados.Name = "nResultados"
-        Me.nResultados.Size = New System.Drawing.Size(120, 20)
-        Me.nResultados.TabIndex = 5
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Carrera: "
         '
         'frmVerResultados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1109, 570)
-        Me.Controls.Add(Me.nResultados)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.rbPuesta)
         Me.Controls.Add(Me.rbUnGanador)
         Me.Controls.Add(Me.cbCarrera)
-        Me.Controls.Add(Me.txResultado)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmVerResultados"
-        Me.Text = "frmVerResultados"
+        Me.Text = "Ver Resultados"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAPDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nResultados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -239,11 +230,10 @@ Partial Class frmVerResultados
     Friend WithEvents FilaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ImportePremioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IncluidoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents txResultado As TextBox
     Friend WithEvents cbCarrera As ComboBox
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
     Friend WithEvents rbUnGanador As RadioButton
     Friend WithEvents rbPuesta As RadioButton
-    Friend WithEvents nResultados As NumericUpDown
+    Friend WithEvents Label1 As Label
 End Class
