@@ -44,6 +44,7 @@ Partial Class frmPrincipal
         Me.VerResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportePremiosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -176,7 +177,7 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -186,6 +187,12 @@ Partial Class frmPrincipal
         Me.ReportePremiosToolStripMenuItem.Name = "ReportePremiosToolStripMenuItem"
         Me.ReportePremiosToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.ReportePremiosToolStripMenuItem.Text = "Reporte Premios"
+        '
+        'ReporteCierreDeCajaToolStripMenuItem
+        '
+        Me.ReporteCierreDeCajaToolStripMenuItem.Name = "ReporteCierreDeCajaToolStripMenuItem"
+        Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReporteCierreDeCajaToolStripMenuItem.Text = "Reporte Cierre de Caja"
         '
         'frmPrincipal
         '
@@ -226,4 +233,5 @@ Partial Class frmPrincipal
     Friend WithEvents CargarLLaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificarCarreraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportePremiosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteCierreDeCajaToolStripMenuItem As ToolStripMenuItem
 End Class

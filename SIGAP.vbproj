@@ -204,6 +204,12 @@
     <Compile Include="frmRemates.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReporteCierreCaja.Designer.vb">
+      <DependentUpon>frmReporteCierreCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCierreCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportePremios.Designer.vb">
       <DependentUpon>frmReportePremios.vb</DependentUpon>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemates.resx">
       <DependentUpon>frmRemates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCierreCaja.resx">
+      <DependentUpon>frmReporteCierreCaja.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportePremios.resx">
       <DependentUpon>frmReportePremios.vb</DependentUpon>

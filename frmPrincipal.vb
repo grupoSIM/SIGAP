@@ -63,4 +63,8 @@
     Private Sub ReportePremiosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportePremiosToolStripMenuItem.Click
         frmReportePremioSeleccionar.Show()
     End Sub
+
+    Private Sub ReporteCierreDeCajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCierreDeCajaToolStripMenuItem.Click
+        frmReporteCierreCaja.Show()
+    End Sub
 End Class
