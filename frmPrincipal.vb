@@ -67,4 +67,8 @@
     Private Sub ReporteCierreDeCajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCierreDeCajaToolStripMenuItem.Click
         frmReporteCierreCaja.Show()
     End Sub
+
+    Private Sub PorcentajesDeLaCasaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PorcentajesDeLaCasaToolStripMenuItem.Click
+        frmPorcentajesCasa.Show()
+    End Sub
 End Class

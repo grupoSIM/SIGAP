@@ -180,6 +180,12 @@
     <Compile Include="frmPalco.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPorcentajesCasa.Designer.vb">
+      <DependentUpon>frmPorcentajesCasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPorcentajesCasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPalco.resx">
       <DependentUpon>frmPalco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPorcentajesCasa.resx">
+      <DependentUpon>frmPorcentajesCasa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
