@@ -5,8 +5,9 @@
 
         Dim idCarrera As Integer
         idCarrera = frmReportePremioSeleccionar.cbCarrera.SelectedValue
-
+        'idCarrera = 21
         'MsgBox(frmReportePremioSeleccionar.cbCarrera.SelectedValue, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
         Me.VwPremiosTableAdapter.FillByIdCarrera(bdSIGAP_DataSet.VwPremios, idCarrera) ' <-- CAMBIAR EL 26 POR EL PARAMETRO
         Dim setup = Me.ReportViewer1.GetPageSettings()
         setup.Margins = New System.Drawing.Printing.Margins(1, 1, 1, 1)
