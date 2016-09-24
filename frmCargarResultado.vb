@@ -107,7 +107,9 @@
         frmVerResultados.nResultados.Value = totalGanadores
         frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
 
-        MarcarGanadores()
+        'MarcarGanadores()
+        frmVerResultados.Show()
+
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
