@@ -276,7 +276,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Hipodromo</rd:DefaultName>
-          <Left>0cm</Left>
           <Height>0.71727cm</Height>
           <Width>7.32516cm</Width>
           <Style>
@@ -311,7 +310,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.75255cm</Top>
-          <Left>0cm</Left>
           <Height>0.49389cm</Height>
           <Width>7.32516cm</Width>
           <ZIndex>1</ZIndex>
@@ -332,7 +330,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!Fecha.Value, "DS_Premios")</Value>
+                  <Value>=First(Fields!Fecha.Value, "DataSet1")</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -402,7 +400,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!Palco.Value, "DS_Premios")</Value>
+                  <Value>=First(Fields!Palco.Value, "DataSet1")</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -471,7 +469,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!NroCarrera.Value, "DS_Premios")</Value>
+                  <Value>=First(Fields!NroCarrera.Value, "DataSet1")</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -506,7 +504,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!NombreCarrera.Value, "DS_Premios")</Value>
+                  <Value>=First(Fields!NombreCarrera.Value, "DataSet1")</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Bold</FontWeight>
