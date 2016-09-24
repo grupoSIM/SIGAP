@@ -16,6 +16,7 @@
         ' Me.Tb_CarrerasCaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_CarrerasCaballos)
         CargarCarreras()
 
+
     End Sub
 
     Private Function CargarCarreras()
@@ -29,6 +30,46 @@
         Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, cbCarrera.SelectedValue)
 
 
+
+    End Function
+
+    Private Function MarcarGanadores()
+        Dim dtRemates As DataTable
+        Dim dtDetallesRemates As DataTable
+        Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+        Dim drCarreraCaballo As DataRow
+        Dim drCarreraCaballo2 As DataRow
+
+        'Tb_CarrerasCaballosTableAdapter.FillByCarrera(carrerasCaballos, cbCarrera.SelectedValue)
+
+        dtRemates = Tb_RematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+        For Each rowR As DataRow In dtRemates.Rows
+            dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+            For Each rowDR As DataRow In dtDetallesRemates.Rows
+                drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
+                If (rowDR("Luz") = "0") Then
+                    If (drCarreraCaballo("Posicion") = 1 And drCarreraCaballo("Luz")) Then
+                        rowDR("ImportePremio") = rowDR("ImportePremio")
+                    Else
+                        rowDR("ImportePremio") = 0
+                    End If
+                Else
+                    If (rowDR("Luz") = "1") Then
+                        For Each rowDR2 As DataRow In dtDetallesRemates.Rows
+                            drCarreraCaballo2 = dtCarrerasCaballos.Rows.Find(rowDR2("IdCarreraCaballo"))
+                            If (rowDR2("Luz") = "0" And drCarreraCaballo2("Posicion") = 1 And drCarreraCaballo2("Luz")) Then
+                                rowDR("ImportePremio") = 0
+                            End If
+                        Next
+                    Else
+                        If (drCarreraCaballo("Posicion") <> 1) Then
+                            rowDR("ImportePremio") = 0
+                        End If
+                    End If
+                End If
+                'MsgBox(drCarreraCaballo("IdCaballo"))
+            Next
+        Next
 
     End Function
 
@@ -61,11 +102,12 @@
             End If
         Next
 
-        frmVerResultados.Show()
+        'frmVerResultados.Show()
         frmVerResultados.txResultado.Text = totalGanadores.ToString()
         frmVerResultados.nResultados.Value = totalGanadores
         frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
 
+        MarcarGanadores()
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click

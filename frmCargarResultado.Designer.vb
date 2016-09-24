@@ -29,16 +29,8 @@ Partial Class frmCargarResultado
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
-        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
         Me.cbJornada = New System.Windows.Forms.ComboBox()
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.cbCarrera = New System.Windows.Forms.ComboBox()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet1 = New SIGAP.bdSIGAP_DataSet()
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -54,30 +46,40 @@ Partial Class frmCargarResultado
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.nGanadores = New System.Windows.Forms.NumericUpDown()
         Me.txResultado = New System.Windows.Forms.TextBox()
-        Me.TbCarrerasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet1 = New SIGAP.bdSIGAP_DataSet()
+        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.OrdenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PosicionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LuzDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
+        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.TbCarrerasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
+        Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdSIGAP_DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.nGanadores, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -125,20 +127,6 @@ Partial Class frmCargarResultado
         Me.DataGridView1.Size = New System.Drawing.Size(655, 150)
         Me.DataGridView1.TabIndex = 6
         '
-        'TbCarrerasCaballosBindingSource
-        '
-        Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
-        Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tb_CarrerasCaballosTableAdapter
-        '
-        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
-        '
         'cbJornada
         '
         Me.cbJornada.DataSource = Me.TbJornadasBindingSource
@@ -150,15 +138,6 @@ Partial Class frmCargarResultado
         Me.cbJornada.TabIndex = 7
         Me.cbJornada.ValueMember = "Id"
         '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
-        '
         'cbCarrera
         '
         Me.cbCarrera.DataSource = Me.TbCarrerasBindingSource
@@ -169,20 +148,6 @@ Partial Class frmCargarResultado
         Me.cbCarrera.Size = New System.Drawing.Size(203, 21)
         Me.cbCarrera.TabIndex = 8
         Me.cbCarrera.ValueMember = "Id"
-        '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet1
-        '
-        'BdSIGAP_DataSet1
-        '
-        Me.BdSIGAP_DataSet1.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tb_CarrerasTableAdapter
-        '
-        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
         '
         'Button1
         '
@@ -315,20 +280,6 @@ Partial Class frmCargarResultado
         Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.PrintToolStripButton.Text = "&Print"
         '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
-        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
-        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
-        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'nGanadores
         '
         Me.nGanadores.Location = New System.Drawing.Point(239, 295)
@@ -343,19 +294,30 @@ Partial Class frmCargarResultado
         Me.txResultado.Size = New System.Drawing.Size(100, 20)
         Me.txResultado.TabIndex = 13
         '
-        'TbCarrerasBindingSource1
+        'TbCarrerasCaballosBindingSource
         '
-        Me.TbCarrerasBindingSource1.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource1.DataSource = Me.BdSIGAP_DataSet
+        Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
+        Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'TbCaballosBindingSource
+        'BdSIGAP_DataSet
         '
-        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
-        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Tb_CaballosTableAdapter
+        'TbCarrerasBindingSource
         '
-        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet1
+        '
+        'BdSIGAP_DataSet1
+        '
+        Me.BdSIGAP_DataSet1.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TbJornadasBindingSource
+        '
+        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -392,6 +354,11 @@ Partial Class frmCargarResultado
         Me.IdCaballoDataGridViewTextBoxColumn.ValueMember = "Id"
         Me.IdCaballoDataGridViewTextBoxColumn.Width = 150
         '
+        'TbCaballosBindingSource
+        '
+        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
+        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'NoTomaNuevosRematesDataGridViewCheckBoxColumn
         '
         Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.DataPropertyName = "NoTomaNuevosRemates"
@@ -410,6 +377,51 @@ Partial Class frmCargarResultado
         Me.LuzDataGridViewCheckBoxColumn.DataPropertyName = "Luz"
         Me.LuzDataGridViewCheckBoxColumn.HeaderText = "Luz"
         Me.LuzDataGridViewCheckBoxColumn.Name = "LuzDataGridViewCheckBoxColumn"
+        '
+        'Tb_CarrerasCaballosTableAdapter
+        '
+        Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_JornadasTableAdapter
+        '
+        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
+        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
+        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'TbCarrerasBindingSource1
+        '
+        Me.TbCarrerasBindingSource1.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource1.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_CaballosTableAdapter
+        '
+        Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_RematesTableAdapter
+        '
+        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_DetalleRematesTableAdapter
+        '
+        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
         '
         'frmCargarResultado
         '
@@ -430,17 +442,17 @@ Partial Class frmCargarResultado
         Me.Name = "frmCargarResultado"
         Me.Text = "frmCargarResultado"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdSIGAP_DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         CType(Me.nGanadores, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -488,4 +500,6 @@ Partial Class frmCargarResultado
     Friend WithEvents NoTomaNuevosRematesDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents PosicionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LuzDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents Tb_RematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter
+    Friend WithEvents Tb_DetalleRematesTableAdapter As bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter
 End Class
