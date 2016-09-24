@@ -23,36 +23,36 @@ Partial Class frmReportePremioSeleccionar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.cbCarrera = New System.Windows.Forms.ComboBox()
         Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cbCarrera
         '
-        Me.ComboBox1.DataSource = Me.TbCarrerasBindingSource
-        Me.ComboBox1.DisplayMember = "Nombre"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(97, 28)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(285, 21)
-        Me.ComboBox1.TabIndex = 0
-        Me.ComboBox1.ValueMember = "Id"
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.cbCarrera.DataSource = Me.TbCarrerasBindingSource
+        Me.cbCarrera.DisplayMember = "Nombre"
+        Me.cbCarrera.FormattingEnabled = True
+        Me.cbCarrera.Location = New System.Drawing.Point(97, 28)
+        Me.cbCarrera.Name = "cbCarrera"
+        Me.cbCarrera.Size = New System.Drawing.Size(285, 21)
+        Me.cbCarrera.TabIndex = 0
+        Me.cbCarrera.ValueMember = "Id"
         '
         'TbCarrerasBindingSource
         '
         Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
         Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Tb_CarrerasTableAdapter
         '
@@ -83,17 +83,17 @@ Partial Class frmReportePremioSeleccionar
         Me.ClientSize = New System.Drawing.Size(426, 128)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbCarrera)
         Me.Name = "frmReportePremioSeleccionar"
-        Me.Text = "frmReportePremioSeleccionar"
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Reporte Premios"
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbCarrera As ComboBox
     Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
