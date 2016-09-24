@@ -2,7 +2,10 @@
     Private Sub frmCajaPalco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'bdSIGAP_DataSet.VwCajaPalco' table. You can move, or remove it, as needed.
         'Me.VwCajaPalcoTableAdapter.Fill(Me.bdSIGAP_DataSet.VwCajaPalco)
-        Me.VwCajaPalcoTableAdapter.FillByIdCarrera(Me.bdSIGAP_DataSet.VwCajaPalco, 26) '<-- CAMBIAR 26 POR EL PARAMETRO
+        Dim idCarrera As Integer
+        idCarrera = frmReporteCierreCaja.cbCarrera.SelectedValue
+
+        Me.VwCajaPalcoTableAdapter.FillByIdCarrera(Me.bdSIGAP_DataSet.VwCajaPalco, idCarrera) '<-- CAMBIAR 26 POR EL PARAMETRO
 
         Dim setup = Me.ReportViewer1.GetPageSettings()
         setup.Margins = New System.Drawing.Printing.Margins(1, 1, 1, 1)

@@ -25,12 +25,12 @@ Partial Class frmReporteCierreCaja
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.cbCarrera = New System.Windows.Forms.ComboBox()
         Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -51,26 +51,26 @@ Partial Class frmReporteCierreCaja
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Carrera:"
         '
-        'ComboBox1
+        'cbCarrera
         '
-        Me.ComboBox1.DataSource = Me.TbCarrerasBindingSource
-        Me.ComboBox1.DisplayMember = "Nombre"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(84, 23)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(285, 21)
-        Me.ComboBox1.TabIndex = 3
-        Me.ComboBox1.ValueMember = "Id"
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.cbCarrera.DataSource = Me.TbCarrerasBindingSource
+        Me.cbCarrera.DisplayMember = "Nombre"
+        Me.cbCarrera.FormattingEnabled = True
+        Me.cbCarrera.Location = New System.Drawing.Point(84, 23)
+        Me.cbCarrera.Name = "cbCarrera"
+        Me.cbCarrera.Size = New System.Drawing.Size(285, 21)
+        Me.cbCarrera.TabIndex = 3
+        Me.cbCarrera.ValueMember = "Id"
         '
         'TbCarrerasBindingSource
         '
         Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
         Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Tb_CarrerasTableAdapter
         '
@@ -83,11 +83,11 @@ Partial Class frmReporteCierreCaja
         Me.ClientSize = New System.Drawing.Size(407, 108)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbCarrera)
         Me.Name = "frmReporteCierreCaja"
         Me.Text = "frmReporteCierreCaja"
-        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -95,7 +95,7 @@ Partial Class frmReporteCierreCaja
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbCarrera As ComboBox
     Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
