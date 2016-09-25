@@ -64,7 +64,7 @@
                 End If
             Next
             premio = (rowR("TotalApuestas") * ((100 - rowR("PorcentajeCasa")) / 100))
-            premio = Decimal.Round(premio / 5, 0) * 5
+            premio = Decimal.Round(premio / 10, 0) * 10
             rowR("ImportePremio") = premio
             For Each rowDR As DataRow In dtDetallesRemates.Rows
                 drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))

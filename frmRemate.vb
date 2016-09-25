@@ -110,7 +110,7 @@
         Next
 
         premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
-        premio = Decimal.Round(premio / 5, 0) * 5
+        premio = Decimal.Round(premio / 10, 0) * 10
 
         Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
         i = 0
@@ -158,7 +158,7 @@
         Next
 
         premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
-        premio = Decimal.Round(premio / 5) * 5
+        premio = Decimal.Round(premio / 10) * 10
 
         Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
         i = 0
