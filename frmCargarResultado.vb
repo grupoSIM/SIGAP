@@ -33,6 +33,52 @@
 
     End Function
 
+    Private Function recalcularPremio()
+        Dim dtRemates = Tb_RematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+        Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+        Dim dtDetallesRemates As DataTable
+        Dim ganadores As Integer = 0
+        Dim corrieron As Integer = 0
+        Dim drCarreraCaballo As DataRow
+        Dim premio As Decimal
+
+        For Each rowCC As DataRow In dtCarrerasCaballos.Rows
+            If (rowCC("Posicion") = 1) Then
+                ganadores += 1
+            End If
+            If (rowCC("Posicion") <> 0) Then
+                corrieron += 1
+            End If
+        Next
+
+        Dim dtPorcentajeCasa = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(corrieron).Rows(0)
+
+        For Each rowR As DataRow In dtRemates.Rows
+            rowR("PorcentajeCasa") = dtPorcentajeCasa("Porcentaje")
+            dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+            For Each rowDR As DataRow In dtDetallesRemates.Rows
+                drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
+                If (drCarreraCaballo("Posicion") = 0) Then
+                    rowR("TotalApuestas") = rowR("TotalApuestas") - rowDR("ImporteApuesta")
+                    rowDR("ImportePremio") = 0
+                End If
+            Next
+            premio = (rowR("TotalApuestas") * ((100 - rowR("PorcentajeCasa")) / 100))
+            premio = Decimal.Round(premio / 5, 0) * 5
+            rowR("ImportePremio") = premio
+            For Each rowDR As DataRow In dtDetallesRemates.Rows
+                drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
+                If (drCarreraCaballo("Posicion") <> 0) Then
+                    If (ganadores > 0) Then
+                        rowDR("ImportePremio") = premio / ganadores
+                    End If
+                End If
+            Next
+        Next
+
+
+    End Function
+
     Private Function MarcarGanadores()
         Dim dtRemates As DataTable
         Dim dtDetallesRemates As DataTable
@@ -58,6 +104,9 @@
                         For Each rowDR2 As DataRow In dtDetallesRemates.Rows
                             drCarreraCaballo2 = dtCarrerasCaballos.Rows.Find(rowDR2("IdCarreraCaballo"))
                             If (rowDR2("Luz") = "0" And drCarreraCaballo2("Posicion") = 1 And drCarreraCaballo2("Luz")) Then
+                                rowDR("ImportePremio") = 0
+                            End If
+                            If (drCarreraCaballo2("Posicion") > 2) Then
                                 rowDR("ImportePremio") = 0
                             End If
                         Next

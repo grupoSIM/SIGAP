@@ -25,6 +25,8 @@ Partial Class frmRemate
         Me.components = New System.ComponentModel.Container()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.cmbCarrera = New System.Windows.Forms.ComboBox()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.txtRemate = New System.Windows.Forms.TextBox()
         Me.txtPorcentajeCasa = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -38,6 +40,7 @@ Partial Class frmRemate
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbPalco = New System.Windows.Forms.ComboBox()
+        Me.TbPalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.lblNumero = New System.Windows.Forms.Label()
         Me.lblCaballo = New System.Windows.Forms.Label()
@@ -116,7 +119,6 @@ Partial Class frmRemate
         Me.txtApostador8 = New System.Windows.Forms.TextBox()
         Me.txtCaballo8 = New System.Windows.Forms.TextBox()
         Me.txtNumero8 = New System.Windows.Forms.TextBox()
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
@@ -124,11 +126,9 @@ Partial Class frmRemate
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
         Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
-        Me.TbPalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -153,6 +153,16 @@ Partial Class frmRemate
         Me.cmbCarrera.TabStop = False
         Me.cmbCarrera.ValueMember = "Id"
         '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'txtRemate
         '
         Me.txtRemate.Enabled = False
@@ -175,8 +185,7 @@ Partial Class frmRemate
         Me.btnGuardar.Location = New System.Drawing.Point(395, 386)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardar.TabIndex = 95
-        Me.btnGuardar.TabStop = False
+        Me.btnGuardar.TabIndex = 99
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -204,6 +213,7 @@ Partial Class frmRemate
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(104, 23)
         Me.btnImprimir.TabIndex = 100
+        Me.btnImprimir.TabStop = False
         Me.btnImprimir.Text = "Guardar e Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = True
         '
@@ -273,6 +283,11 @@ Partial Class frmRemate
         Me.cmbPalco.TabIndex = 0
         Me.cmbPalco.TabStop = False
         Me.cmbPalco.ValueMember = "Id"
+        '
+        'TbPalcosBindingSource
+        '
+        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
+        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'txtId
         '
@@ -1061,11 +1076,6 @@ Partial Class frmRemate
         Me.txtNumero8.TabStop = False
         Me.txtNumero8.Visible = False
         '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Tb_PalcosTableAdapter
         '
         Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
@@ -1093,16 +1103,6 @@ Partial Class frmRemate
         'Tb_RematesTableAdapter
         '
         Me.Tb_RematesTableAdapter.ClearBeforeFill = True
-        '
-        'TbPalcosBindingSource
-        '
-        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
-        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'frmRemate
         '
@@ -1205,9 +1205,9 @@ Partial Class frmRemate
         Me.Name = "frmRemate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Remate"
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
