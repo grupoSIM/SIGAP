@@ -25,8 +25,15 @@ Partial Class frmJornada
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmJornada))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdHipodromoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TbHipodromosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEventoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TbEventosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.Tb_HipodromosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_HipodromosTableAdapter()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -43,22 +50,15 @@ Partial Class frmJornada
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
-        Me.TbEventosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_EventosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_EventosTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdHipodromoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEventoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbHipodromosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -72,6 +72,25 @@ Partial Class frmJornada
         Me.DataGridView1.Size = New System.Drawing.Size(744, 304)
         Me.DataGridView1.TabIndex = 0
         '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Visible = False
+        '
+        'IdHipodromoDataGridViewTextBoxColumn
+        '
+        Me.IdHipodromoDataGridViewTextBoxColumn.DataPropertyName = "IdHipodromo"
+        Me.IdHipodromoDataGridViewTextBoxColumn.DataSource = Me.TbHipodromosBindingSource
+        Me.IdHipodromoDataGridViewTextBoxColumn.DisplayMember = "Nombre"
+        Me.IdHipodromoDataGridViewTextBoxColumn.HeaderText = "Hipódromo"
+        Me.IdHipodromoDataGridViewTextBoxColumn.Name = "IdHipodromoDataGridViewTextBoxColumn"
+        Me.IdHipodromoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdHipodromoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdHipodromoDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdHipodromoDataGridViewTextBoxColumn.Width = 200
+        '
         'TbHipodromosBindingSource
         '
         Me.TbHipodromosBindingSource.DataMember = "tb_Hipodromos"
@@ -82,6 +101,41 @@ Partial Class frmJornada
         Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
         Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 200
+        '
+        'FechaDataGridViewTextBoxColumn
+        '
+        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
+        '
+        'IdEventoDataGridViewTextBoxColumn
+        '
+        Me.IdEventoDataGridViewTextBoxColumn.DataPropertyName = "IdEvento"
+        Me.IdEventoDataGridViewTextBoxColumn.DataSource = Me.TbEventosBindingSource
+        Me.IdEventoDataGridViewTextBoxColumn.DisplayMember = "NombreEvento"
+        Me.IdEventoDataGridViewTextBoxColumn.HeaderText = "Evento"
+        Me.IdEventoDataGridViewTextBoxColumn.Name = "IdEventoDataGridViewTextBoxColumn"
+        Me.IdEventoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdEventoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdEventoDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdEventoDataGridViewTextBoxColumn.Width = 200
+        '
+        'TbEventosBindingSource
+        '
+        Me.TbEventosBindingSource.DataMember = "tb_Eventos"
+        Me.TbEventosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'TbJornadasBindingSource
+        '
+        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
@@ -89,8 +143,9 @@ Partial Class frmJornada
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
-        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Me.Tb_EventosTableAdapter
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
         Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
         Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
@@ -207,6 +262,7 @@ Partial Class frmJornada
         'BindingNavigator1
         '
         Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.BindingNavigator1.BindingSource = Me.TbJornadasBindingSource
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.PrintToolStripButton})
@@ -221,67 +277,13 @@ Partial Class frmJornada
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_JornadasTableAdapter
         '
         Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
         '
-        'TbEventosBindingSource
-        '
-        Me.TbEventosBindingSource.DataMember = "tb_Eventos"
-        Me.TbEventosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_EventosTableAdapter
         '
         Me.Tb_EventosTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Visible = False
-        '
-        'IdHipodromoDataGridViewTextBoxColumn
-        '
-        Me.IdHipodromoDataGridViewTextBoxColumn.DataPropertyName = "IdHipodromo"
-        Me.IdHipodromoDataGridViewTextBoxColumn.DataSource = Me.TbHipodromosBindingSource
-        Me.IdHipodromoDataGridViewTextBoxColumn.DisplayMember = "Nombre"
-        Me.IdHipodromoDataGridViewTextBoxColumn.HeaderText = "Hipódromo"
-        Me.IdHipodromoDataGridViewTextBoxColumn.Name = "IdHipodromoDataGridViewTextBoxColumn"
-        Me.IdHipodromoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.IdHipodromoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdHipodromoDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdHipodromoDataGridViewTextBoxColumn.Width = 200
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        Me.DescripcionDataGridViewTextBoxColumn.Width = 200
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        '
-        'IdEventoDataGridViewTextBoxColumn
-        '
-        Me.IdEventoDataGridViewTextBoxColumn.DataPropertyName = "IdEvento"
-        Me.IdEventoDataGridViewTextBoxColumn.DataSource = Me.TbEventosBindingSource
-        Me.IdEventoDataGridViewTextBoxColumn.DisplayMember = "NombreEvento"
-        Me.IdEventoDataGridViewTextBoxColumn.HeaderText = "Evento"
-        Me.IdEventoDataGridViewTextBoxColumn.Name = "IdEventoDataGridViewTextBoxColumn"
-        Me.IdEventoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.IdEventoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdEventoDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdEventoDataGridViewTextBoxColumn.Width = 200
         '
         'frmJornada
         '
@@ -295,11 +297,11 @@ Partial Class frmJornada
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbHipodromosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
