@@ -280,7 +280,7 @@ Partial Class frmDetalleRemate
         Me.Controls.Add(Me.Tb_DetalleRematesBindingNavigator)
         Me.Name = "frmDetalleRemate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmDetalleRemate"
+        Me.Text = "Listado de Detalles Remates"
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_DetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tb_DetalleRematesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

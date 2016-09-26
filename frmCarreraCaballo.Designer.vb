@@ -241,6 +241,7 @@ Partial Class frmCarreraCaballo
         'nbCaballo1
         '
         Me.nbCaballo1.Location = New System.Drawing.Point(15, 154)
+        Me.nbCaballo1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nbCaballo1.Name = "nbCaballo1"
         Me.nbCaballo1.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo1.TabIndex = 20
