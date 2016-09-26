@@ -40,8 +40,8 @@
         frmCargarResultado.Show()
     End Sub
 
-    Private Sub RematesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RematesToolStripMenuItem1.Click
-        frmRemates.Show()
+    Private Sub RematesToolStripMenuItem1_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub VerResultadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerResultadosToolStripMenuItem.Click
@@ -78,5 +78,9 @@
 
     Private Sub ReporteDevolucionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDevolucionesToolStripMenuItem.Click
         frmReporteDevolucionesSeleccionar.Show()
+    End Sub
+
+    Private Sub ListadoDeRematesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeRematesToolStripMenuItem.Click
+        frmRemates.Show()
     End Sub
 End Class

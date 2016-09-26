@@ -1066,7 +1066,7 @@ Partial Class frmCargarLlave
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(106, 23)
         Me.btCancelar.TabIndex = 101
-        Me.btCancelar.Text = "Cancelar"
+        Me.btCancelar.Text = "Salir"
         Me.btCancelar.UseVisualStyleBackColor = True
         '
         'frmCargarLlave
