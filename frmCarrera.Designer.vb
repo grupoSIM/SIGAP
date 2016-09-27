@@ -71,7 +71,7 @@ Partial Class frmCarrera
         Me.DataGridView1.DataSource = Me.TbCarrerasBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(3, 24)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(960, 253)
+        Me.DataGridView1.Size = New System.Drawing.Size(942, 323)
         Me.DataGridView1.TabIndex = 0
         '
         'IdDataGridViewTextBoxColumn
@@ -180,7 +180,7 @@ Partial Class frmCarrera
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(975, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(946, 25)
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -307,10 +307,11 @@ Partial Class frmCarrera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(975, 308)
+        Me.ClientSize = New System.Drawing.Size(946, 347)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmCarrera"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Carreras"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -112,30 +112,50 @@
         premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
         premio = Decimal.Round(premio / 10, 0) * 10
 
-        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
+        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
         i = 0
         For Each row As DataRow In dtCarrerasCaballos.Rows
             Select Case i
                 Case 0
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, premio, chbincluido0.Checked, "")
+                    If (chbincluido0.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, premio, chbincluido0.Checked, "")
+                    End If
                 Case 1
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, premio, chbincluido1.Checked, "")
+                    If (chbincluido1.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, premio, chbincluido1.Checked, "")
+                    End If
                 Case 2
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, premio, chbincluido2.Checked, "")
+                    If (chbincluido2.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, premio, chbincluido2.Checked, "")
+                    End If
                 Case 3
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, premio, chbincluido3.Checked, "")
+                    If (chbincluido3.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, premio, chbincluido3.Checked, "")
+                    End If
                 Case 4
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, premio, chbincluido4.Checked, "")
+                    If (chbincluido4.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, premio, chbincluido4.Checked, "")
+                    End If
                 Case 5
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, premio, chbincluido5.Checked, "")
+                    If (chbincluido5.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, premio, chbincluido5.Checked, "")
+                    End If
                 Case 6
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, premio, chbincluido6.Checked, "")
+                    If (chbincluido6.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, premio, chbincluido6.Checked, "")
+                    End If
                 Case 7
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, premio, chbincluido7.Checked, "")
+                    If (chbincluido7.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, premio, chbincluido7.Checked, "")
+                    End If
                 Case 8
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, premio, chbincluido8.Checked, "")
+                    If (chbincluido8.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, premio, chbincluido8.Checked, "")
+                    End If
                 Case 9
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, premio, chbincluido9.Checked, "")
+                    If (chbincluido9.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, premio, chbincluido9.Checked, "")
+                    End If
             End Select
             i += 1
         Next
@@ -160,30 +180,50 @@
         premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
         premio = Decimal.Round(premio / 10) * 10
 
-        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100)), 1, totalApuestas, vbNull, txtRemate.Text)
+        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
         i = 0
         For Each row As DataRow In dtCarrerasCaballos.Rows
             Select Case i
                 Case 0
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, premio, chbincluido0.Checked, "")
+                    If (chbincluido0.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, premio, chbincluido0.Checked, "")
+                    End If
                 Case 1
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, premio, chbincluido1.Checked, "")
+                    If (chbincluido1.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, premio, chbincluido1.Checked, "")
+                    End If
                 Case 2
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, premio, chbincluido2.Checked, "")
+                    If (chbincluido2.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, premio, chbincluido2.Checked, "")
+                    End If
                 Case 3
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, premio, chbincluido3.Checked, "")
+                    If (chbincluido3.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, premio, chbincluido3.Checked, "")
+                    End If
                 Case 4
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, premio, chbincluido4.Checked, "")
+                    If (chbincluido4.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, premio, chbincluido4.Checked, "")
+                    End If
                 Case 5
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, premio, chbincluido5.Checked, "")
+                    If (chbincluido5.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, premio, chbincluido5.Checked, "")
+                    End If
                 Case 6
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, premio, chbincluido6.Checked, "")
+                    If (chbincluido6.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, premio, chbincluido6.Checked, "")
+                    End If
                 Case 7
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, premio, chbincluido7.Checked, "")
+                    If (chbincluido7.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, premio, chbincluido7.Checked, "")
+                    End If
                 Case 8
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, premio, chbincluido8.Checked, "")
+                    If (chbincluido8.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, premio, chbincluido8.Checked, "")
+                    End If
                 Case 9
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, premio, chbincluido9.Checked, "")
+                    If (chbincluido9.Checked) Then
+                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, premio, chbincluido9.Checked, "")
+                    End If
             End Select
             i += 1
         Next

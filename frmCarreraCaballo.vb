@@ -213,6 +213,7 @@
         filaCarrera("PorcentajeCasa") = nProcentajeCasa.Value
         filaCarrera("PorcentajeUltimoRemate") = nProcentajeCasa.Value
         filaCarrera("TipoCarrera") = "Normal"
+        filaCarrera("Observaciones") = " "
 
         Me.Validate()
         Me.TbCarrerasBindingSource.EndEdit()
