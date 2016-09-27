@@ -144,6 +144,12 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'lo q hacia al guardar
+        Me.Validate()
+        Me.TbCarrerasCaballosBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+
         Dim totalGanadores As Integer
 
         For i As Integer = 0 To DataGridView1.RowCount - 1
@@ -162,13 +168,15 @@
         frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
-        Me.Validate()
-        Me.TbCarrerasCaballosBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub cbJornada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJornada.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub nGanadores_ValueChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

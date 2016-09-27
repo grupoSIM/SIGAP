@@ -43,7 +43,7 @@
 
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -212,7 +212,8 @@
         filaCarrera("Estado") = 0
         filaCarrera("PorcentajeCasa") = nProcentajeCasa.Value
         filaCarrera("PorcentajeUltimoRemate") = nProcentajeCasa.Value
-        filaCarrera("TipoCarrera") = cbTipo.Text
+        filaCarrera("TipoCarrera") = "Normal"
+        filaCarrera("Observaciones") = " "
 
         Me.Validate()
         Me.TbCarrerasBindingSource.EndEdit()

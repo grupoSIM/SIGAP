@@ -62,7 +62,7 @@ Partial Class frmEvento
         Me.DataGridView1.DataSource = Me.TbEventosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(2, 28)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(453, 232)
+        Me.DataGridView1.Size = New System.Drawing.Size(538, 232)
         Me.DataGridView1.TabIndex = 0
         '
         'TbEventosBindingSource
@@ -93,7 +93,7 @@ Partial Class frmEvento
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(457, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(541, 25)
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -235,6 +235,7 @@ Partial Class frmEvento
         Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
         Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
         Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 200
         '
         'RedondeoDataGridViewTextBoxColumn
         '
@@ -246,7 +247,7 @@ Partial Class frmEvento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(457, 262)
+        Me.ClientSize = New System.Drawing.Size(541, 262)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmEvento"

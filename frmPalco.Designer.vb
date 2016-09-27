@@ -25,8 +25,10 @@ Partial Class frmPalco
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPalco))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Tb_PalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
+        Me.TbRematadoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_PalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
@@ -43,9 +45,7 @@ Partial Class frmPalco
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
-        Me.TbRematadoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PalcoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,12 +53,12 @@ Partial Class frmPalco
         Me.IdRematadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.UltimoIdRematadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -69,18 +69,28 @@ Partial Class frmPalco
         Me.DataGridView1.DataSource = Me.Tb_PalcosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(1, 28)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(501, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(505, 176)
         Me.DataGridView1.TabIndex = 0
         '
-        'Tb_PalcosBindingSource
+        'TbJornadasBindingSource
         '
-        Me.Tb_PalcosBindingSource.DataMember = "tb_Palcos"
-        Me.Tb_PalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'BdSIGAP_DataSet
         '
         Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
         Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TbRematadoresBindingSource
+        '
+        Me.TbRematadoresBindingSource.DataMember = "tb_Rematadores"
+        Me.TbRematadoresBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_PalcosBindingSource
+        '
+        Me.Tb_PalcosBindingSource.DataMember = "tb_Palcos"
+        Me.Tb_PalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Tb_PalcosTableAdapter
         '
@@ -93,9 +103,11 @@ Partial Class frmPalco
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
         Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
         Me.TableAdapterManager.tb_PalcosTableAdapter = Me.Tb_PalcosTableAdapter
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -221,19 +233,9 @@ Partial Class frmPalco
         Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.PrintToolStripButton.Text = "&Print"
         '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_JornadasTableAdapter
         '
         Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
-        '
-        'TbRematadoresBindingSource
-        '
-        Me.TbRematadoresBindingSource.DataMember = "tb_Rematadores"
-        Me.TbRematadoresBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Tb_RematadoresTableAdapter
         '
@@ -264,7 +266,7 @@ Partial Class frmPalco
         Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdJornadaDataGridViewTextBoxColumn.Width = 150
+        Me.IdJornadaDataGridViewTextBoxColumn.Width = 200
         '
         'IdRematadorDataGridViewTextBoxColumn
         '
@@ -278,7 +280,7 @@ Partial Class frmPalco
         Me.IdRematadorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.IdRematadorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.IdRematadorDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdRematadorDataGridViewTextBoxColumn.Width = 150
+        Me.IdRematadorDataGridViewTextBoxColumn.Width = 200
         '
         'UltimoIdRematadorDataGridViewTextBoxColumn
         '
@@ -295,15 +297,16 @@ Partial Class frmPalco
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmPalco"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Palco"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tb_PalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

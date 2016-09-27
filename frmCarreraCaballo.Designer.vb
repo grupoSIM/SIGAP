@@ -29,8 +29,6 @@ Partial Class frmCarreraCaballo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cbTipo = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txMetros = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -162,27 +160,6 @@ Partial Class frmCarreraCaballo
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Porcentaje Casa:"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(51, 98)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(31, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Tipo:"
-        '
-        'cbTipo
-        '
-        Me.cbTipo.AutoCompleteCustomSource.AddRange(New String() {"Normal", "Llave"})
-        Me.cbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.cbTipo.FormattingEnabled = True
-        Me.cbTipo.Items.AddRange(New Object() {"Normal", "Llave"})
-        Me.cbTipo.Location = New System.Drawing.Point(87, 95)
-        Me.cbTipo.Name = "cbTipo"
-        Me.cbTipo.Size = New System.Drawing.Size(121, 21)
-        Me.cbTipo.TabIndex = 9
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.txMetros)
@@ -193,21 +170,19 @@ Partial Class frmCarreraCaballo
         Me.GroupBox1.Controls.Add(Me.nProcentajeCasa)
         Me.GroupBox1.Controls.Add(Me.cbJornada)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.cbTipo)
-        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(570, 174)
+        Me.GroupBox1.Size = New System.Drawing.Size(570, 136)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "General"
         '
         'txMetros
         '
-        Me.txMetros.Location = New System.Drawing.Point(88, 125)
+        Me.txMetros.Location = New System.Drawing.Point(88, 96)
         Me.txMetros.Name = "txMetros"
         Me.txMetros.Size = New System.Drawing.Size(100, 20)
         Me.txMetros.TabIndex = 18
@@ -216,7 +191,7 @@ Partial Class frmCarreraCaballo
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(40, 128)
+        Me.Label6.Location = New System.Drawing.Point(40, 99)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(42, 13)
         Me.Label6.TabIndex = 17
@@ -256,7 +231,7 @@ Partial Class frmCarreraCaballo
         '
         'agregarCaballo
         '
-        Me.agregarCaballo.Location = New System.Drawing.Point(284, 265)
+        Me.agregarCaballo.Location = New System.Drawing.Point(280, 218)
         Me.agregarCaballo.Name = "agregarCaballo"
         Me.agregarCaballo.Size = New System.Drawing.Size(103, 23)
         Me.agregarCaballo.TabIndex = 18
@@ -265,7 +240,8 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo1
         '
-        Me.nbCaballo1.Location = New System.Drawing.Point(19, 201)
+        Me.nbCaballo1.Location = New System.Drawing.Point(15, 154)
+        Me.nbCaballo1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nbCaballo1.Name = "nbCaballo1"
         Me.nbCaballo1.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo1.TabIndex = 20
@@ -273,7 +249,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo2
         '
-        Me.nbCaballo2.Location = New System.Drawing.Point(19, 227)
+        Me.nbCaballo2.Location = New System.Drawing.Point(15, 180)
         Me.nbCaballo2.Name = "nbCaballo2"
         Me.nbCaballo2.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo2.TabIndex = 22
@@ -286,7 +262,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo1.DataSource = Me.Tb_CaballosBindingSource1
         Me.cbCaballo1.DisplayMember = "CaballoNombre"
         Me.cbCaballo1.FormattingEnabled = True
-        Me.cbCaballo1.Location = New System.Drawing.Point(82, 201)
+        Me.cbCaballo1.Location = New System.Drawing.Point(78, 154)
         Me.cbCaballo1.Name = "cbCaballo1"
         Me.cbCaballo1.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo1.TabIndex = 29
@@ -304,7 +280,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo2.DataSource = Me.Tb_CaballosBindingSource2
         Me.cbCaballo2.DisplayMember = "CaballoNombre"
         Me.cbCaballo2.FormattingEnabled = True
-        Me.cbCaballo2.Location = New System.Drawing.Point(82, 227)
+        Me.cbCaballo2.Location = New System.Drawing.Point(78, 180)
         Me.cbCaballo2.Name = "cbCaballo2"
         Me.cbCaballo2.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo2.TabIndex = 30
@@ -317,7 +293,7 @@ Partial Class frmCarreraCaballo
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(284, 201)
+        Me.Button1.Location = New System.Drawing.Point(280, 154)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 44
@@ -326,7 +302,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo3
         '
-        Me.nbCaballo3.Location = New System.Drawing.Point(19, 253)
+        Me.nbCaballo3.Location = New System.Drawing.Point(15, 206)
         Me.nbCaballo3.Name = "nbCaballo3"
         Me.nbCaballo3.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo3.TabIndex = 45
@@ -335,7 +311,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo4
         '
-        Me.nbCaballo4.Location = New System.Drawing.Point(19, 279)
+        Me.nbCaballo4.Location = New System.Drawing.Point(15, 232)
         Me.nbCaballo4.Name = "nbCaballo4"
         Me.nbCaballo4.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo4.TabIndex = 46
@@ -344,7 +320,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo5
         '
-        Me.nbCaballo5.Location = New System.Drawing.Point(19, 305)
+        Me.nbCaballo5.Location = New System.Drawing.Point(15, 258)
         Me.nbCaballo5.Name = "nbCaballo5"
         Me.nbCaballo5.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo5.TabIndex = 47
@@ -353,7 +329,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo6
         '
-        Me.nbCaballo6.Location = New System.Drawing.Point(19, 331)
+        Me.nbCaballo6.Location = New System.Drawing.Point(15, 284)
         Me.nbCaballo6.Name = "nbCaballo6"
         Me.nbCaballo6.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo6.TabIndex = 48
@@ -362,7 +338,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo7
         '
-        Me.nbCaballo7.Location = New System.Drawing.Point(19, 357)
+        Me.nbCaballo7.Location = New System.Drawing.Point(15, 310)
         Me.nbCaballo7.Name = "nbCaballo7"
         Me.nbCaballo7.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo7.TabIndex = 49
@@ -371,7 +347,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo8
         '
-        Me.nbCaballo8.Location = New System.Drawing.Point(19, 384)
+        Me.nbCaballo8.Location = New System.Drawing.Point(15, 337)
         Me.nbCaballo8.Name = "nbCaballo8"
         Me.nbCaballo8.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo8.TabIndex = 50
@@ -380,7 +356,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo9
         '
-        Me.nbCaballo9.Location = New System.Drawing.Point(19, 409)
+        Me.nbCaballo9.Location = New System.Drawing.Point(15, 362)
         Me.nbCaballo9.Name = "nbCaballo9"
         Me.nbCaballo9.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo9.TabIndex = 51
@@ -389,7 +365,7 @@ Partial Class frmCarreraCaballo
         '
         'nbCaballo10
         '
-        Me.nbCaballo10.Location = New System.Drawing.Point(19, 437)
+        Me.nbCaballo10.Location = New System.Drawing.Point(15, 390)
         Me.nbCaballo10.Name = "nbCaballo10"
         Me.nbCaballo10.Size = New System.Drawing.Size(57, 20)
         Me.nbCaballo10.TabIndex = 52
@@ -403,7 +379,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo3.DataSource = Me.Tb_CaballosBindingSource3
         Me.cbCaballo3.DisplayMember = "CaballoNombre"
         Me.cbCaballo3.FormattingEnabled = True
-        Me.cbCaballo3.Location = New System.Drawing.Point(82, 253)
+        Me.cbCaballo3.Location = New System.Drawing.Point(78, 206)
         Me.cbCaballo3.Name = "cbCaballo3"
         Me.cbCaballo3.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo3.TabIndex = 53
@@ -422,7 +398,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo4.DataSource = Me.Tb_CaballosBindingSource4
         Me.cbCaballo4.DisplayMember = "CaballoNombre"
         Me.cbCaballo4.FormattingEnabled = True
-        Me.cbCaballo4.Location = New System.Drawing.Point(82, 279)
+        Me.cbCaballo4.Location = New System.Drawing.Point(78, 232)
         Me.cbCaballo4.Name = "cbCaballo4"
         Me.cbCaballo4.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo4.TabIndex = 54
@@ -441,7 +417,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo5.DataSource = Me.Tb_CaballosBindingSource5
         Me.cbCaballo5.DisplayMember = "CaballoNombre"
         Me.cbCaballo5.FormattingEnabled = True
-        Me.cbCaballo5.Location = New System.Drawing.Point(82, 305)
+        Me.cbCaballo5.Location = New System.Drawing.Point(78, 258)
         Me.cbCaballo5.Name = "cbCaballo5"
         Me.cbCaballo5.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo5.TabIndex = 55
@@ -460,7 +436,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo6.DataSource = Me.Tb_CaballosBindingSource6
         Me.cbCaballo6.DisplayMember = "CaballoNombre"
         Me.cbCaballo6.FormattingEnabled = True
-        Me.cbCaballo6.Location = New System.Drawing.Point(82, 331)
+        Me.cbCaballo6.Location = New System.Drawing.Point(78, 284)
         Me.cbCaballo6.Name = "cbCaballo6"
         Me.cbCaballo6.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo6.TabIndex = 56
@@ -479,7 +455,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo7.DataSource = Me.Tb_CaballosBindingSource7
         Me.cbCaballo7.DisplayMember = "CaballoNombre"
         Me.cbCaballo7.FormattingEnabled = True
-        Me.cbCaballo7.Location = New System.Drawing.Point(82, 357)
+        Me.cbCaballo7.Location = New System.Drawing.Point(78, 310)
         Me.cbCaballo7.Name = "cbCaballo7"
         Me.cbCaballo7.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo7.TabIndex = 57
@@ -498,7 +474,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo8.DataSource = Me.Tb_CaballosBindingSource8
         Me.cbCaballo8.DisplayMember = "CaballoNombre"
         Me.cbCaballo8.FormattingEnabled = True
-        Me.cbCaballo8.Location = New System.Drawing.Point(82, 384)
+        Me.cbCaballo8.Location = New System.Drawing.Point(78, 337)
         Me.cbCaballo8.Name = "cbCaballo8"
         Me.cbCaballo8.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo8.TabIndex = 58
@@ -517,7 +493,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo9.DataSource = Me.Tb_CaballosBindingSource9
         Me.cbCaballo9.DisplayMember = "CaballoNombre"
         Me.cbCaballo9.FormattingEnabled = True
-        Me.cbCaballo9.Location = New System.Drawing.Point(82, 409)
+        Me.cbCaballo9.Location = New System.Drawing.Point(78, 362)
         Me.cbCaballo9.Name = "cbCaballo9"
         Me.cbCaballo9.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo9.TabIndex = 59
@@ -536,7 +512,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo10.DataSource = Me.Tb_CaballosBindingSource10
         Me.cbCaballo10.DisplayMember = "CaballoNombre"
         Me.cbCaballo10.FormattingEnabled = True
-        Me.cbCaballo10.Location = New System.Drawing.Point(82, 437)
+        Me.cbCaballo10.Location = New System.Drawing.Point(78, 390)
         Me.cbCaballo10.Name = "cbCaballo10"
         Me.cbCaballo10.Size = New System.Drawing.Size(186, 21)
         Me.cbCaballo10.TabIndex = 60
@@ -550,7 +526,7 @@ Partial Class frmCarreraCaballo
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(284, 224)
+        Me.Button2.Location = New System.Drawing.Point(280, 177)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 61
@@ -559,7 +535,7 @@ Partial Class frmCarreraCaballo
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(463, 201)
+        Me.Button3.Location = New System.Drawing.Point(463, 154)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(119, 23)
         Me.Button3.TabIndex = 62
@@ -599,9 +575,11 @@ Partial Class frmCarreraCaballo
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter1
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
         Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
         Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
         Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
         Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -647,6 +625,8 @@ Partial Class frmCarreraCaballo
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Name = "frmCarreraCaballo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Cargar Carrera"
         CType(Me.TbJornadasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -685,8 +665,6 @@ Partial Class frmCarreraCaballo
     Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents cbTipo As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents nProcentajeCasa As NumericUpDown
     Friend WithEvents nCarrera As NumericUpDown

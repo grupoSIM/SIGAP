@@ -35,6 +35,8 @@ Partial Class frmJornada
         Me.TbEventosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.Tb_EventosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_EventosTableAdapter()
+        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.Tb_HipodromosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_HipodromosTableAdapter()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
@@ -50,8 +52,6 @@ Partial Class frmJornada
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
-        Me.Tb_EventosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_EventosTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbHipodromosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,6 +151,14 @@ Partial Class frmJornada
         Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tb_EventosTableAdapter
+        '
+        Me.Tb_EventosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_JornadasTableAdapter
+        '
+        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
         '
         'Tb_HipodromosTableAdapter
         '
@@ -277,14 +285,6 @@ Partial Class frmJornada
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_EventosTableAdapter
-        '
-        Me.Tb_EventosTableAdapter.ClearBeforeFill = True
-        '
         'frmJornada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -293,6 +293,7 @@ Partial Class frmJornada
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmJornada"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Jornadas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbHipodromosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

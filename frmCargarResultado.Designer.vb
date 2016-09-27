@@ -57,10 +57,6 @@ Partial Class frmCargarResultado
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.nGanadores = New System.Windows.Forms.NumericUpDown()
-        Me.txResultado = New System.Windows.Forms.TextBox()
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
@@ -79,7 +75,6 @@ Partial Class frmCargarResultado
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        CType(Me.nGanadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -95,7 +90,7 @@ Partial Class frmCargarResultado
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(426, 37)
+        Me.Label2.Location = New System.Drawing.Point(439, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 13)
         Me.Label2.TabIndex = 2
@@ -103,7 +98,7 @@ Partial Class frmCargarResultado
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(472, 34)
+        Me.txtFecha.Location = New System.Drawing.Point(485, 34)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.Size = New System.Drawing.Size(100, 20)
         Me.txtFecha.TabIndex = 3
@@ -111,7 +106,7 @@ Partial Class frmCargarResultado
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 76)
+        Me.Label3.Location = New System.Drawing.Point(37, 64)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 5
@@ -125,7 +120,7 @@ Partial Class frmCargarResultado
         Me.DataGridView1.DataSource = Me.TbCarrerasCaballosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(8, 137)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(655, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(655, 297)
         Me.DataGridView1.TabIndex = 6
         '
         'IdDataGridViewTextBoxColumn
@@ -228,19 +223,19 @@ Partial Class frmCargarResultado
         Me.cbCarrera.DataSource = Me.TbCarrerasBindingSource
         Me.cbCarrera.DisplayMember = "Nombre"
         Me.cbCarrera.FormattingEnabled = True
-        Me.cbCarrera.Location = New System.Drawing.Point(87, 76)
+        Me.cbCarrera.Location = New System.Drawing.Point(87, 61)
         Me.cbCarrera.Name = "cbCarrera"
-        Me.cbCarrera.Size = New System.Drawing.Size(203, 21)
+        Me.cbCarrera.Size = New System.Drawing.Size(350, 21)
         Me.cbCarrera.TabIndex = 8
         Me.cbCarrera.ValueMember = "Id"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(554, 293)
+        Me.Button1.Location = New System.Drawing.Point(554, 448)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(109, 23)
         Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Ver Ganadores"
+        Me.Button1.Text = "Marcar Ganadores"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'BindingNavigator1
@@ -250,7 +245,7 @@ Partial Class frmCargarResultado
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.PrintToolStripButton})
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem})
         Me.BindingNavigator1.Location = New System.Drawing.Point(8, 106)
         Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -258,7 +253,7 @@ Partial Class frmCargarResultado
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(301, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(255, 25)
         Me.BindingNavigator1.TabIndex = 10
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -347,38 +342,6 @@ Partial Class frmCargarResultado
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
-        '
-        'PrintToolStripButton
-        '
-        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
-        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PrintToolStripButton.Name = "PrintToolStripButton"
-        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PrintToolStripButton.Text = "&Print"
-        '
-        'nGanadores
-        '
-        Me.nGanadores.Location = New System.Drawing.Point(239, 295)
-        Me.nGanadores.Name = "nGanadores"
-        Me.nGanadores.Size = New System.Drawing.Size(120, 20)
-        Me.nGanadores.TabIndex = 12
-        '
-        'txResultado
-        '
-        Me.txResultado.Location = New System.Drawing.Point(407, 295)
-        Me.txResultado.Name = "txResultado"
-        Me.txResultado.Size = New System.Drawing.Size(100, 20)
-        Me.txResultado.TabIndex = 13
-        '
         'Tb_CarrerasCaballosTableAdapter
         '
         Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
@@ -432,9 +395,7 @@ Partial Class frmCargarResultado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(675, 345)
-        Me.Controls.Add(Me.txResultado)
-        Me.Controls.Add(Me.nGanadores)
+        Me.ClientSize = New System.Drawing.Size(675, 483)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cbCarrera)
@@ -445,7 +406,7 @@ Partial Class frmCargarResultado
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmCargarResultado"
-        Me.Text = "frmCargarResultado"
+        Me.Text = "Cargar Resultado"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -456,7 +417,6 @@ Partial Class frmCargarResultado
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        CType(Me.nGanadores, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -490,11 +450,7 @@ Partial Class frmCargarResultado
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents SaveToolStripButton As ToolStripButton
-    Friend WithEvents PrintToolStripButton As ToolStripButton
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents nGanadores As NumericUpDown
-    Friend WithEvents txResultado As TextBox
     Friend WithEvents TbCarrerasBindingSource1 As BindingSource
     Friend WithEvents TbCaballosBindingSource As BindingSource
     Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter

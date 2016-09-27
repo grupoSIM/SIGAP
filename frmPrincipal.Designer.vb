@@ -31,7 +31,6 @@ Partial Class frmPrincipal
         Me.CarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PalcosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RematesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarLLaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,6 +47,7 @@ Partial Class frmPrincipal
         Me.ReportePremiosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDevolucionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListadoDeRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,7 +62,7 @@ Partial Class frmPrincipal
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventoToolStripMenuItem, Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.PorcentajesDeLaCasaToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem, Me.RematesToolStripMenuItem1})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EventoToolStripMenuItem, Me.HipódromoToolStripMenuItem, Me.JornadasToolStripMenuItem, Me.PorcentajesDeLaCasaToolStripMenuItem, Me.CarrerasToolStripMenuItem, Me.RematadorToolStripMenuItem, Me.PalcosToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -109,12 +109,6 @@ Partial Class frmPrincipal
         Me.PalcosToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.PalcosToolStripMenuItem.Text = "Palcos"
         '
-        'RematesToolStripMenuItem1
-        '
-        Me.RematesToolStripMenuItem1.Name = "RematesToolStripMenuItem1"
-        Me.RematesToolStripMenuItem1.Size = New System.Drawing.Size(191, 22)
-        Me.RematesToolStripMenuItem1.Text = "Remates"
-        '
         'CarrerasToolStripMenuItem1
         '
         Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.CargarLLaveToolStripMenuItem, Me.ModificarCarreraToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
@@ -154,7 +148,7 @@ Partial Class frmPrincipal
         '
         'RematesToolStripMenuItem
         '
-        Me.RematesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarRematesToolStripMenuItem, Me.ListadoDeDetalleRematesToolStripMenuItem})
+        Me.RematesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarRematesToolStripMenuItem, Me.ListadoDeRematesToolStripMenuItem, Me.ListadoDeDetalleRematesToolStripMenuItem})
         Me.RematesToolStripMenuItem.Name = "RematesToolStripMenuItem"
         Me.RematesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.RematesToolStripMenuItem.Text = "Remates"
@@ -215,6 +209,12 @@ Partial Class frmPrincipal
         Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReporteDevolucionesToolStripMenuItem.Text = "Reporte Devoluciones"
         '
+        'ListadoDeRematesToolStripMenuItem
+        '
+        Me.ListadoDeRematesToolStripMenuItem.Name = "ListadoDeRematesToolStripMenuItem"
+        Me.ListadoDeRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.ListadoDeRematesToolStripMenuItem.Text = "Listado de Remates"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -248,7 +248,6 @@ Partial Class frmPrincipal
     Friend WithEvents CarCabPruebaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResultadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarResultadoCarreraToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RematesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents VerResultadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeDetalleRematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarLLaveToolStripMenuItem As ToolStripMenuItem
@@ -258,4 +257,5 @@ Partial Class frmPrincipal
     Friend WithEvents PorcentajesDeLaCasaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EventoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDevolucionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListadoDeRematesToolStripMenuItem As ToolStripMenuItem
 End Class
