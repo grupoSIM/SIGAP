@@ -6,7 +6,9 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        frmCajaPalco.Show()
+        'frmCajaPalco.Show()
 
+        Dim ctrlImpre As New ControladorImpresion
+        ctrlImpre.ImprimirCajaPalco(Me.cbCarrera.SelectedValue)
     End Sub
 End Class

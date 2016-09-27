@@ -108,6 +108,7 @@
     <Compile Include="bdSIGAP_DataSet.vb">
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ControladorImpresion.vb" />
     <Compile Include="frmCaballo.Designer.vb">
       <DependentUpon>frmCaballo.vb</DependentUpon>
     </Compile>
@@ -359,6 +360,7 @@
     <EmbeddedResource Include="rpDevoluciones.rdlc" />
     <EmbeddedResource Include="rpCajaPalco.rdlc" />
     <EmbeddedResource Include="rpPremios.rdlc" />
+    <EmbeddedResource Include="rpTicket.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bdSIGAP_DataSet.xsc">

@@ -6,6 +6,9 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        frmReportePremios.Show()
+        'frmReportePremios.Show()
+
+        Dim ctrlImpre As New ControladorImpresion
+        ctrlImpre.ImprimirPremios(Me.cbCarrera.SelectedValue)
     End Sub
 End Class
