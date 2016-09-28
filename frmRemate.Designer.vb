@@ -112,10 +112,10 @@ Partial Class frmRemate
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(395, 480)
+        Me.btnGuardar.Location = New System.Drawing.Point(395, 555)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardar.TabIndex = 200
+        Me.btnGuardar.TabIndex = 500
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -139,10 +139,10 @@ Partial Class frmRemate
         '
         'btnImprimir
         '
-        Me.btnImprimir.Location = New System.Drawing.Point(481, 480)
+        Me.btnImprimir.Location = New System.Drawing.Point(481, 555)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(104, 23)
-        Me.btnImprimir.TabIndex = 201
+        Me.btnImprimir.TabIndex = 501
         Me.btnImprimir.TabStop = False
         Me.btnImprimir.Text = "Guardar e Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = True
@@ -221,10 +221,10 @@ Partial Class frmRemate
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(6, 498)
+        Me.txtId.Location = New System.Drawing.Point(6, 573)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
-        Me.txtId.TabIndex = 202
+        Me.txtId.TabIndex = 502
         Me.txtId.TabStop = False
         Me.txtId.Visible = False
         '
@@ -329,7 +329,7 @@ Partial Class frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 525)
+        Me.ClientSize = New System.Drawing.Size(606, 599)
         Me.Controls.Add(Me.lblFila)
         Me.Controls.Add(Me.lblLuz)
         Me.Controls.Add(Me.lblIncluido)

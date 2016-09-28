@@ -50,6 +50,7 @@ Public Class frmRemate
                 .Name = "txtNumero" & i
                 .Location = New Point(8, (100 + (25 * (i + 1))))
                 .Size() = New Size(55, 20)
+                .TabIndex = 21 + (i * 7)
                 .TabStop = False
                 .Text = row("Orden")
                 .Tag = "Numero"
@@ -63,6 +64,7 @@ Public Class frmRemate
                 .Name = "txtCaballo" & i
                 .Location = New Point(69, (100 + (25 * (i + 1))))
                 .Size() = New Size(170, 20)
+                .TabIndex = 22 + (i * 7)
                 .TabStop = False
                 .Text = caballo("CaballoNombre")
                 .Tag = "Caballo"
@@ -75,6 +77,7 @@ Public Class frmRemate
                 .Name = "txtApostador" & i
                 .Location = New Point(245, (100 + (25 * (i + 1))))
                 .Size() = New Size(92, 20)
+                .TabIndex = 23 + (i * 7)
                 .TabStop = True
                 .Tag = "Apostador"
             End With
@@ -87,6 +90,7 @@ Public Class frmRemate
                 .Name = "txtApuesta" & i
                 .Location = New Point(342, (100 + (25 * (i + 1))))
                 .Size() = New Size(92, 20)
+                .TabIndex = 24 + (i * 7)
                 .TabStop = True
                 .Tag = "Apuesta"
             End With
@@ -101,6 +105,7 @@ Public Class frmRemate
                 .Name = "chbIncluido" & i
                 .Location = New Point(441, (103 + (25 * (i + 1))))
                 .Size() = New Size(15, 14)
+                .TabIndex = 25 + (i * 7)
                 .TabStop = False
                 .Tag = "Incluido"
             End With
@@ -112,6 +117,7 @@ Public Class frmRemate
                 .Name = "cmbLuz" & i
                 .Location = New Point(473, (100 + (25 * (i + 1))))
                 .Size() = New Size(81, 20)
+                .TabIndex = 26 + (i * 7)
                 .TabStop = False
                 .Tag = "Luz"
             End With
@@ -123,6 +129,7 @@ Public Class frmRemate
                 .Name = "radFila" & i
                 .Location = New Point(566, (104 + (25 * (i + 1))))
                 .Size() = New Size(14, 13)
+                .TabIndex = 27 + (i * 7)
                 .TabStop = False
                 .Tag = "Fila"
             End With
