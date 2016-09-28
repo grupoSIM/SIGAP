@@ -31,10 +31,11 @@ Public Class ControladorImpresion
             "<PageWidth>3in</PageWidth>" &
             "<PageHeight>11in</PageHeight>" &
             "<MarginTop>0.10in</MarginTop>" &
-            "<MarginLeft>0.10in</MarginLeft>" &
-            "<MarginRight>0.10in</MarginRight>" &
+            "<MarginLeft>0in</MarginLeft>" &
+            "<MarginRight>0in</MarginRight>" &
             "<MarginBottom>0.10in</MarginBottom>" &
             "</DeviceInfo>"
+
         Dim warnings As Warning()
         m_streams = New List(Of Stream)()
         report.Render("Image", deviceInfo, AddressOf CreateStream, warnings)
@@ -69,6 +70,11 @@ Public Class ControladorImpresion
             Throw New Exception("Error: no stream to print.")
         End If
         Dim printDoc As New PrintDocument()
+        printDoc.PrintController = New StandardPrintController()
+        printDoc.PrinterSettings.DefaultPageSettings.Margins.Bottom = 0
+        printDoc.PrinterSettings.DefaultPageSettings.Margins.Left = 0
+        printDoc.PrinterSettings.DefaultPageSettings.Margins.Right = 0
+        printDoc.PrinterSettings.DefaultPageSettings.Margins.Top = 0
         If Not printDoc.PrinterSettings.IsValid Then
             Throw New Exception("Error: cannot find the default printer.")
         Else

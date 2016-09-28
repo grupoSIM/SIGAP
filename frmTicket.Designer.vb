@@ -26,6 +26,8 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.NombreLabel1 = New System.Windows.Forms.Label()
+        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.FechaLabel1 = New System.Windows.Forms.Label()
         Me.NroCarreraLabel1 = New System.Windows.Forms.Label()
         Me.PalcoLabel1 = New System.Windows.Forms.Label()
@@ -56,8 +58,6 @@ Partial Class Form1
         Me.NroRemateLabel1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.NombreCarreraLabel1 = New System.Windows.Forms.Label()
-        Me.VwTicketBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.VwTicketTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.ObservacionesLabel1 = New System.Windows.Forms.Label()
@@ -82,6 +82,16 @@ Partial Class Form1
         Me.NombreLabel1.Size = New System.Drawing.Size(295, 23)
         Me.NombreLabel1.TabIndex = 3
         Me.NombreLabel1.Text = "Lbl_Hipodromo"
+        '
+        'VwTicketBindingSource
+        '
+        Me.VwTicketBindingSource.DataMember = "VwTicket"
+        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'BdSIGAP_DataSet
+        '
+        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
+        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FechaLabel1
         '
@@ -384,16 +394,6 @@ Partial Class Form1
         Me.NombreCarreraLabel1.Size = New System.Drawing.Size(198, 18)
         Me.NombreCarreraLabel1.TabIndex = 54
         Me.NombreCarreraLabel1.Text = "Lbl_NombreCarrera"
-        '
-        'VwTicketBindingSource
-        '
-        Me.VwTicketBindingSource.DataMember = "VwTicket"
-        Me.VwTicketBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'BdSIGAP_DataSet
-        '
-        Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
-        Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VwTicketTableAdapter
         '
