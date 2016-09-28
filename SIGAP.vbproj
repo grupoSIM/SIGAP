@@ -357,10 +357,18 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="rpDevoluciones.rdlc" />
-    <EmbeddedResource Include="rpCajaPalco.rdlc" />
-    <EmbeddedResource Include="rpPremios.rdlc" />
-    <EmbeddedResource Include="rpTicket.rdlc" />
+    <EmbeddedResource Include="rpDevoluciones.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpCajaPalco.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpPremios.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpTicket.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="bdSIGAP_DataSet.xsc">
