@@ -1,4 +1,7 @@
-﻿Public Class frmRemate
+﻿Imports System.Drawing.Color
+Imports System.Threading
+
+Public Class frmRemate
     Private Sub frmRemate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Palcos' table. You can move, or remove it, as needed.
         Me.Tb_PalcosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Palcos)
@@ -26,31 +29,177 @@
         Dim caballo As DataRow
         Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cmbCarrera.SelectedValue)
         Dim i As Integer = 0
+        Dim nuevoControl As Control
+        Dim ctrlsEjec As Integer = Controls.Count - 1
+        Dim ctrl As Control
 
-        'Me.BdSIGAP_DataSet.tb_DetalleRemates.Clear()
+        For n As Integer = ctrlsEjec To 0 Step -1
+            ctrl = Controls(n)
+            If (ctrl.Tag IsNot Nothing) Then
+                Controls.Remove(ctrl)
+                ctrl.Dispose()
+            End If
+        Next
 
         For Each row As DataRow In dtCarrerasCaballos.Rows
             caballo = BdSIGAP_DataSet.tb_Caballos.FindById(row("IdCaballo"))
 
-            Me.Controls("txtNumero" & i).Text = row("Orden")
-            Me.Controls("txtNumero" & i).Show()
-            Me.Controls("txtCaballo" & i).Text = caballo("CaballoNombre")
-            Me.Controls("txtCaballo" & i).Show()
-            Me.Controls("txtApostador" & i).Text = ""
-            Me.Controls("txtApostador" & i).Show()
-            Me.Controls("txtApuesta" & i).Text = ""
-            Me.Controls("txtApuesta" & i).Show()
-            Me.Controls("chbIncluido" & i).Show()
-            Me.Controls("cmbLuz" & i).Show()
-            Me.Controls("radFila" & i).Show()
+            ' Creación de TextBox de orden de caballos
+            nuevoControl = New TextBox
+            With nuevoControl
+                .Name = "txtNumero" & i
+                .Location = New Point(8, (100 + (25 * (i + 1))))
+                .Size() = New Size(55, 20)
+                .TabStop = False
+                .Text = row("Orden")
+                .Tag = "Numero"
+            End With
+            AddHandler nuevoControl.KeyPress, AddressOf txtNumero_KeyPress
+            Controls.Add(nuevoControl)
 
-            i = i + 1
+            ' Creación de TextBox de nombre de caballos
+            nuevoControl = New TextBox
+            With nuevoControl
+                .Name = "txtCaballo" & i
+                .Location = New Point(69, (100 + (25 * (i + 1))))
+                .Size() = New Size(170, 20)
+                .TabStop = False
+                .Text = caballo("CaballoNombre")
+                .Tag = "Caballo"
+            End With
+            Controls.Add(nuevoControl)
+
+            ' Creación de TextBox de apostadores
+            nuevoControl = New TextBox
+            With nuevoControl
+                .Name = "txtApostador" & i
+                .Location = New Point(245, (100 + (25 * (i + 1))))
+                .Size() = New Size(92, 20)
+                .TabStop = True
+                .Tag = "Apostador"
+            End With
+            AddHandler nuevoControl.KeyPress, AddressOf txtApostador_KeyPress
+            Controls.Add(nuevoControl)
+
+            ' Creación de TextBox de apuestas
+            nuevoControl = New TextBox
+            With nuevoControl
+                .Name = "txtApuesta" & i
+                .Location = New Point(342, (100 + (25 * (i + 1))))
+                .Size() = New Size(92, 20)
+                .TabStop = True
+                .Tag = "Apuesta"
+            End With
+            AddHandler nuevoControl.KeyPress, AddressOf txtApuesta_KeyPress
+            AddHandler nuevoControl.TextChanged, AddressOf txtapuesta_TextChanged
+            AddHandler nuevoControl.Leave, AddressOf txtApuesta_Leave
+            Controls.Add(nuevoControl)
+
+            ' Creación de CheckBox de Incluidos
+            nuevoControl = New CheckBox
+            With nuevoControl
+                .Name = "chbIncluido" & i
+                .Location = New Point(441, (103 + (25 * (i + 1))))
+                .Size() = New Size(15, 14)
+                .TabStop = False
+                .Tag = "Incluido"
+            End With
+            Controls.Add(nuevoControl)
+
+            ' Creación de ComboBox de Luz
+            nuevoControl = New ComboBox
+            With nuevoControl
+                .Name = "cmbLuz" & i
+                .Location = New Point(473, (100 + (25 * (i + 1))))
+                .Size() = New Size(81, 20)
+                .TabStop = False
+                .Tag = "Luz"
+            End With
+            Controls.Add(nuevoControl)
+
+            ' Creación de RadioButton de Filas
+            nuevoControl = New RadioButton
+            With nuevoControl
+                .Name = "radFila" & i
+                .Location = New Point(566, (104 + (25 * (i + 1))))
+                .Size() = New Size(14, 13)
+                .TabStop = False
+                .Tag = "Fila"
+            End With
+            Controls.Add(nuevoControl)
+
+            i += 1
         Next
-        'MsgBox(, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
 
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If (txt.Tag <> "Caballo") Then Continue For
+            txt.ReadOnly = True
+        Next
 
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If (txt.Tag <> "Apuesta") Then Continue For
+            txt.TextAlign = HorizontalAlignment.Right
+        Next
+
+        For Each cmb As ComboBox In Controls.OfType(Of ComboBox)
+            If (cmb.Tag <> "Luz") Then Continue For
+            cmb.Items.Add("Da")
+            cmb.Items.Add("Recibe")
+        Next
+
+        SelectNextControl(btnGuardar, True, True, True, True)
 
     End Function
+
+    Private Sub txtNumero_KeyPress(sender As Object, e As KeyPressEventArgs)
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SendKeys.Send("{TAB}")
+        End If
+    End Sub
+
+    Private Sub txtApostador_KeyPress(sender As Object, e As KeyPressEventArgs)
+        If (e.KeyChar = Chr(13)) Then
+            SendKeys.Send("{TAB}")
+        End If
+    End Sub
+
+    Private Sub txtApuesta_KeyPress(sender As Object, e As KeyPressEventArgs)
+        If (e.KeyChar <> Chr(13)) Then
+            ' Controlar que ingrese un número
+            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+                e.Handled = True
+            End If
+        Else
+            SendKeys.Send("{TAB}")
+        End If
+    End Sub
+
+    Private Sub txtapuesta_TextChanged(sender As Object, e As EventArgs)
+        If (DirectCast(sender, TextBox).Text <> "") Then
+            DirectCast(sender, TextBox).Text = FormatNumber(DirectCast(sender, TextBox).Text, 0)
+            DirectCast(sender, TextBox).Select(DirectCast(sender, TextBox).TextLength, 0)
+        End If
+    End Sub
+
+    Private Sub txtapuesta_Leave(sender As Object, e As EventArgs)
+        Dim nombre As String = DirectCast(sender, TextBox).Name
+        If (DirectCast(sender, TextBox).Text <> "") Then
+            For Each chb As CheckBox In Me.Controls.OfType(Of CheckBox)
+                If (chb.Tag <> "Incluido") Then Continue For
+                If (chb.Name = ("chbIncluido" & nombre.Substring(10))) Then chb.Checked = True
+            Next
+        Else
+            For Each chb As CheckBox In Me.Controls.OfType(Of CheckBox)
+                If (chb.Tag <> "Incluido") Then Continue For
+                If (chb.Name = ("chbIncluido" & nombre.Substring(10))) Then chb.Checked = False
+            Next
+        End If
+    End Sub
 
     Private Function CargarRemates()
         Dim jornada As DataRow
@@ -75,7 +224,6 @@
         If (cmbCarrera.SelectedValue) Then
             CargarRemates()
             CargarDetallesRemates()
-            txtApostador0.Focus()
         End If
 
     End Sub
@@ -101,145 +249,77 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim totalApuestas As Integer = 0
         Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cmbCarrera.SelectedValue)
+        Dim carrera = Tb_CarrerasTableAdapter.GetDataById(cmbCarrera.SelectedValue)
         Dim i As Integer = 0
         Dim premio As Decimal
 
-        For Each row As DataRow In dtCarrerasCaballos.Rows
-            totalApuestas += Me.Controls("txtApuesta" & i).Text
-            i += 1
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If (txt.Tag <> "Apuesta") Then Continue For
+            If (txt.Text <> "") Then totalApuestas += txt.Text
         Next
 
         premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
         premio = Decimal.Round(premio / 10, 0) * 10
 
+        carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
+        Tb_CarrerasTableAdapter.Update(carrera)
+
         Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
-        i = 0
+
         For Each row As DataRow In dtCarrerasCaballos.Rows
-            Select Case i
-                Case 0
-                    If (chbincluido0.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, premio, chbincluido0.Checked, "")
-                    End If
-                Case 1
-                    If (chbincluido1.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, premio, chbincluido1.Checked, "")
-                    End If
-                Case 2
-                    If (chbincluido2.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, premio, chbincluido2.Checked, "")
-                    End If
-                Case 3
-                    If (chbincluido3.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, premio, chbincluido3.Checked, "")
-                    End If
-                Case 4
-                    If (chbincluido4.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, premio, chbincluido4.Checked, "")
-                    End If
-                Case 5
-                    If (chbincluido5.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, premio, chbincluido5.Checked, "")
-                    End If
-                Case 6
-                    If (chbincluido6.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, premio, chbincluido6.Checked, "")
-                    End If
-                Case 7
-                    If (chbincluido7.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, premio, chbincluido7.Checked, "")
-                    End If
-                Case 8
-                    If (chbincluido8.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, premio, chbincluido8.Checked, "")
-                    End If
-                Case 9
-                    If (chbincluido9.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, premio, chbincluido9.Checked, "")
-                    End If
-            End Select
+            If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
+                Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+            End If
             i += 1
         Next
 
         CargarRemates()
         CargarDetallesRemates()
-        txtApostador0.Focus()
+
+        SelectNextControl(btnGuardar, True, True, True, True)
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
         Dim totalApuestas As Integer = 0
         Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cmbCarrera.SelectedValue)
+        Dim carrera = Tb_CarrerasTableAdapter.GetDataById(cmbCarrera.SelectedValue)
         Dim i As Integer = 0
         Dim premio As Decimal
-        Dim detalles As DataTable
 
-        For Each row As DataRow In dtCarrerasCaballos.Rows
-            totalApuestas += Me.Controls("txtApuesta" & i).Text
-            i += 1
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If (txt.Tag <> "Apuesta") Then Continue For
+            If (txt.Text <> "") Then totalApuestas += txt.Text
         Next
 
         premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
-        premio = Decimal.Round(premio / 10) * 10
+        premio = Decimal.Round(premio / 10, 0) * 10
+
+        carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
+        Tb_CarrerasTableAdapter.Update(carrera)
 
         Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
-        i = 0
+
         For Each row As DataRow In dtCarrerasCaballos.Rows
-            Select Case i
-                Case 0
-                    If (chbincluido0.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero0.Text, txtApostador0.Text, txtapuesta0.Text, cmbLuz0.SelectedIndex, radFila0.Checked, premio, chbincluido0.Checked, "")
-                    End If
-                Case 1
-                    If (chbincluido1.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero1.Text, txtApostador1.Text, txtapuesta1.Text, cmbLuz1.SelectedIndex, radFila1.Checked, premio, chbincluido1.Checked, "")
-                    End If
-                Case 2
-                    If (chbincluido2.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero2.Text, txtApostador2.Text, txtapuesta2.Text, cmbLuz2.SelectedIndex, radFila2.Checked, premio, chbincluido2.Checked, "")
-                    End If
-                Case 3
-                    If (chbincluido3.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero3.Text, txtApostador3.Text, txtapuesta3.Text, cmbLuz3.SelectedIndex, radFila3.Checked, premio, chbincluido3.Checked, "")
-                    End If
-                Case 4
-                    If (chbincluido4.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero4.Text, txtApostador4.Text, txtapuesta4.Text, cmbLuz4.SelectedIndex, radFila4.Checked, premio, chbincluido4.Checked, "")
-                    End If
-                Case 5
-                    If (chbincluido5.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero5.Text, txtApostador5.Text, txtapuesta5.Text, cmbLuz5.SelectedIndex, radFila5.Checked, premio, chbincluido5.Checked, "")
-                    End If
-                Case 6
-                    If (chbincluido6.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero6.Text, txtApostador6.Text, txtapuesta6.Text, cmbLuz6.SelectedIndex, radFila6.Checked, premio, chbincluido6.Checked, "")
-                    End If
-                Case 7
-                    If (chbincluido7.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero7.Text, txtApostador7.Text, txtapuesta7.Text, cmbLuz7.SelectedIndex, radFila7.Checked, premio, chbincluido7.Checked, "")
-                    End If
-                Case 8
-                    If (chbincluido8.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero8.Text, txtApostador8.Text, txtapuesta8.Text, cmbLuz8.SelectedIndex, radFila8.Checked, premio, chbincluido8.Checked, "")
-                    End If
-                Case 9
-                    If (chbincluido9.Checked) Then
-                        Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), txtNumero9.Text, txtApostador9.Text, txtapuesta9.Text, cmbLuz9.SelectedIndex, radFila9.Checked, premio, chbincluido9.Checked, "")
-                    End If
-            End Select
+            If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
+                Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+            End If
             i += 1
         Next
 
-        detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
+        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
+        Dim ctrlImpre As New ControladorImpresion
 
         For Each row As DataRow In detalles.Rows
 
-            Imprimir(row("Id"))
+            'Imprimir(row("Id"))
+            ctrlImpre.ImprimirTicket(row("Id"))
 
         Next
 
         CargarRemates()
         CargarDetallesRemates()
-        txtApostador0.Focus()
-        'MsgBox(totalApuestas)
+
+        SelectNextControl(btnGuardar, True, True, True, True)
     End Sub
 
     Private Sub txtPorcentajeCasa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPorcentajeCasa.KeyPress
@@ -249,357 +329,357 @@
                 e.Handled = True
             End If
         Else
-            SelectNextControl(ActiveControl, True, True, True, True)
+            SendKeys.Send("{TAB}")
         End If
     End Sub
 
-    Private Sub txtNumero0_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero0.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero0_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero1.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero1_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero2.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero2_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero3.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero3_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero4.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero4_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero5.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero5_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero6.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero6_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero7.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero7_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero8.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero8_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtNumero9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero9.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtNumero9_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta0_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta0.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta0_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta1.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta1_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta2.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta2_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta3.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta3_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta4.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta4_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta5.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta5_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta6.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta6_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta7.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta7_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta8.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta8_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtapuesta9.KeyPress
-        If (e.KeyChar <> Chr(13)) Then
-            ' Controlar que ingrese un número
-            If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
-                e.Handled = True
-            End If
-        Else
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtapuesta9_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar <> Chr(13)) Then
+    '        ' Controlar que ingrese un número
+    '        If (Not Char.IsNumber(e.KeyChar) And (e.KeyChar <> Microsoft.VisualBasic.ChrW(8))) Then
+    '            e.Handled = True
+    '        End If
+    '    Else
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta0_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta0.TextChanged
-        If (txtapuesta0.Text <> "") Then
-            txtapuesta0.Text = FormatNumber(txtapuesta0.Text, 0)
-            txtapuesta0.Select(txtapuesta0.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta0_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta0.Text <> "") Then
+    '        txtapuesta0.Text = FormatNumber(txtapuesta0.Text, 0)
+    '        txtapuesta0.Select(txtapuesta0.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta1_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta1.TextChanged
-        If (txtapuesta1.Text <> "") Then
-            txtapuesta1.Text = FormatNumber(txtapuesta1.Text, 0)
-            txtapuesta1.Select(txtapuesta1.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta1_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta1.Text <> "") Then
+    '        txtapuesta1.Text = FormatNumber(txtapuesta1.Text, 0)
+    '        txtapuesta1.Select(txtapuesta1.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta2_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta2.TextChanged
-        If (txtapuesta2.Text <> "") Then
-            txtapuesta2.Text = FormatNumber(txtapuesta2.Text, 0)
-            txtapuesta2.Select(txtapuesta2.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta2_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta2.Text <> "") Then
+    '        txtapuesta2.Text = FormatNumber(txtapuesta2.Text, 0)
+    '        txtapuesta2.Select(txtapuesta2.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta3_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta3.TextChanged
-        If (txtapuesta3.Text <> "") Then
-            txtapuesta3.Text = FormatNumber(txtapuesta3.Text, 0)
-            txtapuesta3.Select(txtapuesta3.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta3_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta3.Text <> "") Then
+    '        txtapuesta3.Text = FormatNumber(txtapuesta3.Text, 0)
+    '        txtapuesta3.Select(txtapuesta3.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta4_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta4.TextChanged
-        If (txtapuesta4.Text <> "") Then
-            txtapuesta4.Text = FormatNumber(txtapuesta4.Text, 0)
-            txtapuesta4.Select(txtapuesta4.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta4_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta4.Text <> "") Then
+    '        txtapuesta4.Text = FormatNumber(txtapuesta4.Text, 0)
+    '        txtapuesta4.Select(txtapuesta4.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta5_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta5.TextChanged
-        If (txtapuesta5.Text <> "") Then
-            txtapuesta5.Text = FormatNumber(txtapuesta5.Text, 0)
-            txtapuesta5.Select(txtapuesta5.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta5_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta5.Text <> "") Then
+    '        txtapuesta5.Text = FormatNumber(txtapuesta5.Text, 0)
+    '        txtapuesta5.Select(txtapuesta5.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta6_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta6.TextChanged
-        If (txtapuesta6.Text <> "") Then
-            txtapuesta6.Text = FormatNumber(txtapuesta6.Text, 0)
-            txtapuesta6.Select(txtapuesta6.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta6_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta6.Text <> "") Then
+    '        txtapuesta6.Text = FormatNumber(txtapuesta6.Text, 0)
+    '        txtapuesta6.Select(txtapuesta6.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta7_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta7.TextChanged
-        If (txtapuesta7.Text <> "") Then
-            txtapuesta7.Text = FormatNumber(txtapuesta7.Text, 0)
-            txtapuesta7.Select(txtapuesta7.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta7_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta7.Text <> "") Then
+    '        txtapuesta7.Text = FormatNumber(txtapuesta7.Text, 0)
+    '        txtapuesta7.Select(txtapuesta7.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta8_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta8.TextChanged
-        If (txtapuesta8.Text <> "") Then
-            txtapuesta8.Text = FormatNumber(txtapuesta8.Text, 0)
-            txtapuesta8.Select(txtapuesta8.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta8_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta8.Text <> "") Then
+    '        txtapuesta8.Text = FormatNumber(txtapuesta8.Text, 0)
+    '        txtapuesta8.Select(txtapuesta8.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtapuesta9_TextChanged(sender As Object, e As EventArgs) Handles txtapuesta9.TextChanged
-        If (txtapuesta9.Text <> "") Then
-            txtapuesta9.Text = FormatNumber(txtapuesta9.Text, 0)
-            txtapuesta9.Select(txtapuesta9.TextLength, 0)
-        End If
-    End Sub
+    'Private Sub txtapuesta9_TextChanged(sender As Object, e As EventArgs)
+    '    If (txtapuesta9.Text <> "") Then
+    '        txtapuesta9.Text = FormatNumber(txtapuesta9.Text, 0)
+    '        txtapuesta9.Select(txtapuesta9.TextLength, 0)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador0_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador0.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador0_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador1.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador1_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador2.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador2_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador3.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador3_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador4.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador4_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador5.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador5_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador6.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador6_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador7_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador7.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador7_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador8_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador8.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador8_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 
-    Private Sub txtApostador9_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApostador9.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            SelectNextControl(ActiveControl, True, True, True, True)
-        End If
-    End Sub
+    'Private Sub txtApostador9_KeyPress(sender As Object, e As KeyPressEventArgs)
+    '    If (e.KeyChar = Chr(13)) Then
+    '        SelectNextControl(ActiveControl, True, True, True, True)
+    '    End If
+    'End Sub
 End Class
