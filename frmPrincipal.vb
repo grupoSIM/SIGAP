@@ -83,4 +83,9 @@
     Private Sub ListadoDeRematesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeRematesToolStripMenuItem.Click
         frmRemates.Show()
     End Sub
+
+    Private Sub CargarYuntasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarYuntasToolStripMenuItem.Click
+        frmYunta.Show()
+
+    End Sub
 End Class

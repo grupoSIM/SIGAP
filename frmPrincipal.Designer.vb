@@ -39,6 +39,7 @@ Partial Class frmPrincipal
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListadoDeRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeDetalleRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarResultadoCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,7 +48,7 @@ Partial Class frmPrincipal
         Me.ReportePremiosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDevolucionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListadoDeRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargarYuntasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -111,7 +112,7 @@ Partial Class frmPrincipal
         '
         'CarrerasToolStripMenuItem1
         '
-        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.CargarLLaveToolStripMenuItem, Me.ModificarCarreraToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
+        Me.CarrerasToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarCarreraCaballosToolStripMenuItem, Me.CargarLLaveToolStripMenuItem, Me.CargarYuntasToolStripMenuItem, Me.ModificarCarreraToolStripMenuItem, Me.ListadoDeCarrerasToolStripMenuItem, Me.CarCabPruebaToolStripMenuItem})
         Me.CarrerasToolStripMenuItem1.Name = "CarrerasToolStripMenuItem1"
         Me.CarrerasToolStripMenuItem1.Size = New System.Drawing.Size(62, 20)
         Me.CarrerasToolStripMenuItem1.Text = "Carreras"
@@ -158,6 +159,12 @@ Partial Class frmPrincipal
         Me.CargarRematesToolStripMenuItem.Name = "CargarRematesToolStripMenuItem"
         Me.CargarRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.CargarRematesToolStripMenuItem.Text = "Cargar Remates"
+        '
+        'ListadoDeRematesToolStripMenuItem
+        '
+        Me.ListadoDeRematesToolStripMenuItem.Name = "ListadoDeRematesToolStripMenuItem"
+        Me.ListadoDeRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.ListadoDeRematesToolStripMenuItem.Text = "Listado de Remates"
         '
         'ListadoDeDetalleRematesToolStripMenuItem
         '
@@ -209,11 +216,11 @@ Partial Class frmPrincipal
         Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReporteDevolucionesToolStripMenuItem.Text = "Reporte Devoluciones"
         '
-        'ListadoDeRematesToolStripMenuItem
+        'CargarYuntasToolStripMenuItem
         '
-        Me.ListadoDeRematesToolStripMenuItem.Name = "ListadoDeRematesToolStripMenuItem"
-        Me.ListadoDeRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
-        Me.ListadoDeRematesToolStripMenuItem.Text = "Listado de Remates"
+        Me.CargarYuntasToolStripMenuItem.Name = "CargarYuntasToolStripMenuItem"
+        Me.CargarYuntasToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.CargarYuntasToolStripMenuItem.Text = "Cargar Yuntas"
         '
         'frmPrincipal
         '
@@ -258,4 +265,5 @@ Partial Class frmPrincipal
     Friend WithEvents EventoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDevolucionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeRematesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CargarYuntasToolStripMenuItem As ToolStripMenuItem
 End Class
