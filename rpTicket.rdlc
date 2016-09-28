@@ -265,7 +265,6 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>2.02311cm</Top>
-        <Left>0cm</Left>
         <Height>0.6cm</Height>
         <Width>7.32516cm</Width>
         <ZIndex>7</ZIndex>
@@ -367,7 +366,6 @@
         </Paragraphs>
         <rd:DefaultName>ImporteApuesta</rd:DefaultName>
         <Top>4.24645cm</Top>
-        <Left>0cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>10</ZIndex>
@@ -399,7 +397,6 @@
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>4.84645cm</Top>
-        <Left>0cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -555,16 +552,18 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC1.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC1</rd:DefaultName>
-        <Top>7.28145cm</Top>
+        <Top>6.85812cm</Top>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -584,17 +583,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC2.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC2</rd:DefaultName>
-        <Top>7.28145cm</Top>
-        <Left>2.67639cm</Left>
+        <Top>6.85812cm</Top>
+        <Left>2.37639cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -614,17 +615,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC3.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC3</rd:DefaultName>
-        <Top>7.28145cm</Top>
-        <Left>5.32516cm</Left>
+        <Top>6.85812cm</Top>
+        <Left>4.75278cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -644,16 +647,18 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC4.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC4</rd:DefaultName>
-        <Top>7.98728cm</Top>
+        <Top>7.56395cm</Top>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -673,17 +678,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC5.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC5</rd:DefaultName>
-        <Top>7.98728cm</Top>
-        <Left>2.67639cm</Left>
+        <Top>7.56395cm</Top>
+        <Left>2.37639cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>20</ZIndex>
         <Style>
           <Border>
@@ -703,17 +710,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC6.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC6</rd:DefaultName>
-        <Top>7.98728cm</Top>
-        <Left>5.32516cm</Left>
+        <Top>7.56395cm</Top>
+        <Left>4.75278cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>21</ZIndex>
         <Style>
           <Border>
@@ -733,16 +742,18 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC7.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC7</rd:DefaultName>
-        <Top>8.69311cm</Top>
+        <Top>8.26978cm</Top>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>
@@ -762,17 +773,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC8.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC8</rd:DefaultName>
-        <Top>8.69311cm</Top>
-        <Left>2.67639cm</Left>
+        <Top>8.26978cm</Top>
+        <Left>2.37639cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>23</ZIndex>
         <Style>
           <Border>
@@ -792,17 +805,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC9.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC9</rd:DefaultName>
-        <Top>8.69311cm</Top>
-        <Left>5.32516cm</Left>
+        <Top>8.26978cm</Top>
+        <Left>4.75278cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>24</ZIndex>
         <Style>
           <Border>
@@ -822,16 +837,18 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC10.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC10</rd:DefaultName>
-        <Top>9.36367cm</Top>
+        <Top>8.94034cm</Top>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>25</ZIndex>
         <Style>
           <Border>
@@ -851,17 +868,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC11.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC11</rd:DefaultName>
-        <Top>9.36367cm</Top>
-        <Left>2.67639cm</Left>
+        <Top>8.94034cm</Top>
+        <Left>2.37639cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>26</ZIndex>
         <Style>
           <Border>
@@ -881,17 +900,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ApuC12.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC12</rd:DefaultName>
-        <Top>9.36367cm</Top>
-        <Left>5.32516cm</Left>
+        <Top>8.94034cm</Top>
+        <Left>4.75278cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.2cm</Width>
         <ZIndex>27</ZIndex>
         <Style>
           <Border>
@@ -938,10 +959,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>4.0683in</Height>
+    <Height>3.83913in</Height>
     <Style />
   </Body>
-  <Width>3.1137in</Width>
+  <Width>3.1762in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
