@@ -108,6 +108,7 @@
     <Compile Include="bdSIGAP_DataSet.vb">
       <DependentUpon>bdSIGAP_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ControladorImpresion.vb" />
     <Compile Include="frmCaballo.Designer.vb">
       <DependentUpon>frmCaballo.vb</DependentUpon>
     </Compile>
@@ -365,9 +366,18 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="rpDevoluciones.rdlc" />
-    <EmbeddedResource Include="rpCajaPalco.rdlc" />
-    <EmbeddedResource Include="rpPremios.rdlc" />
+    <EmbeddedResource Include="rpDevoluciones.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpCajaPalco.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpPremios.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpTicket.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="bdSIGAP_DataSet.xsc">
