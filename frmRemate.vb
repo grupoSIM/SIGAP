@@ -267,29 +267,42 @@ Public Class frmRemate
         Dim carrera = Tb_CarrerasTableAdapter.GetDataById(cmbCarrera.SelectedValue)
         Dim i As Integer = 0
         Dim premio As Decimal
+        Dim incluidos As Integer = 0
 
-        For Each txt As TextBox In Controls.OfType(Of TextBox)
-            If (txt.Tag <> "Apuesta") Then Continue For
-            If (txt.Text <> "") Then totalApuestas += txt.Text
-        Next
-
-        premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
-        premio = Decimal.Round(premio / 10, 0) * 10
-
-        carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
-        Tb_CarrerasTableAdapter.Update(carrera)
-
-        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
-
-        For Each row As DataRow In dtCarrerasCaballos.Rows
-            If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
-                Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+        For Each chb As CheckBox In Controls.OfType(Of CheckBox)
+            If (chb.Tag <> "Incluido") Then Continue For
+            If (chb.Checked) Then
+                incluidos += 1
             End If
-            i += 1
         Next
 
-        CargarRemates()
-        CargarDetallesRemates()
+        If (incluidos > 1) Then
+            For Each txt As TextBox In Controls.OfType(Of TextBox)
+                If (txt.Tag <> "Apuesta") Then Continue For
+                If (txt.Text <> "") Then totalApuestas += txt.Text
+            Next
+
+            premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
+            premio = Decimal.Round(premio / 10, 0) * 10
+
+            carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
+            Tb_CarrerasTableAdapter.Update(carrera)
+
+            Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
+
+            For Each row As DataRow In dtCarrerasCaballos.Rows
+                If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+                End If
+                i += 1
+            Next
+
+            CargarRemates()
+            CargarDetallesRemates()
+        Else
+            MsgBox("Se deben incluir al menos dos apuestas para guardar el remate.", vbExclamation + vbOKOnly)
+        End If
+
 
         SelectNextControl(btnGuardar, True, True, True, True)
     End Sub
@@ -300,41 +313,54 @@ Public Class frmRemate
         Dim carrera = Tb_CarrerasTableAdapter.GetDataById(cmbCarrera.SelectedValue)
         Dim i As Integer = 0
         Dim premio As Decimal
+        Dim incluidos As Integer = 0
 
-        For Each txt As TextBox In Controls.OfType(Of TextBox)
-            If (txt.Tag <> "Apuesta") Then Continue For
-            If (txt.Text <> "") Then totalApuestas += txt.Text
-        Next
-
-        premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
-        premio = Decimal.Round(premio / 10, 0) * 10
-
-        carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
-        Tb_CarrerasTableAdapter.Update(carrera)
-
-        Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
-
-        For Each row As DataRow In dtCarrerasCaballos.Rows
-            If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
-                Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+        For Each chb As CheckBox In Controls.OfType(Of CheckBox)
+            If (chb.Tag <> "Incluido") Then Continue For
+            If (chb.Checked) Then
+                incluidos += 1
             End If
-            i += 1
         Next
 
-        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
-        Dim ctrlImpre As New ControladorImpresion
+        If (incluidos > 1) Then
+            For Each txt As TextBox In Controls.OfType(Of TextBox)
+                If (txt.Tag <> "Apuesta") Then Continue For
+                If (txt.Text <> "") Then totalApuestas += txt.Text
+            Next
 
-        For Each row As DataRow In detalles.Rows
+            premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
+            premio = Decimal.Round(premio / 10, 0) * 10
 
-            'Imprimir(row("Id"))
-            ctrlImpre.ImprimirTicket(row("Id"))
+            carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
+            Tb_CarrerasTableAdapter.Update(carrera)
 
-        Next
+            Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
 
-        CargarRemates()
-        CargarDetallesRemates()
+            For Each row As DataRow In dtCarrerasCaballos.Rows
+                If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+                End If
+                i += 1
+            Next
+
+            Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
+            Dim ctrlImpre As New ControladorImpresion
+
+            For Each row As DataRow In detalles.Rows
+
+                'Imprimir(row("Id"))
+                ctrlImpre.ImprimirTicket(row("Id"))
+
+            Next
+
+            CargarRemates()
+            CargarDetallesRemates()
+        Else
+            MsgBox("Se deben incluir al menos dos apuestas para guardar el remate.", vbExclamation + vbOKOnly)
+        End If
 
         SelectNextControl(btnGuardar, True, True, True, True)
+
     End Sub
 
     Private Sub txtPorcentajeCasa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPorcentajeCasa.KeyPress
