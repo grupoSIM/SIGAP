@@ -22,6 +22,24 @@ Public Class frmRemate
 
     End Sub
 
+    Private Function CargarRemates()
+        Dim jornada As DataRow
+        Dim carrera = Tb_CarrerasTableAdapter.GetDataById(cmbCarrera.SelectedValue)
+
+        'carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cmbCarrera.SelectedValue)
+        jornada = BdSIGAP_DataSet.tb_Jornadas.FindById(carrera.Rows(0).Item("IdJornada"))
+
+        txtJornada.Text = jornada("Descripcion")
+        txtFecha.Text = jornada("Fecha")
+        If (Tb_RematesTableAdapter.MaxNroRemateByCarrera(cmbCarrera.SelectedValue)) Then
+            txtRemate.Text = Tb_RematesTableAdapter.MaxNroRemateByCarrera(cmbCarrera.SelectedValue) + 1
+        Else
+            txtRemate.Text = 1
+        End If
+        'txtPorcentajeCasa.Text = carrera("PorcentajeUltimoRemate")
+        txtPorcentajeCasa.Text = carrera.Rows(0).Item("PorcentajeUltimoRemate")
+
+    End Function
 
 
     Private Function CargarDetallesRemates()
@@ -32,6 +50,10 @@ Public Class frmRemate
         Dim nuevoControl As Control
         Dim ctrlsEjec As Integer = Controls.Count - 1
         Dim ctrl As Control
+        Dim palco As DataRow
+
+        palco = BdSIGAP_DataSet.tb_Palcos.FindById(cmbPalco.SelectedValue)
+        Dim rematador = Tb_RematadoresTableAdapter.GetDataById(palco("IdRematador"))
 
         For n As Integer = ctrlsEjec To 0 Step -1
             ctrl = Controls(n)
@@ -78,9 +100,13 @@ Public Class frmRemate
                 .Location = New Point(245, (100 + (25 * (i + 1))))
                 .Size() = New Size(92, 20)
                 .TabIndex = 23 + (i * 7)
-                .TabStop = True
                 .Tag = "Apostador"
             End With
+            If (rematador.Rows(0).Item("SinNombre")) Then
+                nuevoControl.TabStop = False
+            Else
+                nuevoControl.TabStop = True
+            End If
             AddHandler nuevoControl.KeyPress, AddressOf txtApostador_KeyPress
             Controls.Add(nuevoControl)
 
@@ -207,24 +233,6 @@ Public Class frmRemate
             Next
         End If
     End Sub
-
-    Private Function CargarRemates()
-        Dim jornada As DataRow
-        Dim carrera As DataRow
-
-        carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cmbCarrera.SelectedValue)
-        jornada = BdSIGAP_DataSet.tb_Jornadas.FindById(carrera("IdJornada"))
-
-        txtJornada.Text = jornada("Descripcion")
-        txtFecha.Text = jornada("Fecha")
-        If (Tb_RematesTableAdapter.MaxNroRemateByCarrera(cmbCarrera.SelectedValue)) Then
-            txtRemate.Text = Tb_RematesTableAdapter.MaxNroRemateByCarrera(cmbCarrera.SelectedValue) + 1
-        Else
-            txtRemate.Text = 1
-        End If
-        txtPorcentajeCasa.Text = carrera("PorcentajeUltimoRemate")
-
-    End Function
 
     Private Sub cmbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCarrera.SelectedIndexChanged
 
