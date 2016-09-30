@@ -83,7 +83,7 @@
     End Function
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btAgregar.Click
         Dim nuevoControl As Control
         Dim i As Integer = 1
         Dim c As Integer = 1
@@ -140,14 +140,30 @@
     Private Function CreaCarrera()
         Dim i As Integer = 1
         Dim idCarreraNueva As Integer
+        Dim y As Integer = 1
+        Dim yuntas As String = ""
+        Dim nroYunta As String = "00"
+
+
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If txt.Name = "txtNum" & y Then
+                'MessageBox.Show("y=" & y, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                'MessageBox.Show("txtNum" & y, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                yuntas = yuntas & "#" & Me.Controls("txtNum" & y).Text
+                nroYunta = nroYunta & Me.Controls("txtNum" & y).Text
+                y += 1
+            End If
+        Next
+
+
 
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
         filaCarrera = TbCarrerasBindingSource.AddNew()
 
         filaCarrera("IdJornada") = cbJornada.SelectedValue
-        filaCarrera("NroCarrera") = 901
-        filaCarrera("Nombre") = "Yunta" & cbCarrera.SelectedValue
+        filaCarrera("NroCarrera") = cbJornada.SelectedValue & nroYunta
+        filaCarrera("Nombre") = "Yunta " & cbCarrera.SelectedValue & yuntas
         filaCarrera("Metros") = "0"
         filaCarrera("Estado") = 0
         filaCarrera("PorcentajeCasa") = 20
@@ -222,7 +238,23 @@
     End Sub
 
     Private Sub btRemates_Click(sender As Object, e As EventArgs) Handles btRemates.Click
+        Dim idCarrera As Integer
+
+        idCarrera = CreaCarrera()
+        CreaCaballos()
+        CreaCaballosCarrera(idCarrera)
+
         Me.Close()
         frmRemate.Show()
+    End Sub
+
+    Private Sub btEliminar_Click(sender As Object, e As EventArgs) Handles btEliminar.Click
+        contCab = contCab - 1
+        altoYunta = altoYunta - 20
+        'MessageBox.Show("txtCaballo" & contCab, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+        Controls.Remove(Controls("txtCaballo" & contCab))
+        Controls.Remove(Controls("txtNum" & contCab))
+
     End Sub
 End Class

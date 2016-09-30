@@ -35,12 +35,13 @@ Partial Class frmYunta
         Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btAgregar = New System.Windows.Forms.Button()
         Me.btCrearCarrera = New System.Windows.Forms.Button()
         Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btRemates = New System.Windows.Forms.Button()
+        Me.btEliminar = New System.Windows.Forms.Button()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -132,18 +133,18 @@ Partial Class frmYunta
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
-        'Button1
+        'btAgregar
         '
-        Me.Button1.Location = New System.Drawing.Point(297, 121)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btAgregar.Location = New System.Drawing.Point(297, 100)
+        Me.btAgregar.Name = "btAgregar"
+        Me.btAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btAgregar.TabIndex = 4
+        Me.btAgregar.Text = "Agregar"
+        Me.btAgregar.UseVisualStyleBackColor = True
         '
         'btCrearCarrera
         '
-        Me.btCrearCarrera.Location = New System.Drawing.Point(292, 150)
+        Me.btCrearCarrera.Location = New System.Drawing.Point(292, 193)
         Me.btCrearCarrera.Name = "btCrearCarrera"
         Me.btCrearCarrera.Size = New System.Drawing.Size(84, 23)
         Me.btCrearCarrera.TabIndex = 6
@@ -178,22 +179,32 @@ Partial Class frmYunta
         '
         'btRemates
         '
-        Me.btRemates.Location = New System.Drawing.Point(585, 18)
+        Me.btRemates.Location = New System.Drawing.Point(292, 154)
         Me.btRemates.Name = "btRemates"
-        Me.btRemates.Size = New System.Drawing.Size(75, 23)
+        Me.btRemates.Size = New System.Drawing.Size(84, 39)
         Me.btRemates.TabIndex = 7
-        Me.btRemates.Text = "Ir a Remates"
+        Me.btRemates.Text = "Crear Carrera e ir Remates"
         Me.btRemates.UseVisualStyleBackColor = True
+        '
+        'btEliminar
+        '
+        Me.btEliminar.Location = New System.Drawing.Point(297, 124)
+        Me.btEliminar.Name = "btEliminar"
+        Me.btEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btEliminar.TabIndex = 8
+        Me.btEliminar.Text = "Eliminar"
+        Me.btEliminar.UseVisualStyleBackColor = True
         '
         'frmYunta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(797, 385)
+        Me.Controls.Add(Me.btEliminar)
         Me.Controls.Add(Me.btRemates)
         Me.Controls.Add(Me.btCrearCarrera)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btAgregar)
         Me.Name = "frmYunta"
         Me.Text = "Yunta, Tríos y Cuartetos"
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -219,10 +230,11 @@ Partial Class frmYunta
     Friend WithEvents TbJornadasBindingSource As BindingSource
     Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btAgregar As Button
     Friend WithEvents btCrearCarrera As Button
     Friend WithEvents TbCaballosBindingSource As BindingSource
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
     Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
     Friend WithEvents btRemates As Button
+    Friend WithEvents btEliminar As Button
 End Class
