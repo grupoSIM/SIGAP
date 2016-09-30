@@ -92,4 +92,9 @@
     Private Sub ReporteCajaJornadaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaJornadaToolStripMenuItem.Click
         frmReporteCajaJornadaSeleccionar.Show()
     End Sub
+
+    Private Sub ReporteCajaGralToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaGralToolStripMenuItem.Click
+        Dim ctrlImpre As New ControladorImpresion
+        ctrlImpre.ImprimirCajaPalcoGral()
+    End Sub
 End Class

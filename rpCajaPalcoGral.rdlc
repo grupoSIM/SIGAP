@@ -2,31 +2,31 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Fecha">
+      <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Fecha.Value, "DataSet1")</Value>
+                <Value>REPORTE DE CAJA GENERAL</Value>
                 <Style>
-                  <FontSize>9pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                  <Format>=CDate(Fields!Fecha.Value).ToString("dd/MM/yyyy")</Format>
+                  <TextDecoration>Underline</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Left</TextAlign>
+              <TextAlign>Center</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Fecha</rd:DefaultName>
-        <Top>1.28172cm</Top>
-        <Left>0.04cm</Left>
-        <Height>0.49417cm</Height>
-        <Width>2.15604cm</Width>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.75255cm</Top>
+        <Left>0.02646cm</Left>
+        <Height>0.49389cm</Height>
+        <Width>7.3387cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -72,212 +72,27 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Palco">
+      <Textbox Name="Textbox16">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!IdPalco.Value, "DataSet1")</Value>
+                <Value>CANT. CARRERAS:</Value>
                 <Style>
-                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Palco</rd:DefaultName>
-        <Top>1.28172cm</Top>
-        <Left>6.50558cm</Left>
-        <Height>0.56472cm</Height>
-        <Width>0.85958cm</Width>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>1.66124cm</Top>
+        <Height>0.6cm</Height>
+        <Width>4.63585cm</Width>
         <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="CantRemates">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!CantRemates.Value, "DataSet1")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>CantRemates</rd:DefaultName>
-        <Top>2.96016cm</Top>
-        <Left>4.8387cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BottomBorder>
-            <Style>Solid</Style>
-            <Width>2pt</Width>
-          </BottomBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="SumaApuestas">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!SumaApuestas.Value, "DataSet1")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>SumaApuestas</rd:DefaultName>
-        <Top>4.07802cm</Top>
-        <Left>4.86516cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BottomBorder>
-            <Style>Solid</Style>
-            <Width>2pt</Width>
-          </BottomBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="SumaPremios">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!SumaPremios.Value, "DataSet1")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>SumaPremios</rd:DefaultName>
-        <Top>5.19589cm</Top>
-        <Left>4.86516cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BottomBorder>
-            <Style>Solid</Style>
-            <Width>2pt</Width>
-          </BottomBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="ComisionRematador">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!ComisionRematador.Value, "DataSet1")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>ComisionRematador</rd:DefaultName>
-        <Top>6.31376cm</Top>
-        <Left>4.86516cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BottomBorder>
-            <Style>Solid</Style>
-            <Width>2pt</Width>
-          </BottomBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="ComisionHipodromo">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!ComisionHipodromo.Value, "DataSet1")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>ComisionHipodromo</rd:DefaultName>
-        <Top>7.43162cm</Top>
-        <Left>4.86516cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -309,11 +124,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>2.96016cm</Top>
-        <Left>0.02646cm</Left>
+        <Top>2.66912cm</Top>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -345,11 +159,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>4.07802cm</Top>
-        <Left>0.02646cm</Left>
+        <Top>3.78698cm</Top>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -381,11 +194,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>5.19589cm</Top>
-        <Left>0.02646cm</Left>
+        <Top>4.90485cm</Top>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -417,11 +229,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>6.31376cm</Top>
-        <Left>0.02646cm</Left>
+        <Top>6.02272cm</Top>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -453,10 +264,189 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>7.43162cm</Top>
-        <Left>0.02646cm</Left>
+        <Top>7.14058cm</Top>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BottomBorder>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
+          </BottomBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="CantCarreras">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!CantCarreras.Value, "DataSet1")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>CantCarreras</rd:DefaultName>
+        <Top>1.66124cm</Top>
+        <Left>4.86516cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BottomBorder>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
+          </BottomBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="CantRemates">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!CantRemates.Value, "DataSet1")</Value>
+                <Style>
+                  <Format>#,0;(#,0)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>CantRemates</rd:DefaultName>
+        <Top>2.66912cm</Top>
+        <Left>4.86516cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BottomBorder>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
+          </BottomBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="SumaApuestas">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!SumaApuestas.Value, "DataSet1")</Value>
+                <Style>
+                  <Format>#,0;(#,0)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>SumaApuestas</rd:DefaultName>
+        <Top>3.78698cm</Top>
+        <Left>4.86516cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BottomBorder>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
+          </BottomBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="SumaPremios">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!SumaPremios.Value, "DataSet1")</Value>
+                <Style>
+                  <Format>#,0;(#,0)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>SumaPremios</rd:DefaultName>
+        <Top>4.90485cm</Top>
+        <Left>4.86516cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BottomBorder>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
+          </BottomBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ComisionRematador">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!ComisionRematador.Value, "DataSet1")</Value>
+                <Style>
+                  <Format>#,0;(#,0)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ComisionRematador</rd:DefaultName>
+        <Top>6.02272cm</Top>
+        <Left>4.86516cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -472,123 +462,15 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox2">
+      <Textbox Name="ComisionHipodromo">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>REPORTE DE CAJA-JORNADA</Value>
+                <Value>=Sum(Fields!ComisionHipodromo.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>Underline</TextDecoration>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.75255cm</Top>
-        <Left>0.04cm</Left>
-        <Height>0.49389cm</Height>
-        <Width>7.32516cm</Width>
-        <ZIndex>13</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox7">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>PALCO:</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>1.28172cm</Top>
-        <Left>4.9821cm</Left>
-        <Height>0.56472cm</Height>
-        <Width>1.52347cm</Width>
-        <ZIndex>14</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>CANT. CARRERAS:</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.95228cm</Top>
-        <Left>0.02646cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
-        <ZIndex>15</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BottomBorder>
-            <Style>Solid</Style>
-            <Width>2pt</Width>
-          </BottomBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="CantRemates1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!CantCarreras.Value, "DataSet1")</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
                   <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
@@ -596,12 +478,12 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>CantRemates1</rd:DefaultName>
-        <Top>2.02283cm</Top>
+        <rd:DefaultName>ComisionHipodromo</rd:DefaultName>
+        <Top>7.14058cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -617,10 +499,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.82292in</Height>
+    <Height>3.22917in</Height>
     <Style />
   </Body>
-  <Width>3.233in</Width>
+  <Width>3.11842in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -638,7 +520,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>83e48a0b-6067-4326-9114-371b32b216bd</rd:DataSourceID>
+      <rd:DataSourceID>fefc4d35-1309-4161-a4ad-95ab0a0d2e2a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -652,14 +534,6 @@
           <DataField>Hipodromo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="IdJornada">
-          <DataField>IdJornada</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Fecha">
-          <DataField>Fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
         <Field Name="IdPalco">
           <DataField>IdPalco</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -667,6 +541,10 @@
         <Field Name="Palco">
           <DataField>Palco</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CantCarreras">
+          <DataField>CantCarreras</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="CantRemates">
           <DataField>CantRemates</DataField>
@@ -688,21 +566,17 @@
           <DataField>ComisionHipodromo</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="CantCarreras">
-          <DataField>CantCarreras</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>bdSIGAP_DataSet</rd:DataSetName>
         <rd:SchemaPath>D:\Gustavo\SIM\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
-        <rd:TableName>VwCajaPalcoJornada</rd:TableName>
+        <rd:TableName>VwCajaPalcoGral</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>VwCajaPalcoJornadaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>VwCajaPalcoGralTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>aa09479d-1f8a-4968-849a-a134d00b637e</rd:ReportID>
+  <rd:ReportID>74b68dac-da09-4519-9a21-26f410322c4e</rd:ReportID>
 </Report>

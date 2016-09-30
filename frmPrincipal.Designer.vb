@@ -50,6 +50,7 @@ Partial Class frmPrincipal
         Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDevolucionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCajaJornadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteCajaGralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -200,7 +201,7 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem, Me.ReporteCajaGralToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -228,6 +229,12 @@ Partial Class frmPrincipal
         Me.ReporteCajaJornadaToolStripMenuItem.Name = "ReporteCajaJornadaToolStripMenuItem"
         Me.ReporteCajaJornadaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReporteCajaJornadaToolStripMenuItem.Text = "Reporte Caja Jornada"
+        '
+        'ReporteCajaGralToolStripMenuItem
+        '
+        Me.ReporteCajaGralToolStripMenuItem.Name = "ReporteCajaGralToolStripMenuItem"
+        Me.ReporteCajaGralToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReporteCajaGralToolStripMenuItem.Text = "Reporte Caja Gral"
         '
         'frmPrincipal
         '
@@ -274,4 +281,5 @@ Partial Class frmPrincipal
     Friend WithEvents ListadoDeRematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarYuntasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteCajaJornadaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteCajaGralToolStripMenuItem As ToolStripMenuItem
 End Class
