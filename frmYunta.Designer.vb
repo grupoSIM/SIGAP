@@ -42,6 +42,7 @@ Partial Class frmYunta
         Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btRemates = New System.Windows.Forms.Button()
         Me.btEliminar = New System.Windows.Forms.Button()
+        Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,6 +196,10 @@ Partial Class frmYunta
         Me.btEliminar.Text = "Eliminar"
         Me.btEliminar.UseVisualStyleBackColor = True
         '
+        'Tb_PorcentajesCasaTableAdapter
+        '
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
+        '
         'frmYunta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -237,4 +242,5 @@ Partial Class frmYunta
     Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
     Friend WithEvents btRemates As Button
     Friend WithEvents btEliminar As Button
+    Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
 End Class

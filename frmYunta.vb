@@ -142,7 +142,7 @@
         Dim idCarreraNueva As Integer
         Dim y As Integer = 1
         Dim yuntas As String = ""
-        Dim nroYunta As String = "00"
+        Dim nroYunta As String = "0"
 
 
         For Each txt As TextBox In Controls.OfType(Of TextBox)
@@ -166,8 +166,8 @@
         filaCarrera("Nombre") = "Yunta " & cbCarrera.SelectedValue & yuntas
         filaCarrera("Metros") = "0"
         filaCarrera("Estado") = 0
-        filaCarrera("PorcentajeCasa") = 20
-        filaCarrera("PorcentajeUltimoRemate") = 20
+        filaCarrera("PorcentajeCasa") = RecuperarPorcentaje()
+        filaCarrera("PorcentajeUltimoRemate") = RecuperarPorcentaje()
         filaCarrera("TipoCarrera") = "Normal"
         filaCarrera("Observaciones") = " "
 
@@ -257,4 +257,27 @@
         Controls.Remove(Controls("txtNum" & contCab))
 
     End Sub
+
+    Private Function RecuperarPorcentaje()
+        Dim i As Integer = 1
+        Dim porCaballos As Integer
+        Dim cont As Integer = 0
+
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If txt.Name = "txtCaballo" & i Then
+                cont += 1
+                i += 1
+            End If
+        Next
+        If i > 1 Then
+            porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
+        End If
+        If i = 1 Then
+            porCaballos = 0
+        End If
+        'MessageBox.Show("cont=" & cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("porCaballos=" & porCaballos, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        Return porCaballos
+    End Function
+
 End Class

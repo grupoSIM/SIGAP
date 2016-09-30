@@ -25,18 +25,8 @@ Partial Class frmCarrera
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCarrera))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdJornadaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
-        Me.NroCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MetrosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorcentajeCasaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
@@ -55,6 +45,16 @@ Partial Class frmCarrera
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdJornadaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.NroCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MetrosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PorcentajeCasaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,27 +71,8 @@ Partial Class frmCarrera
         Me.DataGridView1.DataSource = Me.TbCarrerasBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(3, 24)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(942, 323)
+        Me.DataGridView1.Size = New System.Drawing.Size(1039, 323)
         Me.DataGridView1.TabIndex = 0
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        '
-        'IdJornadaDataGridViewTextBoxColumn
-        '
-        Me.IdJornadaDataGridViewTextBoxColumn.DataPropertyName = "IdJornada"
-        Me.IdJornadaDataGridViewTextBoxColumn.DataSource = Me.TbJornadasBindingSource
-        Me.IdJornadaDataGridViewTextBoxColumn.DisplayMember = "Descripcion"
-        Me.IdJornadaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
-        Me.IdJornadaDataGridViewTextBoxColumn.HeaderText = "Jornada"
-        Me.IdJornadaDataGridViewTextBoxColumn.Name = "IdJornadaDataGridViewTextBoxColumn"
-        Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdJornadaDataGridViewTextBoxColumn.Width = 150
         '
         'TbJornadasBindingSource
         '
@@ -102,56 +83,6 @@ Partial Class frmCarrera
         '
         Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
         Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'NroCarreraDataGridViewTextBoxColumn
-        '
-        Me.NroCarreraDataGridViewTextBoxColumn.DataPropertyName = "NroCarrera"
-        Me.NroCarreraDataGridViewTextBoxColumn.HeaderText = "Nro Carrera"
-        Me.NroCarreraDataGridViewTextBoxColumn.Name = "NroCarreraDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'MetrosDataGridViewTextBoxColumn
-        '
-        Me.MetrosDataGridViewTextBoxColumn.DataPropertyName = "Metros"
-        Me.MetrosDataGridViewTextBoxColumn.HeaderText = "Metros"
-        Me.MetrosDataGridViewTextBoxColumn.Name = "MetrosDataGridViewTextBoxColumn"
-        Me.MetrosDataGridViewTextBoxColumn.Width = 50
-        '
-        'EstadoDataGridViewTextBoxColumn
-        '
-        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
-        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
-        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        '
-        'PorcentajeCasaDataGridViewTextBoxColumn
-        '
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeCasa"
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.HeaderText = "% Casa"
-        Me.PorcentajeCasaDataGridViewTextBoxColumn.Name = "PorcentajeCasaDataGridViewTextBoxColumn"
-        '
-        'PorcentajeUltimoRemateDataGridViewTextBoxColumn
-        '
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeUltimoRemate"
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.HeaderText = "PorcentajeUltimoRemate"
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.Name = "PorcentajeUltimoRemateDataGridViewTextBoxColumn"
-        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.Visible = False
-        '
-        'ObservacionesDataGridViewTextBoxColumn
-        '
-        Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
-        Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
-        Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
-        '
-        'TipoCarreraDataGridViewTextBoxColumn
-        '
-        Me.TipoCarreraDataGridViewTextBoxColumn.DataPropertyName = "TipoCarrera"
-        Me.TipoCarreraDataGridViewTextBoxColumn.HeaderText = "Tipo"
-        Me.TipoCarreraDataGridViewTextBoxColumn.Name = "TipoCarreraDataGridViewTextBoxColumn"
         '
         'TbCarrerasBindingSource
         '
@@ -180,7 +111,7 @@ Partial Class frmCarrera
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(946, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(1043, 25)
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -303,11 +234,79 @@ Partial Class frmCarrera
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        '
+        'IdJornadaDataGridViewTextBoxColumn
+        '
+        Me.IdJornadaDataGridViewTextBoxColumn.DataPropertyName = "IdJornada"
+        Me.IdJornadaDataGridViewTextBoxColumn.DataSource = Me.TbJornadasBindingSource
+        Me.IdJornadaDataGridViewTextBoxColumn.DisplayMember = "Descripcion"
+        Me.IdJornadaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
+        Me.IdJornadaDataGridViewTextBoxColumn.HeaderText = "Jornada"
+        Me.IdJornadaDataGridViewTextBoxColumn.Name = "IdJornadaDataGridViewTextBoxColumn"
+        Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdJornadaDataGridViewTextBoxColumn.Width = 150
+        '
+        'NroCarreraDataGridViewTextBoxColumn
+        '
+        Me.NroCarreraDataGridViewTextBoxColumn.DataPropertyName = "NroCarrera"
+        Me.NroCarreraDataGridViewTextBoxColumn.HeaderText = "Nro Carrera"
+        Me.NroCarreraDataGridViewTextBoxColumn.Name = "NroCarreraDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'MetrosDataGridViewTextBoxColumn
+        '
+        Me.MetrosDataGridViewTextBoxColumn.DataPropertyName = "Metros"
+        Me.MetrosDataGridViewTextBoxColumn.HeaderText = "Metros"
+        Me.MetrosDataGridViewTextBoxColumn.Name = "MetrosDataGridViewTextBoxColumn"
+        Me.MetrosDataGridViewTextBoxColumn.Width = 50
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        '
+        'PorcentajeCasaDataGridViewTextBoxColumn
+        '
+        Me.PorcentajeCasaDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeCasa"
+        Me.PorcentajeCasaDataGridViewTextBoxColumn.HeaderText = "% Casa"
+        Me.PorcentajeCasaDataGridViewTextBoxColumn.Name = "PorcentajeCasaDataGridViewTextBoxColumn"
+        '
+        'PorcentajeUltimoRemateDataGridViewTextBoxColumn
+        '
+        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.DataPropertyName = "PorcentajeUltimoRemate"
+        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.HeaderText = "% Último Remate"
+        Me.PorcentajeUltimoRemateDataGridViewTextBoxColumn.Name = "PorcentajeUltimoRemateDataGridViewTextBoxColumn"
+        '
+        'ObservacionesDataGridViewTextBoxColumn
+        '
+        Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
+        Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
+        Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
+        '
+        'TipoCarreraDataGridViewTextBoxColumn
+        '
+        Me.TipoCarreraDataGridViewTextBoxColumn.DataPropertyName = "TipoCarrera"
+        Me.TipoCarreraDataGridViewTextBoxColumn.HeaderText = "Tipo"
+        Me.TipoCarreraDataGridViewTextBoxColumn.Name = "TipoCarreraDataGridViewTextBoxColumn"
+        '
         'frmCarrera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(946, 347)
+        Me.ClientSize = New System.Drawing.Size(1043, 347)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmCarrera"
