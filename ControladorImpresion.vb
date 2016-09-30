@@ -134,6 +134,22 @@ Public Class ControladorImpresion
         Print()
     End Sub
 
+    Public Sub ImprimirCajaPalcoJornada(IdJornada As Int32)
+        Dim report As New LocalReport()
+        Dim dataSet As New bdSIGAP_DataSet
+        Dim dataTable As New Object
+
+        Dim TableAdapter As New bdSIGAP_DataSetTableAdapters.VwCajaPalcoJornadaTableAdapter ' <-- Cambiar VwCajaPalcoTableAdapter por el nombre q corresponda
+
+        TableAdapter.FillByIdJornada(dataSet.VwCajaPalcoJornada, IdJornada) ' <-- Cambiar VwPremios por el nombre q corresponda
+        dataTable = dataSet.VwCajaPalcoJornada ' <-- Cambiar VwCajaPalco por el nombre q corresponda
+        report.ReportPath = "rpCajaPalcoJornada.rdlc" ' <-- Cambiar por el nombre del reporte q corresponda ( debe estar en el copiado a la carpeta debug)
+        report.DataSources.Add(New ReportDataSource("DataSet1", dataTable)) ' <-- Cambiar "DataSet1" por el nombre del DataSet q espera el reporte
+
+        Export(report)
+        Print()
+    End Sub
+
     Public Sub ImprimirTicket(IdDetalleRemate As Int32)
         Dim report As New LocalReport()
         Dim dataSet As New bdSIGAP_DataSet

@@ -88,4 +88,8 @@
         frmYunta.Show()
 
     End Sub
+
+    Private Sub ReporteCajaJornadaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaJornadaToolStripMenuItem.Click
+        frmReporteCajaJornadaSeleccionar.Show()
+    End Sub
 End Class
