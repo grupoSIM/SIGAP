@@ -11,6 +11,8 @@
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
     End Sub
 
+    Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
 
+    End Sub
 End Class
 

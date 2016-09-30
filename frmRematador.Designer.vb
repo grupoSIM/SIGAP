@@ -24,8 +24,6 @@ Partial Class frmRematador
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRematador))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TbRematadoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
@@ -43,31 +41,18 @@ Partial Class frmRematador
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TbRematadoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PorcentajeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SinNombreDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.PorcentajeDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TbRematadoresBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 28)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(341, 178)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'TbRematadoresBindingSource
-        '
-        Me.TbRematadoresBindingSource.DataMember = "tb_Rematadores"
-        Me.TbRematadoresBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'BdSIGAP_DataSet
         '
@@ -92,7 +77,7 @@ Partial Class frmRematador
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(341, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(442, 25)
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -202,6 +187,7 @@ Partial Class frmRematador
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.MSysCompactErrorTableAdapter = Nothing
         Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
@@ -215,19 +201,33 @@ Partial Class frmRematador
         Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.PorcentajeDataGridViewTextBoxColumn, Me.SinNombreDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.TbRematadoresBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 28)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(442, 177)
+        Me.DataGridView1.TabIndex = 2
+        '
+        'TbRematadoresBindingSource
+        '
+        Me.TbRematadoresBindingSource.DataMember = "tb_Rematadores"
+        Me.TbRematadoresBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'IdDataGridViewTextBoxColumn
         '
         Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
         Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Visible = False
         '
         'NombreDataGridViewTextBoxColumn
         '
         Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
         Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
         Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.Width = 200
         '
         'PorcentajeDataGridViewTextBoxColumn
         '
@@ -235,30 +235,33 @@ Partial Class frmRematador
         Me.PorcentajeDataGridViewTextBoxColumn.HeaderText = "Porcentaje"
         Me.PorcentajeDataGridViewTextBoxColumn.Name = "PorcentajeDataGridViewTextBoxColumn"
         '
+        'SinNombreDataGridViewCheckBoxColumn
+        '
+        Me.SinNombreDataGridViewCheckBoxColumn.DataPropertyName = "SinNombre"
+        Me.SinNombreDataGridViewCheckBoxColumn.HeaderText = "SinNombre"
+        Me.SinNombreDataGridViewCheckBoxColumn.Name = "SinNombreDataGridViewCheckBoxColumn"
+        '
         'frmRematador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(341, 206)
-        Me.Controls.Add(Me.BindingNavigator1)
+        Me.ClientSize = New System.Drawing.Size(442, 206)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.BindingNavigator1)
         Me.Name = "frmRematador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Rematador"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbRematadoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
-    Friend WithEvents TbRematadoresBindingSource As BindingSource
     Friend WithEvents Tb_RematadoresTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter
     Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
@@ -275,7 +278,10 @@ Partial Class frmRematador
     Friend WithEvents SaveToolStripButton As ToolStripButton
     Friend WithEvents PrintToolStripButton As ToolStripButton
     Friend WithEvents TableAdapterManager As bdSIGAP_DataSetTableAdapters.TableAdapterManager
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PorcentajeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SinNombreDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents TbRematadoresBindingSource As BindingSource
 End Class
