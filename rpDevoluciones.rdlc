@@ -295,7 +295,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE DE DEVULUCIONES</Value>
+                  <Value>REPORTE DE DEVOLUCIONES</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>

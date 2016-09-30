@@ -34,6 +34,7 @@ Partial Class frmPrincipal
         Me.CarrerasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarCarreraCaballosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarLLaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargarYuntasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeCarrerasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,7 +49,7 @@ Partial Class frmPrincipal
         Me.ReportePremiosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDevolucionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargarYuntasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteCajaJornadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -129,6 +130,12 @@ Partial Class frmPrincipal
         Me.CargarLLaveToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.CargarLLaveToolStripMenuItem.Text = "Cargar Llave"
         '
+        'CargarYuntasToolStripMenuItem
+        '
+        Me.CargarYuntasToolStripMenuItem.Name = "CargarYuntasToolStripMenuItem"
+        Me.CargarYuntasToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.CargarYuntasToolStripMenuItem.Text = "Cargar Yuntas"
+        '
         'ModificarCarreraToolStripMenuItem
         '
         Me.ModificarCarreraToolStripMenuItem.Name = "ModificarCarreraToolStripMenuItem"
@@ -193,7 +200,7 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -216,11 +223,11 @@ Partial Class frmPrincipal
         Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReporteDevolucionesToolStripMenuItem.Text = "Reporte Devoluciones"
         '
-        'CargarYuntasToolStripMenuItem
+        'ReporteCajaJornadaToolStripMenuItem
         '
-        Me.CargarYuntasToolStripMenuItem.Name = "CargarYuntasToolStripMenuItem"
-        Me.CargarYuntasToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.CargarYuntasToolStripMenuItem.Text = "Cargar Yuntas"
+        Me.ReporteCajaJornadaToolStripMenuItem.Name = "ReporteCajaJornadaToolStripMenuItem"
+        Me.ReporteCajaJornadaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReporteCajaJornadaToolStripMenuItem.Text = "Reporte Caja Jornada"
         '
         'frmPrincipal
         '
@@ -266,4 +273,5 @@ Partial Class frmPrincipal
     Friend WithEvents ReporteDevolucionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeRematesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CargarYuntasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteCajaJornadaToolStripMenuItem As ToolStripMenuItem
 End Class

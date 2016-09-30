@@ -217,6 +217,12 @@
     <Compile Include="frmRemates.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReporteCajaJornadaSeleccionar.Designer.vb">
+      <DependentUpon>frmReporteCajaJornadaSeleccionar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCajaJornadaSeleccionar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReporteCierreCaja.Designer.vb">
       <DependentUpon>frmReporteCierreCaja.vb</DependentUpon>
     </Compile>
@@ -336,6 +342,9 @@
     <EmbeddedResource Include="frmRemates.resx">
       <DependentUpon>frmRemates.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCajaJornadaSeleccionar.resx">
+      <DependentUpon>frmReporteCajaJornadaSeleccionar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteCierreCaja.resx">
       <DependentUpon>frmReporteCierreCaja.vb</DependentUpon>
     </EmbeddedResource>
@@ -366,10 +375,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="rpDevoluciones.rdlc">
+    <EmbeddedResource Include="rpCajaPalcoJornada.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="rpCajaPalco.rdlc">
+    <EmbeddedResource Include="rpCajaPalco.rdlc" />
+    <EmbeddedResource Include="rpDevoluciones.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="rpPremios.rdlc">
