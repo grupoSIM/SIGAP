@@ -1,5 +1,6 @@
 ﻿Public Class frmYunta
     Public altoYunta As Integer = 100
+    Public contCab As Integer = 1
 
     Private Sub frmYunta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Jornadas' table. You can move, or remove it, as needed.
@@ -85,10 +86,11 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim nuevoControl As Control
         Dim i As Integer = 1
+        Dim c As Integer = 1
+        Dim cb As Integer = 1
         Dim nombrecillo As String
         nombrecillo = " "
         Dim num As String = ""
-        'Dim alto As Integer = 90
         Dim ubicacion As Point
         ubicacion = New Point(35, altoYunta)
 
@@ -96,29 +98,29 @@
         For Each chk As CheckBox In Controls.OfType(Of CheckBox)
             If chk.Checked = True Then
                 nombrecillo = nombrecillo & chk.Text & "/"
-                num = num & Me.Controls("txtNumero" & i).Text
+                num = num & Me.Controls("txtNumero" & c).Text
             End If
-            i += 1
+            c += 1
         Next
 
         nuevoControl = New TextBox
         With nuevoControl
-            .Name = "txtNum" & i
+            .Name = "txtNum" & contCab
             .Location = New Point(400, altoYunta)
             .Size() = New Size(40, 20)
             .Text = num
-            '.Tag = "Numero"
+            '.Tag = "NumeroOrden"
             .Visible = True
         End With
         Controls.Add(nuevoControl)
 
         nuevoControl = New TextBox
         With nuevoControl
-            .Name = "txtCaballo" & i
+            .Name = "txtCaballo" & contCab
             .Location = New Point(450, altoYunta)
             .Size() = New Size(300, 20)
             .Text = nombrecillo
-            '.Tag = "Numero"
+            '.Tag = "NomCab"
             .Visible = True
         End With
         Controls.Add(nuevoControl)
@@ -130,8 +132,96 @@
             If chk.Checked = True Then
                 chk.Checked = False
             End If
-            i += 1
+            cb += 1
         Next
 
+        contCab += 1
+    End Sub
+    Private Function CreaCarrera()
+        Dim i As Integer = 1
+        Dim idCarreraNueva As Integer
+
+        '#1 CARGAR CARRERA'
+        Dim filaCarrera As DataRowView
+        filaCarrera = TbCarrerasBindingSource.AddNew()
+
+        filaCarrera("IdJornada") = cbJornada.SelectedValue
+        filaCarrera("NroCarrera") = 901
+        filaCarrera("Nombre") = "Yunta" & cbCarrera.SelectedValue
+        filaCarrera("Metros") = "0"
+        filaCarrera("Estado") = 0
+        filaCarrera("PorcentajeCasa") = 20
+        filaCarrera("PorcentajeUltimoRemate") = 20
+        filaCarrera("TipoCarrera") = "Normal"
+        filaCarrera("Observaciones") = " "
+
+        Me.Validate()
+        Me.TbCarrerasBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+        idCarreraNueva = Tb_CarrerasTableAdapter.maxId()
+
+        Return idCarreraNueva
+
+
+    End Function
+
+    Private Function CreaCaballos()
+        Dim i As Integer
+        i = 1
+        '2 creo caballo
+        Dim filaCaballo As DataRowView
+
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            MessageBox.Show(txt.Name, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            MessageBox.Show("i=" & i, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            If txt.Name = "txtCaballo" & i Then
+                filaCaballo = TbCaballosBindingSource.AddNew()
+                filaCaballo("CaballoNombre") = Me.Controls("txtCaballo" & i).Text
+
+                Me.Validate()
+                Me.TbCaballosBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+                i += 1
+            End If
+        Next
+
+    End Function
+
+    Private Sub CreaCaballosCarrera(ByVal idCarrera As Integer)
+        Dim filaCaballoCarrera As DataRowView
+        Dim i As Integer = 1
+
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If txt.Name = "txtCaballo" & i Then
+                filaCaballoCarrera = TbCarrerasCaballosBindingSource.AddNew()
+                filaCaballoCarrera("IdCaballo") = Tb_CaballosTableAdapter.GetIdByNombre(Me.Controls("txtCaballo" & i).Text)
+                filaCaballoCarrera("IdCarrera") = idCarrera
+                filaCaballoCarrera("Orden") = Me.Controls("txtNum" & i).Text
+
+                Me.Validate()
+                Me.TbCarrerasCaballosBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+                'MessageBox.Show("Se ha creado la carreraCAballo", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+                i += 1
+            End If
+
+        Next
+
+    End Sub
+
+    Private Sub btCrearCarrera_Click(sender As Object, e As EventArgs) Handles btCrearCarrera.Click
+        Dim idCarrera As Integer
+
+        idCarrera = CreaCarrera()
+        CreaCaballos()
+        CreaCaballosCarrera(idCarrera)
+
+    End Sub
+
+    Private Sub btRemates_Click(sender As Object, e As EventArgs) Handles btRemates.Click
+        frmRemate.Show()
     End Sub
 End Class
