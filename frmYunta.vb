@@ -173,8 +173,8 @@
         Dim filaCaballo As DataRowView
 
         For Each txt As TextBox In Controls.OfType(Of TextBox)
-            MessageBox.Show(txt.Name, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-            MessageBox.Show("i=" & i, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            'MessageBox.Show(txt.Name, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            'MessageBox.Show("i=" & i, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             If txt.Name = "txtCaballo" & i Then
                 filaCaballo = TbCaballosBindingSource.AddNew()
                 filaCaballo("CaballoNombre") = Me.Controls("txtCaballo" & i).Text
@@ -222,6 +222,7 @@
     End Sub
 
     Private Sub btRemates_Click(sender As Object, e As EventArgs) Handles btRemates.Click
+        Me.Close()
         frmRemate.Show()
     End Sub
 End Class
