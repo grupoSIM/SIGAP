@@ -187,7 +187,6 @@ Partial Class frmRematador
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.MSysCompactErrorTableAdapter = Nothing
         Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
         Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
