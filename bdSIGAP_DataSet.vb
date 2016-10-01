@@ -4,6 +4,9 @@ Partial Public Class bdSIGAP_DataSet
 End Class
 
 Namespace bdSIGAP_DataSetTableAdapters
+    Partial Public Class VwCajaPalcoCarreraCaballoTableAdapter
+    End Class
+
     Partial Public Class VwCajaPalcoTableAdapter
     End Class
 
