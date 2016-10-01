@@ -97,4 +97,8 @@
         Dim ctrlImpre As New ControladorImpresion
         ctrlImpre.ImprimirCajaPalcoGral()
     End Sub
+
+    Private Sub ReporteCajaPorCaballoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaPorCaballoToolStripMenuItem.Click
+        frmReporteCajaXCaballo.Show()
+    End Sub
 End Class
