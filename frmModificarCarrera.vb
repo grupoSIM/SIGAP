@@ -1,6 +1,7 @@
 ﻿Public Class frmModificarCarrera
 
     Public ref1 As Integer = 0
+    Public IdCarrera As Integer
 
 
     Private Sub frmCargarResultado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -17,21 +18,22 @@
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_CarrerasCaballos' table. You can move, or remove it, as needed.
         ' Me.Tb_CarrerasCaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_CarrerasCaballos)
 
-        CargarCarreras()
+        CargarCarreras(cbCarrera.SelectedValue)
     End Sub
 
-    Private Function CargarCarreras()
+    Private Function CargarCarreras(ByVal IdCarrera As Integer)
+        IdCarrera = cbCarrera.SelectedValue
 
-        Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, cbCarrera.SelectedValue)
+        Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, IdCarrera)
 
-            Dim carrera As DataRow
-            carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cbCarrera.SelectedValue)
-            'MessageBox.Show("SelectedValue " & cbCarrera.SelectedValue, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        Dim carrera As DataRow
+        carrera = BdSIGAP_DataSet.tb_Carreras.FindById(IdCarrera)
+        'MessageBox.Show("SelectedValue " & cbCarrera.SelectedValue, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
-            Me.nCarrera.Value = carrera("NroCarrera")
-            Me.txNombre.Text = carrera("Nombre")
-            Me.nProcentajeCasa.Value = carrera("PorcentajeCasa")
-            Me.txMetros.Text = carrera("Metros")
+        Me.nCarrera.Text = carrera("NroCarrera")
+        Me.txNombre.Text = carrera("Nombre")
+        Me.nProcentajeCasa.Value = carrera("PorcentajeCasa")
+        Me.txMetros.Text = carrera("Metros")
 
 
     End Function
@@ -39,13 +41,19 @@
 
 
     Private Sub cbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera.SelectedIndexChanged
-        CargarCarreras()
+        If (cbCarrera.SelectedValue) Then
+            CargarCarreras(IdCarrera)
+        End If
+
     End Sub
 
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim carrera As DataRow
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cbCarrera.SelectedValue)
+
+
+        IdCarrera = cbCarrera.SelectedValue
 
         'actualiza, pone los datos a moficar y  continuando los originales
 
@@ -59,7 +67,7 @@
 
         Me.Tb_CarrerasTableAdapter.Update(
             carrera("IdJornada"),
-            Me.nCarrera.Value,
+            Me.nCarrera.Text,
             Me.txNombre.Text,
             Me.txMetros.Text,
             carrera("Estado"),
@@ -82,8 +90,12 @@
         Me.TbCarrerasBindingSource.EndEdit()
         Me.TbCarrerasCaballosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
-        'MessageBox.Show("Se ha Modificado la Carrera", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
+        MessageBox.Show("Se ha Modificado la Carrera", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+        'Me.cbCarrera.SelectedValue = carrera("Id")
+
+        Me.Tb_CarrerasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Carreras)
 
     End Sub
 
