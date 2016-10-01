@@ -45,7 +45,6 @@ Partial Class frmModificarCarrera
         Me.cbJornada = New System.Windows.Forms.ComboBox()
         Me.nProcentajeCasa = New System.Windows.Forms.NumericUpDown()
         Me.txNombre = New System.Windows.Forms.TextBox()
-        Me.nCarrera = New System.Windows.Forms.NumericUpDown()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txMetros = New System.Windows.Forms.TextBox()
         Me.cbCarrera = New System.Windows.Forms.ComboBox()
@@ -58,13 +57,13 @@ Partial Class frmModificarCarrera
         Me.Tb_CarrerasTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.nCarrera = New System.Windows.Forms.TextBox()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -233,13 +232,6 @@ Partial Class frmModificarCarrera
         Me.txNombre.Size = New System.Drawing.Size(300, 20)
         Me.txNombre.TabIndex = 14
         '
-        'nCarrera
-        '
-        Me.nCarrera.Location = New System.Drawing.Point(75, 73)
-        Me.nCarrera.Name = "nCarrera"
-        Me.nCarrera.Size = New System.Drawing.Size(120, 20)
-        Me.nCarrera.TabIndex = 16
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -321,6 +313,7 @@ Partial Class frmModificarCarrera
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.nCarrera)
         Me.GroupBox1.Controls.Add(Me.nProcentajeCasa)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txMetros)
@@ -333,7 +326,6 @@ Partial Class frmModificarCarrera
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.cbTipo)
-        Me.GroupBox1.Controls.Add(Me.nCarrera)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(687, 130)
@@ -348,6 +340,13 @@ Partial Class frmModificarCarrera
         Me.Button2.TabIndex = 21
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'nCarrera
+        '
+        Me.nCarrera.Location = New System.Drawing.Point(76, 72)
+        Me.nCarrera.Name = "nCarrera"
+        Me.nCarrera.Size = New System.Drawing.Size(100, 20)
+        Me.nCarrera.TabIndex = 19
         '
         'frmModificarCarrera
         '
@@ -367,7 +366,6 @@ Partial Class frmModificarCarrera
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -388,7 +386,6 @@ Partial Class frmModificarCarrera
     Friend WithEvents cbJornada As ComboBox
     Friend WithEvents nProcentajeCasa As NumericUpDown
     Friend WithEvents txNombre As TextBox
-    Friend WithEvents nCarrera As NumericUpDown
     Friend WithEvents Label6 As Label
     Friend WithEvents txMetros As TextBox
     Friend WithEvents cbCarrera As ComboBox
@@ -409,4 +406,5 @@ Partial Class frmModificarCarrera
     Friend WithEvents PosicionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LuzDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents OrdenDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents nCarrera As TextBox
 End Class

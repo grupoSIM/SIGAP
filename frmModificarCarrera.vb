@@ -26,11 +26,11 @@
 
             Dim carrera As DataRow
             carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cbCarrera.SelectedValue)
-            'MessageBox.Show("SelectedValue " & cbCarrera.SelectedValue, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("SelectedValue " & cbCarrera.SelectedValue, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
-            Me.nCarrera.Value = carrera("NroCarrera")
-            Me.txNombre.Text = carrera("Nombre")
-            Me.nProcentajeCasa.Value = carrera("PorcentajeCasa")
+        Me.nCarrera.Text = carrera("NroCarrera")
+        Me.txNombre.Text = carrera("Nombre")
+        Me.nProcentajeCasa.Value = carrera("PorcentajeCasa")
             Me.txMetros.Text = carrera("Metros")
 
 
@@ -59,7 +59,7 @@
 
         Me.Tb_CarrerasTableAdapter.Update(
             carrera("IdJornada"),
-            Me.nCarrera.Value,
+            Me.nCarrera.Text,
             Me.txNombre.Text,
             Me.txMetros.Text,
             carrera("Estado"),
