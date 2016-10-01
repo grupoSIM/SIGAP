@@ -22,7 +22,7 @@
     End Sub
 
     Private Function CargarCarreras(ByVal IdCarrera As Integer)
-        IdCarrera = cbCarrera.SelectedValue
+        'IdCarrera = cbCarrera.SelectedValue
 
         Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, IdCarrera)
 
@@ -35,14 +35,13 @@
         Me.nProcentajeCasa.Value = carrera("PorcentajeCasa")
         Me.txMetros.Text = carrera("Metros")
 
-
     End Function
 
 
 
     Private Sub cbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera.SelectedIndexChanged
         If (cbCarrera.SelectedValue) Then
-            CargarCarreras(IdCarrera)
+            CargarCarreras(cbCarrera.SelectedValue)
         End If
 
     End Sub
@@ -51,10 +50,7 @@
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim carrera As DataRow
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cbCarrera.SelectedValue)
-
-
         IdCarrera = cbCarrera.SelectedValue
-
         'actualiza, pone los datos a moficar y  continuando los originales
 
         Me.Validate()
@@ -67,7 +63,6 @@
 
         Me.Tb_CarrerasTableAdapter.Update(
             carrera("IdJornada"),
-            Me.nCarrera.Text,
             Me.txNombre.Text,
             Me.txMetros.Text,
             carrera("Estado"),
@@ -75,17 +70,17 @@
             carrera("PorcentajeUltimoRemate"),
             carrera("Observaciones"),
             carrera("TipoCarrera"),
+            Me.nCarrera.Value,
             carrera("Id"),
             carrera("IdJornada"),
-            carrera("NroCarrera"),
             carrera("Nombre"),
             carrera("Metros"),
             carrera("Estado"),
             carrera("PorcentajeCasa"),
             carrera("PorcentajeUltimoRemate"),
             carrera("Observaciones"),
-            carrera("TipoCarrera"))
-
+            carrera("TipoCarrera"),
+            carrera("NroCarrera"))
 
         Me.TbCarrerasBindingSource.EndEdit()
         Me.TbCarrerasCaballosBindingSource.EndEdit()
@@ -93,9 +88,9 @@
 
         MessageBox.Show("Se ha Modificado la Carrera", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
-        'Me.cbCarrera.SelectedValue = carrera("Id")
-
         Me.Tb_CarrerasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Carreras)
+        Me.cbCarrera.SelectedValue = IdCarrera
+
 
     End Sub
 

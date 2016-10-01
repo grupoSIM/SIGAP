@@ -347,7 +347,7 @@ Partial Class frmModificarCarrera
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(108, 23)
         Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Cancelar"
+        Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'frmModificarCarrera
