@@ -236,6 +236,7 @@ Partial Class frmModificarCarrera
         'nCarrera
         '
         Me.nCarrera.Location = New System.Drawing.Point(75, 73)
+        Me.nCarrera.Maximum = New Decimal(New Integer() {276447232, 23283, 0, 0})
         Me.nCarrera.Name = "nCarrera"
         Me.nCarrera.Size = New System.Drawing.Size(120, 20)
         Me.nCarrera.TabIndex = 16
