@@ -135,6 +135,7 @@ Partial Class frmCargarLlave
         Me.ColorDialog2 = New System.Windows.Forms.ColorDialog()
         Me.ColorDialog3 = New System.Windows.Forms.ColorDialog()
         Me.btCancelar = New System.Windows.Forms.Button()
+        Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -197,7 +198,6 @@ Partial Class frmCargarLlave
         Me.nProcentajeCasa.Name = "nProcentajeCasa"
         Me.nProcentajeCasa.Size = New System.Drawing.Size(120, 20)
         Me.nProcentajeCasa.TabIndex = 13
-        Me.nProcentajeCasa.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'cbJornada
         '
@@ -1069,6 +1069,10 @@ Partial Class frmCargarLlave
         Me.btCancelar.Text = "Salir"
         Me.btCancelar.UseVisualStyleBackColor = True
         '
+        'Tb_PorcentajesCasaTableAdapter
+        '
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
+        '
         'frmCargarLlave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1294,4 +1298,5 @@ Partial Class frmCargarLlave
     Friend WithEvents ColorDialog2 As ColorDialog
     Friend WithEvents ColorDialog3 As ColorDialog
     Friend WithEvents btCancelar As Button
+    Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
 End Class

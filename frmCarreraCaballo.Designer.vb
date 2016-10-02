@@ -79,6 +79,7 @@ Partial Class frmCarreraCaballo
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.Tb_CarrerasCaballosTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
         Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         CType(Me.TbJornadasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -593,6 +594,10 @@ Partial Class frmCarreraCaballo
         Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
         Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
+        'Tb_PorcentajesCasaTableAdapter
+        '
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
+        '
         'frmCarreraCaballo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -715,4 +720,5 @@ Partial Class frmCarreraCaballo
     Friend WithEvents txMetros As TextBox
     Friend WithEvents Tb_CarrerasCaballosTableAdapter1 As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
     Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
+    Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
 End Class

@@ -2,6 +2,8 @@
 
     Public ref1 As Integer
     Public ref2 As Integer
+    Public cuentaCab1 As Integer = 0
+    Public cuentaCab2 As Integer = 0
 
     Private Sub frmCargarLlave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Caballos' table. You can move, or remove it, as needed.
@@ -16,9 +18,27 @@
         CargarCaballos1()
         CargarCaballos2()
     End Sub
+    Private Function LimpiarCaballos1()
+        Dim ctrlsEjec As Integer = Controls.Count - 1
 
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            txt.Visible = False
+        Next
+
+    End Function
+
+    Private Function LimpiarCaballos2()
+        Dim ctrlsEjec As Integer = Controls.Count - 1
+
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
+            txt.Visible = False
+        Next
+
+    End Function
 
     Private Sub cbCarrera1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera1.SelectedIndexChanged
+        LimpiarCaballos1()
+        LimpiarCaballos2()
         CargarCaballos1()
         CargarCaballos2()
     End Sub
@@ -43,6 +63,7 @@
 
             'MsgBox(caballo("CaballoNombre"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
             i = i + 1
+
         Next
         ref1 = cbCarrera1.SelectedValue
 
@@ -71,14 +92,40 @@
 
             'MsgBox(caballo("CaballoNombre"), MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
             y = y + 1
+
         Next
     End Function
 
+    Private Function RecuperarPorcentaje()
+        Dim i As Integer = 1
+        Dim porCaballos As Integer = 0
+        Dim cont As Integer = 0
 
+        Dim dtCarrerasCaballos1 As DataTable = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera1.SelectedValue)
+        Dim dtCarrerasCaballos2 As DataTable = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera2.SelectedValue)
+
+        For Each row As DataRow In dtCarrerasCaballos1.Rows
+            Dim y As Integer = 1
+            For Each row2 As DataRow In dtCarrerasCaballos2.Rows
+                cont += 1
+                y = y + 1
+            Next
+            i = i + 1
+        Next
+
+        If cont > 1 Then
+            porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
+        End If
+
+        Return porCaballos
+    End Function
 
     Private Function CreaCarrera(ByVal car1 As Integer, ByVal car2 As Integer)
         ' MessageBox.Show("crecarrera ref 1" & ref1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Dim idCarreraNueva As Integer
+
+        nProcentajeCasa.Value = RecuperarPorcentaje()
+        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
 
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
