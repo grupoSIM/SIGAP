@@ -26,7 +26,7 @@ Partial Class frmModificarCarrera
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView = New System.Windows.Forms.DataGridView()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -58,9 +58,10 @@ Partial Class frmModificarCarrera
         Me.Tb_CarrerasTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,16 +84,16 @@ Partial Class frmModificarCarrera
         '
         Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
         '
-        'DataGridView1
+        'DataGridView
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdCarreraDataGridViewTextBoxColumn, Me.IdCaballoDataGridViewTextBoxColumn, Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn, Me.PosicionDataGridViewTextBoxColumn, Me.LuzDataGridViewCheckBoxColumn, Me.OrdenDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TbCarrerasCaballosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 162)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(744, 313)
-        Me.DataGridView1.TabIndex = 13
+        Me.DataGridView.AutoGenerateColumns = False
+        Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdCarreraDataGridViewTextBoxColumn, Me.IdCaballoDataGridViewTextBoxColumn, Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn, Me.PosicionDataGridViewTextBoxColumn, Me.LuzDataGridViewCheckBoxColumn, Me.OrdenDataGridViewTextBoxColumn})
+        Me.DataGridView.DataSource = Me.TbCarrerasCaballosBindingSource
+        Me.DataGridView.Location = New System.Drawing.Point(12, 162)
+        Me.DataGridView.Name = "DataGridView"
+        Me.DataGridView.Size = New System.Drawing.Size(744, 313)
+        Me.DataGridView.TabIndex = 13
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -350,6 +351,10 @@ Partial Class frmModificarCarrera
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Tb_PorcentajesCasaTableAdapter
+        '
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
+        '
         'frmModificarCarrera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -358,13 +363,13 @@ Partial Class frmModificarCarrera
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridView)
         Me.Name = "frmModificarCarrera"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Modificar Carrera"
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).EndInit()
@@ -378,7 +383,7 @@ Partial Class frmModificarCarrera
     Friend WithEvents BdSIGAP_DataSet As bdSIGAP_DataSet
     Friend WithEvents TbJornadasBindingSource As BindingSource
     Friend WithEvents Tb_JornadasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridView As DataGridView
     Friend WithEvents TbCarrerasCaballosBindingSource As BindingSource
     Friend WithEvents Tb_CarrerasCaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter
     Friend WithEvents Label4 As Label
@@ -410,4 +415,5 @@ Partial Class frmModificarCarrera
     Friend WithEvents PosicionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LuzDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents OrdenDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
 End Class
