@@ -84,8 +84,6 @@
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        ' nbCaballo3.Visible = True'
-        'cbCaballo3.Visible = True '
 
         Dim varNombreCombo As String
         Dim varNumCombo As String
@@ -200,9 +198,32 @@
 
     End Sub
 
+    Private Function RecuperarPorcentaje()
+        Dim i As Integer = 1
+        Dim porCaballos As Integer = 0
+        Dim cont As Integer = 0
+
+        For Each cb As ComboBox In Controls.OfType(Of ComboBox)
+            If cb.Visible = True And cb.Name <> "cbJornada" Then
+                cont += 1
+            End If
+        Next
+
+        'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+        If cont > 1 Then
+            porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
+        End If
+
+        Return porCaballos
+    End Function
+
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
+
+        nProcentajeCasa.Value = RecuperarPorcentaje()
+
         filaCarrera = TbCarrerasBindingSource.AddNew()
 
         filaCarrera("IdJornada") = cbJornada.SelectedValue
