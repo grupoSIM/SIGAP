@@ -53,6 +53,7 @@ Partial Class frmCabCarreList
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -284,11 +285,21 @@ Partial Class frmCabCarreList
         '
         Me.Tb_CaballosTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(368, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Cerrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmCabCarreList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(880, 504)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Tb_CarrerasCaballosDataGridView)
         Me.Controls.Add(Me.Tb_CarrerasCaballosBindingNavigator)
         Me.Name = "frmCabCarreList"
@@ -336,4 +347,5 @@ Partial Class frmCabCarreList
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

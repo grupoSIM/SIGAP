@@ -37,4 +37,9 @@
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Tb_CarrerasCaballosDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
+        Me.Close()
+    End Sub
 End Class
