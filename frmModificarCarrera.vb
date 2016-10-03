@@ -24,11 +24,16 @@
     Private Function CargarCarreras(ByVal IdCarrera As Integer)
         'IdCarrera = cbCarrera.SelectedValue
 
+
+
+
         Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, IdCarrera)
 
         Dim carrera As DataRow
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(IdCarrera)
         'MessageBox.Show("SelectedValue " & cbCarrera.SelectedValue, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+        Me.cbJornada.SelectedValue = BdSIGAP_DataSet.tb_Jornadas.FindById(carrera("IdJornada"))
 
         Me.nCarrera.Text = carrera("NroCarrera")
         Me.txNombre.Text = carrera("Nombre")

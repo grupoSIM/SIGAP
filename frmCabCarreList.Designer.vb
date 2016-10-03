@@ -107,7 +107,7 @@ Partial Class frmCabCarreList
         Me.Tb_CarrerasCaballosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Tb_CarrerasCaballosBindingNavigator.Name = "Tb_CarrerasCaballosBindingNavigator"
         Me.Tb_CarrerasCaballosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tb_CarrerasCaballosBindingNavigator.Size = New System.Drawing.Size(880, 25)
+        Me.Tb_CarrerasCaballosBindingNavigator.Size = New System.Drawing.Size(851, 25)
         Me.Tb_CarrerasCaballosBindingNavigator.TabIndex = 0
         Me.Tb_CarrerasCaballosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -212,7 +212,7 @@ Partial Class frmCabCarreList
         Me.Tb_CarrerasCaballosDataGridView.DataSource = Me.Tb_CarrerasCaballosBindingSource
         Me.Tb_CarrerasCaballosDataGridView.Location = New System.Drawing.Point(0, 28)
         Me.Tb_CarrerasCaballosDataGridView.Name = "Tb_CarrerasCaballosDataGridView"
-        Me.Tb_CarrerasCaballosDataGridView.Size = New System.Drawing.Size(851, 464)
+        Me.Tb_CarrerasCaballosDataGridView.Size = New System.Drawing.Size(851, 475)
         Me.Tb_CarrerasCaballosDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -298,7 +298,7 @@ Partial Class frmCabCarreList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(880, 504)
+        Me.ClientSize = New System.Drawing.Size(851, 504)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Tb_CarrerasCaballosDataGridView)
         Me.Controls.Add(Me.Tb_CarrerasCaballosBindingNavigator)

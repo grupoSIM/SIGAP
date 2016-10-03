@@ -17,4 +17,9 @@
         Me.Tb_RematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Remates)
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Tb_RematesDataGridView.DataSource = Nothing
+        Me.Close()
+    End Sub
 End Class

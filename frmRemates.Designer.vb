@@ -42,21 +42,22 @@ Partial Class frmRemates
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Tb_RematesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Tb_RematesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        Me.TbPalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
-        Me.TbRematadoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TbPalcosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TbRematadoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
+        Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_RematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_RematesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -219,33 +220,6 @@ Partial Class frmRemates
         Me.Tb_RematesDataGridView.Size = New System.Drawing.Size(942, 384)
         Me.Tb_RematesDataGridView.TabIndex = 1
         '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_CarrerasTableAdapter
-        '
-        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'TbPalcosBindingSource
-        '
-        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
-        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_PalcosTableAdapter
-        '
-        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
-        '
-        'TbRematadoresBindingSource
-        '
-        Me.TbRematadoresBindingSource.DataMember = "tb_Rematadores"
-        Me.TbRematadoresBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_RematadoresTableAdapter
-        '
-        Me.Tb_RematadoresTableAdapter.ClearBeforeFill = True
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
@@ -263,6 +237,11 @@ Partial Class frmRemates
         Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.DataGridViewTextBoxColumn2.ValueMember = "Id"
         '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "IdPalco"
@@ -273,6 +252,11 @@ Partial Class frmRemates
         Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.DataGridViewTextBoxColumn3.ValueMember = "Id"
+        '
+        'TbPalcosBindingSource
+        '
+        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
+        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'DataGridViewTextBoxColumn4
         '
@@ -297,6 +281,11 @@ Partial Class frmRemates
         Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.DataGridViewTextBoxColumn6.ValueMember = "Id"
         '
+        'TbRematadoresBindingSource
+        '
+        Me.TbRematadoresBindingSource.DataMember = "tb_Rematadores"
+        Me.TbRematadoresBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "TotalApuestas"
@@ -315,11 +304,33 @@ Partial Class frmRemates
         Me.DataGridViewTextBoxColumn9.HeaderText = "Nro Remate"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_PalcosTableAdapter
+        '
+        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_RematadoresTableAdapter
+        '
+        Me.Tb_RematadoresTableAdapter.ClearBeforeFill = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(326, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Cerrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmRemates
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(944, 414)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Tb_RematesDataGridView)
         Me.Controls.Add(Me.Tb_RematesBindingNavigator)
         Me.Name = "frmRemates"
@@ -372,4 +383,5 @@ Partial Class frmRemates
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class
