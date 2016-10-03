@@ -24,8 +24,7 @@
     Private Function CargarCarreras(ByVal IdCarrera As Integer)
         'IdCarrera = cbCarrera.SelectedValue
 
-
-
+        Dim jornada As DataRow
 
         Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, IdCarrera)
 
@@ -33,7 +32,9 @@
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(IdCarrera)
         'MessageBox.Show("SelectedValue " & cbCarrera.SelectedValue, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
-        Me.cbJornada.SelectedValue = BdSIGAP_DataSet.tb_Jornadas.FindById(carrera("IdJornada"))
+        jornada = BdSIGAP_DataSet.tb_Jornadas.FindById(carrera("IdJornada"))
+
+        Me.cbJornada.SelectedValue = jornada("Id")
 
         Me.nCarrera.Text = carrera("NroCarrera")
         Me.txNombre.Text = carrera("Nombre")
@@ -130,5 +131,10 @@
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    End Sub
+
+    Private Sub cbJornada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJornada.SelectedIndexChanged
+        Dim carreras = Tb_CarrerasTableAdapter.GetDataByJornada(cbJornada.SelectedValue)
+        cbCarrera.DataSource = carreras
     End Sub
 End Class
