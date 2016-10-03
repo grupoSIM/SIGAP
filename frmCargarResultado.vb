@@ -10,6 +10,7 @@
         Me.Tb_JornadasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Jornadas)
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Carreras' table. You can move, or remove it, as needed.
         Me.Tb_CarrerasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Carreras)
+        Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_CarrerasCaballos' table. You can move, or remove it, as needed.
         ' Me.Tb_CarrerasCaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_CarrerasCaballos)
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_CarrerasCaballos' table. You can move, or remove it, as needed.
@@ -33,7 +34,11 @@
 
     End Function
 
-    Private Function recalcularPremio()
+    Private Function recalcularPremio(ganadores As Integer)
+        MsgBox(ganadores)
+    End Function
+
+    Private Function recalcularPremioOld()
         Dim dtRemates = Tb_RematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
         Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
         Dim dtDetallesRemates As DataTable
@@ -80,6 +85,94 @@
     End Function
 
     Private Function MarcarGanadores()
+        Dim ganadores As Integer = 0
+        Dim dtRemates As DataTable = Tb_RematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+        Dim dtDetallesRemates As DataTable
+        Dim drDetalleRemate As DataRow
+        Dim posicionGanadora As Integer
+        Dim hayFila As Boolean
+        Dim posFila As Integer = 0
+        Dim ganoLuz As Boolean
+        Dim segundoRecibeLuz As Boolean = False
+
+        For Each rowR As DataRow In dtRemates.Rows
+            dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByIdRemateOrdenadoPorPosicion(rowR("Id"))
+            posicionGanadora = dtDetallesRemates.Rows(0).Item("Posicion")
+            hayFila = False
+            For Each rowDR As DataRow In dtDetallesRemates.Rows
+                If (rowDR.Item("Fila")) Then
+                    hayFila = True
+                    posFila = rowDR("Posicion")
+                End If
+                If (rowDR.Item("ApostocLuz") = 0) Then
+                    ganoLuz = rowDR("GanocLuz")
+                End If
+                If (rowDR.Item("Posicion") = 2 And rowDR.Item("ApostocLuz") = 1) Then
+                    segundoRecibeLuz = True
+                End If
+            Next
+            For Each rowDR As DataRow In dtDetallesRemates.Rows
+                drDetalleRemate = BdSIGAP_DataSet.tb_DetalleRemates.FindById(rowDR("Id"))
+                If (hayFila) Then
+                    If (rowDR.Item("Posicion") = 1) Then
+                        ganadores += 1
+                    Else
+                        If (rowDR.Item("Fila")) Then
+                            drDetalleRemate.Item("ImportePremio") = 0
+                        Else
+                            If (posFila <> 1) Then
+                                ganadores += 1
+                            Else
+                                drDetalleRemate.Item("ImportePremio") = 0
+                            End If
+                        End If
+                    End If
+                Else
+                    If (rowDR.Item("Posicion") = posicionGanadora) Then
+                        If (posicionGanadora = 1) Then
+                            If (rowDR.Item("ApostocLuz") = 0) Then
+                                If (rowDR.Item("GanocLuz")) Then
+                                    ganadores += 1
+                                Else
+                                    If (segundoRecibeLuz) Then
+                                        drDetalleRemate.Item("ImportePremio") = 0
+                                    Else
+                                        ganadores += 1
+                                    End If
+                                End If
+                            Else
+                                ganadores += 1
+                            End If
+                        Else
+                            ganadores += 1
+                        End If
+                    Else
+                        If (posicionGanadora = 1) Then
+                            If (rowDR.Item("ApostocLuz") = 1) Then
+                                If (rowDR.Item("Posicion") = 2 And ganoLuz = False) Then
+                                    ganadores += 1
+                                Else
+                                    drDetalleRemate.Item("ImportePremio") = 0
+                                End If
+                            Else
+                                drDetalleRemate.Item("ImportePremio") = 0
+                            End If
+                        Else
+                            drDetalleRemate.Item("ImportePremio") = 0
+                        End If
+                    End If
+                End If
+                Tb_DetalleRematesTableAdapter.Update(drDetalleRemate)
+            Next
+            recalcularPremio(ganadores)
+            ganadores = 0
+            posFila = 0
+            segundoRecibeLuz = False
+        Next
+        MsgBox("Terminó")
+    End Function
+
+    Private Function MarcarGanadoresOld()
         Dim dtRemates As DataTable
         Dim dtDetallesRemates As DataTable
         Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
@@ -150,22 +243,14 @@
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
 
-        Dim totalGanadores As Integer
-
-        For i As Integer = 0 To DataGridView1.RowCount - 1
-            If DataGridView1.Rows(i).Cells(5).Value = 1 Then
-                totalGanadores = totalGanadores + 1
-            End If
-        Next
-
         'frmVerResultados.Show()
         'frmVerResultados.txResultado.Text = totalGanadores.ToString()
         'frmVerResultados.nResultados.Value = totalGanadores
 
 
         MarcarGanadores()
-        frmVerResultados.Show()
-        frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
+        'frmVerResultados.Show()
+        'frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
