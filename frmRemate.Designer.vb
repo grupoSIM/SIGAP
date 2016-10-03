@@ -57,6 +57,7 @@ Partial Class frmRemate
         Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
         Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
         Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
+        Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,6 +331,10 @@ Partial Class frmRemate
         '
         Me.Tb_RematadoresTableAdapter.ClearBeforeFill = True
         '
+        'Tb_PorcentajesCasaTableAdapter
+        '
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -402,4 +407,5 @@ Partial Class frmRemate
     Friend WithEvents TbPalcosBindingSource As BindingSource
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_RematadoresTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter
+    Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
 End Class
