@@ -15452,9 +15452,8 @@ Namespace bdSIGAP_DataSetTableAdapters
                 "eRemates.ImporteApuesta, tb_DetalleRemates.Luz, tb_DetalleRemates.Fila, tb_Detal"& _ 
                 "leRemates.ImportePremio, tb_DetalleRemates.Incluido, tb_DetalleRemates.Observaci"& _ 
                 "ones FROM (tb_DetalleRemates INNER JOIN tb_CarrerasCaballos ON tb_DetalleRemates"& _ 
-                ".IdCarreraCaballo = tb_CarrerasCaballos.Id) WHERE (tb_CarrerasCaballos.Posicion "& _ 
-                "= 1) AND (tb_DetalleRemates.ImportePremio > 0) AND (tb_CarrerasCaballos.IdCarrer"& _ 
-                "a = ?)"
+                ".IdCarreraCaballo = tb_CarrerasCaballos.Id) WHERE (tb_DetalleRemates.ImportePrem"& _ 
+                "io > 0) AND (tb_CarrerasCaballos.IdCarrera = ?)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
