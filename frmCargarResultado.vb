@@ -34,8 +34,43 @@
 
     End Function
 
-    Private Function recalcularPremio(ganadores As Integer)
-        MsgBox(ganadores)
+    Private Function recalcularPremio(ganadores As Integer, remate As DataRow)
+        Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+        Dim corrieron As Integer = 0
+        Dim dtDetallesRemates As DataTable
+        Dim drCarreraCaballo As DataRow
+        Dim premio As Decimal
+
+        For Each rowCC As DataRow In dtCarrerasCaballos.Rows
+            If (rowCC("Posicion") <> 100) Then
+                corrieron += 1
+            End If
+        Next
+
+        Dim drPorcentajeCasa As DataRow = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(corrieron).Rows(0)
+
+        remate("PorcentajeCasa") = drPorcentajeCasa("Porcentaje")
+        dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByRemate(remate("Id"))
+        For Each rowDR As DataRow In dtDetallesRemates.Rows
+            drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
+            If (drCarreraCaballo("Posicion") = 100) Then
+                remate("TotalApuestas") = remate("TotalApuestas") - rowDR("ImporteApuesta")
+                'rowDR("ImportePremio") = 0
+            End If
+        Next
+        premio = (remate("TotalApuestas") * ((100 - remate("PorcentajeCasa")) / 100))
+        premio = Decimal.Round(premio / 10, 0) * 10
+        remate("ImportePremio") = premio
+        For Each rowDR As DataRow In dtDetallesRemates.Rows
+            drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
+            If (drCarreraCaballo("Posicion") <> 0) Then
+                If (ganadores > 0) Then
+                    rowDR("ImportePremio") = premio / ganadores
+                End If
+            End If
+        Next
+        Tb_RematesTableAdapter.Update(remate)
+        'MsgBox(ganadores)
     End Function
 
     Private Function recalcularPremioOld()
@@ -60,7 +95,7 @@
 
         For Each rowR As DataRow In dtRemates.Rows
             rowR("PorcentajeCasa") = dtPorcentajeCasa("Porcentaje")
-            dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
+            dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByRemate(cbCarrera.SelectedValue)
             For Each rowDR As DataRow In dtDetallesRemates.Rows
                 drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
                 If (drCarreraCaballo("Posicion") = 0) Then
@@ -164,7 +199,7 @@
                 End If
                 Tb_DetalleRematesTableAdapter.Update(drDetalleRemate)
             Next
-            recalcularPremio(ganadores)
+            recalcularPremio(ganadores, rowR)
             ganadores = 0
             posFila = 0
             segundoRecibeLuz = False
@@ -249,8 +284,8 @@
 
 
         MarcarGanadores()
-        'frmVerResultados.Show()
-        'frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
+        frmVerResultados.Show()
+        frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
