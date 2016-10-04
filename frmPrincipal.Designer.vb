@@ -22,7 +22,6 @@ Partial Class frmPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ParámetrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EventoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,6 +40,7 @@ Partial Class frmPrincipal
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarRemateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeDetalleRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,7 +53,7 @@ Partial Class frmPrincipal
         Me.ReporteCajaJornadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCajaGralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCajaPorCaballoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteCarrerasDeJornadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -160,7 +160,7 @@ Partial Class frmPrincipal
         '
         'RematesToolStripMenuItem
         '
-        Me.RematesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarRematesToolStripMenuItem, Me.ListadoDeRematesToolStripMenuItem, Me.ListadoDeDetalleRematesToolStripMenuItem})
+        Me.RematesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarRematesToolStripMenuItem, Me.ModificarRemateToolStripMenuItem, Me.ListadoDeRematesToolStripMenuItem, Me.ListadoDeDetalleRematesToolStripMenuItem})
         Me.RematesToolStripMenuItem.Name = "RematesToolStripMenuItem"
         Me.RematesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.RematesToolStripMenuItem.Text = "Remates"
@@ -170,6 +170,12 @@ Partial Class frmPrincipal
         Me.CargarRematesToolStripMenuItem.Name = "CargarRematesToolStripMenuItem"
         Me.CargarRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.CargarRematesToolStripMenuItem.Text = "Cargar Remates"
+        '
+        'ModificarRemateToolStripMenuItem
+        '
+        Me.ModificarRemateToolStripMenuItem.Name = "ModificarRemateToolStripMenuItem"
+        Me.ModificarRemateToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.ModificarRemateToolStripMenuItem.Text = "Modificar Remate"
         '
         'ListadoDeRematesToolStripMenuItem
         '
@@ -204,7 +210,7 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem, Me.ReporteCajaGralToolStripMenuItem, Me.ReporteCajaPorCaballoToolStripMenuItem, Me.ReporteCarrerasDeJornadaToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem, Me.ReporteCajaGralToolStripMenuItem, Me.ReporteCajaPorCaballoToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -212,52 +218,56 @@ Partial Class frmPrincipal
         'ReportePremiosToolStripMenuItem
         '
         Me.ReportePremiosToolStripMenuItem.Name = "ReportePremiosToolStripMenuItem"
-        Me.ReportePremiosToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReportePremiosToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.ReportePremiosToolStripMenuItem.Text = "Reporte Premios"
         '
         'ReporteCierreDeCajaToolStripMenuItem
         '
         Me.ReporteCierreDeCajaToolStripMenuItem.Name = "ReporteCierreDeCajaToolStripMenuItem"
-        Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.ReporteCierreDeCajaToolStripMenuItem.Text = "Reporte Cierre de Caja"
         '
         'ReporteDevolucionesToolStripMenuItem
         '
         Me.ReporteDevolucionesToolStripMenuItem.Name = "ReporteDevolucionesToolStripMenuItem"
-        Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.ReporteDevolucionesToolStripMenuItem.Text = "Reporte Devoluciones"
         '
         'ReporteCajaJornadaToolStripMenuItem
         '
         Me.ReporteCajaJornadaToolStripMenuItem.Name = "ReporteCajaJornadaToolStripMenuItem"
-        Me.ReporteCajaJornadaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCajaJornadaToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.ReporteCajaJornadaToolStripMenuItem.Text = "Reporte Caja Jornada"
         '
         'ReporteCajaGralToolStripMenuItem
         '
         Me.ReporteCajaGralToolStripMenuItem.Name = "ReporteCajaGralToolStripMenuItem"
-        Me.ReporteCajaGralToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCajaGralToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.ReporteCajaGralToolStripMenuItem.Text = "Reporte Caja Gral"
         '
         'ReporteCajaPorCaballoToolStripMenuItem
         '
         Me.ReporteCajaPorCaballoToolStripMenuItem.Name = "ReporteCajaPorCaballoToolStripMenuItem"
-        Me.ReporteCajaPorCaballoToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCajaPorCaballoToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.ReporteCajaPorCaballoToolStripMenuItem.Text = "Reporte Caja por Caballo"
         '
-        'ReporteCarrerasDeJornadaToolStripMenuItem
+        'Button1
         '
-        Me.ReporteCarrerasDeJornadaToolStripMenuItem.Name = "ReporteCarrerasDeJornadaToolStripMenuItem"
-        Me.ReporteCarrerasDeJornadaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
-        Me.ReporteCarrerasDeJornadaToolStripMenuItem.Text = "Reporte Carreras de Jornada"
+        Me.Button1.ForeColor = System.Drawing.Color.DarkRed
+        Me.Button1.Location = New System.Drawing.Point(529, 68)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(88, 47)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Cargar REMATES"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(629, 354)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPrincipal"
         Me.Text = "SiGAp"
@@ -299,5 +309,6 @@ Partial Class frmPrincipal
     Friend WithEvents ReporteCajaJornadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteCajaGralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteCajaPorCaballoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReporteCarrerasDeJornadaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarRemateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class

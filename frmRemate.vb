@@ -1,10 +1,7 @@
 ﻿Imports System.Drawing.Color
 Imports System.Threading
 
-
-
 Public Class frmRemate
-
     Private Sub frmRemate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Palcos' table. You can move, or remove it, as needed.
         Me.Tb_PalcosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Palcos)
@@ -19,9 +16,6 @@ Public Class frmRemate
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_DetalleRemates' table. You can move, or remove it, as needed.
         Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
 
-        If txYunta.Text <> "" Then
-            cmbCarrera.SelectedValue = txYunta.Text
-        End If
 
         CargarRemates()
         CargarDetallesRemates()
@@ -126,7 +120,7 @@ Public Class frmRemate
             End With
             AddHandler nuevoControl.KeyPress, AddressOf txtApuesta_KeyPress
             AddHandler nuevoControl.TextChanged, AddressOf txtapuesta_TextChanged
-            AddHandler nuevoControl.Leave, AddressOf txtapuesta_Leave
+            AddHandler nuevoControl.Leave, AddressOf txtApuesta_Leave
             Controls.Add(nuevoControl)
 
             ' Creación de CheckBox de Incluidos
@@ -139,6 +133,7 @@ Public Class frmRemate
                 .TabStop = False
                 .Tag = "Incluido"
             End With
+            AddHandler nuevoControl.Click, AddressOf chbIncluido_Click
             Controls.Add(nuevoControl)
 
             ' Creación de ComboBox de Luz
@@ -238,6 +233,14 @@ Public Class frmRemate
         End If
     End Sub
 
+    Private Sub chbIncluido_click(sender As Object, e As EventArgs)
+        Dim nombre As String = DirectCast(sender, CheckBox).Name
+        If (DirectCast(sender, CheckBox).CheckState = False) Then
+            Controls("txtApuesta" & nombre.Substring(11)).Text = ""
+        End If
+        Controls("txtApuesta" & nombre.Substring(11)).Focus()
+    End Sub
+
     Private Sub cmbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCarrera.SelectedIndexChanged
 
         If (cmbCarrera.SelectedValue) Then
@@ -267,6 +270,8 @@ Public Class frmRemate
                 If (txt.Tag <> "Apuesta") Then Continue For
                 If (txt.Text <> "") Then totalApuestas += txt.Text
             Next
+
+            txtPorcentajeCasa.Text = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(incluidos).Rows(0).Item("Porcentaje")
 
             premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
             premio = Decimal.Round(premio / 10, 0) * 10
@@ -359,8 +364,4 @@ Public Class frmRemate
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btYunta.Click
-        Me.Close()
-        frmYunta.Show()
-    End Sub
 End Class

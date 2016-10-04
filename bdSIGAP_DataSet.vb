@@ -4,9 +4,6 @@ Partial Public Class bdSIGAP_DataSet
 End Class
 
 Namespace bdSIGAP_DataSetTableAdapters
-    Partial Public Class tb_RematesTableAdapter
-    End Class
-
     Partial Public Class VwCajaPalcoCarreraCaballoTableAdapter
     End Class
 

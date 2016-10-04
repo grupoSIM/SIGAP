@@ -53,8 +53,6 @@
 
     End Sub
 
-
-
     Private Function RecuperarPorcentaje()
         Dim i As Integer = 1
         Dim porCaballos As Integer = 0
@@ -84,7 +82,7 @@
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cbCarrera.SelectedValue)
         IdCarrera = cbCarrera.SelectedValue
 
-
+        nProcentajeCasa.Value = RecuperarPorcentaje()
 
         'actualiza, pone los datos a moficar y continuando los originales
         Me.Validate()
@@ -138,9 +136,5 @@
     Private Sub cbJornada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJornada.SelectedIndexChanged
         Dim carreras = Tb_CarrerasTableAdapter.GetDataByJornada(cbJornada.SelectedValue)
         cbCarrera.DataSource = carreras
-    End Sub
-
-    Private Sub DataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView.CellContentClick
-        nProcentajeCasa.Value = RecuperarPorcentaje()
     End Sub
 End Class

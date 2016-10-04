@@ -211,6 +211,7 @@ Partial Class frmYunta
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btAgregar)
         Me.Name = "frmYunta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Yunta, Tríos y Cuartetos"
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
