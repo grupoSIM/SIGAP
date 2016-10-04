@@ -54,6 +54,7 @@ Partial Class frmPrincipal
         Me.ReporteCajaGralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCajaPorCaballoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCarrerasDeJornadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarRemateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -160,7 +161,7 @@ Partial Class frmPrincipal
         '
         'RematesToolStripMenuItem
         '
-        Me.RematesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarRematesToolStripMenuItem, Me.ListadoDeRematesToolStripMenuItem, Me.ListadoDeDetalleRematesToolStripMenuItem})
+        Me.RematesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarRematesToolStripMenuItem, Me.ModificarRemateToolStripMenuItem, Me.ListadoDeRematesToolStripMenuItem, Me.ListadoDeDetalleRematesToolStripMenuItem})
         Me.RematesToolStripMenuItem.Name = "RematesToolStripMenuItem"
         Me.RematesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.RematesToolStripMenuItem.Text = "Remates"
@@ -251,6 +252,12 @@ Partial Class frmPrincipal
         Me.ReporteCarrerasDeJornadaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.ReporteCarrerasDeJornadaToolStripMenuItem.Text = "Reporte Carreras de Jornada"
         '
+        'ModificarRemateToolStripMenuItem
+        '
+        Me.ModificarRemateToolStripMenuItem.Name = "ModificarRemateToolStripMenuItem"
+        Me.ModificarRemateToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.ModificarRemateToolStripMenuItem.Text = "Modificar Remate"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -300,4 +307,5 @@ Partial Class frmPrincipal
     Friend WithEvents ReporteCajaGralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteCajaPorCaballoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteCarrerasDeJornadaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarRemateToolStripMenuItem As ToolStripMenuItem
 End Class

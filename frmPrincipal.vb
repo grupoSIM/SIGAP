@@ -105,4 +105,9 @@
     Private Sub ReporteCarrerasDeJornadaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCarrerasDeJornadaToolStripMenuItem.Click
         frmReporteJornadaCarreras.Show()
     End Sub
+
+    Private Sub ModificarRemateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarRemateToolStripMenuItem.Click
+        frmModiRemate.Show()
+
+    End Sub
 End Class
