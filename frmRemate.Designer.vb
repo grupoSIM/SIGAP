@@ -59,6 +59,7 @@ Partial Class frmRemate
         Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         Me.txYunta = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -338,16 +339,26 @@ Partial Class frmRemate
         '
         'txYunta
         '
-        Me.txYunta.Location = New System.Drawing.Point(614, 6)
+        Me.txYunta.Location = New System.Drawing.Point(637, 53)
         Me.txYunta.Name = "txYunta"
         Me.txYunta.Size = New System.Drawing.Size(100, 20)
         Me.txYunta.TabIndex = 503
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(637, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(97, 23)
+        Me.Button1.TabIndex = 504
+        Me.Button1.Text = "Crear YUNTA"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(776, 599)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txYunta)
         Me.Controls.Add(Me.lblFila)
         Me.Controls.Add(Me.lblLuz)
@@ -418,4 +429,5 @@ Partial Class frmRemate
     Friend WithEvents Tb_RematadoresTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter
     Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
     Friend WithEvents txYunta As TextBox
+    Friend WithEvents Button1 As Button
 End Class
