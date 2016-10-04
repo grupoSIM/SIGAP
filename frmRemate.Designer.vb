@@ -343,6 +343,7 @@ Partial Class frmRemate
         Me.txYunta.Name = "txYunta"
         Me.txYunta.Size = New System.Drawing.Size(100, 20)
         Me.txYunta.TabIndex = 503
+        Me.txYunta.Visible = False
         '
         'Button1
         '
