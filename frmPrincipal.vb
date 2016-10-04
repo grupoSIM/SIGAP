@@ -101,4 +101,12 @@
     Private Sub ReporteCajaPorCaballoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaPorCaballoToolStripMenuItem.Click
         frmReporteCajaXCaballo.Show()
     End Sub
+
+    Private Sub ModificarRemateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarRemateToolStripMenuItem.Click
+        frmModificarRemate.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmRemate.Show()
+    End Sub
 End Class

@@ -57,6 +57,8 @@ Partial Class frmRemate
         Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
         Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
         Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
+        Me.btYunta = New System.Windows.Forms.Button()
+        Me.txYunta = New System.Windows.Forms.TextBox()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,11 +332,29 @@ Partial Class frmRemate
         '
         Me.Tb_RematadoresTableAdapter.ClearBeforeFill = True
         '
+        'btYunta
+        '
+        Me.btYunta.Location = New System.Drawing.Point(616, 25)
+        Me.btYunta.Name = "btYunta"
+        Me.btYunta.Size = New System.Drawing.Size(83, 23)
+        Me.btYunta.TabIndex = 503
+        Me.btYunta.Text = "Crear Yunta"
+        Me.btYunta.UseVisualStyleBackColor = True
+        '
+        'txYunta
+        '
+        Me.txYunta.Location = New System.Drawing.Point(599, 6)
+        Me.txYunta.Name = "txYunta"
+        Me.txYunta.Size = New System.Drawing.Size(100, 20)
+        Me.txYunta.TabIndex = 504
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 599)
+        Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.txYunta)
+        Me.Controls.Add(Me.btYunta)
         Me.Controls.Add(Me.lblFila)
         Me.Controls.Add(Me.lblLuz)
         Me.Controls.Add(Me.lblIncluido)
@@ -402,4 +422,6 @@ Partial Class frmRemate
     Friend WithEvents TbPalcosBindingSource As BindingSource
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_RematadoresTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter
+    Friend WithEvents btYunta As Button
+    Friend WithEvents txYunta As TextBox
 End Class
