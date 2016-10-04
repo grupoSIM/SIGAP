@@ -133,6 +133,7 @@ Public Class frmRemate
                 .TabStop = False
                 .Tag = "Incluido"
             End With
+            AddHandler nuevoControl.Click, AddressOf chbIncluido_Click
             Controls.Add(nuevoControl)
 
             ' Creación de ComboBox de Luz
@@ -232,6 +233,14 @@ Public Class frmRemate
         End If
     End Sub
 
+    Private Sub chbIncluido_click(sender As Object, e As EventArgs)
+        Dim nombre As String = DirectCast(sender, CheckBox).Name
+        If (DirectCast(sender, CheckBox).CheckState = False) Then
+            Controls("txtApuesta" & nombre.Substring(11)).Text = ""
+        End If
+        Controls("txtApuesta" & nombre.Substring(11)).Focus()
+    End Sub
+
     Private Sub cmbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCarrera.SelectedIndexChanged
 
         If (cmbCarrera.SelectedValue) Then
@@ -261,6 +270,8 @@ Public Class frmRemate
                 If (txt.Tag <> "Apuesta") Then Continue For
                 If (txt.Text <> "") Then totalApuestas += txt.Text
             Next
+
+            txtPorcentajeCasa.Text = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(incluidos).Rows(0).Item("Porcentaje")
 
             premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
             premio = Decimal.Round(premio / 10, 0) * 10

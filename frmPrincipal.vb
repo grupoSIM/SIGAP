@@ -101,4 +101,8 @@
     Private Sub ReporteCajaPorCaballoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaPorCaballoToolStripMenuItem.Click
         frmReporteCajaXCaballo.Show()
     End Sub
+
+    Private Sub ReporteCarrerasDeJornadaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCarrerasDeJornadaToolStripMenuItem.Click
+        frmReporteJornadaCarreras.Show()
+    End Sub
 End Class

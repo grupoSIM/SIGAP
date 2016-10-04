@@ -533,7 +533,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!ComisionRematador.Value, "DataSet1")</Value>
+                <Value>=IIf(First(Fields!PorcentajeUtilidad.Value, "DataSet1") &gt; 0, First(Fields!PorcentajeUtilidad.Value, "DataSet1")*(Sum(Fields!SumaApuestas.Value, "DataSet1")-First(Fields!SumaPremios.Value, "DataSet1"))/100, First(Fields!PorcentajeBruto.Value, "DataSet1")*Sum(Fields!SumaApuestas.Value)/100)</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -567,7 +567,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!ComisionHipodromo.Value, "DataSet1")</Value>
+                <Value>=Sum(Fields!SumaApuestas.Value, "DataSet1")-(First(Fields!SumaPremios.Value, "DataSet1"))-IIf(First(Fields!PorcentajeUtilidad.Value, "DataSet1") &gt; 0, (First(Fields!PorcentajeUtilidad.Value, "DataSet1")*(Sum(Fields!SumaApuestas.Value, "DataSet1")-First(Fields!SumaPremios.Value, "DataSet1"))/100), (First(Fields!PorcentajeBruto.Value, "DataSet1")*Sum(Fields!SumaApuestas.Value)/100))</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -735,10 +735,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.86458in</Height>
+    <Height>2.8808in</Height>
     <Style />
   </Body>
-  <Width>3.21192in</Width>
+  <Width>3.33717in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -824,6 +824,14 @@
         </Field>
         <Field Name="ComisionHipodromo">
           <DataField>ComisionHipodromo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PorcentajeUtilidad">
+          <DataField>PorcentajeUtilidad</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PorcentajeBruto">
+          <DataField>PorcentajeBruto</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
