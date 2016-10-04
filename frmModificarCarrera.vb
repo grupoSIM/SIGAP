@@ -26,7 +26,7 @@
 
         Dim jornada As DataRow
 
-        Me.Tb_CarrerasCaballosTableAdapter.FillByCarrera(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, IdCarrera)
+        Me.Tb_CarrerasCaballosTableAdapter.FillBy(Me.BdSIGAP_DataSet.tb_CarrerasCaballos, IdCarrera)
 
         Dim carrera As DataRow
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(IdCarrera)
@@ -63,9 +63,10 @@
                 'MessageBox.Show(Me.DataGridView.Rows(Renglones).Cells(3).Value, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 cont += 1
             End If
+            i += 1
         Next
 
-        'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
         If cont > 1 Then
             porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
@@ -82,7 +83,7 @@
         carrera = BdSIGAP_DataSet.tb_Carreras.FindById(cbCarrera.SelectedValue)
         IdCarrera = cbCarrera.SelectedValue
 
-        nProcentajeCasa.Value = RecuperarPorcentaje()
+
 
         'actualiza, pone los datos a moficar y continuando los originales
         Me.Validate()
@@ -136,5 +137,13 @@
     Private Sub cbJornada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJornada.SelectedIndexChanged
         Dim carreras = Tb_CarrerasTableAdapter.GetDataByJornada(cbJornada.SelectedValue)
         cbCarrera.DataSource = carreras
+    End Sub
+
+    Private Sub DataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView.CellEndEdit
+        nProcentajeCasa.Value = RecuperarPorcentaje()
     End Sub
 End Class
