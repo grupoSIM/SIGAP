@@ -58,6 +58,7 @@ Partial Class frmRemate
         Me.Tb_RematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematesTableAdapter()
         Me.Tb_RematadoresTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter()
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
+        Me.txYunta = New System.Windows.Forms.TextBox()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,11 +336,19 @@ Partial Class frmRemate
         '
         Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
         '
+        'txYunta
+        '
+        Me.txYunta.Location = New System.Drawing.Point(614, 6)
+        Me.txYunta.Name = "txYunta"
+        Me.txYunta.Size = New System.Drawing.Size(100, 20)
+        Me.txYunta.TabIndex = 503
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 599)
+        Me.ClientSize = New System.Drawing.Size(776, 599)
+        Me.Controls.Add(Me.txYunta)
         Me.Controls.Add(Me.lblFila)
         Me.Controls.Add(Me.lblLuz)
         Me.Controls.Add(Me.lblIncluido)
@@ -408,4 +417,5 @@ Partial Class frmRemate
     Friend WithEvents TbCarrerasBindingSource As BindingSource
     Friend WithEvents Tb_RematadoresTableAdapter As bdSIGAP_DataSetTableAdapters.tb_RematadoresTableAdapter
     Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
+    Friend WithEvents txYunta As TextBox
 End Class

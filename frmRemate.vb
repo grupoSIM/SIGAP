@@ -16,7 +16,9 @@ Public Class frmRemate
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_DetalleRemates' table. You can move, or remove it, as needed.
         Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
 
-
+        If txYunta.Text <> "" Then
+            cmbCarrera.SelectedValue = txYunta.Text
+        End If
         CargarRemates()
         CargarDetallesRemates()
 
