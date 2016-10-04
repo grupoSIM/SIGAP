@@ -1,4 +1,4 @@
-﻿Public Class frmModificarRemate
+﻿Public Class frmModiRemate
     Private Sub frmModificarRemate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Palcos' table. You can move, or remove it, as needed.
         Me.Tb_PalcosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Palcos)

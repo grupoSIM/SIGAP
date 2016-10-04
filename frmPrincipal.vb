@@ -103,7 +103,7 @@
     End Sub
 
     Private Sub ModificarRemateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarRemateToolStripMenuItem.Click
-        frmModificarRemate.Show()
+        frmModiRemate.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
