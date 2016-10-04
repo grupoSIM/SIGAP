@@ -184,12 +184,6 @@
     <Compile Include="frmModificarCarrera.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModificarRemate.Designer.vb">
-      <DependentUpon>frmModificarRemate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmModificarRemate.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmPalco.Designer.vb">
       <DependentUpon>frmPalco.vb</DependentUpon>
     </Compile>
@@ -338,9 +332,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarCarrera.resx">
       <DependentUpon>frmModificarCarrera.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmModificarRemate.resx">
-      <DependentUpon>frmModificarRemate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPalco.resx">
       <DependentUpon>frmPalco.vb</DependentUpon>

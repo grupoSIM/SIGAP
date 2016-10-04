@@ -1,10 +1,7 @@
 ﻿Imports System.Drawing.Color
 Imports System.Threading
 
-
-
 Public Class frmRemate
-
     Private Sub frmRemate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Palcos' table. You can move, or remove it, as needed.
         Me.Tb_PalcosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Palcos)
@@ -19,9 +16,6 @@ Public Class frmRemate
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_DetalleRemates' table. You can move, or remove it, as needed.
         Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
 
-        If txYunta.Text <> "" Then
-            cmbCarrera.SelectedValue = txYunta.Text
-        End If
 
         CargarRemates()
         CargarDetallesRemates()
@@ -126,7 +120,7 @@ Public Class frmRemate
             End With
             AddHandler nuevoControl.KeyPress, AddressOf txtApuesta_KeyPress
             AddHandler nuevoControl.TextChanged, AddressOf txtapuesta_TextChanged
-            AddHandler nuevoControl.Leave, AddressOf txtapuesta_Leave
+            AddHandler nuevoControl.Leave, AddressOf txtApuesta_Leave
             Controls.Add(nuevoControl)
 
             ' Creación de CheckBox de Incluidos
@@ -359,8 +353,4 @@ Public Class frmRemate
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btYunta.Click
-        Me.Close()
-        frmYunta.Show()
-    End Sub
 End Class
