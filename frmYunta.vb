@@ -163,7 +163,7 @@
 
         filaCarrera("IdJornada") = cbJornada.SelectedValue
         filaCarrera("NroCarrera") = cbJornada.SelectedValue & nroYunta
-        filaCarrera("Nombre") = "Yunta " & cbCarrera.SelectedValue & yuntas
+        filaCarrera("Nombre") = "Y " & cbCarrera.SelectedValue & yuntas
         filaCarrera("Metros") = "0"
         filaCarrera("Estado") = 0
         filaCarrera("PorcentajeCasa") = RecuperarPorcentaje()
@@ -244,6 +244,7 @@
         CreaCaballos()
         CreaCaballosCarrera(idCarrera)
 
+        frmRemate.txYunta.Text = idCarrera
         Me.Close()
         frmRemate.Show()
     End Sub
