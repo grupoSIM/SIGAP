@@ -77,6 +77,9 @@
         Me.TbRematesBindingSource.EndEdit()
         Me.TbDetalleRematesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
+
+        MessageBox.Show("Se han realizado los cambios", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
     End Sub
 
 
