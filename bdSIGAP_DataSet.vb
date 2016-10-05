@@ -1,6 +1,12 @@
 ﻿
 
 Partial Public Class bdSIGAP_DataSet
+    Partial Public Class VwCaballosPosicionesDataTable
+        Private Sub VwCaballosPosicionesDataTable_VwCaballosPosicionesRowChanging(sender As Object, e As VwCaballosPosicionesRowChangeEvent) Handles Me.VwCaballosPosicionesRowChanging
+
+        End Sub
+
+    End Class
 End Class
 
 Namespace bdSIGAP_DataSetTableAdapters
