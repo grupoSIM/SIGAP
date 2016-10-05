@@ -59,7 +59,7 @@ Partial Class frmModiRemate
         Me.ImporteApuesta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImportePremioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImportePremio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,7 +145,7 @@ Partial Class frmModiRemate
         '
         Me.DataGridView.AutoGenerateColumns = False
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdRemateDataGridViewTextBoxColumn, Me.IdCarreraCaballoDataGridViewTextBoxColumn, Me.NroCaballoDataGridViewTextBoxColumn, Me.ApostadorDataGridViewTextBoxColumn, Me.ImporteApuesta, Me.LuzDataGridViewTextBoxColumn, Me.FilaDataGridViewTextBoxColumn, Me.ImportePremioDataGridViewTextBoxColumn, Me.Incluido, Me.ObservacionesDataGridViewTextBoxColumn})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdRemateDataGridViewTextBoxColumn, Me.IdCarreraCaballoDataGridViewTextBoxColumn, Me.NroCaballoDataGridViewTextBoxColumn, Me.ApostadorDataGridViewTextBoxColumn, Me.ImporteApuesta, Me.LuzDataGridViewTextBoxColumn, Me.FilaDataGridViewTextBoxColumn, Me.ImportePremio, Me.Incluido, Me.ObservacionesDataGridViewTextBoxColumn})
         Me.DataGridView.DataSource = Me.TbDetalleRematesBindingSource
         Me.DataGridView.Location = New System.Drawing.Point(-2, 146)
         Me.DataGridView.Name = "DataGridView"
@@ -329,11 +329,11 @@ Partial Class frmModiRemate
         Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
         Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
         '
-        'ImportePremioDataGridViewTextBoxColumn
+        'ImportePremio
         '
-        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
+        Me.ImportePremio.DataPropertyName = "ImportePremio"
+        Me.ImportePremio.HeaderText = "ImportePremio"
+        Me.ImportePremio.Name = "ImportePremio"
         '
         'Incluido
         '
@@ -347,7 +347,7 @@ Partial Class frmModiRemate
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
         '
-        'frmModificarRemate
+        'frmModiRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -368,7 +368,7 @@ Partial Class frmModiRemate
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cbJornada)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmModificarRemate"
+        Me.Name = "frmModiRemate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Modificar Remate"
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -418,7 +418,7 @@ Partial Class frmModiRemate
     Friend WithEvents ImporteApuesta As DataGridViewTextBoxColumn
     Friend WithEvents LuzDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FilaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ImportePremioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ImportePremio As DataGridViewTextBoxColumn
     Friend WithEvents Incluido As DataGridViewCheckBoxColumn
     Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

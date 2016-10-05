@@ -51,6 +51,30 @@
     End Sub
 
     Private Sub btModificar_Click(sender As Object, e As EventArgs) Handles btModificar.Click
+        Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, NroRemate)
+        Dim remate As DataRow
+        remate = BdSIGAP_DataSet.tb_Remates.FindById(IdRemate)
+
+        Me.Tb_RematesTableAdapter.Update(
+            cbCarrera.SelectedValue,
+            cbPalco.SelectedValue,
+            txPorcCasa.Text,
+            txPremio.Text,
+            remate("IdRematador"),
+            txTotalApuestas.Text,
+            txPremio.Text,
+            txRemate.Text,
+            remate("Id"),
+            remate("IdCarrera"),
+            remate("IdPalco"),
+            remate("PorcentajeCasa"),
+            remate("Premio"),
+            remate("IdRematador"),
+            remate("TotalApuestas"),
+            remate("ImportePremio"),
+            remate("NroRemate"))
+
+
         Me.TbDetalleRematesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
     End Sub
@@ -91,15 +115,38 @@
         Return totalApuesta
     End Function
 
+    Private Function ModificarPremio(premio As Decimal)
+        Dim i As Integer = 0
+
+        For DetalleRemate As Integer = 1 To Me.DataGridView.RowCount - 1
+            If Me.DataGridView.Rows(i).Cells("Incluido").Value = True Then
+                Me.DataGridView.Rows(i).Cells("ImportePremio").Value = premio
+                'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            Else
+                Me.DataGridView.Rows(i).Cells("ImportePremio").Value = 0
+            End If
+
+            i += 1
+        Next
+        Return premio
+    End Function
+
     Private Sub DataGridView1_Cellc(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView.CellEndEdit
         'Controlo los porcentajes
         Me.txPorcCasa.Text = RecuperarPorcentaje()
-
         Me.txTotalApuestas.Text = RecuperarTotalApuesta()
+
+        Dim premio As Decimal
+
+        premio = (Me.txTotalApuestas.Text * ((100 - Me.txPorcCasa.Text) / 100))
+        premio = Decimal.Round(premio / 10, 0) * 10
+        Me.txPremio.Text = premio
+        ModificarPremio(premio)
+
+
+
+
         'Me.cbPalco.SelectedValue = remate.Rows(0).Item("IdPalco")
-
-
-        'Me.txPremio.Text = remate.Rows(0).Item("Premio")
 
     End Sub
 
