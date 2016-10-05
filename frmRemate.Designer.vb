@@ -351,6 +351,7 @@ Partial Class frmRemate
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(97, 23)
         Me.Button1.TabIndex = 504
+        Me.Button1.TabStop = False
         Me.Button1.Text = "Crear YUNTA"
         Me.Button1.UseVisualStyleBackColor = True
         '
