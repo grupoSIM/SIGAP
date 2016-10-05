@@ -15453,7 +15453,7 @@ Namespace bdSIGAP_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(8) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(7) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id, IdRemate, IdCarreraCaballo, NroCaballo, Apostador, ImporteApuesta, Luz"& _ 
@@ -15529,17 +15529,10 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(7) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(7).Connection = Me.Connection
             Me._commandCollection(7).CommandText = "SELECT Id, IdRemate, IdCarreraCaballo, NroCaballo, Apostador, ImporteApuesta, Luz"& _ 
-                ", Fila, ImportePremio, Incluido, Observaciones FROM tb_DetalleRemates "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (I"& _ 
-                "dRemate = ?) and (Incluido = True)"
-            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(8) = New Global.System.Data.OleDb.OleDbCommand()
-            Me._commandCollection(8).Connection = Me.Connection
-            Me._commandCollection(8).CommandText = "SELECT Id, IdRemate, IdCarreraCaballo, NroCaballo, Apostador, ImporteApuesta, Luz"& _ 
                 ", Fila, ImportePremio, Incluido, Observaciones FROM tb_DetalleRemates WHERE (IdR"& _ 
                 "emate = ?) AND (Incluido = TRUE)"
-            Me._commandCollection(8).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdRemate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdRemate", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15746,42 +15739,8 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByRemateIncluidos(ByVal dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable, ByVal IdRemate As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(7)
-            If (IdRemate.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdRemate.Value,Integer)
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByRemateIncluidos(ByVal IdRemate As Global.System.Nullable(Of Integer)) As bdSIGAP_DataSet.tb_DetalleRematesDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(7)
-            If (IdRemate.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdRemate.Value,Integer)
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
-            Dim dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable = New bdSIGAP_DataSet.tb_DetalleRematesDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByRematesIncluidos(ByVal dataTable As bdSIGAP_DataSet.tb_DetalleRematesDataTable, ByVal IdRemate As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(8)
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
             If (IdRemate.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdRemate.Value,Integer)
             Else
@@ -15799,7 +15758,7 @@ Namespace bdSIGAP_DataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataByRematesIncluidos(ByVal IdRemate As Global.System.Nullable(Of Integer)) As bdSIGAP_DataSet.tb_DetalleRematesDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(8)
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
             If (IdRemate.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(IdRemate.Value,Integer)
             Else
