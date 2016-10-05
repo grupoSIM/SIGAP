@@ -187,7 +187,9 @@
     <Compile Include="frmModiRemate.Designer.vb">
       <DependentUpon>frmModiRemate.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmModiRemate.vb" />
+    <Compile Include="frmModiRemate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPalco.Designer.vb">
       <DependentUpon>frmPalco.vb</DependentUpon>
     </Compile>
