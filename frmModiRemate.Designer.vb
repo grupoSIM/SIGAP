@@ -51,7 +51,9 @@ Partial Class frmModiRemate
         Me.txPremio = New System.Windows.Forms.TextBox()
         Me.Tb_PalcosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter()
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txRematador = New System.Windows.Forms.TextBox()
+        Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,8 +64,6 @@ Partial Class frmModiRemate
         Me.ImportePremio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txRematador = New System.Windows.Forms.TextBox()
-        Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,7 +148,7 @@ Partial Class frmModiRemate
         '
         Me.DataGridView.AutoGenerateColumns = False
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdRemateDataGridViewTextBoxColumn, Me.IdCarreraCaballoDataGridViewTextBoxColumn, Me.NroCaballoDataGridViewTextBoxColumn, Me.ApostadorDataGridViewTextBoxColumn, Me.ImporteApuesta, Me.LuzDataGridViewTextBoxColumn, Me.FilaDataGridViewTextBoxColumn, Me.ImportePremio, Me.Incluido, Me.ObservacionesDataGridViewTextBoxColumn})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.IdRemateDataGridViewTextBoxColumn, Me.IdCarreraCaballoDataGridViewTextBoxColumn, Me.NroCaballoDataGridViewTextBoxColumn, Me.ApostadorDataGridViewTextBoxColumn, Me.ImporteApuesta, Me.LuzDataGridViewTextBoxColumn, Me.FilaDataGridViewTextBoxColumn, Me.ImportePremio, Me.Incluido, Me.ObservacionesDataGridViewTextBoxColumn})
         Me.DataGridView.DataSource = Me.TbDetalleRematesBindingSource
         Me.DataGridView.Location = New System.Drawing.Point(-2, 146)
         Me.DataGridView.Name = "DataGridView"
@@ -194,11 +194,11 @@ Partial Class frmModiRemate
         '
         'btModificar
         '
-        Me.btModificar.Location = New System.Drawing.Point(1028, 20)
+        Me.btModificar.Location = New System.Drawing.Point(927, 20)
         Me.btModificar.Name = "btModificar"
-        Me.btModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btModificar.Size = New System.Drawing.Size(117, 23)
         Me.btModificar.TabIndex = 7
-        Me.btModificar.Text = "Modificar"
+        Me.btModificar.Text = "Guardar / Imprimir"
         Me.btModificar.UseVisualStyleBackColor = True
         '
         'cbPalco
@@ -283,12 +283,24 @@ Partial Class frmModiRemate
         '
         Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
         '
-        'IdDataGridViewTextBoxColumn
+        'txRematador
         '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Visible = False
+        Me.txRematador.Location = New System.Drawing.Point(106, 94)
+        Me.txRematador.Name = "txRematador"
+        Me.txRematador.Size = New System.Drawing.Size(100, 20)
+        Me.txRematador.TabIndex = 17
+        '
+        'TbRematesBindingSource
+        '
+        Me.TbRematesBindingSource.DataMember = "tb_Remates"
+        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Id
+        '
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.Visible = False
         '
         'IdRemateDataGridViewTextBoxColumn
         '
@@ -349,18 +361,6 @@ Partial Class frmModiRemate
         Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
-        '
-        'txRematador
-        '
-        Me.txRematador.Location = New System.Drawing.Point(106, 94)
-        Me.txRematador.Name = "txRematador"
-        Me.txRematador.Size = New System.Drawing.Size(100, 20)
-        Me.txRematador.TabIndex = 17
-        '
-        'TbRematesBindingSource
-        '
-        Me.TbRematesBindingSource.DataMember = "tb_Remates"
-        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'frmModiRemate
         '
@@ -427,7 +427,9 @@ Partial Class frmModiRemate
     Friend WithEvents TbPalcosBindingSource As BindingSource
     Friend WithEvents Tb_PalcosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PalcosTableAdapter
     Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents txRematador As TextBox
+    Friend WithEvents TbRematesBindingSource As BindingSource
+    Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents IdRemateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdCarreraCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NroCaballoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -438,6 +440,4 @@ Partial Class frmModiRemate
     Friend WithEvents ImportePremio As DataGridViewTextBoxColumn
     Friend WithEvents Incluido As DataGridViewCheckBoxColumn
     Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents txRematador As TextBox
-    Friend WithEvents TbRematesBindingSource As BindingSource
 End Class

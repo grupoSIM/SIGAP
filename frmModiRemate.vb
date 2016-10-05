@@ -78,7 +78,22 @@
         Me.TbDetalleRematesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
+
+
+
+        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(IdRemate)
+        Dim ctrlImpre As New ControladorImpresion
+
+        For Each row As DataRow In detalles.Rows
+            'MessageBox.Show("impre", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            ctrlImpre.ImprimirTicket(row("Id"))
+
+        Next
+
+
+
         MessageBox.Show("Se han realizado los cambios", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
 
     End Sub
 
