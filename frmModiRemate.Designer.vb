@@ -62,12 +62,15 @@ Partial Class frmModiRemate
         Me.ImportePremio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txRematador = New System.Windows.Forms.TextBox()
+        Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -347,11 +350,24 @@ Partial Class frmModiRemate
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
         '
+        'txRematador
+        '
+        Me.txRematador.Location = New System.Drawing.Point(106, 94)
+        Me.txRematador.Name = "txRematador"
+        Me.txRematador.Size = New System.Drawing.Size(100, 20)
+        Me.txRematador.TabIndex = 17
+        '
+        'TbRematesBindingSource
+        '
+        Me.TbRematesBindingSource.DataMember = "tb_Remates"
+        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
         'frmModiRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1141, 347)
+        Me.Controls.Add(Me.txRematador)
         Me.Controls.Add(Me.txPremio)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -377,6 +393,7 @@ Partial Class frmModiRemate
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbRematesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,4 +438,6 @@ Partial Class frmModiRemate
     Friend WithEvents ImportePremio As DataGridViewTextBoxColumn
     Friend WithEvents Incluido As DataGridViewCheckBoxColumn
     Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents txRematador As TextBox
+    Friend WithEvents TbRematesBindingSource As BindingSource
 End Class

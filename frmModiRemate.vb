@@ -31,6 +31,7 @@
         Me.txTotalApuestas.Text = remate.Rows(0).Item("TotalApuestas")
         Me.txPorcCasa.Text = remate.Rows(0).Item("PorcentajeCasa")
         Me.txPremio.Text = remate.Rows(0).Item("Premio")
+        Me.txRematador.Text = remate.Rows(0).Item("IdRematador")
 
     End Function
     Private Function CargarDetalleRemate(ByVal NroRemate As Integer)
@@ -51,30 +52,29 @@
     End Sub
 
     Private Sub btModificar_Click(sender As Object, e As EventArgs) Handles btModificar.Click
-        Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, NroRemate)
-        Dim remate As DataRow
-        remate = BdSIGAP_DataSet.tb_Remates.FindById(IdRemate)
+        Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, txRemate.Text)
+        Dim remate = Me.Tb_RematesTableAdapter.GetDataByIdRemate(IdRemate)
 
         Me.Tb_RematesTableAdapter.Update(
             cbCarrera.SelectedValue,
             cbPalco.SelectedValue,
             txPorcCasa.Text,
             txPremio.Text,
-            remate("IdRematador"),
+            txRematador.Text,
             txTotalApuestas.Text,
             txPremio.Text,
             txRemate.Text,
-            remate("Id"),
-            remate("IdCarrera"),
-            remate("IdPalco"),
-            remate("PorcentajeCasa"),
-            remate("Premio"),
-            remate("IdRematador"),
-            remate("TotalApuestas"),
-            remate("ImportePremio"),
-            remate("NroRemate"))
+            remate.Rows(0).Item("Id"),
+            remate.Rows(0).Item("IdCarrera"),
+            remate.Rows(0).Item("IdPalco"),
+            remate.Rows(0).Item("PorcentajeCasa"),
+            remate.Rows(0).Item("Premio"),
+            remate.Rows(0).Item("IdRematador"),
+            remate.Rows(0).Item("TotalApuestas"),
+            remate.Rows(0).Item("ImportePremio"),
+            remate.Rows(0).Item("NroRemate"))
 
-
+        Me.TbRematesBindingSource.EndEdit()
         Me.TbDetalleRematesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
     End Sub
