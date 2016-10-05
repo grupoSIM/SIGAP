@@ -36,7 +36,7 @@
     End Function
     Private Function CargarDetalleRemate(ByVal NroRemate As Integer)
         Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, NroRemate)
-        MessageBox.Show("IdRemate" & IdRemate, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("IdRemate" & IdRemate, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Me.Tb_DetalleRematesTableAdapter.FillByRemate(Me.BdSIGAP_DataSet.tb_DetalleRemates, IdRemate)
     End Function
 
@@ -81,7 +81,7 @@
 
 
 
-        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(IdRemate)
+        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemateIncluidos(IdRemate)
         Dim ctrlImpre As New ControladorImpresion
 
         For Each row As DataRow In detalles.Rows
@@ -96,9 +96,6 @@
 
 
     End Sub
-
-
-
 
 
     Private Function RecuperarPorcentaje()
@@ -160,8 +157,6 @@
         premio = Decimal.Round(premio / 10, 0) * 10
         Me.txPremio.Text = premio
         ModificarPremio(premio)
-
-
 
 
         'Me.cbPalco.SelectedValue = remate.Rows(0).Item("IdPalco")
