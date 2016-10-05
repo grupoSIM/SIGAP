@@ -9,6 +9,10 @@
         Me.Tb_CarrerasTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Carreras)
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Caballos' table. You can move, or remove it, as needed.
         Me.Tb_CaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Caballos)
+
+        If txCarrera.Text <> "" Then
+            cbCarrera.SelectedValue = txCarrera.Text
+        End If
         CargarCaballos()
 
     End Sub

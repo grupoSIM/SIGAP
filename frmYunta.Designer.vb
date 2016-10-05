@@ -43,6 +43,7 @@ Partial Class frmYunta
         Me.btRemates = New System.Windows.Forms.Button()
         Me.btEliminar = New System.Windows.Forms.Button()
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
+        Me.txCarrera = New System.Windows.Forms.TextBox()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,17 +201,28 @@ Partial Class frmYunta
         '
         Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
         '
+        'txCarrera
+        '
+        Me.txCarrera.Location = New System.Drawing.Point(590, 27)
+        Me.txCarrera.Name = "txCarrera"
+        Me.txCarrera.Size = New System.Drawing.Size(100, 20)
+        Me.txCarrera.TabIndex = 9
+        '
         'frmYunta
         '
+        Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(797, 385)
+        Me.Controls.Add(Me.txCarrera)
         Me.Controls.Add(Me.btEliminar)
         Me.Controls.Add(Me.btRemates)
         Me.Controls.Add(Me.btCrearCarrera)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btAgregar)
+        Me.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.Name = "frmYunta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Yunta, Tríos y Cuartetos"
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -220,6 +232,7 @@ Partial Class frmYunta
         CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -243,4 +256,5 @@ Partial Class frmYunta
     Friend WithEvents btRemates As Button
     Friend WithEvents btEliminar As Button
     Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
+    Friend WithEvents txCarrera As TextBox
 End Class

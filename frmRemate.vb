@@ -367,6 +367,8 @@ Public Class frmRemate
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmYunta.txCarrera.Text = cmbCarrera.SelectedValue
+
         Me.Close()
         frmYunta.Show()
     End Sub
