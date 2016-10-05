@@ -118,9 +118,9 @@ Partial Class frmCargarResultado
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdCarreraDataGridViewTextBoxColumn, Me.OrdenDataGridViewTextBoxColumn, Me.IdCaballoDataGridViewTextBoxColumn, Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn, Me.PosicionDataGridViewTextBoxColumn, Me.LuzDataGridViewCheckBoxColumn})
         Me.DataGridView1.DataSource = Me.TbCarrerasCaballosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 137)
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 134)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(655, 297)
+        Me.DataGridView1.Size = New System.Drawing.Size(693, 297)
         Me.DataGridView1.TabIndex = 6
         '
         'TbCarrerasBindingSource
@@ -384,7 +384,7 @@ Partial Class frmCargarResultado
         'PosicionDataGridViewTextBoxColumn
         '
         Me.PosicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion"
-        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posicion"
+        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posición"
         Me.PosicionDataGridViewTextBoxColumn.Name = "PosicionDataGridViewTextBoxColumn"
         '
         'LuzDataGridViewCheckBoxColumn
@@ -397,7 +397,7 @@ Partial Class frmCargarResultado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(675, 483)
+        Me.ClientSize = New System.Drawing.Size(701, 483)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cbCarrera)
