@@ -207,6 +207,7 @@ Partial Class frmYunta
         Me.txCarrera.Name = "txCarrera"
         Me.txCarrera.Size = New System.Drawing.Size(100, 20)
         Me.txCarrera.TabIndex = 9
+        Me.txCarrera.Visible = False
         '
         'frmYunta
         '
