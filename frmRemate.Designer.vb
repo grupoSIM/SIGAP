@@ -120,6 +120,7 @@ Partial Class frmRemate
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 500
+        Me.btnGuardar.TabStop = False
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -147,7 +148,6 @@ Partial Class frmRemate
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(104, 23)
         Me.btnImprimir.TabIndex = 501
-        Me.btnImprimir.TabStop = False
         Me.btnImprimir.Text = "Guardar e Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = True
         '

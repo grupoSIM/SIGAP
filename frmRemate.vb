@@ -2,6 +2,8 @@
 Imports System.Threading
 
 Public Class frmRemate
+    Dim ctrlImpre As New ControladorImpresion
+
     Private Sub frmRemate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Palcos' table. You can move, or remove it, as needed.
         Me.Tb_PalcosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Palcos)
@@ -181,7 +183,7 @@ Public Class frmRemate
             cmb.Items.Add("Recibe")
         Next
 
-        SelectNextControl(btnGuardar, True, True, True, True)
+        SelectNextControl(btnImprimir, True, True, True, True)
 
     End Function
 
@@ -297,7 +299,7 @@ Public Class frmRemate
         End If
 
 
-        SelectNextControl(btnGuardar, True, True, True, True)
+        SelectNextControl(btnImprimir, True, True, True, True)
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
@@ -337,7 +339,6 @@ Public Class frmRemate
             Next
 
             Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
-            Dim ctrlImpre As New ControladorImpresion
 
             For Each row As DataRow In detalles.Rows
 
@@ -351,7 +352,7 @@ Public Class frmRemate
             MsgBox("Se deben incluir al menos dos apuestas para guardar el remate.", vbExclamation + vbOKOnly)
         End If
 
-        SelectNextControl(btnGuardar, True, True, True, True)
+        SelectNextControl(btnImprimir, True, True, True, True)
 
     End Sub
 
