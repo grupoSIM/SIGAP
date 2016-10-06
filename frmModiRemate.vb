@@ -109,7 +109,7 @@
         For DetalleRemate As Integer = 1 To Me.DataGridView.RowCount - 1
             If Me.DataGridView.Rows(i).Cells("Incluido").Value = True Then
                 cont += 1
-                MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             End If
             i += 1
         Next
