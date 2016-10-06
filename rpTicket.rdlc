@@ -330,7 +330,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>3.64645cm</Top>
+        <Top>3.32895cm</Top>
+        <Left>0cm</Left>
         <Height>0.5cm</Height>
         <Width>7.32516cm</Width>
         <ZIndex>9</ZIndex>
@@ -365,7 +366,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ImporteApuesta</rd:DefaultName>
-        <Top>4.24645cm</Top>
+        <Top>3.92895cm</Top>
+        <Left>0cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>10</ZIndex>
@@ -396,7 +398,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>4.84645cm</Top>
+        <Top>4.52895cm</Top>
+        <Left>0cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -431,7 +434,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Premio</rd:DefaultName>
-        <Top>4.24645cm</Top>
+        <Top>3.92895cm</Top>
         <Left>4.82516cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -463,7 +466,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>4.84645cm</Top>
+        <Top>4.52895cm</Top>
         <Left>4.82516cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -497,9 +500,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Apostador</rd:DefaultName>
-        <Top>5.44645cm</Top>
-        <Left>1.90182cm</Left>
-        <Height>0.6cm</Height>
+        <Top>5.84061cm</Top>
+        <Left>1.91078cm</Left>
+        <Height>0.54708cm</Height>
         <Width>3.55833cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
@@ -529,8 +532,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>6.04645cm</Top>
-        <Left>2.48391cm</Left>
+        <Top>6.3877cm</Top>
+        <Left>2.49287cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>15</ZIndex>
@@ -561,7 +564,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC1</rd:DefaultName>
-        <Top>6.85812cm</Top>
+        <Top>7.02881cm</Top>
+        <Left>0.00896cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>16</ZIndex>
@@ -592,8 +596,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC2</rd:DefaultName>
-        <Top>6.85812cm</Top>
-        <Left>2.37639cm</Left>
+        <Top>7.02881cm</Top>
+        <Left>2.38535cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>17</ZIndex>
@@ -624,8 +628,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC3</rd:DefaultName>
-        <Top>6.85812cm</Top>
-        <Left>4.75278cm</Left>
+        <Top>7.02881cm</Top>
+        <Left>4.76174cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>18</ZIndex>
@@ -656,7 +660,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC4</rd:DefaultName>
-        <Top>7.56395cm</Top>
+        <Top>7.73464cm</Top>
+        <Left>0.00896cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>19</ZIndex>
@@ -687,8 +692,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC5</rd:DefaultName>
-        <Top>7.56395cm</Top>
-        <Left>2.37639cm</Left>
+        <Top>7.73464cm</Top>
+        <Left>2.38535cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>20</ZIndex>
@@ -719,8 +724,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC6</rd:DefaultName>
-        <Top>7.56395cm</Top>
-        <Left>4.75278cm</Left>
+        <Top>7.73464cm</Top>
+        <Left>4.76174cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>21</ZIndex>
@@ -751,7 +756,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC7</rd:DefaultName>
-        <Top>8.26978cm</Top>
+        <Top>8.44047cm</Top>
+        <Left>0.00896cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>22</ZIndex>
@@ -782,8 +788,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC8</rd:DefaultName>
-        <Top>8.26978cm</Top>
-        <Left>2.37639cm</Left>
+        <Top>8.44047cm</Top>
+        <Left>2.38535cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>23</ZIndex>
@@ -814,8 +820,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC9</rd:DefaultName>
-        <Top>8.26978cm</Top>
-        <Left>4.75278cm</Left>
+        <Top>8.44047cm</Top>
+        <Left>4.76174cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>24</ZIndex>
@@ -846,7 +852,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC10</rd:DefaultName>
-        <Top>8.94034cm</Top>
+        <Top>9.11103cm</Top>
+        <Left>0.00896cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>25</ZIndex>
@@ -877,8 +884,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC11</rd:DefaultName>
-        <Top>8.94034cm</Top>
-        <Left>2.37639cm</Left>
+        <Top>9.11103cm</Top>
+        <Left>2.38535cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>26</ZIndex>
@@ -909,8 +916,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ApuC12</rd:DefaultName>
-        <Top>8.94034cm</Top>
-        <Left>4.75278cm</Left>
+        <Top>9.11103cm</Top>
+        <Left>4.76174cm</Left>
         <Height>0.6cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>27</ZIndex>
@@ -944,7 +951,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>CaballoNombre</rd:DefaultName>
-        <Top>3.01117cm</Top>
+        <Top>2.69367cm</Top>
+        <Left>0cm</Left>
         <Height>0.6cm</Height>
         <Width>7.32516cm</Width>
         <ZIndex>28</ZIndex>
@@ -958,8 +966,39 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Observaciones">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Observaciones.Value, "DataSet1")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Observaciones</rd:DefaultName>
+        <Top>5.06422cm</Top>
+        <Height>0.6cm</Height>
+        <Width>7.32516cm</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.83913in</Height>
+    <Height>3.90163in</Height>
     <Style />
   </Body>
   <Width>3.1762in</Width>

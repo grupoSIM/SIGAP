@@ -280,6 +280,56 @@ Public Class frmRemate
                 If (txt.Text <> "") Then totalApuestas += txt.Text
             Next
 
+            ' observaciones
+            Dim observaciones As String
+            Dim observacionesDaLuz As String
+            Dim cantDaLuz As Int16
+            Dim cantRecibeLuz As Int16
+            Dim observacionesRecibeLuz As String
+            Dim tieneFila As Int16
+            Dim observacionesDaFila As String
+            Dim observacionesRecibeFila As String
+
+            cantDaLuz = 0
+            cantRecibeLuz = 0
+            observacionesDaLuz = "Da Luz a"
+            observacionesRecibeLuz = "Luz de"
+
+            For Each cbLuz As ComboBox In Controls.OfType(Of ComboBox)
+                If (cbLuz.Tag <> "Luz") Then Continue For
+                If (cbLuz.SelectedIndex = 0) Then
+                    cantDaLuz = cantDaLuz + 1
+                    observacionesDaLuz = observacionesDaLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                End If
+                If (cbLuz.SelectedIndex = 1) Then
+                    cantRecibeLuz = cantRecibeLuz + 1
+                    observacionesRecibeLuz = observacionesRecibeLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                End If
+            Next
+
+            If (cantDaLuz > 0 And cantRecibeLuz = 0) Or (cantDaLuz = 0 And cantRecibeLuz > 0) Then
+                MsgBox("Problemas")
+            End If
+
+            If (cantDaLuz = 0 And cantRecibeLuz = 0) Then
+                observacionesDaLuz = ""
+                observacionesRecibeLuz = ""
+            End If
+
+            tieneFila = 0
+            observacionesDaFila = ""
+            observacionesRecibeFila = ""
+            For Each rbFila As RadioButton In Controls.OfType(Of RadioButton)
+                If (rbFila.Tag <> "Fila") Then Continue For
+                If rbFila.Checked Then
+                    tieneFila = 1
+                    observacionesDaFila = "Da fila"
+                    observacionesRecibeFila = "Recibe Fila de " & CType(Me.Controls("txtNumero" & rbFila.Name.Substring(7)), TextBox).Text
+                End If
+
+            Next
+            ' FIN observaciones
+
             txtPorcentajeCasa.Text = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(incluidos).Rows(0).Item("Porcentaje")
 
             premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
@@ -292,7 +342,38 @@ Public Class frmRemate
 
             For Each row As DataRow In dtCarrerasCaballos.Rows
                 If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+
+                    ' OBSERVACIONES
+                    observaciones = ""
+                    If tieneFila = 1 Then
+                        If DirectCast(Controls("radFila" & i), RadioButton).Checked Then
+                            observaciones = observacionesDaFila
+                        Else
+                            observaciones = observacionesRecibeFila
+                        End If
+                    End If
+
+                    If DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex = 0 Then
+                        If Len(observaciones) > 3 Then
+                            observaciones = observaciones & " - " & observacionesDaLuz
+                        Else
+                            observaciones = observacionesDaLuz
+                        End If
+                    End If
+
+                    If DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex = 1 Then
+                        If Len(observaciones) > 3 Then
+                            observaciones = observaciones & " " & observacionesRecibeLuz
+                        Else
+                            observaciones = observacionesRecibeLuz
+                        End If
+                    End If
+
+                    observaciones = Trim(observaciones)
+
+                    ' FIN OBSERVACIONES
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, observaciones)
+
                 End If
                 i += 1
             Next
@@ -328,6 +409,56 @@ Public Class frmRemate
                 If (txt.Text <> "") Then totalApuestas += txt.Text
             Next
 
+            ' observaciones
+            Dim observaciones As String
+            Dim observacionesDaLuz As String
+            Dim cantDaLuz As Int16
+            Dim cantRecibeLuz As Int16
+            Dim observacionesRecibeLuz As String
+            Dim tieneFila As Int16
+            Dim observacionesDaFila As String
+            Dim observacionesRecibeFila As String
+
+            cantDaLuz = 0
+            cantRecibeLuz = 0
+            observacionesDaLuz = "Da Luz a"
+            observacionesRecibeLuz = "Luz de"
+
+            For Each cbLuz As ComboBox In Controls.OfType(Of ComboBox)
+                If (cbLuz.Tag <> "Luz") Then Continue For
+                If (cbLuz.SelectedIndex = 0) Then
+                    cantDaLuz = cantDaLuz + 1
+                    observacionesDaLuz = observacionesDaLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                End If
+                If (cbLuz.SelectedIndex = 1) Then
+                    cantRecibeLuz = cantRecibeLuz + 1
+                    observacionesRecibeLuz = observacionesRecibeLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                End If
+            Next
+
+            If (cantDaLuz > 0 And cantRecibeLuz = 0) Or (cantDaLuz = 0 And cantRecibeLuz > 0) Then
+                MsgBox("Problemas")
+            End If
+
+            If (cantDaLuz = 0 And cantRecibeLuz = 0) Then
+                observacionesDaLuz = ""
+                observacionesRecibeLuz = ""
+            End If
+
+            tieneFila = 0
+            observacionesDaFila = ""
+            observacionesRecibeFila = ""
+            For Each rbFila As RadioButton In Controls.OfType(Of RadioButton)
+                If (rbFila.Tag <> "Fila") Then Continue For
+                If rbFila.Checked Then
+                    tieneFila = 1
+                    observacionesDaFila = "Da fila"
+                    observacionesRecibeFila = "Recibe Fila de " & CType(Me.Controls("txtNumero" & rbFila.Name.Substring(7)), TextBox).Text
+                End If
+
+            Next
+            ' FIN observaciones
+
             premio = (totalApuestas * ((100 - txtPorcentajeCasa.Text) / 100))
             premio = Decimal.Round(premio / 10, 0) * 10
 
@@ -338,7 +469,37 @@ Public Class frmRemate
 
             For Each row As DataRow In dtCarrerasCaballos.Rows
                 If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, "")
+
+                    ' OBSERVACIONES
+                    observaciones = ""
+                    If tieneFila = 1 Then
+                        If DirectCast(Controls("radFila" & i), RadioButton).Checked Then
+                            observaciones = observacionesDaFila
+                        Else
+                            observaciones = observacionesRecibeFila
+                        End If
+                    End If
+
+                    If DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex = 0 Then
+                        If Len(observaciones) > 3 Then
+                            observaciones = observaciones & " - " & observacionesDaLuz
+                        Else
+                            observaciones = observacionesDaLuz
+                        End If
+                    End If
+
+
+                    If DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex = 1 Then
+                        If Len(observaciones) > 3 Then
+                            observaciones = observaciones & " - " & observacionesRecibeLuz
+                        Else
+                            observaciones = observacionesRecibeLuz
+                        End If
+                    End If
+                    observaciones = Trim(observaciones)
+                    ' FIN OBSERVACIONES
+
+                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, observaciones)
                 End If
                 i += 1
             Next
