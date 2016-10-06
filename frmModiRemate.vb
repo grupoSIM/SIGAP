@@ -36,7 +36,7 @@
     End Function
     Private Function CargarDetalleRemate(ByVal NroRemate As Integer)
         Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, NroRemate)
-        MessageBox.Show("IdRemate" & IdRemate, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("IdRemate" & IdRemate, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Me.Tb_DetalleRematesTableAdapter.FillByRemate(Me.BdSIGAP_DataSet.tb_DetalleRemates, IdRemate)
     End Function
 
@@ -109,7 +109,7 @@
         For DetalleRemate As Integer = 1 To Me.DataGridView.RowCount - 1
             If Me.DataGridView.Rows(i).Cells("Incluido").Value = True Then
                 cont += 1
-                MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             End If
             i += 1
         Next

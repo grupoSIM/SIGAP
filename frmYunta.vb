@@ -141,7 +141,7 @@
 
         contCab += 1
     End Sub
-    Private Function CreaCarrera()
+    Private Function CreaCarrera(ByVal idCarreraOri As Integer, ByVal NomCarreraOri As String)
         Dim i As Integer = 1
         Dim idCarreraNueva As Integer
         Dim y As Integer = 1
@@ -153,21 +153,23 @@
             If txt.Name = "txtNum" & y Then
                 'MessageBox.Show("y=" & y, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 'MessageBox.Show("txtNum" & y, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-                yuntas = yuntas & "#" & Me.Controls("txtNum" & y).Text
+                yuntas = yuntas & "-" & Me.Controls("txtNum" & y).Text
                 nroYunta = nroYunta & Me.Controls("txtNum" & y).Text
                 y += 1
             End If
         Next
 
 
+        MessageBox.Show("idCarreraOri" & idCarreraOri, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        MessageBox.Show("NomCarreraOri" & NomCarreraOri, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
         filaCarrera = TbCarrerasBindingSource.AddNew()
 
         filaCarrera("IdJornada") = cbJornada.SelectedValue
-        filaCarrera("NroCarrera") = cbJornada.SelectedValue & nroYunta
-        filaCarrera("Nombre") = "Y " & cbCarrera.SelectedValue & yuntas
+        filaCarrera("NroCarrera") = idCarreraOri '& nroYunta
+        filaCarrera("Nombre") = NomCarreraOri & " Yunta" & yuntas
         filaCarrera("Metros") = "0"
         filaCarrera("Estado") = 0
         filaCarrera("PorcentajeCasa") = RecuperarPorcentaje()
@@ -235,7 +237,7 @@
     Private Sub btCrearCarrera_Click(sender As Object, e As EventArgs) Handles btCrearCarrera.Click
         Dim idCarrera As Integer
 
-        idCarrera = CreaCarrera()
+        idCarrera = CreaCarrera(cbCarrera.SelectedValue, cbCarrera.SelectedText)
         CreaCaballos()
         CreaCaballosCarrera(idCarrera)
 
@@ -244,7 +246,7 @@
     Private Sub btRemates_Click(sender As Object, e As EventArgs) Handles btRemates.Click
         Dim idCarrera As Integer
 
-        idCarrera = CreaCarrera()
+        idCarrera = CreaCarrera(cbCarrera.SelectedValue, cbCarrera.Text)
         CreaCaballos()
         CreaCaballosCarrera(idCarrera)
 

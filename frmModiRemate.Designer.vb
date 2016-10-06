@@ -33,6 +33,17 @@ Partial Class frmModiRemate
         Me.txRemate = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApostadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImporteApuesta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImportePremio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TbDetalleRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_DetalleRematesTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_DetalleRematesTableAdapter()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
@@ -53,17 +64,7 @@ Partial Class frmModiRemate
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         Me.txRematador = New System.Windows.Forms.TextBox()
         Me.TbRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApostadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImporteApuesta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImportePremio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Incluido = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ObservacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,148 +153,8 @@ Partial Class frmModiRemate
         Me.DataGridView.DataSource = Me.TbDetalleRematesBindingSource
         Me.DataGridView.Location = New System.Drawing.Point(-2, 146)
         Me.DataGridView.Name = "DataGridView"
-        Me.DataGridView.Size = New System.Drawing.Size(1141, 200)
+        Me.DataGridView.Size = New System.Drawing.Size(1045, 200)
         Me.DataGridView.TabIndex = 6
-        '
-        'TbDetalleRematesBindingSource
-        '
-        Me.TbDetalleRematesBindingSource.DataMember = "tb_DetalleRemates"
-        Me.TbDetalleRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Tb_DetalleRematesTableAdapter
-        '
-        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
-        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Me.Tb_DetalleRematesTableAdapter
-        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
-        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematesTableAdapter = Me.Tb_RematesTableAdapter
-        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Tb_CarrerasTableAdapter
-        '
-        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_JornadasTableAdapter
-        '
-        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_RematesTableAdapter
-        '
-        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
-        '
-        'btModificar
-        '
-        Me.btModificar.Location = New System.Drawing.Point(927, 20)
-        Me.btModificar.Name = "btModificar"
-        Me.btModificar.Size = New System.Drawing.Size(117, 23)
-        Me.btModificar.TabIndex = 7
-        Me.btModificar.Text = "Guardar / Imprimir"
-        Me.btModificar.UseVisualStyleBackColor = True
-        '
-        'cbPalco
-        '
-        Me.cbPalco.DataSource = Me.TbPalcosBindingSource
-        Me.cbPalco.DisplayMember = "Palco"
-        Me.cbPalco.FormattingEnabled = True
-        Me.cbPalco.Location = New System.Drawing.Point(224, 67)
-        Me.cbPalco.Name = "cbPalco"
-        Me.cbPalco.Size = New System.Drawing.Size(121, 21)
-        Me.cbPalco.TabIndex = 8
-        Me.cbPalco.ValueMember = "Id"
-        '
-        'TbPalcosBindingSource
-        '
-        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
-        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(185, 71)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 13)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Palco:"
-        '
-        'txPorcCasa
-        '
-        Me.txPorcCasa.Location = New System.Drawing.Point(404, 67)
-        Me.txPorcCasa.Name = "txPorcCasa"
-        Me.txPorcCasa.Size = New System.Drawing.Size(76, 20)
-        Me.txPorcCasa.TabIndex = 11
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(358, 71)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "% Casa:"
-        '
-        'txTotalApuestas
-        '
-        Me.txTotalApuestas.Enabled = False
-        Me.txTotalApuestas.Location = New System.Drawing.Point(590, 67)
-        Me.txTotalApuestas.Name = "txTotalApuestas"
-        Me.txTotalApuestas.Size = New System.Drawing.Size(100, 20)
-        Me.txTotalApuestas.TabIndex = 13
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(744, 71)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 13)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "Premio:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(508, 71)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Total Apuesta:"
-        '
-        'txPremio
-        '
-        Me.txPremio.Location = New System.Drawing.Point(792, 67)
-        Me.txPremio.Name = "txPremio"
-        Me.txPremio.Size = New System.Drawing.Size(100, 20)
-        Me.txPremio.TabIndex = 16
-        '
-        'Tb_PalcosTableAdapter
-        '
-        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
-        '
-        'Tb_PorcentajesCasaTableAdapter
-        '
-        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
-        '
-        'txRematador
-        '
-        Me.txRematador.Location = New System.Drawing.Point(106, 94)
-        Me.txRematador.Name = "txRematador"
-        Me.txRematador.Size = New System.Drawing.Size(100, 20)
-        Me.txRematador.TabIndex = 17
-        '
-        'TbRematesBindingSource
-        '
-        Me.TbRematesBindingSource.DataMember = "tb_Remates"
-        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Id
         '
@@ -362,11 +223,165 @@ Partial Class frmModiRemate
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
         '
+        'TbDetalleRematesBindingSource
+        '
+        Me.TbDetalleRematesBindingSource.DataMember = "tb_DetalleRemates"
+        Me.TbDetalleRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Tb_DetalleRematesTableAdapter
+        '
+        Me.Tb_DetalleRematesTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
+        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Me.Tb_DetalleRematesTableAdapter
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
+        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematesTableAdapter = Me.Tb_RematesTableAdapter
+        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tb_CarrerasTableAdapter
+        '
+        Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_JornadasTableAdapter
+        '
+        Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_RematesTableAdapter
+        '
+        Me.Tb_RematesTableAdapter.ClearBeforeFill = True
+        '
+        'btModificar
+        '
+        Me.btModificar.Location = New System.Drawing.Point(915, 20)
+        Me.btModificar.Name = "btModificar"
+        Me.btModificar.Size = New System.Drawing.Size(117, 23)
+        Me.btModificar.TabIndex = 7
+        Me.btModificar.Text = "Guardar / Imprimir"
+        Me.btModificar.UseVisualStyleBackColor = True
+        '
+        'cbPalco
+        '
+        Me.cbPalco.DataSource = Me.TbPalcosBindingSource
+        Me.cbPalco.DisplayMember = "Palco"
+        Me.cbPalco.Enabled = False
+        Me.cbPalco.FormattingEnabled = True
+        Me.cbPalco.Location = New System.Drawing.Point(224, 67)
+        Me.cbPalco.Name = "cbPalco"
+        Me.cbPalco.Size = New System.Drawing.Size(121, 21)
+        Me.cbPalco.TabIndex = 8
+        Me.cbPalco.ValueMember = "Id"
+        '
+        'TbPalcosBindingSource
+        '
+        Me.TbPalcosBindingSource.DataMember = "tb_Palcos"
+        Me.TbPalcosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(185, 71)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(37, 13)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Palco:"
+        '
+        'txPorcCasa
+        '
+        Me.txPorcCasa.Enabled = False
+        Me.txPorcCasa.Location = New System.Drawing.Point(404, 67)
+        Me.txPorcCasa.Name = "txPorcCasa"
+        Me.txPorcCasa.Size = New System.Drawing.Size(76, 20)
+        Me.txPorcCasa.TabIndex = 11
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(358, 71)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "% Casa:"
+        '
+        'txTotalApuestas
+        '
+        Me.txTotalApuestas.Enabled = False
+        Me.txTotalApuestas.Location = New System.Drawing.Point(590, 67)
+        Me.txTotalApuestas.Name = "txTotalApuestas"
+        Me.txTotalApuestas.Size = New System.Drawing.Size(100, 20)
+        Me.txTotalApuestas.TabIndex = 13
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(723, 71)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(42, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Premio:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(508, 71)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(76, 13)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Total Apuesta:"
+        '
+        'txPremio
+        '
+        Me.txPremio.Enabled = False
+        Me.txPremio.Location = New System.Drawing.Point(771, 68)
+        Me.txPremio.Name = "txPremio"
+        Me.txPremio.Size = New System.Drawing.Size(100, 20)
+        Me.txPremio.TabIndex = 16
+        '
+        'Tb_PalcosTableAdapter
+        '
+        Me.Tb_PalcosTableAdapter.ClearBeforeFill = True
+        '
+        'Tb_PorcentajesCasaTableAdapter
+        '
+        Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
+        '
+        'txRematador
+        '
+        Me.txRematador.Enabled = False
+        Me.txRematador.Location = New System.Drawing.Point(106, 94)
+        Me.txRematador.Name = "txRematador"
+        Me.txRematador.Size = New System.Drawing.Size(100, 20)
+        Me.txRematador.TabIndex = 17
+        '
+        'TbRematesBindingSource
+        '
+        Me.TbRematesBindingSource.DataMember = "tb_Remates"
+        Me.TbRematesBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(38, 97)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(62, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Rematador:"
+        '
         'frmModiRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1141, 347)
+        Me.ClientSize = New System.Drawing.Size(1044, 347)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txRematador)
         Me.Controls.Add(Me.txPremio)
         Me.Controls.Add(Me.Label7)
@@ -440,4 +455,5 @@ Partial Class frmModiRemate
     Friend WithEvents ImportePremio As DataGridViewTextBoxColumn
     Friend WithEvents Incluido As DataGridViewCheckBoxColumn
     Friend WithEvents ObservacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label8 As Label
 End Class
