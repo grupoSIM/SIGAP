@@ -80,9 +80,9 @@ Partial Class frmRemate
         Me.cmbCarrera.DisplayMember = "Nombre"
         Me.cmbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbCarrera.FormattingEnabled = True
-        Me.cmbCarrera.Location = New System.Drawing.Point(81, 64)
+        Me.cmbCarrera.Location = New System.Drawing.Point(76, 64)
         Me.cmbCarrera.Name = "cmbCarrera"
-        Me.cmbCarrera.Size = New System.Drawing.Size(121, 21)
+        Me.cmbCarrera.Size = New System.Drawing.Size(295, 21)
         Me.cmbCarrera.TabIndex = 9
         Me.cmbCarrera.TabStop = False
         Me.cmbCarrera.ValueMember = "Id"
@@ -99,18 +99,18 @@ Partial Class frmRemate
         '
         'txtRemate
         '
-        Me.txtRemate.Location = New System.Drawing.Point(308, 64)
+        Me.txtRemate.Location = New System.Drawing.Point(456, 64)
         Me.txtRemate.Name = "txtRemate"
         Me.txtRemate.ReadOnly = True
-        Me.txtRemate.Size = New System.Drawing.Size(100, 20)
+        Me.txtRemate.Size = New System.Drawing.Size(29, 20)
         Me.txtRemate.TabIndex = 11
         Me.txtRemate.TabStop = False
         '
         'txtPorcentajeCasa
         '
-        Me.txtPorcentajeCasa.Location = New System.Drawing.Point(478, 64)
+        Me.txtPorcentajeCasa.Location = New System.Drawing.Point(547, 64)
         Me.txtPorcentajeCasa.Name = "txtPorcentajeCasa"
-        Me.txtPorcentajeCasa.Size = New System.Drawing.Size(100, 20)
+        Me.txtPorcentajeCasa.Size = New System.Drawing.Size(31, 20)
         Me.txtPorcentajeCasa.TabIndex = 13
         Me.txtPorcentajeCasa.TabStop = False
         '
@@ -190,7 +190,7 @@ Partial Class frmRemate
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(220, 67)
+        Me.Label5.Location = New System.Drawing.Point(371, 67)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(82, 13)
         Me.Label5.TabIndex = 10
@@ -199,7 +199,7 @@ Partial Class frmRemate
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(414, 68)
+        Me.Label6.Location = New System.Drawing.Point(486, 68)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 13)
         Me.Label6.TabIndex = 12
