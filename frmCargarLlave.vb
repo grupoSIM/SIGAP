@@ -32,6 +32,8 @@
 
         For Each txt As TextBox In Controls.OfType(Of TextBox)
             txt.Visible = False
+            ' MsgBox(txt.Name, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+
         Next
 
     End Function
@@ -223,6 +225,8 @@
     End Sub
 
     Private Sub cbCarrera2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera2.SelectedIndexChanged
+        LimpiarCaballos1()
+        LimpiarCaballos2()
         CargarCaballos1()
         CargarCaballos2()
     End Sub
