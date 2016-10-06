@@ -60,6 +60,7 @@ Partial Class frmRemate
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
         Me.txYunta = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLimpiarFilas = New System.Windows.Forms.Button()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbPalcosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,13 +130,13 @@ Partial Class frmRemate
         Me.txtJornada.Location = New System.Drawing.Point(102, 27)
         Me.txtJornada.Name = "txtJornada"
         Me.txtJornada.ReadOnly = True
-        Me.txtJornada.Size = New System.Drawing.Size(100, 20)
+        Me.txtJornada.Size = New System.Drawing.Size(212, 20)
         Me.txtJornada.TabIndex = 3
         Me.txtJornada.TabStop = False
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(276, 27)
+        Me.txtFecha.Location = New System.Drawing.Point(363, 27)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
         Me.txtFecha.Size = New System.Drawing.Size(100, 20)
@@ -154,7 +155,7 @@ Partial Class frmRemate
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(408, 30)
+        Me.Label1.Location = New System.Drawing.Point(479, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 6
@@ -163,7 +164,7 @@ Partial Class frmRemate
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(233, 30)
+        Me.Label2.Location = New System.Drawing.Point(320, 30)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 4
@@ -211,9 +212,9 @@ Partial Class frmRemate
         Me.cmbPalco.DisplayMember = "Palco"
         Me.cmbPalco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbPalco.FormattingEnabled = True
-        Me.cmbPalco.Location = New System.Drawing.Point(457, 26)
+        Me.cmbPalco.Location = New System.Drawing.Point(526, 26)
         Me.cmbPalco.Name = "cmbPalco"
-        Me.cmbPalco.Size = New System.Drawing.Size(121, 21)
+        Me.cmbPalco.Size = New System.Drawing.Size(52, 21)
         Me.cmbPalco.TabIndex = 7
         Me.cmbPalco.TabStop = False
         Me.cmbPalco.ValueMember = "Id"
@@ -355,11 +356,22 @@ Partial Class frmRemate
         Me.Button1.Text = "Crear YUNTA"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'btnLimpiarFilas
+        '
+        Me.btnLimpiarFilas.Location = New System.Drawing.Point(601, 99)
+        Me.btnLimpiarFilas.Name = "btnLimpiarFilas"
+        Me.btnLimpiarFilas.Size = New System.Drawing.Size(70, 23)
+        Me.btnLimpiarFilas.TabIndex = 505
+        Me.btnLimpiarFilas.TabStop = False
+        Me.btnLimpiarFilas.Text = "Limpiar filas"
+        Me.btnLimpiarFilas.UseVisualStyleBackColor = True
+        '
         'frmRemate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(776, 599)
+        Me.Controls.Add(Me.btnLimpiarFilas)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txYunta)
         Me.Controls.Add(Me.lblFila)
@@ -432,4 +444,5 @@ Partial Class frmRemate
     Friend WithEvents Tb_PorcentajesCasaTableAdapter As bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter
     Friend WithEvents txYunta As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnLimpiarFilas As Button
 End Class
