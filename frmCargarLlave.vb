@@ -70,7 +70,8 @@
         ref1 = cbCarrera1.SelectedValue
 
         'MessageBox.Show(ref1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-
+        nProcentajeCasa.Value = RecuperarPorcentaje()
+        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
 
     End Function
 
@@ -96,6 +97,10 @@
             y = y + 1
 
         Next
+
+        nProcentajeCasa.Value = RecuperarPorcentaje()
+        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
+
     End Function
 
     Private Function RecuperarPorcentaje()
@@ -114,6 +119,10 @@
             Next
             i = i + 1
         Next
+        If cont > 10 Then
+            cont = 10
+            porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
+        End If
 
         If cont > 1 Then
             porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)

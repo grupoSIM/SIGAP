@@ -187,9 +187,10 @@ Partial Class frmCargarLlave
         '
         'txNombre
         '
+        Me.txNombre.Enabled = False
         Me.txNombre.Location = New System.Drawing.Point(337, 43)
         Me.txNombre.Name = "txNombre"
-        Me.txNombre.Size = New System.Drawing.Size(250, 20)
+        Me.txNombre.Size = New System.Drawing.Size(302, 20)
         Me.txNombre.TabIndex = 14
         '
         'nProcentajeCasa
