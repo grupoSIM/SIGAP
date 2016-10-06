@@ -17,6 +17,8 @@
 
         CargarCaballos1()
         CargarCaballos2()
+
+
     End Sub
     Private Function LimpiarCaballos1()
         Dim ctrlsEjec As Integer = Controls.Count - 1
@@ -39,10 +41,13 @@
     End Function
 
     Private Sub cbCarrera1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera1.SelectedIndexChanged
-        LimpiarCaballos1()
-        LimpiarCaballos2()
-        CargarCaballos1()
-        CargarCaballos2()
+        If (cbCarrera1.SelectedValue) Then
+            LimpiarCaballos1()
+            LimpiarCaballos2()
+            CargarCaballos1()
+            CargarCaballos2()
+        End If
+
     End Sub
 
     Private Function CargarCaballos1()
@@ -70,8 +75,7 @@
         ref1 = cbCarrera1.SelectedValue
 
         'MessageBox.Show(ref1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-        nProcentajeCasa.Value = RecuperarPorcentaje()
-        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
+
 
     End Function
 
@@ -97,9 +101,6 @@
             y = y + 1
 
         Next
-
-        nProcentajeCasa.Value = RecuperarPorcentaje()
-        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
 
     End Function
 
@@ -135,8 +136,8 @@
         ' MessageBox.Show("crecarrera ref 1" & ref1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Dim idCarreraNueva As Integer
 
-        nProcentajeCasa.Value = RecuperarPorcentaje()
-        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
+        'nProcentajeCasa.Value = RecuperarPorcentaje()
+        'txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
 
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
@@ -157,6 +158,7 @@
         idCarreraNueva = Tb_CarrerasTableAdapter.maxId()
 
         'MessageBox.Show("Se ha creado la carrera" & car1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
 
         Return car1
     End Function
@@ -234,14 +236,21 @@
     End Sub
 
     Private Sub cbCarrera2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera2.SelectedIndexChanged
-        LimpiarCaballos1()
-        LimpiarCaballos2()
-        CargarCaballos1()
-        CargarCaballos2()
+        If (cbCarrera2.SelectedValue) Then
+            LimpiarCaballos1()
+            LimpiarCaballos2()
+            CargarCaballos1()
+            CargarCaballos2()
+        End If
+
     End Sub
 
     Private Sub btCreaCarrera_Click(sender As Object, e As EventArgs) Handles btCreaCarrera.Click
         Dim idCarrera1 As Integer
+
+        nProcentajeCasa.Value = RecuperarPorcentaje()
+        txNombre.Text = "Llave:" & cbCarrera1.Text & "-" & cbCarrera2.Text
+
         idCarrera1 = CreaCarrera(ref1, cbCarrera2.SelectedValue)
         cbCarrera1.SelectedValue = idCarrera1
 
@@ -254,15 +263,8 @@
     End Sub
 
 
-    Private Sub btCrearLlave_Click(sender As Object, e As EventArgs)
-        CreaCaballosCarrera(cbCarrera1.SelectedValue, cbCarrera2.SelectedValue)
-    End Sub
-
     Private Sub btCancelar_Click(sender As Object, e As EventArgs) Handles btCancelar.Click
         Me.Close()
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
 End Class
