@@ -14301,7 +14301,7 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Id, IdJornada, Nombre, Metros, Estado, PorcentajeCasa, PorcentajeUl"& _ 
-                "timoRemate, Observaciones, TipoCarrera, NroCarrera"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tb_Carreras"
+                "timoRemate, Observaciones, TipoCarrera, NroCarrera"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tb_Carreras"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY NroCarrera, Nombre"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = New Global.System.Data.OleDb.OleDbConnection(Global.SIGAP.My.MySettings.Default.bdSIGAP_ConnectionString)

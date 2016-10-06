@@ -168,6 +168,11 @@ Public Class frmRemate
         Next
 
         For Each txt As TextBox In Controls.OfType(Of TextBox)
+            If (txt.Tag <> "Numero") Then Continue For
+            txt.ReadOnly = True
+        Next
+
+        For Each txt As TextBox In Controls.OfType(Of TextBox)
             If (txt.Tag <> "Caballo") Then Continue For
             txt.ReadOnly = True
         Next
@@ -372,5 +377,11 @@ Public Class frmRemate
 
         Me.Close()
         frmYunta.Show()
+    End Sub
+
+    Private Sub btnLimpiarFilas_Click(sender As Object, e As EventArgs) Handles btnLimpiarFilas.Click
+        For Each rad As RadioButton In Controls.OfType(Of RadioButton)
+            rad.Checked = False
+        Next
     End Sub
 End Class
