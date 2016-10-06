@@ -160,15 +160,16 @@
         Next
 
 
-        MessageBox.Show("idCarreraOri" & idCarreraOri, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-        MessageBox.Show("NomCarreraOri" & NomCarreraOri, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("idCarreraOri" & idCarreraOri, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("NomCarreraOri" & NomCarreraOri, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        Dim CarrOri = Tb_CarrerasTableAdapter.GetDataById(idCarreraOri)
 
         '#1 CARGAR CARRERA'
         Dim filaCarrera As DataRowView
         filaCarrera = TbCarrerasBindingSource.AddNew()
 
         filaCarrera("IdJornada") = cbJornada.SelectedValue
-        filaCarrera("NroCarrera") = idCarreraOri '& nroYunta
+        filaCarrera("NroCarrera") = CarrOri.Rows(0).Item("NroCarrera") '& nroYunta
         filaCarrera("Nombre") = NomCarreraOri & " Yunta" & yuntas
         filaCarrera("Metros") = "0"
         filaCarrera("Estado") = 0
