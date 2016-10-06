@@ -36,7 +36,7 @@
     End Function
     Private Function CargarDetalleRemate(ByVal NroRemate As Integer)
         Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, NroRemate)
-        MessageBox.Show("IdRemate" & IdRemate, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        'MessageBox.Show("IdRemate" & IdRemate, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Me.Tb_DetalleRematesTableAdapter.FillByRemate(Me.BdSIGAP_DataSet.tb_DetalleRemates, IdRemate)
     End Function
 
