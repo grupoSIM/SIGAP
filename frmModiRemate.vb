@@ -17,7 +17,7 @@
             CargarRemate(txRemate.Text)
             CargarDetalleRemate(txRemate.Text)
         Else
-            Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
+            'Me.Tb_DetalleRematesTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_DetalleRemates)
         End If
 
 
@@ -27,11 +27,16 @@
         Dim IdRemate = Me.Tb_RematesTableAdapter.GetIdByCarreraYNroRemate(cbCarrera.SelectedValue, NroRemate)
         Dim remate = Me.Tb_RematesTableAdapter.GetDataByIdRemate(IdRemate)
 
-        Me.cbPalco.SelectedValue = remate.Rows(0).Item("IdPalco")
-        Me.txTotalApuestas.Text = remate.Rows(0).Item("TotalApuestas")
-        Me.txPorcCasa.Text = remate.Rows(0).Item("PorcentajeCasa")
-        Me.txPremio.Text = remate.Rows(0).Item("Premio")
-        Me.txRematador.Text = remate.Rows(0).Item("IdRematador")
+        If IdRemate Is Nothing Then
+            MessageBox.Show("No existe el Nro Remate: " & txRemate.Text & " para la carrera.", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        Else
+            Me.cbPalco.SelectedValue = remate.Rows(0).Item("IdPalco")
+            Me.txTotalApuestas.Text = remate.Rows(0).Item("TotalApuestas")
+            Me.txPorcCasa.Text = remate.Rows(0).Item("PorcentajeCasa")
+            Me.txPremio.Text = remate.Rows(0).Item("Premio")
+            Me.txRematador.Text = remate.Rows(0).Item("IdRematador")
+        End If
+
 
     End Function
     Private Function CargarDetalleRemate(ByVal NroRemate As Integer)
@@ -43,12 +48,19 @@
     Private Sub cbJornada_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbJornada.SelectedIndexChanged
         Dim carreras = Tb_CarrerasTableAdapter.GetDataByJornada(cbJornada.SelectedValue)
         cbCarrera.DataSource = carreras
+
     End Sub
 
     Private Sub txRemate_TextChanged(sender As Object, e As EventArgs) Handles txRemate.TextChanged
         'MessageBox.Show("entra en el chnge ", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-        CargarRemate(txRemate.Text)
-        CargarDetalleRemate(txRemate.Text)
+        If txRemate.Text <> "" Then
+
+            CargarRemate(txRemate.Text)
+            CargarDetalleRemate(txRemate.Text)
+        Else
+            'borrar la grilla
+
+        End If
     End Sub
 
     Private Sub btModificar_Click(sender As Object, e As EventArgs) Handles btModificar.Click
@@ -168,4 +180,8 @@
 
     End Sub
 
+    Private Sub cbCarrera_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarrera.SelectedIndexChanged
+        txRemate.Text = ""
+
+    End Sub
 End Class

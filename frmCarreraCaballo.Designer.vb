@@ -160,6 +160,7 @@ Partial Class frmCarreraCaballo
         Me.Label4.Size = New System.Drawing.Size(88, 13)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Porcentaje Casa:"
+        Me.Label4.Visible = False
         '
         'GroupBox1
         '
@@ -177,7 +178,7 @@ Partial Class frmCarreraCaballo
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(570, 136)
-        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "General"
         '
@@ -186,7 +187,7 @@ Partial Class frmCarreraCaballo
         Me.txMetros.Location = New System.Drawing.Point(88, 96)
         Me.txMetros.Name = "txMetros"
         Me.txMetros.Size = New System.Drawing.Size(100, 20)
-        Me.txMetros.TabIndex = 18
+        Me.txMetros.TabIndex = 3
         Me.txMetros.Text = "0"
         '
         'Label6
@@ -203,7 +204,7 @@ Partial Class frmCarreraCaballo
         Me.nCarrera.Location = New System.Drawing.Point(88, 63)
         Me.nCarrera.Name = "nCarrera"
         Me.nCarrera.Size = New System.Drawing.Size(120, 20)
-        Me.nCarrera.TabIndex = 16
+        Me.nCarrera.TabIndex = 1
         Me.nCarrera.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label3
@@ -220,7 +221,7 @@ Partial Class frmCarreraCaballo
         Me.txNombre.Location = New System.Drawing.Point(295, 63)
         Me.txNombre.Name = "txNombre"
         Me.txNombre.Size = New System.Drawing.Size(250, 20)
-        Me.txNombre.TabIndex = 14
+        Me.txNombre.TabIndex = 2
         '
         'nProcentajeCasa
         '
@@ -228,7 +229,7 @@ Partial Class frmCarreraCaballo
         Me.nProcentajeCasa.Name = "nProcentajeCasa"
         Me.nProcentajeCasa.Size = New System.Drawing.Size(120, 20)
         Me.nProcentajeCasa.TabIndex = 13
-        Me.nProcentajeCasa.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.nProcentajeCasa.Visible = False
         '
         'agregarCaballo
         '
@@ -236,6 +237,7 @@ Partial Class frmCarreraCaballo
         Me.agregarCaballo.Name = "agregarCaballo"
         Me.agregarCaballo.Size = New System.Drawing.Size(103, 23)
         Me.agregarCaballo.TabIndex = 18
+        Me.agregarCaballo.TabStop = False
         Me.agregarCaballo.Text = "Agregar Caballo"
         Me.agregarCaballo.UseVisualStyleBackColor = True
         '
@@ -245,7 +247,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nbCaballo1.Name = "nbCaballo1"
         Me.nbCaballo1.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo1.TabIndex = 20
+        Me.nbCaballo1.TabIndex = 4
         Me.nbCaballo1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'nbCaballo2
@@ -253,7 +255,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo2.Location = New System.Drawing.Point(15, 180)
         Me.nbCaballo2.Name = "nbCaballo2"
         Me.nbCaballo2.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo2.TabIndex = 22
+        Me.nbCaballo2.TabIndex = 6
         Me.nbCaballo2.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'cbCaballo1
@@ -266,7 +268,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo1.Location = New System.Drawing.Point(78, 154)
         Me.cbCaballo1.Name = "cbCaballo1"
         Me.cbCaballo1.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo1.TabIndex = 29
+        Me.cbCaballo1.TabIndex = 5
         Me.cbCaballo1.ValueMember = "Id"
         '
         'Tb_CaballosBindingSource1
@@ -284,7 +286,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo2.Location = New System.Drawing.Point(78, 180)
         Me.cbCaballo2.Name = "cbCaballo2"
         Me.cbCaballo2.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo2.TabIndex = 30
+        Me.cbCaballo2.TabIndex = 7
         Me.cbCaballo2.ValueMember = "Id"
         '
         'Tb_CaballosBindingSource2
@@ -298,6 +300,7 @@ Partial Class frmCarreraCaballo
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 44
+        Me.Button1.TabStop = False
         Me.Button1.Text = "Agregar Fila"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -306,7 +309,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo3.Location = New System.Drawing.Point(15, 206)
         Me.nbCaballo3.Name = "nbCaballo3"
         Me.nbCaballo3.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo3.TabIndex = 45
+        Me.nbCaballo3.TabIndex = 8
         Me.nbCaballo3.Value = New Decimal(New Integer() {3, 0, 0, 0})
         Me.nbCaballo3.Visible = False
         '
@@ -315,7 +318,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo4.Location = New System.Drawing.Point(15, 232)
         Me.nbCaballo4.Name = "nbCaballo4"
         Me.nbCaballo4.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo4.TabIndex = 46
+        Me.nbCaballo4.TabIndex = 10
         Me.nbCaballo4.Value = New Decimal(New Integer() {4, 0, 0, 0})
         Me.nbCaballo4.Visible = False
         '
@@ -324,7 +327,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo5.Location = New System.Drawing.Point(15, 258)
         Me.nbCaballo5.Name = "nbCaballo5"
         Me.nbCaballo5.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo5.TabIndex = 47
+        Me.nbCaballo5.TabIndex = 12
         Me.nbCaballo5.Value = New Decimal(New Integer() {5, 0, 0, 0})
         Me.nbCaballo5.Visible = False
         '
@@ -333,7 +336,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo6.Location = New System.Drawing.Point(15, 284)
         Me.nbCaballo6.Name = "nbCaballo6"
         Me.nbCaballo6.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo6.TabIndex = 48
+        Me.nbCaballo6.TabIndex = 14
         Me.nbCaballo6.Value = New Decimal(New Integer() {6, 0, 0, 0})
         Me.nbCaballo6.Visible = False
         '
@@ -342,7 +345,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo7.Location = New System.Drawing.Point(15, 310)
         Me.nbCaballo7.Name = "nbCaballo7"
         Me.nbCaballo7.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo7.TabIndex = 49
+        Me.nbCaballo7.TabIndex = 16
         Me.nbCaballo7.Value = New Decimal(New Integer() {7, 0, 0, 0})
         Me.nbCaballo7.Visible = False
         '
@@ -351,7 +354,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo8.Location = New System.Drawing.Point(15, 337)
         Me.nbCaballo8.Name = "nbCaballo8"
         Me.nbCaballo8.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo8.TabIndex = 50
+        Me.nbCaballo8.TabIndex = 18
         Me.nbCaballo8.Value = New Decimal(New Integer() {8, 0, 0, 0})
         Me.nbCaballo8.Visible = False
         '
@@ -360,7 +363,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo9.Location = New System.Drawing.Point(15, 362)
         Me.nbCaballo9.Name = "nbCaballo9"
         Me.nbCaballo9.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo9.TabIndex = 51
+        Me.nbCaballo9.TabIndex = 20
         Me.nbCaballo9.Value = New Decimal(New Integer() {9, 0, 0, 0})
         Me.nbCaballo9.Visible = False
         '
@@ -369,7 +372,7 @@ Partial Class frmCarreraCaballo
         Me.nbCaballo10.Location = New System.Drawing.Point(15, 390)
         Me.nbCaballo10.Name = "nbCaballo10"
         Me.nbCaballo10.Size = New System.Drawing.Size(57, 20)
-        Me.nbCaballo10.TabIndex = 52
+        Me.nbCaballo10.TabIndex = 22
         Me.nbCaballo10.Value = New Decimal(New Integer() {10, 0, 0, 0})
         Me.nbCaballo10.Visible = False
         '
@@ -383,7 +386,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo3.Location = New System.Drawing.Point(78, 206)
         Me.cbCaballo3.Name = "cbCaballo3"
         Me.cbCaballo3.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo3.TabIndex = 53
+        Me.cbCaballo3.TabIndex = 9
         Me.cbCaballo3.ValueMember = "Id"
         Me.cbCaballo3.Visible = False
         '
@@ -402,7 +405,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo4.Location = New System.Drawing.Point(78, 232)
         Me.cbCaballo4.Name = "cbCaballo4"
         Me.cbCaballo4.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo4.TabIndex = 54
+        Me.cbCaballo4.TabIndex = 11
         Me.cbCaballo4.ValueMember = "Id"
         Me.cbCaballo4.Visible = False
         '
@@ -421,7 +424,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo5.Location = New System.Drawing.Point(78, 258)
         Me.cbCaballo5.Name = "cbCaballo5"
         Me.cbCaballo5.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo5.TabIndex = 55
+        Me.cbCaballo5.TabIndex = 13
         Me.cbCaballo5.ValueMember = "Id"
         Me.cbCaballo5.Visible = False
         '
@@ -440,7 +443,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo6.Location = New System.Drawing.Point(78, 284)
         Me.cbCaballo6.Name = "cbCaballo6"
         Me.cbCaballo6.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo6.TabIndex = 56
+        Me.cbCaballo6.TabIndex = 15
         Me.cbCaballo6.ValueMember = "Id"
         Me.cbCaballo6.Visible = False
         '
@@ -459,7 +462,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo7.Location = New System.Drawing.Point(78, 310)
         Me.cbCaballo7.Name = "cbCaballo7"
         Me.cbCaballo7.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo7.TabIndex = 57
+        Me.cbCaballo7.TabIndex = 17
         Me.cbCaballo7.ValueMember = "Id"
         Me.cbCaballo7.Visible = False
         '
@@ -478,7 +481,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo8.Location = New System.Drawing.Point(78, 337)
         Me.cbCaballo8.Name = "cbCaballo8"
         Me.cbCaballo8.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo8.TabIndex = 58
+        Me.cbCaballo8.TabIndex = 19
         Me.cbCaballo8.ValueMember = "Id"
         Me.cbCaballo8.Visible = False
         '
@@ -497,7 +500,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo9.Location = New System.Drawing.Point(78, 362)
         Me.cbCaballo9.Name = "cbCaballo9"
         Me.cbCaballo9.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo9.TabIndex = 59
+        Me.cbCaballo9.TabIndex = 21
         Me.cbCaballo9.ValueMember = "Id"
         Me.cbCaballo9.Visible = False
         '
@@ -516,7 +519,7 @@ Partial Class frmCarreraCaballo
         Me.cbCaballo10.Location = New System.Drawing.Point(78, 390)
         Me.cbCaballo10.Name = "cbCaballo10"
         Me.cbCaballo10.Size = New System.Drawing.Size(186, 21)
-        Me.cbCaballo10.TabIndex = 60
+        Me.cbCaballo10.TabIndex = 23
         Me.cbCaballo10.ValueMember = "Id"
         Me.cbCaballo10.Visible = False
         '
@@ -531,6 +534,7 @@ Partial Class frmCarreraCaballo
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 61
+        Me.Button2.TabStop = False
         Me.Button2.Text = "Ocultar Fila"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -539,7 +543,7 @@ Partial Class frmCarreraCaballo
         Me.Button3.Location = New System.Drawing.Point(463, 154)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(119, 23)
-        Me.Button3.TabIndex = 62
+        Me.Button3.TabIndex = 24
         Me.Button3.Text = "Crear Carrera"
         Me.Button3.UseVisualStyleBackColor = True
         '

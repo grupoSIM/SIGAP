@@ -322,6 +322,9 @@
         txNombre.Text = ""
         txMetros.Text = "0"
         nProcentajeCasa.Value = 10
+
+
+
     End Function
 
     Private Sub Label6_Click_1(sender As Object, e As EventArgs) Handles Label6.Click
