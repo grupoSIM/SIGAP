@@ -311,7 +311,7 @@
         Me.TbCarrerasCaballosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BdSIGAP_DataSet)
 
-        MessageBox.Show("Se Ha Creado La Carrera" & txNombre.Text, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) '
+        MessageBox.Show("Se ha Creado La Carrera: " & txNombre.Text, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) '
 
         LimpiarCarrera()
 

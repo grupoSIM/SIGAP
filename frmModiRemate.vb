@@ -59,7 +59,7 @@
             CargarDetalleRemate(txRemate.Text)
         Else
             'borrar la grilla
-
+            CargarDetalleRemate(0)
         End If
     End Sub
 

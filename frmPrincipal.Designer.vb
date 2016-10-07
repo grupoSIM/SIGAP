@@ -41,6 +41,7 @@ Partial Class frmPrincipal
         Me.CarCabPruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarRemateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeDetalleRematesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -54,7 +55,10 @@ Partial Class frmPrincipal
         Me.ReporteCajaGralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCajaPorCaballoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteCarrerasDeJornadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarRemateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -172,6 +176,12 @@ Partial Class frmPrincipal
         Me.CargarRematesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.CargarRematesToolStripMenuItem.Text = "Cargar Remates"
         '
+        'ModificarRemateToolStripMenuItem
+        '
+        Me.ModificarRemateToolStripMenuItem.Name = "ModificarRemateToolStripMenuItem"
+        Me.ModificarRemateToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.ModificarRemateToolStripMenuItem.Text = "Modificar Remate"
+        '
         'ListadoDeRematesToolStripMenuItem
         '
         Me.ListadoDeRematesToolStripMenuItem.Name = "ListadoDeRematesToolStripMenuItem"
@@ -252,17 +262,51 @@ Partial Class frmPrincipal
         Me.ReporteCarrerasDeJornadaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
         Me.ReporteCarrerasDeJornadaToolStripMenuItem.Text = "Reporte Carreras de Jornada"
         '
-        'ModificarRemateToolStripMenuItem
+        'Button1
         '
-        Me.ModificarRemateToolStripMenuItem.Name = "ModificarRemateToolStripMenuItem"
-        Me.ModificarRemateToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
-        Me.ModificarRemateToolStripMenuItem.Text = "Modificar Remate"
+        Me.Button1.Location = New System.Drawing.Point(598, 85)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(101, 38)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Cargar REMATE"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(598, 129)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 38)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Imprimir Cierre de Caja por Caballo"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(598, 173)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(101, 38)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Cargar RESULTADO"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(598, 217)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(101, 38)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "Imprimir Reporte PREMIOS"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(758, 354)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -308,4 +352,8 @@ Partial Class frmPrincipal
     Friend WithEvents ReporteCajaPorCaballoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteCarrerasDeJornadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificarRemateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
