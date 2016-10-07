@@ -132,7 +132,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NroCarrera.Value</Value>
+                              <Value>=Fields!NroRemate.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

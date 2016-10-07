@@ -287,7 +287,7 @@
 
         MarcarGanadores()
 
-        ctrlImpre.ImprimirCajaXCaballo(cbCarrera.SelectedValue)
+        ctrlImpre.ImprimirPremios(cbCarrera.SelectedValue)
         ctrlImpre.ImprimirDevoluciones(cbCarrera.SelectedValue)
         'frmVerResultados.Show()
         'frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
