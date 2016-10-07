@@ -1,4 +1,6 @@
 ﻿Public Class frmCargarResultado
+    Dim ctrlImpre As New ControladorImpresion
+
     Private Sub frmCargarResultado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BdSIGAP_DataSet.tb_Caballos' table. You can move, or remove it, as needed.
         Me.Tb_CaballosTableAdapter.Fill(Me.BdSIGAP_DataSet.tb_Caballos)
@@ -284,8 +286,11 @@
 
 
         MarcarGanadores()
-        frmVerResultados.Show()
-        frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
+
+        ctrlImpre.ImprimirCajaXCaballo(cbCarrera.SelectedValue)
+        ctrlImpre.ImprimirDevoluciones(cbCarrera.SelectedValue)
+        'frmVerResultados.Show()
+        'frmVerResultados.cbCarrera.SelectedValue = Me.cbCarrera.SelectedValue
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
