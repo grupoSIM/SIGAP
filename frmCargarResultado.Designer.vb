@@ -95,6 +95,7 @@ Partial Class frmCargarResultado
         Me.Label2.Size = New System.Drawing.Size(40, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fecha:"
+        Me.Label2.Visible = False
         '
         'txtFecha
         '
@@ -102,6 +103,7 @@ Partial Class frmCargarResultado
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.Size = New System.Drawing.Size(100, 20)
         Me.txtFecha.TabIndex = 3
+        Me.txtFecha.Visible = False
         '
         'Label3
         '
@@ -408,6 +410,7 @@ Partial Class frmCargarResultado
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmCargarResultado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cargar Resultado"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
