@@ -7264,10 +7264,6 @@ Partial Public Class bdSIGAP_DataSet
         
         Private columnComisionHipodromo As Global.System.Data.DataColumn
         
-        Private columnPorcentajeUtilidad As Global.System.Data.DataColumn
-        
-        Private columnPorcentajeBruto As Global.System.Data.DataColumn
-        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -7424,22 +7420,6 @@ Partial Public Class bdSIGAP_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property PorcentajeUtilidadColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPorcentajeUtilidad
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property PorcentajeBrutoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPorcentajeBruto
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -7476,9 +7456,9 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddVwCajaPalcoCarreraCaballoRow(ByVal Hipodromo As String, ByVal Fecha As Date, ByVal Palco As String, ByVal NroCarrera As Integer, ByVal NombreCarrera As String, ByVal NroCaballo As Integer, ByVal CaballoNombre As String, ByVal CantRemates As Integer, ByVal SumaApuestas As Decimal, ByVal SumaPremios As Double, ByVal ComisionRematador As Integer, ByVal ComisionHipodromo As Integer, ByVal PorcentajeUtilidad As Integer, ByVal PorcentajeBruto As Integer) As VwCajaPalcoCarreraCaballoRow
+        Public Overloads Function AddVwCajaPalcoCarreraCaballoRow(ByVal Hipodromo As String, ByVal Fecha As Date, ByVal Palco As String, ByVal NroCarrera As Integer, ByVal NombreCarrera As String, ByVal NroCaballo As Integer, ByVal CaballoNombre As String, ByVal CantRemates As Integer, ByVal SumaApuestas As Decimal, ByVal SumaPremios As Double, ByVal ComisionRematador As Integer, ByVal ComisionHipodromo As Integer) As VwCajaPalcoCarreraCaballoRow
             Dim rowVwCajaPalcoCarreraCaballoRow As VwCajaPalcoCarreraCaballoRow = CType(Me.NewRow,VwCajaPalcoCarreraCaballoRow)
-            Dim columnValuesArray() As Object = New Object() {Hipodromo, Nothing, Fecha, Nothing, Palco, Nothing, NroCarrera, NombreCarrera, NroCaballo, CaballoNombre, CantRemates, SumaApuestas, SumaPremios, ComisionRematador, ComisionHipodromo, PorcentajeUtilidad, PorcentajeBruto}
+            Dim columnValuesArray() As Object = New Object() {Hipodromo, Nothing, Fecha, Nothing, Palco, Nothing, NroCarrera, NombreCarrera, NroCaballo, CaballoNombre, CantRemates, SumaApuestas, SumaPremios, ComisionRematador, ComisionHipodromo}
             rowVwCajaPalcoCarreraCaballoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVwCajaPalcoCarreraCaballoRow)
             Return rowVwCajaPalcoCarreraCaballoRow
@@ -7516,8 +7496,6 @@ Partial Public Class bdSIGAP_DataSet
             Me.columnSumaPremios = MyBase.Columns("SumaPremios")
             Me.columnComisionRematador = MyBase.Columns("ComisionRematador")
             Me.columnComisionHipodromo = MyBase.Columns("ComisionHipodromo")
-            Me.columnPorcentajeUtilidad = MyBase.Columns("PorcentajeUtilidad")
-            Me.columnPorcentajeBruto = MyBase.Columns("PorcentajeBruto")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7553,10 +7531,6 @@ Partial Public Class bdSIGAP_DataSet
             MyBase.Columns.Add(Me.columnComisionRematador)
             Me.columnComisionHipodromo = New Global.System.Data.DataColumn("ComisionHipodromo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnComisionHipodromo)
-            Me.columnPorcentajeUtilidad = New Global.System.Data.DataColumn("PorcentajeUtilidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPorcentajeUtilidad)
-            Me.columnPorcentajeBruto = New Global.System.Data.DataColumn("PorcentajeBruto", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPorcentajeBruto)
             Me.columnHipodromo.MaxLength = 255
             Me.columnIdJornada.AutoIncrement = true
             Me.columnIdJornada.AutoIncrementSeed = -1
@@ -12558,38 +12532,6 @@ Partial Public Class bdSIGAP_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property PorcentajeUtilidad() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeUtilidadColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PorcentajeUtilidad' in table 'VwCajaPalcoCarreraCaballo' is"& _ 
-                            " DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeUtilidadColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property PorcentajeBruto() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeBrutoColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PorcentajeBruto' in table 'VwCajaPalcoCarreraCaballo' is DB"& _ 
-                            "Null.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeBrutoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHipodromoNull() As Boolean
             Return Me.IsNull(Me.tableVwCajaPalcoCarreraCaballo.HipodromoColumn)
         End Function
@@ -12766,30 +12708,6 @@ Partial Public Class bdSIGAP_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetComisionHipodromoNull()
             Me(Me.tableVwCajaPalcoCarreraCaballo.ComisionHipodromoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsPorcentajeUtilidadNull() As Boolean
-            Return Me.IsNull(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeUtilidadColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetPorcentajeUtilidadNull()
-            Me(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeUtilidadColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsPorcentajeBrutoNull() As Boolean
-            Return Me.IsNull(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeBrutoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetPorcentajeBrutoNull()
-            Me(Me.tableVwCajaPalcoCarreraCaballo.PorcentajeBrutoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -20677,8 +20595,6 @@ Namespace bdSIGAP_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("SumaPremios", "SumaPremios")
             tableMapping.ColumnMappings.Add("ComisionRematador", "ComisionRematador")
             tableMapping.ColumnMappings.Add("ComisionHipodromo", "ComisionHipodromo")
-            tableMapping.ColumnMappings.Add("PorcentajeUtilidad", "PorcentajeUtilidad")
-            tableMapping.ColumnMappings.Add("PorcentajeBruto", "PorcentajeBruto")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -20697,15 +20613,14 @@ Namespace bdSIGAP_DataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Hipodromo, IdJornada, Fecha, IdPalco, Palco, IdCarrera, NroCarrera, Nombre"& _ 
                 "Carrera, NroCaballo, CaballoNombre, CantRemates, SumaApuestas, SumaPremios, Comi"& _ 
-                "sionRematador, ComisionHipodromo, PorcentajeBruto, PorcentajeUtilidad FROM VwCaj"& _ 
-                "aPalcoCarreraCaballo"
+                "sionRematador, ComisionHipodromo FROM VwCajaPalcoCarreraCaballo"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT Hipodromo, IdJornada, Fecha, IdPalco, Palco, IdCarrera, NroCarrera, Nombre"& _ 
                 "Carrera, NroCaballo, CaballoNombre, CantRemates, SumaApuestas, SumaPremios, Comi"& _ 
-                "sionRematador, ComisionHipodromo, PorcentajeBruto, PorcentajeUtilidad FROM VwCaj"& _ 
-                "aPalcoCarreraCaballo WHERE (IdCarrera = ?)"
+                "sionRematador, ComisionHipodromo FROM VwCajaPalcoCarreraCaballo WHERE (IdCarrera"& _ 
+                " = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdCarrera", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdCarrera", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
