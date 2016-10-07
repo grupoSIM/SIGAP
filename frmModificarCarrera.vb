@@ -54,11 +54,12 @@
     End Sub
 
     Private Function RecuperarPorcentaje()
-        Dim i As Integer = 1
+        Dim i As Integer = 0
         Dim porCaballos As Integer = 0
-        Dim cont As Integer = 0
+        Dim cont As Integer
 
-        For Renglones As Integer = 1 To DataGridView.RowCount - 1
+        'MessageBox.Show(DataGridView.RowCount - 1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        For Renglones As Integer = 1 To DataGridView.RowCount - 2
             If Me.DataGridView.Rows(Renglones).Cells(3).Value = False Then
                 'MessageBox.Show(Me.DataGridView.Rows(Renglones).Cells(3).Value, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 cont += 1
@@ -69,6 +70,10 @@
         MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
         If cont > 1 Then
+            porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
+        End If
+        If cont > 10 Then
+            cont = 10
             porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
         End If
 
