@@ -124,6 +124,7 @@ Partial Class frmRemate
         Me.btnGuardar.TabStop = False
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.Visible = False
         '
         'txtJornada
         '
