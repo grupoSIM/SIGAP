@@ -299,11 +299,11 @@ Public Class frmRemate
                 If (cbLuz.Tag <> "Luz") Then Continue For
                 If (cbLuz.SelectedIndex = 0) Then
                     cantDaLuz = cantDaLuz + 1
-                    observacionesDaLuz = observacionesDaLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                    observacionesRecibeLuz = observacionesRecibeLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
                 End If
                 If (cbLuz.SelectedIndex = 1) Then
                     cantRecibeLuz = cantRecibeLuz + 1
-                    observacionesRecibeLuz = observacionesRecibeLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                    observacionesDaLuz = observacionesDaLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
                 End If
             Next
 
@@ -418,6 +418,7 @@ Public Class frmRemate
             Dim tieneFila As Int16
             Dim observacionesDaFila As String
             Dim observacionesRecibeFila As String
+            Dim nombreCaballos As String
 
             cantDaLuz = 0
             cantRecibeLuz = 0
@@ -428,11 +429,11 @@ Public Class frmRemate
                 If (cbLuz.Tag <> "Luz") Then Continue For
                 If (cbLuz.SelectedIndex = 0) Then
                     cantDaLuz = cantDaLuz + 1
-                    observacionesDaLuz = observacionesDaLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                    observacionesRecibeLuz = observacionesRecibeLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
                 End If
                 If (cbLuz.SelectedIndex = 1) Then
                     cantRecibeLuz = cantRecibeLuz + 1
-                    observacionesRecibeLuz = observacionesRecibeLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
+                    observacionesDaLuz = observacionesDaLuz & " " & CType(Me.Controls("txtNumero" & cbLuz.Name.Substring(6)), TextBox).Text
                 End If
             Next
 
