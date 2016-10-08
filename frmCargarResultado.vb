@@ -152,12 +152,14 @@
                 drDetalleRemate = BdSIGAP_DataSet.tb_DetalleRemates.FindById(rowDR("Id"))
                 If (hayFila) Then
                     If (rowDR.Item("Posicion") = 1) Then
+                        drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                         ganadores += 1
                     Else
                         If (rowDR.Item("Fila")) Then
                             drDetalleRemate.Item("ImportePremio") = 0
                         Else
                             If (posFila <> 1) Then
+                                drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                                 ganadores += 1
                             Else
                                 drDetalleRemate.Item("ImportePremio") = 0
@@ -169,24 +171,29 @@
                         If (posicionGanadora = 1) Then
                             If (rowDR.Item("ApostocLuz") = 0) Then
                                 If (rowDR.Item("GanocLuz")) Then
+                                    drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                                     ganadores += 1
                                 Else
                                     If (segundoRecibeLuz) Then
                                         drDetalleRemate.Item("ImportePremio") = 0
                                     Else
+                                        drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                                         ganadores += 1
                                     End If
                                 End If
                             Else
+                                drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                                 ganadores += 1
                             End If
                         Else
+                            drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                             ganadores += 1
                         End If
                     Else
                         If (posicionGanadora = 1) Then
                             If (rowDR.Item("ApostocLuz") = 1) Then
                                 If (rowDR.Item("Posicion") = 2 And ganoLuz = False) Then
+                                    drDetalleRemate.Item("ImportePremio") = rowR("ImportePremio")
                                     ganadores += 1
                                 Else
                                     drDetalleRemate.Item("ImportePremio") = 0
