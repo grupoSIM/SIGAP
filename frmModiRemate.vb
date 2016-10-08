@@ -128,6 +128,10 @@
         If cont > 1 Then
             porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
         End If
+        If cont > 10 Then
+            cont = 10
+            porCaballos = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(cont)
+        End If
         Return porCaballos
     End Function
 

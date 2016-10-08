@@ -125,4 +125,12 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         frmReportePremioSeleccionar.Show()
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        frmReporteDevolucionesSeleccionar.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        frmCargarLlave.Show()
+    End Sub
 End Class
