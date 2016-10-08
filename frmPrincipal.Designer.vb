@@ -59,6 +59,8 @@ Partial Class frmPrincipal
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -264,7 +266,7 @@ Partial Class frmPrincipal
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 116)
+        Me.Button1.Location = New System.Drawing.Point(12, 72)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(101, 38)
         Me.Button1.TabIndex = 1
@@ -298,11 +300,31 @@ Partial Class frmPrincipal
         Me.Button4.Text = "Imprimir Reporte PREMIOS"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(12, 292)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(101, 38)
+        Me.Button5.TabIndex = 5
+        Me.Button5.Text = "Imprimir Reporte DEVOLUCIONES"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(12, 116)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(101, 38)
+        Me.Button6.TabIndex = 6
+        Me.Button6.Text = "Cargar LLAVE"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(758, 354)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -356,4 +378,6 @@ Partial Class frmPrincipal
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
