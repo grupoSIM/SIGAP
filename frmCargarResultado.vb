@@ -39,35 +39,51 @@
     Private Function recalcularPremio(ganadores As Integer, remate As DataRow)
         Dim dtCarrerasCaballos = Tb_CarrerasCaballosTableAdapter.GetDataByCarrera(cbCarrera.SelectedValue)
         Dim corrieron As Integer = 0
+        Dim nocorrieron As Integer = 0
         Dim dtDetallesRemates As DataTable
         Dim drCarreraCaballo As DataRow
         Dim premio As Decimal
+        Dim totalApuestaNuevo As Decimal = 0
 
         For Each rowCC As DataRow In dtCarrerasCaballos.Rows
             If (rowCC("Posicion") <> 100) Then
                 corrieron += 1
+            Else
+                nocorrieron += 1
             End If
         Next
-
-        Dim drPorcentajeCasa As DataRow = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(corrieron).Rows(0)
-
-        remate("PorcentajeCasa") = drPorcentajeCasa("Porcentaje")
         dtDetallesRemates = Tb_DetalleRematesTableAdapter.GetDataByRemate(remate("Id"))
+        If (nocorrieron > 0) Then
+            Dim drPorcentajeCasa As DataRow = Tb_PorcentajesCasaTableAdapter.GetDataByCantCaballos(corrieron).Rows(0)
+            remate("PorcentajeCasa") = drPorcentajeCasa("Porcentaje")
+
+            For Each rowDR As DataRow In dtDetallesRemates.Rows
+                drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
+                If (drCarreraCaballo("Posicion") <> 100) Then
+                    totalApuestaNuevo += rowDR("ImporteApuesta")
+                    'rowDR("ImportePremio") = 0
+                End If
+            Next
+            remate("TotalApuestas") = totalApuestaNuevo
+            premio = (remate("TotalApuestas") * ((100 - remate("PorcentajeCasa")) / 100))
+            premio = Decimal.Round(premio / 10, 0) * 10
+            remate("ImportePremio") = premio
+            remate("Premio") = premio
+            totalApuestaNuevo = 0
+        End If
         For Each rowDR As DataRow In dtDetallesRemates.Rows
             drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
-            If (drCarreraCaballo("Posicion") = 100) Then
-                remate("TotalApuestas") = remate("TotalApuestas") - rowDR("ImporteApuesta")
-                'rowDR("ImportePremio") = 0
-            End If
-        Next
-        premio = (remate("TotalApuestas") * ((100 - remate("PorcentajeCasa")) / 100))
-        premio = Decimal.Round(premio / 10, 0) * 10
-        remate("ImportePremio") = premio
-        For Each rowDR As DataRow In dtDetallesRemates.Rows
-            drCarreraCaballo = dtCarrerasCaballos.Rows.Find(rowDR("IdCarreraCaballo"))
-            If (drCarreraCaballo("Posicion") <> 0) Then
+            If (drCarreraCaballo("Posicion") <> 100) Then
                 If (ganadores > 0) Then
-                    rowDR("ImportePremio") = premio / ganadores
+                    If (nocorrieron > 0) Then
+                        If (rowDR("ImportePremio") > 0) Then
+                            rowDR("ImportePremio") = premio / ganadores
+                            Tb_DetalleRematesTableAdapter.Update(rowDR)
+                        End If
+                    Else
+                        rowDR("ImportePremio") = rowDR("ImportePremio") / ganadores
+                        Tb_DetalleRematesTableAdapter.Update(rowDR)
+                    End If
                 End If
             End If
         Next
