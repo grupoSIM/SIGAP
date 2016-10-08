@@ -61,6 +61,7 @@ Partial Class frmPrincipal
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -284,7 +285,7 @@ Partial Class frmPrincipal
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 204)
+        Me.Button3.Location = New System.Drawing.Point(12, 248)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(101, 38)
         Me.Button3.TabIndex = 3
@@ -293,7 +294,7 @@ Partial Class frmPrincipal
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(12, 248)
+        Me.Button4.Location = New System.Drawing.Point(12, 292)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(101, 38)
         Me.Button4.TabIndex = 4
@@ -302,7 +303,7 @@ Partial Class frmPrincipal
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(12, 292)
+        Me.Button5.Location = New System.Drawing.Point(12, 336)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(101, 38)
         Me.Button5.TabIndex = 5
@@ -318,11 +319,21 @@ Partial Class frmPrincipal
         Me.Button6.Text = "Cargar LLAVE"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(12, 204)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(101, 38)
+        Me.Button7.TabIndex = 7
+        Me.Button7.Text = "Imprimir CIERRE DE CAJA"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(758, 354)
+        Me.ClientSize = New System.Drawing.Size(758, 401)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -380,4 +391,5 @@ Partial Class frmPrincipal
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
 End Class

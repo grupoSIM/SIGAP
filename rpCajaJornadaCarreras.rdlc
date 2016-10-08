@@ -24,9 +24,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.75255cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.48035cm</Left>
         <Height>0.49389cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.76787cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -57,9 +57,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hipodromo</rd:DefaultName>
-        <Left>0.02646cm</Left>
+        <Left>0.48035cm</Left>
         <Height>0.71727cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.72954cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -91,7 +91,7 @@
         </Paragraphs>
         <rd:DefaultName>Fecha</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.48035cm</Left>
         <Height>0.49417cm</Height>
         <Width>2.15604cm</Width>
         <ZIndex>2</ZIndex>
@@ -126,7 +126,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>4.9821cm</Left>
+        <Left>4.86516cm</Left>
         <Height>0.56472cm</Height>
         <Width>1.52347cm</Width>
         <ZIndex>3</ZIndex>
@@ -159,7 +159,7 @@
         </Paragraphs>
         <rd:DefaultName>Palco</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>6.50558cm</Left>
+        <Left>6.38864cm</Left>
         <Height>0.56472cm</Height>
         <Width>0.85958cm</Width>
         <ZIndex>4</ZIndex>
@@ -177,10 +177,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.81162cm</Width>
+              <Width>4.19793cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.56994cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -340,9 +340,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.21932cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.48035cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.31162cm</Width>
+        <Width>6.76787cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -359,6 +359,7 @@
               <TextRun>
                 <Value>TOTAL REMATES:</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -367,10 +368,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>3.59571cm</Top>
-        <Left>0.21577cm</Left>
+        <Top>3.59323cm</Top>
+        <Left>0.48035cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.29189cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -395,6 +396,7 @@
               <TextRun>
                 <Value>TOTAL PREMIOS:</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -403,10 +405,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>4.39608cm</Top>
-        <Left>0.21577cm</Left>
+        <Top>4.36962cm</Top>
+        <Left>0.48035cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.29189cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -431,6 +433,7 @@
               <TextRun>
                 <Value>COMISION REMATADOR:</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -439,10 +442,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>5.19645cm</Top>
-        <Left>0.21577cm</Left>
+        <Top>5.19396cm</Top>
+        <Left>0.48035cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.29189cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -467,6 +470,7 @@
               <TextRun>
                 <Value>COMISION HIPODROMO:</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -476,9 +480,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>5.99681cm</Top>
-        <Left>0.21577cm</Left>
+        <Left>0.48035cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.29189cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -503,6 +507,7 @@
               <TextRun>
                 <Value>CANT. REMATES:</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -512,9 +517,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>6.7732cm</Top>
-        <Left>0.21577cm</Left>
+        <Left>0.48035cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.29189cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -549,7 +554,7 @@
         </Paragraphs>
         <rd:DefaultName>SumaApuestas1</rd:DefaultName>
         <Top>3.59571cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.74822cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -581,8 +586,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SumaPremios</rd:DefaultName>
-        <Top>4.39608cm</Top>
-        <Left>4.86516cm</Left>
+        <Top>4.3721cm</Top>
+        <Left>4.74822cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>12</ZIndex>
@@ -615,7 +620,7 @@
         </Paragraphs>
         <rd:DefaultName>CantRemates</rd:DefaultName>
         <Top>6.7732cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.74822cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>13</ZIndex>
@@ -647,8 +652,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ComisionRematador</rd:DefaultName>
-        <Top>5.19645cm</Top>
-        <Left>4.86516cm</Left>
+        <Top>5.14849cm</Top>
+        <Left>4.74822cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>14</ZIndex>
@@ -681,7 +686,7 @@
         </Paragraphs>
         <rd:DefaultName>ComisionHipodromo</rd:DefaultName>
         <Top>5.99681cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.74822cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>15</ZIndex>

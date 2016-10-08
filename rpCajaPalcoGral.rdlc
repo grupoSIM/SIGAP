@@ -24,9 +24,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.75255cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0.3175cm</Left>
         <Height>0.49389cm</Height>
-        <Width>7.3387cm</Width>
+        <Width>6.69016cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -58,9 +58,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hipodromo</rd:DefaultName>
-        <Left>0.02646cm</Left>
+        <Left>0.3175cm</Left>
         <Height>0.71727cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.69016cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -90,6 +90,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>1.66124cm</Top>
+        <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>2</ZIndex>
@@ -125,6 +126,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>2.66912cm</Top>
+        <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>3</ZIndex>
@@ -160,6 +162,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>3.78698cm</Top>
+        <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>4</ZIndex>
@@ -195,6 +198,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>4.90485cm</Top>
+        <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>5</ZIndex>
@@ -230,6 +234,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>6.02272cm</Top>
+        <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>6</ZIndex>
@@ -265,6 +270,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>7.14058cm</Top>
+        <Left>0.3175cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>7</ZIndex>
@@ -302,7 +308,7 @@
         <Top>1.66124cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.1425cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -338,7 +344,7 @@
         <Top>2.66912cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.1425cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -374,7 +380,7 @@
         <Top>3.78698cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.1425cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -410,7 +416,7 @@
         <Top>4.90485cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.1425cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -446,7 +452,7 @@
         <Top>6.02272cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.1425cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -469,7 +475,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!ComisionHipodromo.Value, "DataSet1")</Value>
+                <Value>=Sum(Fields!SumaApuestas.Value, "DataSet1")-Sum(Fields!SumaPremios.Value, "DataSet1")-Sum(Fields!ComisionRematador.Value, "DataSet1")</Value>
                 <Style>
                   <Format>#,0;(#,0)</Format>
                 </Style>
@@ -482,7 +488,7 @@
         <Top>7.14058cm</Top>
         <Left>4.86516cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.1425cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>

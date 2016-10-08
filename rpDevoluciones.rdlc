@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.22745cm</Width>
+              <Width>1.08634cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.59771cm</Width>
+              <Width>3.4566cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.35889cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -236,9 +236,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.03528cm</Top>
-        <Left>0.00229cm</Left>
+        <Left>0.28069cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.90183cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -276,8 +276,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Hipodromo</rd:DefaultName>
+          <Top>0.08474cm</Top>
+          <Left>0.28069cm</Left>
           <Height>0.71727cm</Height>
-          <Width>7.32516cm</Width>
+          <Width>6.90183cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -309,9 +311,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.75255cm</Top>
+          <Top>0.83729cm</Top>
+          <Left>0.28069cm</Left>
           <Height>0.49389cm</Height>
-          <Width>7.32516cm</Width>
+          <Width>6.90183cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -344,7 +347,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Fecha</rd:DefaultName>
-          <Top>1.35227cm</Top>
+          <Top>1.43701cm</Top>
+          <Left>0.28069cm</Left>
           <Height>0.49417cm</Height>
           <Width>2.15604cm</Width>
           <ZIndex>2</ZIndex>
@@ -378,8 +382,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>1.35227cm</Top>
-          <Left>4.82745cm</Left>
+          <Top>1.43701cm</Top>
+          <Left>4.68481cm</Left>
           <Height>0.56472cm</Height>
           <Width>1.4cm</Width>
           <ZIndex>3</ZIndex>
@@ -413,8 +417,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Palco</rd:DefaultName>
-          <Top>1.35227cm</Top>
-          <Left>6.22745cm</Left>
+          <Top>1.43701cm</Top>
+          <Left>6.08481cm</Left>
           <Height>0.56472cm</Height>
           <Width>1.09771cm</Width>
           <ZIndex>4</ZIndex>
@@ -448,7 +452,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>1.98755cm</Top>
+          <Top>2.07229cm</Top>
+          <Left>0.28069cm</Left>
           <Height>0.6cm</Height>
           <Width>2.29715cm</Width>
           <ZIndex>5</ZIndex>
@@ -482,8 +487,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>1.98755cm</Top>
-          <Left>2.33243cm</Left>
+          <Top>2.07229cm</Top>
+          <Left>2.61312cm</Left>
           <Height>0.6cm</Height>
           <Width>0.69128cm</Width>
           <ZIndex>6</ZIndex>
@@ -517,10 +522,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>NombreCarrera</rd:DefaultName>
-          <Top>1.98755cm</Top>
-          <Left>3.05899cm</Left>
+          <Top>2.07229cm</Top>
+          <Left>3.33968cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.26617cm</Width>
+          <Width>3.84284cm</Width>
           <ZIndex>7</ZIndex>
           <Style>
             <Border>

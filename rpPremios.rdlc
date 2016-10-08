@@ -12,7 +12,7 @@
               <Width>3.74354cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.23313cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -254,9 +254,9 @@
         </TablixRowHierarchy>
         <DataSetName>DS_Premios</DataSetName>
         <Top>2.70482cm</Top>
-        <Left>0.00458cm</Left>
+        <Left>0.26916cm</Left>
         <Height>1.1559cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>7.05829cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -270,13 +270,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.78021cm</Width>
+              <Width>1.08162cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.82516cm</Width>
+              <Width>4.34736cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.7175cm</Width>
+              <Width>1.62931cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -497,9 +497,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>4.32732cm</Top>
-        <Left>0.00458cm</Left>
+        <Left>0.26916cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.32287cm</Width>
+        <Width>7.05829cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -528,9 +528,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hipodromo</rd:DefaultName>
-        <Left>0.00229cm</Left>
+        <Left>0.31979cm</Left>
         <Height>0.71727cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>7.00766cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -633,9 +633,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>1.87262cm</Top>
-        <Left>0.00229cm</Left>
+        <Left>0.26916cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.29715cm</Width>
+        <Width>2.3125cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -668,7 +668,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>1.87262cm</Top>
-        <Left>2.33472cm</Left>
+        <Left>2.61694cm</Left>
         <Height>0.6cm</Height>
         <Width>0.69128cm</Width>
         <ZIndex>6</ZIndex>
@@ -704,9 +704,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.71727cm</Top>
-        <Left>0.00229cm</Left>
+        <Left>0.31979cm</Left>
         <Height>0.49389cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>7.00766cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -740,7 +740,7 @@
         </Paragraphs>
         <rd:DefaultName>Fecha</rd:DefaultName>
         <Top>1.23734cm</Top>
-        <Left>0.00229cm</Left>
+        <Left>0.31979cm</Left>
         <Height>0.49417cm</Height>
         <Width>2.15604cm</Width>
         <ZIndex>8</ZIndex>
@@ -775,9 +775,9 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>1.87262cm</Top>
-        <Left>3.06128cm</Left>
+        <Left>3.3435cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.26617cm</Width>
+        <Width>3.98395cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -793,7 +793,7 @@
     <Height>2.50695in</Height>
     <Style />
   </Body>
-  <Width>4.85423in</Width>
+  <Width>3.48965in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

@@ -59,7 +59,7 @@
         Dim cont As Integer
 
         'MessageBox.Show(DataGridView.RowCount - 1, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-        For Renglones As Integer = 1 To DataGridView.RowCount - 2
+        For Renglones As Integer = 0 To DataGridView.RowCount - 1
             If Me.DataGridView.Rows(Renglones).Cells(3).Value = False Then
                 'MessageBox.Show(Me.DataGridView.Rows(Renglones).Cells(3).Value, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 cont += 1
@@ -132,6 +132,7 @@
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        DataGridView.DataSource = Nothing
         Me.Close()
     End Sub
 

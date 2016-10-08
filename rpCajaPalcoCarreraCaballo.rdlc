@@ -24,9 +24,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.75255cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.27813cm</Left>
         <Height>0.49389cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.83537cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -58,9 +58,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hipodromo</rd:DefaultName>
-        <Left>0.02646cm</Left>
+        <Left>0.26459cm</Left>
         <Height>0.71727cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.84891cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -92,7 +92,7 @@
         </Paragraphs>
         <rd:DefaultName>Fecha</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.27813cm</Left>
         <Height>0.49417cm</Height>
         <Width>2.15604cm</Width>
         <ZIndex>2</ZIndex>
@@ -126,8 +126,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>1.28172cm</Top>
-        <Left>4.9821cm</Left>
+        <Top>1.24644cm</Top>
+        <Left>4.73044cm</Left>
         <Height>0.56472cm</Height>
         <Width>1.52347cm</Width>
         <ZIndex>3</ZIndex>
@@ -161,8 +161,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Palco</rd:DefaultName>
-        <Top>1.28172cm</Top>
-        <Left>6.50558cm</Left>
+        <Top>1.24644cm</Top>
+        <Left>6.25392cm</Left>
         <Height>0.56472cm</Height>
         <Width>0.85958cm</Width>
         <ZIndex>4</ZIndex>
@@ -197,7 +197,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.27813cm</Left>
         <Height>0.6cm</Height>
         <Width>2.29715cm</Width>
         <ZIndex>5</ZIndex>
@@ -207,39 +207,6 @@
           </Border>
           <PaddingLeft>1pt</PaddingLeft>
           <PaddingRight>1pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="NroCarrera">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!NroCarrera.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>NroCarrera</rd:DefaultName>
-        <Top>1.88172cm</Top>
-        <Left>2.33715cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.83313cm</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
@@ -263,10 +230,10 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>3.20556cm</Left>
+        <Left>3.44369cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.1596cm</Width>
-        <ZIndex>7</ZIndex>
+        <Width>3.66981cm</Width>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -281,16 +248,52 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.81162cm</Width>
+              <Width>0.78021cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.20307cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.86562cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
               <Height>0.6cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Nro</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox11">
@@ -364,6 +367,38 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="NroCaballo">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!NroCaballo.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>NroCaballo</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="CaballoNombre">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -434,6 +469,7 @@
           <TablixMembers>
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -448,10 +484,10 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.65811cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.27813cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.31162cm</Width>
-        <ZIndex>8</ZIndex>
+        <Width>6.8489cm</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -477,11 +513,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SumaApuestas1</rd:DefaultName>
-        <Top>3.99922cm</Top>
-        <Left>4.9821cm</Left>
+        <Top>4.0345cm</Top>
+        <Left>4.61349cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -511,79 +547,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SumaPremios</rd:DefaultName>
-        <Top>4.77561cm</Top>
-        <Left>4.99564cm</Left>
+        <Top>4.81089cm</Top>
+        <Left>4.62703cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>10</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="ComisionRematador">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=IIf(First(Fields!PorcentajeUtilidad.Value, "DataSet1") &gt; 0, First(Fields!PorcentajeUtilidad.Value, "DataSet1")*(Sum(Fields!SumaApuestas.Value, "DataSet1")-First(Fields!SumaPremios.Value, "DataSet1"))/100, First(Fields!PorcentajeBruto.Value, "DataSet1")*Sum(Fields!SumaApuestas.Value)/100)</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>ComisionRematador</rd:DefaultName>
-        <Top>5.552cm</Top>
-        <Left>4.9821cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="ComisionHipodromo">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!SumaApuestas.Value, "DataSet1")-(First(Fields!SumaPremios.Value, "DataSet1"))-IIf(First(Fields!PorcentajeUtilidad.Value, "DataSet1") &gt; 0, (First(Fields!PorcentajeUtilidad.Value, "DataSet1")*(Sum(Fields!SumaApuestas.Value, "DataSet1")-First(Fields!SumaPremios.Value, "DataSet1"))/100), (First(Fields!PorcentajeBruto.Value, "DataSet1")*Sum(Fields!SumaApuestas.Value)/100))</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Format>#,0;(#,0)</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>ComisionHipodromo</rd:DefaultName>
-        <Top>6.32839cm</Top>
-        <Left>4.9821cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -615,10 +583,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>3.99922cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.27813cm</Left>
         <Height>0.6cm</Height>
         <Width>4.25986cm</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -650,10 +618,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>4.77561cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.27813cm</Left>
         <Height>0.6cm</Height>
         <Width>4.25986cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -664,72 +632,32 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox12">
+      <Textbox Name="NroCarrera">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>COMISION REMATADOR:</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
+                <Value>=First(Fields!NroCarrera.Value, "DataSet1")</Value>
+                <Style />
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>5.552cm</Top>
-        <Left>0.04cm</Left>
+        <rd:DefaultName>NroCarrera</rd:DefaultName>
+        <Top>1.87537cm</Top>
+        <Left>2.64584cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.25987cm</Width>
-        <ZIndex>15</ZIndex>
+        <Width>0.65674cm</Width>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-          <PaddingLeft>1pt</PaddingLeft>
-          <PaddingRight>1pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>COMISION HIPODROMO:</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>6.32839cm</Top>
-        <Left>0.04cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.25987cm</Width>
-        <ZIndex>16</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>1pt</PaddingLeft>
-          <PaddingRight>1pt</PaddingRight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
@@ -738,7 +666,7 @@
     <Height>2.8808in</Height>
     <Style />
   </Body>
-  <Width>3.33717in</Width>
+  <Width>3.96217in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

@@ -24,7 +24,7 @@
         </Paragraphs>
         <rd:DefaultName>Fecha</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.31814cm</Left>
         <Height>0.49417cm</Height>
         <Width>2.15604cm</Width>
         <Style>
@@ -58,9 +58,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Hipodromo</rd:DefaultName>
-        <Left>0.02646cm</Left>
+        <Left>0.3046cm</Left>
         <Height>0.71727cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.47849cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -93,7 +93,7 @@
         </Paragraphs>
         <rd:DefaultName>NroCarrera</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>2.33715cm</Left>
+        <Left>2.61529cm</Left>
         <Height>0.6cm</Height>
         <Width>0.83313cm</Width>
         <ZIndex>2</ZIndex>
@@ -128,9 +128,9 @@
         </Paragraphs>
         <rd:DefaultName>Palco</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>6.50558cm</Left>
+        <Left>5.91059cm</Left>
         <Height>0.56472cm</Height>
-        <Width>0.85958cm</Width>
+        <Width>0.8725cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -161,9 +161,9 @@
         </Paragraphs>
         <rd:DefaultName>CantRemates</rd:DefaultName>
         <Top>2.96016cm</Top>
-        <Left>4.8387cm</Left>
+        <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.94438cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -198,9 +198,9 @@
         </Paragraphs>
         <rd:DefaultName>SumaApuestas</rd:DefaultName>
         <Top>4.07802cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.94438cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -235,9 +235,9 @@
         </Paragraphs>
         <rd:DefaultName>SumaPremios</rd:DefaultName>
         <Top>5.19589cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.94438cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -272,9 +272,9 @@
         </Paragraphs>
         <rd:DefaultName>ComisionRematador</rd:DefaultName>
         <Top>6.31376cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.94438cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -309,9 +309,9 @@
         </Paragraphs>
         <rd:DefaultName>ComisionHipodromo</rd:DefaultName>
         <Top>7.43162cm</Top>
-        <Left>4.86516cm</Left>
+        <Left>4.80342cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.97967cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -345,9 +345,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>2.96016cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.53412cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -381,9 +381,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>4.07802cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.46356cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -417,9 +417,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>5.19589cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.63585cm</Width>
+        <Width>4.46356cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -453,7 +453,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>6.31376cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
         <ZIndex>12</ZIndex>
@@ -489,7 +489,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>7.43162cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.42827cm</Width>
         <ZIndex>13</ZIndex>
@@ -529,9 +529,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.75255cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.31814cm</Left>
         <Height>0.49389cm</Height>
-        <Width>7.32516cm</Width>
+        <Width>6.46495cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -564,7 +564,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>1.28172cm</Top>
-        <Left>4.9821cm</Left>
+        <Left>4.38711cm</Left>
         <Height>0.56472cm</Height>
         <Width>1.52347cm</Width>
         <ZIndex>15</ZIndex>
@@ -599,7 +599,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>0.04cm</Left>
+        <Left>0.31814cm</Left>
         <Height>0.6cm</Height>
         <Width>2.29715cm</Width>
         <ZIndex>16</ZIndex>
@@ -634,9 +634,9 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>3.20556cm</Left>
+        <Left>3.4837cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.1596cm</Width>
+        <Width>3.29939cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>

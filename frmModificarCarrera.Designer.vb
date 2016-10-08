@@ -24,18 +24,8 @@ Partial Class frmModificarCarrera
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
-        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_JornadasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_JornadasTableAdapter()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PosicionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LuzDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.OrdenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,25 +39,35 @@ Partial Class frmModificarCarrera
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txMetros = New System.Windows.Forms.TextBox()
         Me.cbCarrera = New System.Windows.Forms.ComboBox()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.Tb_CarrerasTableAdapter1 = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Tb_PorcentajesCasaTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_PorcentajesCasaTableAdapter()
+        Me.TbJornadasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCarreraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PosicionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LuzDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.OrdenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BdSIGAP_DataSet
@@ -75,17 +75,14 @@ Partial Class frmModificarCarrera
         Me.BdSIGAP_DataSet.DataSetName = "bdSIGAP_DataSet"
         Me.BdSIGAP_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TbJornadasBindingSource
-        '
-        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
-        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_JornadasTableAdapter
         '
         Me.Tb_JornadasTableAdapter.ClearBeforeFill = True
         '
         'DataGridView
         '
+        Me.DataGridView.AllowUserToAddRows = False
+        Me.DataGridView.AllowUserToDeleteRows = False
         Me.DataGridView.AutoGenerateColumns = False
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdCarreraDataGridViewTextBoxColumn, Me.IdCaballoDataGridViewTextBoxColumn, Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn, Me.PosicionDataGridViewTextBoxColumn, Me.LuzDataGridViewCheckBoxColumn, Me.OrdenDataGridViewTextBoxColumn})
@@ -94,65 +91,6 @@ Partial Class frmModificarCarrera
         Me.DataGridView.Name = "DataGridView"
         Me.DataGridView.Size = New System.Drawing.Size(744, 313)
         Me.DataGridView.TabIndex = 13
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.Width = 50
-        '
-        'IdCarreraDataGridViewTextBoxColumn
-        '
-        Me.IdCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera"
-        Me.IdCarreraDataGridViewTextBoxColumn.HeaderText = "Id Carrera"
-        Me.IdCarreraDataGridViewTextBoxColumn.Name = "IdCarreraDataGridViewTextBoxColumn"
-        '
-        'IdCaballoDataGridViewTextBoxColumn
-        '
-        Me.IdCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCaballo"
-        Me.IdCaballoDataGridViewTextBoxColumn.DataSource = Me.TbCaballosBindingSource
-        Me.IdCaballoDataGridViewTextBoxColumn.DisplayMember = "CaballoNombre"
-        Me.IdCaballoDataGridViewTextBoxColumn.HeaderText = "Caballo"
-        Me.IdCaballoDataGridViewTextBoxColumn.Name = "IdCaballoDataGridViewTextBoxColumn"
-        Me.IdCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.IdCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdCaballoDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdCaballoDataGridViewTextBoxColumn.Width = 150
-        '
-        'TbCaballosBindingSource
-        '
-        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
-        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'NoTomaNuevosRematesDataGridViewCheckBoxColumn
-        '
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.DataPropertyName = "NoTomaNuevosRemates"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.HeaderText = "No Toma Nuevos Remates"
-        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Name = "NoTomaNuevosRematesDataGridViewCheckBoxColumn"
-        '
-        'PosicionDataGridViewTextBoxColumn
-        '
-        Me.PosicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion"
-        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posición"
-        Me.PosicionDataGridViewTextBoxColumn.Name = "PosicionDataGridViewTextBoxColumn"
-        '
-        'LuzDataGridViewCheckBoxColumn
-        '
-        Me.LuzDataGridViewCheckBoxColumn.DataPropertyName = "Luz"
-        Me.LuzDataGridViewCheckBoxColumn.HeaderText = "Ganó con Luz?"
-        Me.LuzDataGridViewCheckBoxColumn.Name = "LuzDataGridViewCheckBoxColumn"
-        '
-        'OrdenDataGridViewTextBoxColumn
-        '
-        Me.OrdenDataGridViewTextBoxColumn.DataPropertyName = "Orden"
-        Me.OrdenDataGridViewTextBoxColumn.HeaderText = "Orden"
-        Me.OrdenDataGridViewTextBoxColumn.Name = "OrdenDataGridViewTextBoxColumn"
-        '
-        'TbCarrerasCaballosBindingSource
-        '
-        Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
-        Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
         'Tb_CarrerasCaballosTableAdapter
         '
@@ -270,11 +208,6 @@ Partial Class frmModificarCarrera
         Me.cbCarrera.TabIndex = 14
         Me.cbCarrera.ValueMember = "Id"
         '
-        'TbCarrerasBindingSource
-        '
-        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
-        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
         'Tb_CarrerasTableAdapter
         '
         Me.Tb_CarrerasTableAdapter.ClearBeforeFill = True
@@ -300,22 +233,6 @@ Partial Class frmModificarCarrera
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "Modificar Carrera"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tb_CaballosTableAdapter = Me.Tb_CaballosTableAdapter
-        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Me.Tb_CarrerasCaballosTableAdapter
-        Me.TableAdapterManager.tb_CarrerasTableAdapter = Me.Tb_CarrerasTableAdapter
-        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
-        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_JornadasTableAdapter = Me.Tb_JornadasTableAdapter
-        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
-        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
-        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Tb_CarrerasTableAdapter1
         '
@@ -355,6 +272,92 @@ Partial Class frmModificarCarrera
         '
         Me.Tb_PorcentajesCasaTableAdapter.ClearBeforeFill = True
         '
+        'TbJornadasBindingSource
+        '
+        Me.TbJornadasBindingSource.DataMember = "tb_Jornadas"
+        Me.TbJornadasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'TbCarrerasBindingSource
+        '
+        Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
+        Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Width = 50
+        '
+        'IdCarreraDataGridViewTextBoxColumn
+        '
+        Me.IdCarreraDataGridViewTextBoxColumn.DataPropertyName = "IdCarrera"
+        Me.IdCarreraDataGridViewTextBoxColumn.HeaderText = "Id Carrera"
+        Me.IdCarreraDataGridViewTextBoxColumn.Name = "IdCarreraDataGridViewTextBoxColumn"
+        '
+        'IdCaballoDataGridViewTextBoxColumn
+        '
+        Me.IdCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCaballo"
+        Me.IdCaballoDataGridViewTextBoxColumn.DataSource = Me.TbCaballosBindingSource
+        Me.IdCaballoDataGridViewTextBoxColumn.DisplayMember = "CaballoNombre"
+        Me.IdCaballoDataGridViewTextBoxColumn.HeaderText = "Caballo"
+        Me.IdCaballoDataGridViewTextBoxColumn.Name = "IdCaballoDataGridViewTextBoxColumn"
+        Me.IdCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdCaballoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdCaballoDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdCaballoDataGridViewTextBoxColumn.Width = 150
+        '
+        'TbCaballosBindingSource
+        '
+        Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
+        Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'NoTomaNuevosRematesDataGridViewCheckBoxColumn
+        '
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.DataPropertyName = "NoTomaNuevosRemates"
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.HeaderText = "No Toma Nuevos Remates"
+        Me.NoTomaNuevosRematesDataGridViewCheckBoxColumn.Name = "NoTomaNuevosRematesDataGridViewCheckBoxColumn"
+        '
+        'PosicionDataGridViewTextBoxColumn
+        '
+        Me.PosicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion"
+        Me.PosicionDataGridViewTextBoxColumn.HeaderText = "Posición"
+        Me.PosicionDataGridViewTextBoxColumn.Name = "PosicionDataGridViewTextBoxColumn"
+        '
+        'LuzDataGridViewCheckBoxColumn
+        '
+        Me.LuzDataGridViewCheckBoxColumn.DataPropertyName = "Luz"
+        Me.LuzDataGridViewCheckBoxColumn.HeaderText = "Ganó con Luz?"
+        Me.LuzDataGridViewCheckBoxColumn.Name = "LuzDataGridViewCheckBoxColumn"
+        '
+        'OrdenDataGridViewTextBoxColumn
+        '
+        Me.OrdenDataGridViewTextBoxColumn.DataPropertyName = "Orden"
+        Me.OrdenDataGridViewTextBoxColumn.HeaderText = "Orden"
+        Me.OrdenDataGridViewTextBoxColumn.Name = "OrdenDataGridViewTextBoxColumn"
+        '
+        'TbCarrerasCaballosBindingSource
+        '
+        Me.TbCarrerasCaballosBindingSource.DataMember = "tb_CarrerasCaballos"
+        Me.TbCarrerasCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.tb_CaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasCaballosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_CarrerasTableAdapter = Nothing
+        Me.TableAdapterManager.tb_DetalleRematesTableAdapter = Nothing
+        Me.TableAdapterManager.tb_EventosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_HipodromosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_JornadasTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PalcosTableAdapter = Nothing
+        Me.TableAdapterManager.tb_PorcentajesCasaTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematadoresTableAdapter = Nothing
+        Me.TableAdapterManager.tb_RematesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'frmModificarCarrera
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -368,15 +371,15 @@ Partial Class frmModificarCarrera
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Modificar Carrera"
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nProcentajeCasa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nCarrera, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.TbJornadasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbCarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
