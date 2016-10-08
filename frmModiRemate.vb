@@ -93,7 +93,7 @@
 
 
 
-        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(IdRemate)
+        Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemateSoloIncluidos(IdRemate)
         Dim ctrlImpre As New ControladorImpresion
 
         For Each row As DataRow In detalles.Rows
@@ -189,7 +189,4 @@
 
     End Sub
 
-    Private Sub DataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView.CellContentClick
-
-    End Sub
 End Class
