@@ -230,9 +230,9 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>3.44369cm</Left>
+        <Left>2.64584cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.66981cm</Width>
+        <Width>4.46766cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -628,36 +628,6 @@
           </Border>
           <PaddingLeft>1pt</PaddingLeft>
           <PaddingRight>1pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="NroCarrera">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!NroCarrera.Value, "DataSet1")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>NroCarrera</rd:DefaultName>
-        <Top>1.87537cm</Top>
-        <Left>2.64584cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.65674cm</Width>
-        <ZIndex>12</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>

@@ -72,41 +72,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="NroCarrera">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!NroCarrera.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>NroCarrera</rd:DefaultName>
-        <Top>1.88172cm</Top>
-        <Left>2.61529cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.83313cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Palco">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -131,7 +96,7 @@
         <Left>5.91059cm</Left>
         <Height>0.56472cm</Height>
         <Width>0.8725cm</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -164,7 +129,7 @@
         <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
         <Width>1.94438cm</Width>
-        <ZIndex>4</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -201,7 +166,7 @@
         <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
         <Width>1.94438cm</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -238,7 +203,7 @@
         <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
         <Width>1.94438cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -275,7 +240,7 @@
         <Left>4.83871cm</Left>
         <Height>0.6cm</Height>
         <Width>1.94438cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -312,7 +277,7 @@
         <Left>4.80342cm</Left>
         <Height>0.6cm</Height>
         <Width>1.97967cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -348,7 +313,7 @@
         <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.53412cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -384,7 +349,7 @@
         <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.46356cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -420,7 +385,7 @@
         <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.46356cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -456,7 +421,7 @@
         <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.63585cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -492,7 +457,7 @@
         <Left>0.3046cm</Left>
         <Height>0.6cm</Height>
         <Width>4.42827cm</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -532,7 +497,7 @@
         <Left>0.31814cm</Left>
         <Height>0.49389cm</Height>
         <Width>6.46495cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -567,7 +532,7 @@
         <Left>4.38711cm</Left>
         <Height>0.56472cm</Height>
         <Width>1.52347cm</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -602,7 +567,7 @@
         <Left>0.31814cm</Left>
         <Height>0.6cm</Height>
         <Width>2.29715cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -634,10 +599,10 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>1.88172cm</Top>
-        <Left>3.4837cm</Left>
+        <Left>2.68585cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.29939cm</Width>
-        <ZIndex>17</ZIndex>
+        <Width>4.09724cm</Width>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

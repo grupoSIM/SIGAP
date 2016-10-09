@@ -467,41 +467,6 @@
             <PaddingBottom>1pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox6">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=First(Fields!NroCarrera.Value, "DataSet1")</Value>
-                  <Style>
-                    <FontSize>9pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Left</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.07229cm</Top>
-          <Left>2.61312cm</Left>
-          <Height>0.6cm</Height>
-          <Width>0.69128cm</Width>
-          <ZIndex>6</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
         <Textbox Name="NombreCarrera">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -523,10 +488,10 @@
           </Paragraphs>
           <rd:DefaultName>NombreCarrera</rd:DefaultName>
           <Top>2.07229cm</Top>
-          <Left>3.33968cm</Left>
+          <Left>2.6484cm</Left>
           <Height>0.6cm</Height>
-          <Width>3.84284cm</Width>
-          <ZIndex>7</ZIndex>
+          <Width>4.53412cm</Width>
+          <ZIndex>6</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

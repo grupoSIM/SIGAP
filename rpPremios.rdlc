@@ -648,41 +648,6 @@
           <PaddingBottom>1pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox6">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!NroCarrera.Value, "DS_Premios")</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.87262cm</Top>
-        <Left>2.61694cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.69128cm</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -708,7 +673,7 @@
         <Left>0.31979cm</Left>
         <Height>0.49389cm</Height>
         <Width>7.00766cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -744,7 +709,7 @@
         <Left>0.31979cm</Left>
         <Height>0.49417cm</Height>
         <Width>2.15604cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -776,10 +741,10 @@
         </Paragraphs>
         <rd:DefaultName>NombreCarrera</rd:DefaultName>
         <Top>1.87262cm</Top>
-        <Left>3.3435cm</Left>
+        <Left>2.65222cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.98395cm</Width>
-        <ZIndex>9</ZIndex>
+        <Width>4.67523cm</Width>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -812,7 +777,7 @@
         <Left>4.77682cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -847,7 +812,7 @@
         <Left>0.3175cm</Left>
         <Height>0.59972cm</Height>
         <Width>4.38828cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -882,7 +847,7 @@
         <Left>0.21853cm</Left>
         <Height>0.59972cm</Height>
         <Width>7.05829cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
