@@ -214,41 +214,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="NroCarrera">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!NroCarrera.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>NroCarrera</rd:DefaultName>
-        <Top>1.88783cm</Top>
-        <Left>2.73953cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.99188cm</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="NombreCarrera">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -272,7 +237,7 @@
         <Left>0.28208cm</Left>
         <Height>0.6cm</Height>
         <Width>6.96174cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -307,7 +272,7 @@
         <Left>6.27777cm</Left>
         <Height>0.6cm</Height>
         <Width>0.96605cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -339,7 +304,7 @@
         <Left>0.28208cm</Left>
         <Height>0.5cm</Height>
         <Width>6.96174cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -375,7 +340,7 @@
         <Left>0.28208cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -407,7 +372,7 @@
         <Left>0.28208cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -443,7 +408,7 @@
         <Left>4.62281cm</Left>
         <Height>0.6cm</Height>
         <Width>2.62101cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -475,7 +440,7 @@
         <Left>4.62281cm</Left>
         <Height>0.5cm</Height>
         <Width>2.62101cm</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -509,7 +474,7 @@
         <Left>2.19286cm</Left>
         <Height>0.54708cm</Height>
         <Width>3.55833cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -541,7 +506,7 @@
         <Left>2.77495cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -576,7 +541,7 @@
         <Left>0.28208cm</Left>
         <Height>0.6cm</Height>
         <Width>6.96174cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -608,7 +573,7 @@
         <Left>0.28208cm</Left>
         <Height>0.6cm</Height>
         <Width>6.96174cm</Width>
-        <ZIndex>17</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -795,7 +760,7 @@
         <Left>0.70541cm</Left>
         <Height>0.93542cm</Height>
         <Width>6.22091cm</Width>
-        <ZIndex>18</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
