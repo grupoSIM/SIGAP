@@ -137,4 +137,9 @@
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         frmReporteCierreCaja.Show()
     End Sub
+
+    Private Sub ReporteCajaGralPorCarreraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteCajaGralPorCarreraToolStripMenuItem.Click
+        Dim ctrlImpre As New ControladorImpresion
+        ctrlImpre.ImprimirCajaPalcoGralPorCarrera()
+    End Sub
 End Class

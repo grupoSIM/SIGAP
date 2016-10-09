@@ -98,7 +98,7 @@
 
         For Each row As DataRow In detalles.Rows
             'MessageBox.Show("impre", "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-            ctrlImpre.ImprimirTicket(row("Id"))
+            ctrlImpre.ImprimirTicket(row("Id"), IdRemate)
 
         Next
 
@@ -118,7 +118,7 @@
         Dim cont As Integer
         Dim i As Integer = 0
 
-        For DetalleRemate As Integer = 0 To Me.DataGridView.RowCount - 1
+        For DetalleRemate As Integer = 0 To Me.DataGridView.RowCount - 2
             If Me.DataGridView.Rows(i).Cells("Incluido").Value = True Then
                 cont += 1
                 'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
@@ -139,7 +139,7 @@
         Dim totalApuesta As Integer = 0
         Dim i As Integer = 0
 
-        For DetalleRemate As Integer = 1 To Me.DataGridView.RowCount - 1
+        For DetalleRemate As Integer = 0 To Me.DataGridView.RowCount - 2
             If Me.DataGridView.Rows(i).Cells("Incluido").Value = True Then
                 totalApuesta = totalApuesta + Me.DataGridView.Rows(i).Cells("ImporteApuesta").Value
                 'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
@@ -152,7 +152,7 @@
     Private Function ModificarPremio(premio As Decimal)
         Dim i As Integer = 0
 
-        For DetalleRemate As Integer = 1 To Me.DataGridView.RowCount - 1
+        For DetalleRemate As Integer = 0 To Me.DataGridView.RowCount - 2
             If Me.DataGridView.Rows(i).Cells("Incluido").Value = True Then
                 Me.DataGridView.Rows(i).Cells("ImportePremio").Value = premio
                 'MessageBox.Show(cont, "SiGAp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)

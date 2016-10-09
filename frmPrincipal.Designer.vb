@@ -62,6 +62,7 @@ Partial Class frmPrincipal
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.ReporteCajaGralPorCarreraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -218,7 +219,7 @@ Partial Class frmPrincipal
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem, Me.ReporteCajaGralToolStripMenuItem, Me.ReporteCajaPorCaballoToolStripMenuItem, Me.ReporteCarrerasDeJornadaToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePremiosToolStripMenuItem, Me.ReporteCierreDeCajaToolStripMenuItem, Me.ReporteDevolucionesToolStripMenuItem, Me.ReporteCajaJornadaToolStripMenuItem, Me.ReporteCajaGralToolStripMenuItem, Me.ReporteCajaPorCaballoToolStripMenuItem, Me.ReporteCarrerasDeJornadaToolStripMenuItem, Me.ReporteCajaGralPorCarreraToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -226,43 +227,43 @@ Partial Class frmPrincipal
         'ReportePremiosToolStripMenuItem
         '
         Me.ReportePremiosToolStripMenuItem.Name = "ReportePremiosToolStripMenuItem"
-        Me.ReportePremiosToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReportePremiosToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReportePremiosToolStripMenuItem.Text = "Reporte Premios"
         '
         'ReporteCierreDeCajaToolStripMenuItem
         '
         Me.ReporteCierreDeCajaToolStripMenuItem.Name = "ReporteCierreDeCajaToolStripMenuItem"
-        Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReporteCierreDeCajaToolStripMenuItem.Text = "Reporte Cierre de Caja"
         '
         'ReporteDevolucionesToolStripMenuItem
         '
         Me.ReporteDevolucionesToolStripMenuItem.Name = "ReporteDevolucionesToolStripMenuItem"
-        Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteDevolucionesToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReporteDevolucionesToolStripMenuItem.Text = "Reporte Devoluciones"
         '
         'ReporteCajaJornadaToolStripMenuItem
         '
         Me.ReporteCajaJornadaToolStripMenuItem.Name = "ReporteCajaJornadaToolStripMenuItem"
-        Me.ReporteCajaJornadaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCajaJornadaToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReporteCajaJornadaToolStripMenuItem.Text = "Reporte Caja Jornada"
         '
         'ReporteCajaGralToolStripMenuItem
         '
         Me.ReporteCajaGralToolStripMenuItem.Name = "ReporteCajaGralToolStripMenuItem"
-        Me.ReporteCajaGralToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCajaGralToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReporteCajaGralToolStripMenuItem.Text = "Reporte Caja Gral"
         '
         'ReporteCajaPorCaballoToolStripMenuItem
         '
         Me.ReporteCajaPorCaballoToolStripMenuItem.Name = "ReporteCajaPorCaballoToolStripMenuItem"
-        Me.ReporteCajaPorCaballoToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCajaPorCaballoToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReporteCajaPorCaballoToolStripMenuItem.Text = "Reporte Caja por Caballo"
         '
         'ReporteCarrerasDeJornadaToolStripMenuItem
         '
         Me.ReporteCarrerasDeJornadaToolStripMenuItem.Name = "ReporteCarrerasDeJornadaToolStripMenuItem"
-        Me.ReporteCarrerasDeJornadaToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ReporteCarrerasDeJornadaToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ReporteCarrerasDeJornadaToolStripMenuItem.Text = "Reporte Carreras de Jornada"
         '
         'Button1
@@ -328,6 +329,12 @@ Partial Class frmPrincipal
         Me.Button7.Text = "Imprimir CIERRE DE CAJA"
         Me.Button7.UseVisualStyleBackColor = True
         '
+        'ReporteCajaGralPorCarreraToolStripMenuItem
+        '
+        Me.ReporteCajaGralPorCarreraToolStripMenuItem.Name = "ReporteCajaGralPorCarreraToolStripMenuItem"
+        Me.ReporteCajaGralPorCarreraToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.ReporteCajaGralPorCarreraToolStripMenuItem.Text = "Reporte Caja Gral Por Carrera"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -392,4 +399,5 @@ Partial Class frmPrincipal
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
+    Friend WithEvents ReporteCajaGralPorCarreraToolStripMenuItem As ToolStripMenuItem
 End Class

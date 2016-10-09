@@ -414,6 +414,7 @@
     <EmbeddedResource Include="rpCajaPalcoGral.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="rpCajaPalcoGralPorCarrera.rdlc" />
     <EmbeddedResource Include="rpCajaPalcoJornada.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

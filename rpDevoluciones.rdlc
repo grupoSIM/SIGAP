@@ -54,14 +54,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox19">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Apostador</Value>
+                              <Value>Caballo Nombre</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>ExtraBold</FontWeight>
@@ -71,7 +71,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -155,21 +155,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Apostador">
+                    <Textbox Name="CaballoNombre">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Apostador.Value</Value>
+                              <Value>=Fields!CaballoNombre.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Apostador</rd:DefaultName>
+                      <rd:DefaultName>CaballoNombre</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -588,7 +588,7 @@
         </Field>
         <Field Name="NroCarrera">
           <DataField>NroCarrera</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="NombreCarrera">
           <DataField>NombreCarrera</DataField>
@@ -610,10 +610,14 @@
           <DataField>ImporteApuesta</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="CaballoNombre">
+          <DataField>CaballoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>bdSIGAP_DataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Gustavo\SIM\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\SIM REBORN\SIGAP\bdSIGAP_DataSet.xsd</rd:SchemaPath>
         <rd:TableName>VwDevoluciones</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

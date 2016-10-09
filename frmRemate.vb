@@ -229,10 +229,20 @@ Public Class frmRemate
 
     Private Sub txtapuesta_Leave(sender As Object, e As EventArgs)
         Dim nombre As String = DirectCast(sender, TextBox).Name
+        Dim incluidos As Integer = 0
         If (DirectCast(sender, TextBox).Text <> "") Then
             For Each chb As CheckBox In Me.Controls.OfType(Of CheckBox)
                 If (chb.Tag <> "Incluido") Then Continue For
-                If (chb.Name = ("chbIncluido" & nombre.Substring(10))) Then chb.Checked = True
+                If (chb.Name = ("chbIncluido" & nombre.Substring(10))) Then
+                    chb.Checked = True
+                    For Each chb2 As CheckBox In Controls.OfType(Of CheckBox)
+                        If (chb2.Tag <> "Incluido") Then Continue For
+                        If (chb2.Checked) Then
+                            incluidos += 1
+                        End If
+                    Next
+                    txtPorcentajeCasa.Text = Tb_PorcentajesCasaTableAdapter.GetPorcentajeByCantidadCaballos(incluidos)
+                End If
             Next
         Else
             For Each chb As CheckBox In Me.Controls.OfType(Of CheckBox)
@@ -468,6 +478,8 @@ Public Class frmRemate
 
             Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
 
+            Dim IdRemate As Int32 = Tb_RematesTableAdapter.MaxId()
+
             For Each row As DataRow In dtCarrerasCaballos.Rows
                 If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
 
@@ -500,16 +512,16 @@ Public Class frmRemate
                     observaciones = Trim(observaciones)
                     ' FIN OBSERVACIONES
 
-                    Tb_DetalleRematesTableAdapter.Insert(Tb_RematesTableAdapter.MaxId(), row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, observaciones)
+                    Tb_DetalleRematesTableAdapter.Insert(IdRemate, row("Id"), Controls("txtNumero" & i).Text, Controls("txtApostador" & i).Text, Controls("txtApuesta" & i).Text, DirectCast(Controls("cmbLuz" & i), ComboBox).SelectedIndex, DirectCast(Controls("radFila" & i), RadioButton).Checked, premio, DirectCast(Controls("chbIncluido" & i), CheckBox).Checked, observaciones)
                 End If
                 i += 1
             Next
 
-            Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(Tb_RematesTableAdapter.MaxId())
+            Dim detalles = Tb_DetalleRematesTableAdapter.GetDataByRemate(IdRemate)
 
             For Each row As DataRow In detalles.Rows
 
-                ctrlImpre.ImprimirTicket(row("Id"))
+                ctrlImpre.ImprimirTicket(row("Id"), IdRemate)
 
             Next
 

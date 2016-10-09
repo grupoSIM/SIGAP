@@ -186,6 +186,23 @@ Public Class ControladorImpresion
         Export(report)
         Print()
     End Sub
+
+    Public Sub ImprimirCajaPalcoGralPorCarrera()
+        Dim report As New LocalReport()
+        Dim dataSet As New bdSIGAP_DataSet
+        Dim dataTable As New Object
+
+        Dim TableAdapter As New bdSIGAP_DataSetTableAdapters.VwCajaPalcoGralPorCarreraTableAdapter ' <-- Cambiar VwCajaPalcoTableAdapter por el nombre q corresponda
+
+        TableAdapter.Fill(dataSet.VwCajaPalcoGralPorCarrera) ' <-- Cambiar VwPremios por el nombre q corresponda
+        dataTable = dataSet.VwCajaPalcoGralPorCarrera ' <-- Cambiar VwCajaPalco por el nombre q corresponda
+        report.ReportPath = "rpCajaPalcoGralPorCarrera.rdlc" ' <-- Cambiar por el nombre del reporte q corresponda ( debe estar en el copiado a la carpeta debug)
+        report.DataSources.Add(New ReportDataSource("DataSet1", dataTable)) ' <-- Cambiar "DataSet1" por el nombre del DataSet q espera el reporte
+
+        Export(report)
+        Print()
+    End Sub
+
     Public Sub ImprimirCajaPalcoJornada(IdJornada As Int32)
         Dim report As New LocalReport()
         Dim dataSet As New bdSIGAP_DataSet
@@ -202,17 +219,24 @@ Public Class ControladorImpresion
         Print()
     End Sub
 
-    Public Sub ImprimirTicket(IdDetalleRemate As Int32)
+    Public Sub ImprimirTicket(IdDetalleRemate As Int32, IdRemate As Int32)
         Dim report As New LocalReport()
         Dim dataSet As New bdSIGAP_DataSet
         Dim dataTable As New Object
 
         Dim TableAdapter As New bdSIGAP_DataSetTableAdapters.VwTicketTableAdapter ' <-- Cambiar VwCajaPalcoTableAdapter por el nombre q corresponda
 
+
         TableAdapter.FillByIdDetalleRemate(dataSet.VwTicket, IdDetalleRemate) ' <-- Cambiar VwPremios por el nombre q corresponda
         dataTable = dataSet.VwTicket ' <-- Cambiar VwCajaPalco por el nombre q corresponda
         report.ReportPath = "rpTicket.rdlc" ' <-- Cambiar por el nombre del reporte q corresponda ( debe estar en el copiado a la carpeta debug)
         report.DataSources.Add(New ReportDataSource("DataSet1", dataTable)) ' <-- Cambiar "DataSet1" por el nombre del DataSet q espera el reporte
+
+        Dim dataTableApuestas As New Object
+        Dim TableAdapterApuestas As New bdSIGAP_DataSetTableAdapters.VwApuestasTableAdapter
+        TableAdapterApuestas.FillByIdRemate(dataSet.VwApuestas, IdRemate)
+        dataTableApuestas = dataSet.VwApuestas
+        report.DataSources.Add(New ReportDataSource("DataSet2", dataTableApuestas))
 
         Export(report)
         Print()
