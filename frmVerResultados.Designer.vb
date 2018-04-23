@@ -24,16 +24,6 @@ Partial Class frmVerResultados
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApostadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImporteApuestaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImportePremioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IncluidoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TbDetalleRematesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.BdSIGAPDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -44,6 +34,16 @@ Partial Class frmVerResultados
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TbCarrerasCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tb_CarrerasCaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasCaballosTableAdapter()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdRemateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NroCaballoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApostadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImporteApuestaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LuzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FilaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImportePremioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IncluidoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbDetalleRematesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,67 +62,6 @@ Partial Class frmVerResultados
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1079, 481)
         Me.DataGridView1.TabIndex = 0
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        '
-        'IdRemateDataGridViewTextBoxColumn
-        '
-        Me.IdRemateDataGridViewTextBoxColumn.DataPropertyName = "IdRemate"
-        Me.IdRemateDataGridViewTextBoxColumn.HeaderText = "IdRemate"
-        Me.IdRemateDataGridViewTextBoxColumn.Name = "IdRemateDataGridViewTextBoxColumn"
-        '
-        'IdCarreraCaballoDataGridViewTextBoxColumn
-        '
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCarreraCaballo"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.HeaderText = "IdCarreraCaballo"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Name = "IdCarreraCaballoDataGridViewTextBoxColumn"
-        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'NroCaballoDataGridViewTextBoxColumn
-        '
-        Me.NroCaballoDataGridViewTextBoxColumn.DataPropertyName = "NroCaballo"
-        Me.NroCaballoDataGridViewTextBoxColumn.HeaderText = "NroCaballo"
-        Me.NroCaballoDataGridViewTextBoxColumn.Name = "NroCaballoDataGridViewTextBoxColumn"
-        '
-        'ApostadorDataGridViewTextBoxColumn
-        '
-        Me.ApostadorDataGridViewTextBoxColumn.DataPropertyName = "Apostador"
-        Me.ApostadorDataGridViewTextBoxColumn.HeaderText = "Apostador"
-        Me.ApostadorDataGridViewTextBoxColumn.Name = "ApostadorDataGridViewTextBoxColumn"
-        '
-        'ImporteApuestaDataGridViewTextBoxColumn
-        '
-        Me.ImporteApuestaDataGridViewTextBoxColumn.DataPropertyName = "ImporteApuesta"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.HeaderText = "ImporteApuesta"
-        Me.ImporteApuestaDataGridViewTextBoxColumn.Name = "ImporteApuestaDataGridViewTextBoxColumn"
-        '
-        'LuzDataGridViewTextBoxColumn
-        '
-        Me.LuzDataGridViewTextBoxColumn.DataPropertyName = "Luz"
-        Me.LuzDataGridViewTextBoxColumn.HeaderText = "Luz"
-        Me.LuzDataGridViewTextBoxColumn.Name = "LuzDataGridViewTextBoxColumn"
-        '
-        'FilaDataGridViewTextBoxColumn
-        '
-        Me.FilaDataGridViewTextBoxColumn.DataPropertyName = "Fila"
-        Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
-        Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
-        '
-        'ImportePremioDataGridViewTextBoxColumn
-        '
-        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
-        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
-        '
-        'IncluidoDataGridViewCheckBoxColumn
-        '
-        Me.IncluidoDataGridViewCheckBoxColumn.DataPropertyName = "Incluido"
-        Me.IncluidoDataGridViewCheckBoxColumn.HeaderText = "Incluido"
-        Me.IncluidoDataGridViewCheckBoxColumn.Name = "IncluidoDataGridViewCheckBoxColumn"
         '
         'TbDetalleRematesBindingSource
         '
@@ -180,6 +119,68 @@ Partial Class frmVerResultados
         'Tb_CarrerasCaballosTableAdapter
         '
         Me.Tb_CarrerasCaballosTableAdapter.ClearBeforeFill = True
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Visible = False
+        '
+        'IdRemateDataGridViewTextBoxColumn
+        '
+        Me.IdRemateDataGridViewTextBoxColumn.DataPropertyName = "IdRemate"
+        Me.IdRemateDataGridViewTextBoxColumn.HeaderText = "IdRemate"
+        Me.IdRemateDataGridViewTextBoxColumn.Name = "IdRemateDataGridViewTextBoxColumn"
+        '
+        'IdCarreraCaballoDataGridViewTextBoxColumn
+        '
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.DataPropertyName = "IdCarreraCaballo"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.HeaderText = "IdCarreraCaballo"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Name = "IdCarreraCaballoDataGridViewTextBoxColumn"
+        Me.IdCarreraCaballoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'NroCaballoDataGridViewTextBoxColumn
+        '
+        Me.NroCaballoDataGridViewTextBoxColumn.DataPropertyName = "NroCaballo"
+        Me.NroCaballoDataGridViewTextBoxColumn.HeaderText = "NroCaballo"
+        Me.NroCaballoDataGridViewTextBoxColumn.Name = "NroCaballoDataGridViewTextBoxColumn"
+        '
+        'ApostadorDataGridViewTextBoxColumn
+        '
+        Me.ApostadorDataGridViewTextBoxColumn.DataPropertyName = "Apostador"
+        Me.ApostadorDataGridViewTextBoxColumn.HeaderText = "Apostador"
+        Me.ApostadorDataGridViewTextBoxColumn.Name = "ApostadorDataGridViewTextBoxColumn"
+        '
+        'ImporteApuestaDataGridViewTextBoxColumn
+        '
+        Me.ImporteApuestaDataGridViewTextBoxColumn.DataPropertyName = "ImporteApuesta"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.HeaderText = "ImporteApuesta"
+        Me.ImporteApuestaDataGridViewTextBoxColumn.Name = "ImporteApuestaDataGridViewTextBoxColumn"
+        '
+        'LuzDataGridViewTextBoxColumn
+        '
+        Me.LuzDataGridViewTextBoxColumn.DataPropertyName = "Luz"
+        Me.LuzDataGridViewTextBoxColumn.HeaderText = "Luz"
+        Me.LuzDataGridViewTextBoxColumn.Name = "LuzDataGridViewTextBoxColumn"
+        '
+        'FilaDataGridViewTextBoxColumn
+        '
+        Me.FilaDataGridViewTextBoxColumn.DataPropertyName = "Fila"
+        Me.FilaDataGridViewTextBoxColumn.HeaderText = "Fila"
+        Me.FilaDataGridViewTextBoxColumn.Name = "FilaDataGridViewTextBoxColumn"
+        '
+        'ImportePremioDataGridViewTextBoxColumn
+        '
+        Me.ImportePremioDataGridViewTextBoxColumn.DataPropertyName = "ImportePremio"
+        Me.ImportePremioDataGridViewTextBoxColumn.HeaderText = "ImportePremio"
+        Me.ImportePremioDataGridViewTextBoxColumn.Name = "ImportePremioDataGridViewTextBoxColumn"
+        '
+        'IncluidoDataGridViewCheckBoxColumn
+        '
+        Me.IncluidoDataGridViewCheckBoxColumn.DataPropertyName = "Incluido"
+        Me.IncluidoDataGridViewCheckBoxColumn.HeaderText = "Incluido"
+        Me.IncluidoDataGridViewCheckBoxColumn.Name = "IncluidoDataGridViewCheckBoxColumn"
         '
         'frmVerResultados
         '

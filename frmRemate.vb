@@ -348,7 +348,12 @@ Public Class frmRemate
             carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
             Tb_CarrerasTableAdapter.Update(carrera)
 
-            Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
+            Dim palco As DataRow
+
+            palco = BdSIGAP_DataSet.tb_Palcos.FindById(cmbPalco.SelectedValue)
+            Dim rematador = Tb_RematadoresTableAdapter.GetDataById(palco("IdRematador"))
+
+            Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, rematador.Rows(0).Item("Id"), totalApuestas, premio, txtRemate.Text)
 
             For Each row As DataRow In dtCarrerasCaballos.Rows
                 If (DirectCast(Controls("chbIncluido" & i), CheckBox).Checked) Then
@@ -476,7 +481,12 @@ Public Class frmRemate
             carrera.Rows(0).Item("PorcentajeUltimoRemate") = txtPorcentajeCasa.Text
             Tb_CarrerasTableAdapter.Update(carrera)
 
-            Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, 1, totalApuestas, premio, txtRemate.Text)
+            Dim palco As DataRow
+
+            palco = BdSIGAP_DataSet.tb_Palcos.FindById(cmbPalco.SelectedValue)
+            Dim rematador = Tb_RematadoresTableAdapter.GetDataById(palco("IdRematador"))
+
+            Tb_RematesTableAdapter.Insert(cmbCarrera.SelectedValue, cmbPalco.SelectedValue, txtPorcentajeCasa.Text, premio, rematador.Rows(0).Item("Id"), totalApuestas, premio, txtRemate.Text)
 
             Dim IdRemate As Int32 = Tb_RematesTableAdapter.MaxId()
 

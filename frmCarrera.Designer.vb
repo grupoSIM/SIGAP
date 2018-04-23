@@ -127,8 +127,8 @@ Partial Class frmCarrera
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -239,6 +239,7 @@ Partial Class frmCarrera
         Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
         Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Visible = False
         '
         'IdJornadaDataGridViewTextBoxColumn
         '
@@ -248,6 +249,7 @@ Partial Class frmCarrera
         Me.IdJornadaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
         Me.IdJornadaDataGridViewTextBoxColumn.HeaderText = "Jornada"
         Me.IdJornadaDataGridViewTextBoxColumn.Name = "IdJornadaDataGridViewTextBoxColumn"
+        Me.IdJornadaDataGridViewTextBoxColumn.ReadOnly = True
         Me.IdJornadaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.IdJornadaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.IdJornadaDataGridViewTextBoxColumn.ValueMember = "Id"
@@ -264,6 +266,7 @@ Partial Class frmCarrera
         Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
         Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
         Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.Width = 200
         '
         'MetrosDataGridViewTextBoxColumn
         '
@@ -277,6 +280,7 @@ Partial Class frmCarrera
         Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
         Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
         Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.Visible = False
         '
         'PorcentajeCasaDataGridViewTextBoxColumn
         '
@@ -295,6 +299,7 @@ Partial Class frmCarrera
         Me.ObservacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones"
         Me.ObservacionesDataGridViewTextBoxColumn.Name = "ObservacionesDataGridViewTextBoxColumn"
+        Me.ObservacionesDataGridViewTextBoxColumn.Width = 150
         '
         'TipoCarreraDataGridViewTextBoxColumn
         '

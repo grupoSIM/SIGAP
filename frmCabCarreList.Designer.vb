@@ -42,18 +42,18 @@ Partial Class frmCabCarreList
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Tb_CarrerasCaballosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Tb_CarrerasCaballosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
+        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.TbCarrerasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.TbCaballosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tb_CarrerasTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter()
-        Me.Tb_CaballosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_CarrerasCaballosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,8 +123,8 @@ Partial Class frmCabCarreList
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -215,67 +215,15 @@ Partial Class frmCabCarreList
         Me.Tb_CarrerasCaballosDataGridView.Size = New System.Drawing.Size(851, 475)
         Me.Tb_CarrerasCaballosDataGridView.TabIndex = 1
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "IdCarrera"
-        Me.DataGridViewTextBoxColumn2.DataSource = Me.TbCarrerasBindingSource
-        Me.DataGridViewTextBoxColumn2.DisplayMember = "Nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "IdCarrera"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.DataGridViewTextBoxColumn2.ValueMember = "Id"
-        '
         'TbCarrerasBindingSource
         '
         Me.TbCarrerasBindingSource.DataMember = "tb_Carreras"
         Me.TbCarrerasBindingSource.DataSource = Me.BdSIGAP_DataSet
         '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "IdCaballo"
-        Me.DataGridViewTextBoxColumn3.DataSource = Me.TbCaballosBindingSource
-        Me.DataGridViewTextBoxColumn3.DisplayMember = "CaballoNombre"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "IdCaballo"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.DataGridViewTextBoxColumn3.ValueMember = "Id"
-        '
         'TbCaballosBindingSource
         '
         Me.TbCaballosBindingSource.DataMember = "tb_Caballos"
         Me.TbCaballosBindingSource.DataSource = Me.BdSIGAP_DataSet
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "NoTomaNuevosRemates"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "NoTomaNuevosRemates"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Posicion"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Posicion"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewCheckBoxColumn2
-        '
-        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "Luz"
-        Me.DataGridViewCheckBoxColumn2.HeaderText = "Luz"
-        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Orden"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Orden"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'Tb_CarrerasTableAdapter
         '
@@ -293,6 +241,61 @@ Partial Class frmCabCarreList
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Cerrar"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "IdCarrera"
+        Me.DataGridViewTextBoxColumn2.DataSource = Me.TbCarrerasBindingSource
+        Me.DataGridViewTextBoxColumn2.DisplayMember = "Nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "IdCarrera"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn2.ValueMember = "Id"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "IdCaballo"
+        Me.DataGridViewTextBoxColumn3.DataSource = Me.TbCaballosBindingSource
+        Me.DataGridViewTextBoxColumn3.DisplayMember = "CaballoNombre"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "IdCaballo"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn3.ValueMember = "Id"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "NoTomaNuevosRemates"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "NoTomaNuevosRemates"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Posicion"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Posicion"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "Luz"
+        Me.DataGridViewCheckBoxColumn2.HeaderText = "Luz"
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Orden"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Orden"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'frmCabCarreList
         '
@@ -340,6 +343,7 @@ Partial Class frmCabCarreList
     Friend WithEvents Tb_CarrerasTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CarrerasTableAdapter
     Friend WithEvents TbCaballosBindingSource As BindingSource
     Friend WithEvents Tb_CaballosTableAdapter As bdSIGAP_DataSetTableAdapters.tb_CaballosTableAdapter
+    Friend WithEvents Button1 As Button
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewComboBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewComboBoxColumn
@@ -347,5 +351,4 @@ Partial Class frmCabCarreList
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
 End Class

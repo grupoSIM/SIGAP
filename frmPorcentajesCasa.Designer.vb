@@ -25,10 +25,6 @@ Partial Class frmPorcentajesCasa
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPorcentajesCasa))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantidadCaballosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorcentajeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEventoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TbEventosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BdSIGAP_DataSet = New SIGAP.bdSIGAP_DataSet()
         Me.TbPorcentajesCasaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -49,6 +45,10 @@ Partial Class frmPorcentajesCasa
         Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.TableAdapterManager = New SIGAP.bdSIGAP_DataSetTableAdapters.TableAdapterManager()
         Me.Tb_EventosTableAdapter = New SIGAP.bdSIGAP_DataSetTableAdapters.tb_EventosTableAdapter()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadCaballosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PorcentajeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEventoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbEventosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSIGAP_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,36 +67,6 @@ Partial Class frmPorcentajesCasa
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(572, 256)
         Me.DataGridView1.TabIndex = 0
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        '
-        'CantidadCaballosDataGridViewTextBoxColumn
-        '
-        Me.CantidadCaballosDataGridViewTextBoxColumn.DataPropertyName = "CantidadCaballos"
-        Me.CantidadCaballosDataGridViewTextBoxColumn.HeaderText = "Cantidad Caballos"
-        Me.CantidadCaballosDataGridViewTextBoxColumn.Name = "CantidadCaballosDataGridViewTextBoxColumn"
-        '
-        'PorcentajeDataGridViewTextBoxColumn
-        '
-        Me.PorcentajeDataGridViewTextBoxColumn.DataPropertyName = "Porcentaje"
-        Me.PorcentajeDataGridViewTextBoxColumn.HeaderText = "Porcentaje"
-        Me.PorcentajeDataGridViewTextBoxColumn.Name = "PorcentajeDataGridViewTextBoxColumn"
-        '
-        'IdEventoDataGridViewTextBoxColumn
-        '
-        Me.IdEventoDataGridViewTextBoxColumn.DataPropertyName = "IdEvento"
-        Me.IdEventoDataGridViewTextBoxColumn.DataSource = Me.TbEventosBindingSource
-        Me.IdEventoDataGridViewTextBoxColumn.DisplayMember = "NombreEvento"
-        Me.IdEventoDataGridViewTextBoxColumn.HeaderText = "Evento"
-        Me.IdEventoDataGridViewTextBoxColumn.Name = "IdEventoDataGridViewTextBoxColumn"
-        Me.IdEventoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.IdEventoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.IdEventoDataGridViewTextBoxColumn.ValueMember = "Id"
-        Me.IdEventoDataGridViewTextBoxColumn.Width = 200
         '
         'TbEventosBindingSource
         '
@@ -131,7 +101,7 @@ Partial Class frmPorcentajesCasa
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(573, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(502, 25)
         Me.BindingNavigator1.TabIndex = 1
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -147,8 +117,8 @@ Partial Class frmPorcentajesCasa
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -258,11 +228,42 @@ Partial Class frmPorcentajesCasa
         '
         Me.Tb_EventosTableAdapter.ClearBeforeFill = True
         '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.Visible = False
+        '
+        'CantidadCaballosDataGridViewTextBoxColumn
+        '
+        Me.CantidadCaballosDataGridViewTextBoxColumn.DataPropertyName = "CantidadCaballos"
+        Me.CantidadCaballosDataGridViewTextBoxColumn.HeaderText = "Cantidad Caballos"
+        Me.CantidadCaballosDataGridViewTextBoxColumn.Name = "CantidadCaballosDataGridViewTextBoxColumn"
+        '
+        'PorcentajeDataGridViewTextBoxColumn
+        '
+        Me.PorcentajeDataGridViewTextBoxColumn.DataPropertyName = "Porcentaje"
+        Me.PorcentajeDataGridViewTextBoxColumn.HeaderText = "Porcentaje"
+        Me.PorcentajeDataGridViewTextBoxColumn.Name = "PorcentajeDataGridViewTextBoxColumn"
+        '
+        'IdEventoDataGridViewTextBoxColumn
+        '
+        Me.IdEventoDataGridViewTextBoxColumn.DataPropertyName = "IdEvento"
+        Me.IdEventoDataGridViewTextBoxColumn.DataSource = Me.TbEventosBindingSource
+        Me.IdEventoDataGridViewTextBoxColumn.DisplayMember = "NombreEvento"
+        Me.IdEventoDataGridViewTextBoxColumn.HeaderText = "Evento"
+        Me.IdEventoDataGridViewTextBoxColumn.Name = "IdEventoDataGridViewTextBoxColumn"
+        Me.IdEventoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.IdEventoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.IdEventoDataGridViewTextBoxColumn.ValueMember = "Id"
+        Me.IdEventoDataGridViewTextBoxColumn.Width = 200
+        '
         'frmPorcentajesCasa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(573, 285)
+        Me.ClientSize = New System.Drawing.Size(502, 285)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmPorcentajesCasa"
